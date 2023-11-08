@@ -10,7 +10,7 @@ table{
 }
 
 .button{
-    position:fixed;
+    position:absolute;
     top: 20px;
     right: 20px;
 }
@@ -22,7 +22,7 @@ button{
 }
 
 .button2{
-    position:fixed;
+    position:absolute;
     top: 20px;
     left: 20px;
     margin-left: 300px;
