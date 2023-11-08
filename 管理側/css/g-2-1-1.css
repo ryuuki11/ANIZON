@@ -10,10 +10,9 @@ table{
 }
 
 .button{
-    position:fixed;
+    position:absolute;
     top: 20px;
     right: 20px;
-    color: #db415a;
 }
 
 button{
@@ -23,8 +22,20 @@ button{
 }
 
 .button2{
-    position:fixed;
+    position:absolute;
     top: 20px;
     left: 20px;
     margin-left: 300px;
+}
+
+.keihin{
+    color: #41db6a;
+}
+
+.syouhintouroku{
+    color: #6241db;
+}
+
+.rogout{
+    color: #db4146;
 }
