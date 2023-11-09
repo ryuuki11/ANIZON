@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+}
+
+.example{
+    font-size: 150%;
+}
+table{
+    margin:0 auto;   
+}
+
+button{
+    position: absolute;
+    width: 90px;
+    height: 45px;
+    right: 5vw;
+}
