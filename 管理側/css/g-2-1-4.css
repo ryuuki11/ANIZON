@@ -10,20 +10,20 @@ table{
 }
 
 .button{
-    position:fixed;
+    position:absolute;
     top: 20px;
-    right: 20px;
+    right: 5vw;
 }
 
 button{
-    width: 150px;
-    height: 50px;
-    margin-right: 100px;
+    width: 90px;
+    height: 45px;
+    margin-right: 5vw;
 }
 
 .button2{
-    position:fixed;
+    position:absolute;
     top: 20px;
-    left: 20px;
-    margin-left: 300px;
+    left: 5vw;
+    margin-left: 20vw;
 }
