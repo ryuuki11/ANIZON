@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+}
+
+table{
+    margin-left: 20vw;
+    margin-top: 50px;
+    width: 10vw;
+}
+
+h2{
+    position: absolute;
+    top: 35vh;
+    right: 18vw;
+
+}
+
+.brn{
+    position: absolute;
+    bottom: 45vh;
+    right: 30vw;
+}

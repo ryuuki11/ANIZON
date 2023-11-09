@@ -27,15 +27,3 @@ button{
     left: 5vw;
     margin-left: 20vw;
 }
-
-.syouhin{
-    color: #41db6a;
-}
-
-.keihintouroku{
-    color: #6241db;
-}
-
-.rogout{
-    color: #db4146;
-}
