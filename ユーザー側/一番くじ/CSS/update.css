@@ -1,0 +1,80 @@
+body{
+    text-align: center;
+}
+  
+.list{
+    border-radius: 20px;
+    display: block;
+    width:90px;
+    height:30px;
+    padding-top:5px;
+    box-sizing: border-box;
+    background:#fff;
+    color: #6fa1ff;
+    box-shadow:0px 2px 4px rgb(177, 177, 177);
+    text-decoration: none;
+    margin-left: 54%;
+}
+
+.place{
+    font-size: 20px;
+    margin-right: 150px;
+    margin-top: -20px;
+    margin-bottom: 20px;
+}
+
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+.button{
+    border-radius: 20px;
+    display: block;
+    width:90px;
+    height:30px;
+    padding-top:5px;
+    box-sizing: border-box;
+    border: 1px;
+    background:#fff;
+    color: rgb(0, 0, 0);
+    box-shadow:0px 2px 4px rgb(177, 177, 177);
+    text-decoration: none;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+.post {
+    display: block;
+    height: 20px;
+    margin-top: 3px;
+}
+
+.prefecture{
+    margin-right: 150px;
+    margin-top: 10px;
+}
+  
+.town{
+    margin-right: 100px;
+    margin-top: 10px;
+}
+
+.mansion{
+    margin-right: 54px;
+    margin-top: 10px;
+}
+
+.push{
+    padding:16px 24px;
+    display: block;
+    margin:auto;
+    margin-top:50px;
+    text-decoration: none;
+    border: 2px;
+    border-radius: 20px;
+    background-color: white;
+    color: red;
+    box-shadow:0px 2px 4px rgb(177, 177, 177);
+    width:100px;
+    height:20px;
+}
