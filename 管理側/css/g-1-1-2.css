@@ -7,10 +7,15 @@ title {
 button{
     text-align: center;
     color: #f70d38;
+    width: 150px;
+    height: 100px;
+    margin-top: 6vw;
+    font-size: large;
 }
 
 
 .blue{
     text-align: center;
     color: #16a2c2;
+    margin-top: 5vw;
 }
