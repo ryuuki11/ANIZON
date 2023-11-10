@@ -20,3 +20,11 @@ h2{
     bottom: 45vh;
     right: 30vw;
 }
+
+.yes{
+    color: #7741db;
+}
+
+.no{
+    color: #db4158;
+}

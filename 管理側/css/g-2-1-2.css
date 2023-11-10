@@ -1,7 +1,7 @@
 .rogout{
     position: absolute;
-    top:0;
-    right:0;
+    top: 35px;
+    right: 100px;;
     color: #db415a;
 }
 
@@ -19,5 +19,5 @@ p{
 
 .toroku{
     text-align: center;
-    color: #ff9d09;
+    color: #2609ff;
 }
