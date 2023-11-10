@@ -1,0 +1,50 @@
+.button {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.gacha {
+    padding:16px 24px;
+    padding-top: 20px;
+    text-decoration: none;
+    text-align: center;
+    border: 2px;
+    border-radius: 20px;
+    background-color: white;
+    color: red;
+    box-shadow:0px 2px 4px rgb(177, 177, 177);
+    width:100px;
+    height:20px;
+}
+
+p {
+    text-align: center;
+}
+
+
+.slide {
+    width: 70%;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.slide-inner {
+  display: flex;
+  animation: slide-flow 20s infinite linear 1s both;
+}
+.slide-item{
+  width: 300px;
+  height: 300px;
+  object-fit:cover;
+  border: 1px solid #ddd;
+}
+.slide-item img {
+    width:300px;
+    height:300px;
+}
+@keyframes slide-flow {
+     0% {transform: translateX(0);}
+ 100% {transform: translateX(-100%);}
+}
