@@ -1,21 +1,29 @@
-title {
+.all{
     height: 150px;
     width: 500px;
     margin: 0 auto;
+    text-align: center;
 }
 
-button{
-    text-align: center;
-    color: #f70d38;
-    width: 150px;
-    height: 100px;
+.red{
+    background-color: #ea768b;
+    width: 25vw;
+    height: 5vw;
     margin-top: 6vw;
-    font-size: large;
+    font-size: 30px;
+    border-radius: 20px;
+    min-height: 50px;
+    min-width: 280px;
 }
 
 
 .blue{
-    text-align: center;
-    color: #16a2c2;
-    margin-top: 5vw;
+    background-color: #98c7ed;
+    width: 25vw;
+    height: 5vw;
+    margin-top: 6vw;
+    font-size: 30px;
+    border-radius: 20px;
+    min-height: 50px;
+    min-width: 280px;
 }

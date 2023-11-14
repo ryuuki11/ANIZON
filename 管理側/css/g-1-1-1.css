@@ -1,15 +1,30 @@
-title {
+.all {
     height: 150px;
     width: 500px;
-    margin: 0 auto;
+    margin:0 auto;
+    text-align: center;
 }
 
 button{
-    text-align: center;
-    color: #16a2c2;
+    position: relative;
+    margin-top: 10vw;
+    background-color: #8dd7e8;
+    width: 10vw;
+    height: 3vw;
+    font-size: 20px;
+    min-width: 100px;
+    min-height: 35px;
 }
 
+input{
+    width: 20vw;
+    height: 2vw;
+    max-width: 200px;
+    min-height: 20px;
+}
 
-
+p{
+    font-size: 150%;
+}
 
 
