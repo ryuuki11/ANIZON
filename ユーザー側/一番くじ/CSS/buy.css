@@ -1,0 +1,65 @@
+body{
+    text-align: center;
+}
+
+span{
+    margin-left: 50px;
+}
+ .back{
+        border-radius: 20px;
+        display: block;
+        width:90px;
+        height:30px;
+        padding-top:5px;
+        box-sizing: border-box;
+        background:#fff;
+        color: #6fa1ff;
+        box-shadow:0px 2px 4px rgb(177, 177, 177);
+        text-decoration: none;
+        margin-left: 55%;
+ }
+
+.name{
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.text{
+    margin-top: 5px;
+}
+
+.number{
+    margin-top: 10px;
+    margin-bottom: -20px;
+}
+
+.null{
+    margin-bottom: 100px;
+}
+
+.data{
+    margin-top: -90px;
+}
+.code{
+    margin-top: 10px;
+}
+.sum{
+    margin-top: 30px;
+    margin-left:100px;
+    margin-bottom: -20px;
+}
+
+.gacha {
+    padding:16px 24px;
+    display: block;
+    margin:auto;
+    margin-top:50px;
+    text-decoration: none;
+    border: 2px;
+    border-radius: 20px;
+    background-color: white;
+    color: red;
+    box-shadow:0px 2px 4px rgb(177, 177, 177);
+    width:100px;
+    height:20px;
+}

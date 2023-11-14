@@ -1,0 +1,19 @@
+body {
+    text-align: center;
+}
+
+.image{
+    display: inline-block;
+}
+.image img{
+    display: block;
+}
+
+h1 {
+    text-align: center;
+}
+
+.hiro,.juju,.one,.spy {
+    display: inline-block;
+    margin: 10px;
+}

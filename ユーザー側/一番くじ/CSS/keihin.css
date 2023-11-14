@@ -1,0 +1,60 @@
+.button {
+    text-align: center;
+}
+.buy,.gacha,.back {
+    padding:16px 24px;
+    display: block;
+    margin:auto;
+    text-decoration: none;
+    border: 2px;
+    border-radius: 20px;
+    color: white;
+    box-shadow:0px 2px 4px rgb(177, 177, 177);
+    width:100px;
+    height:20px;
+}
+
+.buy {
+    background-color: rgb(112, 227, 129);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.gacha {
+    background-color:rgb(255, 124, 124);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.back {
+    background-color:rgb(153, 206, 255);
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.top img {
+    width:100%;
+}
+
+.image img {
+    display: block;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+}
+
+p {
+    text-align: center;
+}
+
+.image p::first-letter {
+    font-size: 2em;
+}
+
+p {
+    text-align: center;
+}
+.kazu {
+    text-align: center;
+}
