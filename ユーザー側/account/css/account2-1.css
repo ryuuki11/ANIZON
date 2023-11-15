@@ -1,0 +1,27 @@
+body {
+    font:size 100px;
+    margin-top: 15vh;
+    text-align:center;
+   }
+p{
+    text-align: center;
+    font-size: large;
+   
+}
+div{
+    text-align: center;
+}
+.toroku{
+    color: rgb(62, 197, 255);
+    border-radius:20px;
+    padding:4px 0;
+    margin: 10px auto;
+    width:150px;
+  }
+  button{
+    background-color: #ffffff;
+  }
+  p.name{
+    text-decoration: underline;
+    font-size:min(4vw,20px);
+  }
