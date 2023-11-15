@@ -6,15 +6,21 @@ body{
     position: absolute;
     top: 15px;
     right:100px;
-    color: #db415a;
+    background-color: #f190a0;
+    border-radius: 20px;
 }
 
 h1{
     text-align: center;
 }
 
+h2{
+    text-align: center;
+}
+
 h3{
     text-align: center;
+    margin-right: 1vw;
 }
 .shohin{
     display: flex;
@@ -25,26 +31,49 @@ h3{
 .Ssetumei{
     margin: 0 auto;
     font-size: 30px;
-    width: 50vw;
+    width: 30vw;
+    height: 20vw;
     margin-left: 5vw;
+    margin-top: 15px;
 }
 .btn{
     float: right;
-    margin-right: 5vw;
+    margin-right: 20vw;
     margin-bottom: 20vw;
 }
 
 .shosai input{
-    width: 200px;
-    height:50px;
+    width: 10vw;
+    height:3vw;
     font-size: 18px;
     margin-left: 20vw;
+    min-width: 120px;
+    min-height: 20px;
+
 }
 
 .sakujyo{
-    color: #db4165;
+    background-color: #f5a5d1;
+    width: 5vw;
+    height: 3vw;
+    font-size: 15px;
+    border-radius: 20px;
+    min-height: 35px;
+    min-width: 40px;
 }
 
 .kousin{
-    color: #5041db;
+    background-color: #a9a0fd;
+    width: 5vw;
+    height: 3vw;
+    font-size: 15px;
+    border-radius: 20px;
+    min-height: 35px;
+    min-width: 40px;
+}
+
+.textbox{
+    width: 10vw;
+    height: 3vw;
+    font-size: 20px;
 }

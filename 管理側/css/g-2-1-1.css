@@ -15,7 +15,7 @@ table{
 
 .button{
     position:absolute;
-    top: 20px;
+    top: 1vw;
     right: 5vw;
 }
 
@@ -25,7 +25,7 @@ button{
     margin-right: 5vw;
 }
 
-.syohin{
+.keihin{
     position:absolute;
     top: 1vw;
     left: 5vw;
@@ -39,7 +39,7 @@ button{
     font-size: 20px;
 }
 
-.keihintouroku{
+.syouhintouroku{
     background-color: rgb(238, 184, 126);
     width: 10vw;
     height: 3vw;
