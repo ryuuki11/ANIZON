@@ -8,6 +8,8 @@ h2{
 
 .example{
     font-size: 200%;
+    border: solid 2px black;
+    border-collapse: collapse;
 }
 table{
     margin:0 auto;   

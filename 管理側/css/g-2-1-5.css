@@ -1,51 +1,43 @@
-body{
-    position:relative;
-}
-.rogout{
-    position: absolute;
-    top:0;
-    right:0;
-}
-
 h1{
     text-align: center;
 }
-
-h3{
+h2{
     text-align: center;
 }
-.shohin{
-    display: flex;
-    margin-left: 350px;
+
+table{
+    margin-left: 35vw;
+}
+table input{
+    width: 20vw;
+    height: 3vw;
+    font-size: 20px;
 }
 
-.Ssetumei{
-    text-align: center;
-    font-size: 18px;
-    width: 50vw;
-    padding-top: 10px;
-    margin-right: 250px;
-}
-.btn{
-    float: right;
-    margin-right: 100px;
-    margin-bottom: 100px;
+td p{
+    font-size:min(2vw,20px);
+    font-size:max(1.5vw,5px);
 }
 
-.shosai input{
-    width: 200px;
-    height:50px;
-    font-size: 18px;
+
+button{
+    width: 8vw;
+    min-width: 70px;
+    height:4vw;
+    max-height:40px;
+    border-radius: 20px;
 }
 
-.rogout{
-    color: #db4141;
+.logout{
+    position: fixed;
+    right: 7vw;
+    top: 3vw;
+    background-color: rgb(243, 156, 156);
 }
 
-.sakujyo{
-    color: rgb(214, 65, 219);
-}
-
-.kousin{
-    color: #4153db;
+.toroku{
+    position: fixed;
+    right: 7vw;
+    bottom: 3vw;
+    background-color: rgb(150, 150, 234);
 }
