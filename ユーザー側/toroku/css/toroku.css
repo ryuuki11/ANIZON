@@ -1,8 +1,6 @@
-@charset "UTF-8";
-
-body {
- font:size 40px;
- margin-top: 25vh;
+body{
+  text-align:center;
+  
 }
 p{
   
@@ -13,21 +11,23 @@ p{
 }
 input{
   margin: 10px auto;
-  width:300px;
-  font-size: 30px; 
+  width:25vw;
+  font-size: 2vw; 
+  min-width:200px;
+  min-height:20px;
 }
 a{
-    font-size: 30px;
+    font-size: 2vw;
     text-align:center;
     margin-bottom:30px;
   }
   button{
-    font-size:18px;
+    font-size:1vw;
     background-color: #ffffff;
     border-radius:20px;
     padding:4px 0;
     margin: 10px auto;
-    width:200px;
+    width:15vw;
     text-align:center;
   }
   .toroku{
@@ -39,20 +39,36 @@ text-align: center;
   }
   .th{
     text-align: left;
-    font-size:26px;
-    font-weight:1px;
+    font-size:2vw;
   }
   table{
     text-align:center;
     margin:0 auto;
   }
   .addres{
+  
     text-align:center;
-    font-size:30px;
+    font-size:2vw;
   }
-  .post{
-    text-align:center;
+  div.post{
+    width: 100vw;
   }
+  div.buttn{
+    display:flex;
+    text-align: center;
+    
+  }
+  .auto{
+  position:absolute;
+  right: 0;
+  margin-right:25vw;
+  width:6vw;
+  }
+ .post{
+  text-align: center;
+  
+ }
+
  
   
   
