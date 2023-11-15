@@ -1,0 +1,49 @@
+div.cart-shohin{
+    display: flex;
+    height:21vw;
+    width:90vw;
+    margin-left:3vw;
+}
+button{
+    border:solid 1px black;
+    text-align:center;
+    width:7vw;
+    min-width:40px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+}
+div.cart-shohin img{
+    width:20vw;
+    height:18vw;
+    margin:auto 0 auto 10vw;
+}
+div.name{
+    font-size:min(3vw,30px);
+    margin:100px 0 20px 10vw;
+}
+div.cart-shohin p{
+    font-size:min(3vw,30px);
+}
+.date{
+    margin:auto 0 auto 5vw;
+    
+}
+.syosai{
+    margin:auto 0 auto 5vw;
+}
+.sname{
+    margin-bottom:2vw;
+}
+.price{
+    margin-bottom:2vw;
+}
+button.backb{
+    display: block;
+    font-size: 3vw;
+    width: 20vw;
+    height:6vw;
+    max-height:60px;
+    margin:0px auto;
+    color:blue;
+    margin-top:130px;
+}
