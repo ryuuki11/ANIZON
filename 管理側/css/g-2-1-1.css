@@ -10,9 +10,15 @@ h2{
     font-size: 200%;
     border: solid 2px black;
     border-collapse: collapse;
+    width: 1000px;
 }
 table{
-    margin:0 auto;   
+    margin:0 auto;
+}
+
+.boder{
+    border: solid 2px black;
+    border-collapse: collapse;
 }
 
 .button{
