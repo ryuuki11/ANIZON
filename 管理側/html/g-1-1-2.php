@@ -12,10 +12,10 @@
         <h1>anizon</h1><br>
     </p>
     
-    <form action="g-2-1-1.html" method="post">
+    <form action="g-2-1-1.php" method="post">
         <td><button type="submit" class="red">商品（景品）</button></td>
     </form>
-    <form action="g-2-2-1.html" method="post">
+    <form action="g-2-2-1.php" method="post">
         <td><button type="submit" class="blue">顧客</button></td>
     </form>
 

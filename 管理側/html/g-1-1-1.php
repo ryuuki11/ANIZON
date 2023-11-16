@@ -15,7 +15,7 @@
         <input type="text" name="password" id="2"><br>
     
     <div class="button">
-    <form action="g-1-1-2.html" method="post">
+    <form action="g-1-1-2.php" method="post">
         <td><button type="submit">ログイン</button></td>
     </form>
     </div>

@@ -35,10 +35,10 @@
         <div class="delete">
         <h2>この内容で登録しますか?</h2><br>
             <div class="brn">
-                        <form action="g-1-1-2.html" method="post">
+                        <form action="g-1-1-2.php" method="post">
                             <button type="submit"class="yes">はい</button>
                         </form>
-                        <form action="g-2-1-2.html" method="post">
+                        <form action="g-2-1-2.php" method="post">
                             <button type="submit" class="no">いいえ</button>
                         </form>
             </div>

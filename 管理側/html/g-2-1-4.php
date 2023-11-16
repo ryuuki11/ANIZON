@@ -9,16 +9,16 @@
 <body>
         <h1>anizon</h1><br>
         <h2>景品一覧</h2><br>
-                <form action="g-2-1-1.html" method="post">
+                <form action="g-2-1-1.php" method="post">
                     <button type="submit" class="syohin">商品</button>
                 </form>
             <div class="button">
                 <table class="top">
                     <tr>
-                        <form action="g-2-1-5.html" method="post">
+                        <form action="g-2-1-5.php" method="post">
                             <td><button type="submit" class="keihintouroku">景品登録</button></td>
                         </form>
-                        <form action="g-1-1-1.html" method="post" class="rogout">
+                        <form action="g-1-1-1.php" method="post" class="rogout">
                             <td><button type="submit" class="rogout">ログアウト</button></td>
                         </form>
                     </tr>

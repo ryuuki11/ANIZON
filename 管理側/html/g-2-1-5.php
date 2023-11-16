@@ -7,7 +7,7 @@
     <title>景品登録画面</title>
 </head>
 <body>
-    <form action="g-1-1-1.html" method="post">
+    <form action="g-1-1-1.php" method="post">
         <button type="submit" class="logout">ログアウト</button>
     </form>
     <h1>anizon</h1><br>
@@ -29,7 +29,7 @@
                     <td class="td2"><p>画像パス</p></td><td><p><input type="text" id="pass" placeholder="画像パス"></p></td>
                 </tr>
         </table>
-        <form action="g-2-1-7.html" method="post">
+        <form action="g-2-1-7.php" method="post">
             <button type="submit" class="toroku">登録</button>
         </form>
 </body>
