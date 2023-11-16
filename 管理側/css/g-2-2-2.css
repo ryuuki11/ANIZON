@@ -9,17 +9,25 @@ h1{
     right: 5vw;
 }
 
-.h1{
+p{
     text-align: center;
+    font-size: 200%;
+    padding-top: 5%;
 }
 
 ::placeholder{
     text-align: center;
 }
 
-table{
+table,th,td{
     margin:0 auto;   
     margin-top: 10vw;
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+td{
+    width: calc(20%);
 }
 
 .delete{
@@ -28,6 +36,14 @@ table{
     height: 45px;
     right: 5vw;
     bottom: 5vw;
+}
+
+.sakujyo{
+    color: #4e41db;
+}
+
+.rogout{
+    color: #db4158;
 }
 
 

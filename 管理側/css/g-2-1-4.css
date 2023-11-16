@@ -8,6 +8,8 @@ h2{
 
 .example{
     font-size: 200%;
+    border: solid 2px black;
+    border-collapse: collapse;
 }
 table{
     margin:0 auto;   
@@ -25,21 +27,36 @@ button{
     margin-right: 5vw;
 }
 
-.button2{
+.syohin{
     position:absolute;
-    top: 20px;
+    top: 1vw;
     left: 5vw;
     margin-left: 20vw;
-}
-
-.syouhin{
-    color: #41db6a;
+    border-radius: 20px;
+    background-color: rgb(160, 197, 241);
+    width: 10vw;
+    height: 3vw;
+    min-height: 35px;
+    min-width: 20px;
+    font-size: 20px;
 }
 
 .keihintouroku{
-    color: #6241db;
+    background-color: rgb(238, 184, 126);
+    width: 10vw;
+    height: 3vw;
+    min-height: 35px;
+    min-width: 20px;
+    font-size: 20px;
+    border-radius: 20px;
 }
 
 .rogout{
-    color: #db4146;
+    background-color: #f88e91;
+    width: 10vw;
+    height: 3vw;
+    min-height: 35px;
+    min-width: 20px;
+    font-size: 20px;
+    border-radius: 20px;
 }

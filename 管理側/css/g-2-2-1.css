@@ -5,8 +5,15 @@ h1{
 .example{
     font-size: 150%;
 }
-table{
+table,th,td{
     margin:0 auto;   
+    margin-top: 10vw;
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+td{
+    width: calc(20%);
 }
 
 button{
@@ -15,3 +22,8 @@ button{
     height: 45px;
     right: 5vw;
 }
+
+.rogout{
+    color: rgb(219, 65, 65);
+}
+

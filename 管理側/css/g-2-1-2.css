@@ -1,23 +1,43 @@
-.rogout{
-    position: absolute;
-    top:0;
-    right:0;
-    color: #db415a;
-}
-
 h1{
     text-align: center;
 }
-
-h3{
+h2{
     text-align: center;
 }
 
-p{
-    text-align: center;
+table{
+    margin-left: 35vw;
+}
+table input{
+    width: 20vw;
+    height: 3vw;
+    font-size: 20px;
+}
+
+td p{
+    font-size:min(2vw,20px);
+    font-size:max(1.5vw,5px);
+}
+
+
+button{
+    width: 8vw;
+    min-width: 70px;
+    height:4vw;
+    max-height:40px;
+    border-radius: 20px;
+}
+
+.logout{
+    position: fixed;
+    right: 7vw;
+    top: 3vw;
+    background-color: rgb(243, 156, 156);
 }
 
 .toroku{
-    text-align: center;
-    color: #ff9d09;
+    position: fixed;
+    right: 7vw;
+    bottom: 3vw;
+    background-color: rgb(150, 150, 234);
 }

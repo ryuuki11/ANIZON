@@ -1,7 +1,9 @@
 .rogout{
     position: absolute;
-    top:0;
-    right:0;
+    top:35px;
+    right: 100px;
+    width: 90px;
+    height: 45px;
 }
 
 h1{
