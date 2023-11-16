@@ -24,6 +24,13 @@ button{
 }
 
 .rogout{
-    color: rgb(219, 65, 65);
+    background-color: #f1b4bf;
+    width: 9vw;
+    height: 2vw;
+    min-height: 35px;
+    min-width: 20px;
+    font-size: 15px;
+    border-radius: 20px;
 }
+
 
