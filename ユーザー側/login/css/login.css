@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
 body {
- font:size 40px;
- margin-top: 25vh;
+ font-size: 40px;
 }
 
 p{  
@@ -25,18 +24,37 @@ a{
   margin-bottom:30px;
 }
 
-button{
+/*button{
   font-size:18px;
   background-color: #ffffff;
   border-radius:20px;
+  border: solid 2px #6fa1ff;
   padding:4px 0;
   margin: 10px auto;
   width:200px;
   text-align:center;
 }
+*/
 
-.toroku{
+button {
+  padding-top: 5px;
+  margin: 10px;
+  text-decoration: none;
+  text-align: center;
+  border: solid 1px rgb(190, 190, 190);
+  border-radius: 20px;
+  background-color: white;
+  box-shadow:0px 2px 4px rgb(177, 177, 177);
+  width:150px;
+  height:50px;
+  font-size: 20px;
+}
+
+.toroku,.next{
   color: #6fa1ff;
+}
+.login {
+  color: rgb(228, 83, 83);
 }
 
 div{
