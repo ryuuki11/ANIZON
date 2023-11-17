@@ -10,6 +10,12 @@ h2{
     font-size: 200%;
     border: solid 2px black;
     border-collapse: collapse;
+    width: 1000px;
+}
+
+.boder{
+    border: solid 2px black;
+    border-collapse: collapse;
 }
 table{
     margin:0 auto;   

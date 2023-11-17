@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="right-top">
-        <form action="g-1-1-1.html" method="post">
+        <form action="g-1-1-1.php" method="post">
             <button type="submit" class="rogout">ログアウト</button>
         </form>
     </div>
@@ -27,10 +27,10 @@
                 <p><input type="number" id="kosuu" value="1" class="textbox"></p>
                 <table>
                     <tr>
-                        <form action="g-2-1-9.html" method="post">
+                        <form action="g-2-1-9.php" method="post">
                             <td><button type="submit" class="sakujyo">削除</button></td>
                         </form>
-                        <form action="g-2-1-8.html" method="post">
+                        <form action="g-2-1-8.php" method="post">
                             <td><button type="submit" class="kousin">更新</button></td>
                         </form>
                     </tr>
