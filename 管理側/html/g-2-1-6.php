@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="right-top">
-    <form action="g-1-1-1.html" method="post">
+    <form action="g-1-1-1.php" method="post">
         <button type="submit" class="rogout">ログアウト</button>
     </div>
     </form>
@@ -20,7 +20,7 @@
         <p><input type="text" id="explain" placeholder="商品説明"></p>
         <p><input type="text" id="stock" placeholder="在庫情報"></p>
 
-    <form action="g-2-1-7.html" method="post">
+    <form action="g-2-1-7.php" method="post">
         <button type="submit" class="toroku">登録</button>
     </form>
 </body>

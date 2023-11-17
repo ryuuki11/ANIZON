@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="g-1-1-1.html" method="post">
+    <form action="g-1-1-1.php" method="post">
         <button type="submit" class="rogout">ログアウト</button>
     </form>
     <h1>anizon</h1>
@@ -29,7 +29,7 @@
         </table>
     </div>
     <div class="delete">
-        <form action="g-2-2-1.html" method="post">
+        <form action="g-2-2-1.php" method="post">
             <button type="submit" class="sakujyo">アカウント削除</button>
         </form>
     </div>

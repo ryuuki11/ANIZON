@@ -14,9 +14,9 @@
     <a><p>パスワード</a><br>
     <input type="password" name="password"></p><br>
 
-        <div class="login"><button type="submit">ログイン</button><br></div>
+        <div><button type="submit" class="login">ログイン</button><br></div>
     </form>
 
-    <div class="toroku"><button onclick="location.href='toroku.php'">新規登録</button></div>
+    <div><button class="toroku" onclick="location.href='toroku.php'">新規登録</button></div>
 </body>
 </html>

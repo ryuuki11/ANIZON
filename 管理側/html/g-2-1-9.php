@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/g-2-1-8.css" />
-    <title>更新確認画面</title>
+    <link rel="stylesheet" href="../css/g-2-1-9.css" />
+    <title>削除確認画面</title>
 </head>
 <body>
     <h1>anizon</h1><br>
@@ -33,12 +33,12 @@
         </table>
         </div>
         <div class="delete">
-        <h2>この内容で更新しますか?</h2><br>
+        <h2>この内容で削除しますか?</h2><br>
             <div class="brn">
-                        <form action="g-1-1-2.html" method="post">
+                        <form action="g-1-1-2.php" method="post">
                             <button type="submit"class="yes">はい</button>
                         </form>
-                        <form action="g-2-1-2.html" method="post">
+                        <form action="g-2-1-2.php" method="post">
                             <button type="submit" class="no">いいえ</button>
                         </form>
             </div>

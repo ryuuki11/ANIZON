@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="../css/g-1-1-1.css" />
 </head>
 <body>
+    <form action="g-1-1-1-output.php" method="post">
     <div class="all">
         <h1>anizon</h1><br>
         <p>ログインID</p>
-        <input type="text" name="userid" id="1"><br>
+        <input type="text" name="id" id="1"><br>
         <p>パスワード</p>
         <input type="text" name="password" id="2"><br>
     
     <div class="button">
-    <form action="g-1-1-2.html" method="post">
         <td><button type="submit">ログイン</button></td>
+    </div>
+    </div>
     </form>
-    </div>
-    </div>
-    
 </body>
 </html>

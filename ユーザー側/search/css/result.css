@@ -1,0 +1,38 @@
+h2{
+    font-size: 4vw;
+    margin-top: 10vw;
+    margin-left:5vw;
+}
+h2.title{
+    margin-top:20vw;
+}
+.result{
+    display: grid;
+    grid-template-columns: auto auto ; 
+    grid-template-rows: repeat(auto,auto), 100px ;
+    
+}
+.result div{
+    margin:0 auto;
+}
+.shohin img{
+    width: 30vw;
+    max-width:350px;
+    margin-top:50px;
+    margin-bottom: 20px;
+}
+.shohin p{
+    text-align: left;
+    margin-left:2vw;
+    font-size: 2vw;
+  }
+  .osusume{
+    display: grid;
+    grid-template-columns: auto auto ; 
+    grid-template-rows: repeat(auto,auto), 100px ;
+    margin-top: 50px;
+  }
+  .osusume div{
+    margin:0 auto;
+  }
+ 
