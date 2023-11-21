@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ログイン</title>
-    <link rel="stylesheet">
+    <link rel="stylesheet"href="../css/g-1-1-1-output.css" >
 </head>
 <body>
 <?php
