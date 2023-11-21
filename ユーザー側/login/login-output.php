@@ -1,12 +1,5 @@
 <?php session_start(); ?>
-<?php
-    const SERVER = 'mysql219.phy.lolipop.lan';
-    const DBNAME = 'LAA1518095-anizon';
-    const USER = 'LAA1518095';
-    const PASS = 'Pass0809';
-
-    $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
-?>
+<?php require 'db_connect.php'; ?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -36,7 +29,7 @@ if (empty($_POST['login'])) {
     echo '<p>パスワードを入力してください。</p>';    
 }else if (isset($_SESSION['member'])) {
     echo '<p>ログインしました。</p>';
-    echo '<button onclick="location.href='home.php'">ホームページへ</button>';
+    echo '<div><button class="next" onclick="location.href=',"'home.php'",'">ホームへ</button></div>';
 }else{
     echo '<p>ログインに失敗しました。</p>';
 }

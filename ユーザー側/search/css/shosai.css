@@ -1,0 +1,45 @@
+div.shohin{
+    display:flex;
+    width:80vw;
+    margin:0 auto;
+}
+.shohin img{
+    width:40vw;
+}
+.shohin .shosai{
+    width:22vw;
+    font-size:min(3vw,30px);
+}
+.name{
+    padding-top: 9vw;
+}
+p{
+    margin-top: 2vw;
+    margin-left:2vw;
+}
+p.setumei{
+    font-size:min(2vw,20px);
+}
+button{
+    
+    border:solid 1px black;
+    text-align:center;
+    width:7vw;
+    min-width:40px;
+    background-color: rgb(240, 241, 241);
+}
+button.cart{
+    display: block;
+    width:auto;
+    margin:5vw auto 0 auto;
+}
+button.backb{
+    display: block;
+    font-size: min(4vw,30px);
+    border-radius: 25px;
+    width: auto;
+    height:6vw;
+    max-height:40px;
+    color:blue;
+    margin:10vw auto 0 auto;
+}
