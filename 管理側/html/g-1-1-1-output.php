@@ -30,7 +30,9 @@ foreach ($sql as $row) {
     }
 }
  
-if (empty($_POST['id'])) {
+if (empty($_POST['id']) and empty($_POST['password'])){
+    echo '<p>ログインIDとパスワードを入力してください。</p>';
+}else if(empty($_POST['id'])) {
     echo '<p>ログインIDを入力してください。</p>';
 }else if (empty($_POST['password'])) {
     echo '<p>パスワードを入力してください。</p>';    
