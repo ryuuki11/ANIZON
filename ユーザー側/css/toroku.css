@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 body {
+<<<<<<< HEAD
  font:size 40px;
  margin-top: 25vh;
 }
@@ -22,10 +23,22 @@ a{
     margin-bottom:30px;
   }
   button{
+=======
+ text-align: center;
+}
+
+input{
+  margin: 10px auto;
+  width:200px;
+  font-size: 20px;
+}
+  .p{
+>>>>>>> 9e311265afa1512bb36891aba138392a1fd25371
     font-size:18px;
     background-color: #ffffff;
     border-radius:20px;
     padding:4px 0;
+<<<<<<< HEAD
     margin: 10px auto;
     width:200px;
     text-align:center;
@@ -53,6 +66,23 @@ text-align: center;
   .post{
     text-align:center;
   }
+=======
+    text-align: center;
+    width:200px;
+    margin-bottom: 10px;
+  }
+  .toroku{
+    color: rgb(60, 224, 224);
+    margin-top: 20px;
+  }
+.place{
+  font-size: 20px;
+  margin-top: 20px;
+}
+.name{
+  text-align: center;
+}
+>>>>>>> 9e311265afa1512bb36891aba138392a1fd25371
  
   
   
