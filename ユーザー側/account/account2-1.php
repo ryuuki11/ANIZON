@@ -5,6 +5,8 @@
     <head>
 
     <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/account2-1.css">
     <title>アカウント情報</title>
 </head>
@@ -25,7 +27,7 @@
 
     echo '<p class="name">',$name,'さんのアカウント情報</p><br>';
     
-    echo '<p class="midasi">ログインID</p>';
+    echo '<p class="midasi top">ログインID</p>';
     echo '<p>',$login,'</p>';
 
     echo '<p class="midasi">パスワード</p>';
