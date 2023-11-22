@@ -1,3 +1,5 @@
+<?php sesson_start(); ?>
+
 <!DOCTYPE html>
 <html lang="ja">
     <head>
@@ -7,9 +9,14 @@
     <title>login</title>
 </head>
 <body>
-        <p>○○○○○○○○○○さん</p><br>
-            <p>変更完了です</p>
-            
+<?php
+    $name='';
+    if(isset($_SESSION['member'])) {
+        $name = $_SESSION['member']['m_name'];
+    }
+    echo '<p>',$name,'さん</p><br>';
+    echo '<p>変更完了です</p>';
+?>        
       
             
 

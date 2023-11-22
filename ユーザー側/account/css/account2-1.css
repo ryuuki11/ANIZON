@@ -1,27 +1,39 @@
 body {
-    font:size 100px;
-    margin-top: 15vh;
-    text-align:center;
-   }
-p{
-    text-align: center;
-    font-size: large;
-   
+  margin-top: 15vh;
+  text-align:center;
 }
+
 div{
-    text-align: center;
+  text-align: center;
 }
+
 .toroku{
-    color: rgb(62, 197, 255);
-    border-radius:20px;
-    padding:4px 0;
-    margin: 10px auto;
-    width:150px;
-  }
-  button{
-    background-color: #ffffff;
-  }
-  p.name{
-    text-decoration: underline;
-    font-size:min(4vw,20px);
-  }
+  color: rgb(62, 197, 255);
+}
+
+.toroku{
+  padding-top: 5px;
+  margin: 10px auto;
+  text-decoration: none;
+  text-align: center;
+  border: solid 1px rgb(190, 190, 190);
+  border-radius: 20px;
+  background-color: white;
+  box-shadow:0px 2px 4px rgb(177, 177, 177);
+  width:180px;
+  height:60px;
+  font-size: 30px;
+}
+
+p.name{
+  text-decoration: underline;
+  font-size:40px;
+}
+
+.midasi {
+  font-weight: bold;
+}
+
+p {
+  font-size:30px;
+}
