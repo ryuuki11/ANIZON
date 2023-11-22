@@ -2,66 +2,81 @@ body{
   text-align:center;
   
 }
-p{
-  
+div{  
   text-align:center;
-  margin-bottom:30px;
-  padding:4px 0;
-
+  font-size:clamp(15px, 3vw, 20px);
 }
 input{
   margin: 10px auto;
-  width:25vw;
-  font-size: 2vw; 
-  min-width:200px;
-  min-height:20px;
+  width:20vw;
+  min-width: 200px;
+  height:3vw;
+  min-height: 30px;
+  text-align:center;
+  border: solid 2px black;
+  font-size: clamp(15px, 3vw, 20px);
 }
-a{
-    font-size: 2vw;
+  input.button{
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
     text-align:center;
-    margin-bottom:30px;
+    width:10vw;
+    min-width:90px;
+    height:5vw;
+    max-height:35px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
   }
   button{
-    font-size:1vw;
-    background-color: #ffffff;
-    border-radius:20px;
-    padding:4px 0;
-    margin: 10px auto;
-    width:15vw;
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
     text-align:center;
+    width:10vw;
+    min-width:90px;
+    height:5vw;
+    max-height:40px;
+    min-height: 20px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
   }
+  div.buttn2 button{
+    position:absolute;
+    top:50px;
+    right: 0;
+    margin-right:20vw;
+    color: rgb(75, 189, 246);
+}
   .toroku{
     color: aqua;
   }
   div{
-text-align: center;
+    text-align: center;
+    margin-top: 20px;
 
-  }
-  .th{
-    text-align: left;
-    font-size:2vw;
-  }
-  table{
-    text-align:center;
-    margin:0 auto;
   }
   .addres{
   
     text-align:center;
     font-size:2vw;
   }
-  div.buttn{
-    
+  div.button{
     text-align: center;
-    
   }
-  button.auto{
-  margin:auto 0 auto 0;
+  input.button{
+  width:10vw;
+  min-width:30px;
+  font-size:clamp(7px, 2vw, 15px);
+  }
+  div.p{
+    width:40vw;
   }
  .post{
   text-align: center;
-  margin-left:17.5vw;
+  margin-left:12.5vw;
   margin-right:2vw;
+ }
+ form{
+  margin-top: 100px;
  }
 
  
