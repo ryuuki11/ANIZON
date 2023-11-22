@@ -50,23 +50,18 @@ text-align: center;
     text-align:center;
     font-size:2vw;
   }
-  div.post{
-    width: 100vw;
-  }
   div.buttn{
-    display:flex;
+    
     text-align: center;
     
   }
-  .auto{
-  position:absolute;
-  right: 0;
-  margin-right:25vw;
-  width:6vw;
+  button.auto{
+  margin:auto 0 auto 0;
   }
  .post{
   text-align: center;
-  
+  margin-left:17.5vw;
+  margin-right:2vw;
  }
 
  

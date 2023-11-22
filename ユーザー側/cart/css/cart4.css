@@ -41,11 +41,15 @@ body{
        text-align: center;
        font-size:3.5vw;
     }
-    div.post{
-      width: 100vw;
-    }
+    button.auto{
+      margin:auto 0 auto 0;
+      }
+     input.post{
+      text-align: center;
+      margin-left:17.5vw;
+      margin-right:2vw;
+     }
     div.buttn{
-      display:flex;
       text-align: center;
       
     }
@@ -59,15 +63,6 @@ body{
     color: rgb(75, 189, 246);
     width:6vw;
     }
-    .auto{
-    position:absolute;
-    right: 0;
-    margin-right:25vw;
-    width:6vw;
-    }
-   .post{
-    text-align: center;
-   }
    .name{
     font-size:2vw;
    }

@@ -1,31 +1,47 @@
 body{
     text-align: center;
+    font-size: min(4vw,25px);
+}
+input{
+    height:3vw;
+    max-height: 30px;
+    font-size: min(3vw,20px);
+}
+table{
+    margin:0 auto;
+}
+.back{
+    margin-left: 70vw;
 }
 
-span{
-    margin-left: 50px;
-}
- .back{
+ .back button{
         border-radius: 20px;
-        display: block;
-        width:90px;
-        height:30px;
         padding-top:5px;
-        box-sizing: border-box;
-        background:#fff;
-        color: #6fa1ff;
-        box-shadow:0px 2px 4px rgb(177, 177, 177);
+        color: blue;
+        margin-right: 45vw;
         text-decoration: none;
-        margin-left: 55%;
+        width:5vw;
+        min-width: 70px;
+        height:3vw;
+        min-height: 25px;
+        max-height:40px;
+        font-size:min(2vw,15px);
  }
 
 .name{
-    font-size: 12px;
+    font-size: min(3vw,20px);
     margin-top: 20px;
+}
+td.td2 input, td.td2 div{
+    margin-left: 2vw;
 }
 
 .text{
     margin-top: 5px;
+}
+td input{
+    width:15vw;
+    max-width: 150px;
 }
 
 .number{
@@ -36,6 +52,10 @@ span{
 .null{
     margin-bottom: 100px;
 }
+.null input{
+    width:30vw;
+    max-width: 300px;
+}
 
 .data{
     margin-top: -90px;
@@ -43,23 +63,25 @@ span{
 .code{
     margin-top: 10px;
 }
+input.code2{
+    width:10vw;
+    max-width: 100px;
+}
 .sum{
     margin-top: 30px;
     margin-left:100px;
     margin-bottom: -20px;
 }
 
-.gacha {
-    padding:16px 24px;
-    display: block;
-    margin:auto;
+.gacha button{
     margin-top:50px;
     text-decoration: none;
-    border: 2px;
+    width:6vw;
+    min-width: 80px;
+    height:3vw;
+    min-height: 25px;
+    max-height:40px;
+    font-size:min(2vw,15px);
     border-radius: 20px;
-    background-color: white;
     color: red;
-    box-shadow:0px 2px 4px rgb(177, 177, 177);
-    width:100px;
-    height:20px;
 }

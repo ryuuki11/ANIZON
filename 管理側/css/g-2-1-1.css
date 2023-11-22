@@ -7,13 +7,15 @@ h2{
 }
 
 .example{
-    font-size: 200%;
+    table-layout: fixed;
+    font-size: 150%;
     border: solid 2px black;
     border-collapse: collapse;
     width: 1000px;
 }
 table{
     margin:0 auto;
+    font-size: 5px;
 }
 
 .boder{
@@ -21,6 +23,21 @@ table{
     border-collapse: collapse;
 }
 
+table td{
+    font-size: 20px;
+}
+
+.name{
+    width: 40vw;
+}
+
+.price{
+    width: 10vw;
+}
+
+.category{
+    width: 20vw;
+}
 .button{
     position:absolute;
     top: 1vw;

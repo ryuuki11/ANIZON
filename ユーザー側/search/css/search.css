@@ -26,15 +26,22 @@ p{
 input,select{
     border: solid 1px black;
     width: 30vw;
+    min-width: 200px;
     height:5vw;
     max-height: 40px;
     font-size: min(3vw,25px);
-    margin-left:5vw;
-    margin-top:2vw;
+    margin:0 auto;
+    text-align: left;
+    margin-bottom: 30px;
 }
 .word{
-    margin-left:20vw;
+    text-align: center;
     margin-top:4vw;
+}
+.word p{
+    text-align: left;
+    margin-left:30vw;
+    margin-bottom: 20px;
 }
 button.search{
     display: block;
