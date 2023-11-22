@@ -16,7 +16,7 @@ body{
     min-width:200px;
     min-height:20px;
   }
-  a{
+  p.pos{
       font-size: 2vw;
       text-align:center;
       margin-bottom:30px;
