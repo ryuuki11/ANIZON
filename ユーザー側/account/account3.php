@@ -12,14 +12,8 @@
 
     <a><p>パスワードを20字以内で入力してください</a><br>
         <input type="text" name="password"></p><br>
-
-    <table>
-        <tr>
-        <td class="th">姓</td><td class="th">名</td>
-        </tr>
-        <tr><td><div class="firstname"><input type="text" name="name1"></div></td>
-        <td><div class="midlname"><input type="text" name="name2"></div></td></tr>
-    </table>
+    <a><p>名前を入力してください</p></a>
+    <input type="text" name="name">
     <a><p>メールアドレスを入力してください</a><br>
                 <input type="text"  name="mail" value="○○○○○○○○○○○○"></p><br>
         <p class="addres">ご住所</p>
@@ -35,6 +29,6 @@
         <a><p>電話番号</a><br>
             <input type="text" name="tel"></p>
             
-        <div class="buttn"><button class="toroku" type="submit">確認</button></div>
+        <button class="toroku" type="submit">確認</button>
 </body>
 </html>

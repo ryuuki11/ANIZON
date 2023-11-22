@@ -38,7 +38,7 @@ if(isset($_SESSION['Member'])){
  echo ' <div class="place">ご住所</div>';
  echo ' <div>郵便番号を入力してください</div>';
  echo ' <input type="text" id="zipcode maxlength="8" name="post" value="',$post,'">';
- echo ' <div class=p><input type="button" value="自動入力"></div>';
+ echo ' <div class="p"><input type="button" value="自動入力"></div>';
  echo ' <div>都道府県</div>';
  echo ' <input type="text" size="30" name="prefecture" value="',$address,'">';
  echo ' <div>市区町村、番地</div>';

@@ -8,11 +8,11 @@
 </head>
 <body>
     <form action="login-output.php" method="post">
-    <a><p>ログインID</a><br>
+        <a><p>ログインID</a><br>
         <input type="text" name="login"></p>
 
-    <a><p>パスワード</a><br>
-    <input type="password" name="password"></p><br>
+        <a><p>パスワード</a><br>
+        <input type="password" name="password"></p><br>
 
         <div><button type="submit" class="login">ログイン</button><br></div>
     </form>
