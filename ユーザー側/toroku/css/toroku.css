@@ -1,5 +1,6 @@
 body{
   text-align:center;
+  font-size:clamp(15px, 3vw, 20px);
   
 }
 div{  
@@ -44,6 +45,7 @@ input{
     top:50px;
     right: 0;
     margin-right:20vw;
+    min-width: 70px;
     color: rgb(75, 189, 246);
 }
   .toroku{

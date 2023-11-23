@@ -39,4 +39,5 @@ body {
 }
 .return{
 color: rgb(75, 189, 246);
+min-width: 70px;
 }

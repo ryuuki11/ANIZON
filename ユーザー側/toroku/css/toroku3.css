@@ -24,4 +24,5 @@ body {
   }
   .toroku{
     margin-top: 50px;
+    font-size:clamp(10px, 4vw, 25px);
   }
