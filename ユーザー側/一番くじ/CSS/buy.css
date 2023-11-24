@@ -1,87 +1,90 @@
 body{
-    text-align: center;
-    font-size: min(4vw,25px);
-}
-input{
-    height:3vw;
-    max-height: 30px;
-    font-size: min(3vw,20px);
-}
-table{
+    font-size:clamp(15px, 3vw, 20px);
+  }
+  hr{
+    width:90vw;
     margin:0 auto;
-}
-.back{
-    margin-left: 70vw;
-}
-
- .back button{
-        border-radius: 20px;
-        padding-top:5px;
-        color: blue;
-        margin-right: 45vw;
-        text-decoration: none;
-        width:5vw;
-        min-width: 70px;
-        height:3vw;
-        min-height: 25px;
-        max-height:40px;
-        font-size:min(2vw,15px);
- }
-
-.name{
-    font-size: min(3vw,20px);
-    margin-top: 20px;
-}
-td.td2 input, td.td2 div{
-    margin-left: 2vw;
-}
-
-.text{
-    margin-top: 5px;
-}
-td input{
-    width:15vw;
-    max-width: 150px;
-}
-
-.number{
-    margin-top: 10px;
-    margin-bottom: -20px;
-}
-
-.null{
-    margin-bottom: 100px;
-}
-.null input{
-    width:30vw;
-    max-width: 300px;
-}
-
-.data{
-    margin-top: -90px;
-}
-.code{
-    margin-top: 10px;
-}
-input.code2{
+  }
+  button{
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
+    text-align:center;
     width:10vw;
-    max-width: 100px;
-}
-.sum{
-    margin-top: 30px;
-    margin-left:100px;
-    margin-bottom: -20px;
-}
-
-.gacha button{
-    margin-top:50px;
-    text-decoration: none;
-    width:6vw;
-    min-width: 80px;
-    height:3vw;
-    min-height: 25px;
+    min-width:90px;
+    height:5vw;
     max-height:40px;
-    font-size:min(2vw,15px);
-    border-radius: 20px;
-    color: red;
+    min-height: 20px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+  }
+  div.buttn2 button{
+    position:absolute;
+    top:5vw;
+    right: 0;
+    margin-right:20vw;
+    min-width: 70px;
+    color: rgb(75, 189, 246);
 }
+p.shiharai{
+    font-weight: bold;
+    font-size:clamp(15px, 4vw, 25px);
+    width:80vw;
+    margin:5vw 0 0 auto;
+}
+  .allprice{
+    font-size:clamp(15px, 4vw, 25px);
+    width: auto;
+    float: right;
+    margin-right: 10vw;
+    margin-top: 3vw;
+   
+  }
+  input,select{
+    margin: 10px auto;
+    width:20vw;
+    min-width: 200px;
+    height:3vw;
+    min-height: 30px;
+    text-align:center;
+    border: solid 2px black;
+    font-size: clamp(15px, 3vw, 20px);
+  }
+  div.addres{
+    text-align: center;
+    margin-top:20px;
+  }
+  div.addres p.input{
+    margin-top: 20px;
+  }
+  p.select{
+    text-align: center;
+  }
+  div.card{
+    text-align: center;
+    margin-top:7vw;
+  }
+  p.kin{
+    margin-top: 50px;
+  }
+  table{
+    margin:0 auto;
+  }
+  select.month,select.year{
+    width:6vw;
+    min-width: 60px;
+  }
+  select.year{
+    margin-left:2vw;
+  }
+  .gachab{
+    text-align: center;
+    margin-top: 13vw;
+  }
+  .gachab button{
+    display: block;
+    font-size:clamp(10px, 3vw, 25px);
+    width:20vw;
+    max-width: 250px;
+    margin:0px auto;
+    color:red;
+  }
