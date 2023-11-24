@@ -8,11 +8,14 @@
 </head>
 <body>
     <form action="#" method="post">
-        クレジットのみ<span><a href="hiroaka.html" class="back">戻る</a></span>
+        <p>クレジットのみ</p>
+        <a href="hiroaka.html" class="back"><button>戻る</button></a>
     </form>
-
-    <div class="name">ローマ姓　　　　　　　　ローマ名</div>
-    <div class="text"><input type="text" name="sei" size="6">　　　<input type="text" name="mei" size="6"></div>
+    <table>
+        <div class="name"><tr><td><div>ローマ姓</div></td><td class="td2"><div>ローマ名</div></td></tr></div>
+        <tr><td><input type="text" name="sei"></td><td class="td2"><input type="text" name="mei"></td></tr>
+    </table>
+    
     <div class="number">番号入力</div><br>
     <div class="null"><input type="text" name="number"></div>
     <div class="data">有効期限</div>
@@ -20,8 +23,8 @@
     <input type="text" name="year" size="3"> 年<br>
     <div class="code">セキュリティコード</div>
     ３桁<br>
-    <input type="text" name="code" size="2"><br>
-    <div class="sum">合計　　円</div>
-    <a href="hirogacha.html" class="gacha">ガチャへ</a>
+    <input type="text"  class="code2" name="code"><br>
+    <div class="sum">合計円</div>
+    <a href="hirogacha.html" class="gacha"><button>ガチャへ</button></a>
 </body>
 </html>
