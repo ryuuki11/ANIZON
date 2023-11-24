@@ -55,8 +55,8 @@
                         $sql=$pdo-prepare('inset into Shohin value(?,?,?,?,?,?);');
                         $pdo->execute($_SESSION['Shohin']['name'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['pass']);
                     }else if(isset($_POST['Ktoroku'])){
-                        $sql=$pdo-prepare('inset into Shohin value(?,?,?,?,?,?);');
-                        $pdo->execute($_SESSION['Shohin']['name'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['pass']);
+                        $sql=$pdo-prepare('inset into Prize value(?,?,?,?,?,?);');
+                        $pdo->execute($_SESSION['Prize']['name'],$_SESSION['Prize']['category'],$_SESSION['Prize']['explain'],$_SESSION['Prize']['price'],$_SESSION['Prize']['stock'],$_SESSION['Prize']['pass']);
                     }
             
             ?>

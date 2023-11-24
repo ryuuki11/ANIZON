@@ -1,4 +1,4 @@
-<?php session_stat() ?>
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -39,22 +39,22 @@
                         echo '<tr class="boder">';
                         echo '<th class="boder name">商品名</th>';
                         echo '<th class="boder rank">ランク</th>';
-                        echo '<th class="boder stock">在庫数</th>';
+                        echo '<th class="boder stock">カテゴリー</th>';
                         echo '</tr>';
                         foreach($sql as $row){
                         echo '<tr class="boder">';
-                        echo '<td class="boder name"><a href="g-2-1-3.php?id=',$row['s_id'],'">',$row['s_name'],'</a></td>';
-                        echo '<td class="boder rank">',$row['price'],'</td>';
+                        echo '<td class="boder name"><a href="g-2-1-3.php?id=',$row['p_id'],'">',$row['p_name'],'</a></td>';
+                        echo '<td class="boder rank">',$row['rank'],'</td>';
                         echo '<td class="boder stock">',$row['category'],'</td>';
                         echo '</tr>';
                         }
                 echo '</table>';
 
                 if(isset($_POST['toroku'])){
-                    $sql=$pdo-prepare('inset into Shohin value(?,?,?,?,?,?);');
+                    $sql=$pdo-prepare('inset into Prize value(?,?,?,?,?,?);');
                     $pdo->execute($_SESSION['Shohin']['name'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['pass']);
                 }else if(isset($_POST['Ktoroku'])){
-                    $sql=$pdo-prepare('inset into Shohin value(?,?,?,?,?,?);');
+                    $sql=$pdo-prepare('inset into Prize value(?,?,?,?,?,?);');
                     $pdo->execute($_SESSION['Shohin']['name'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['pass']);
                 }
         ?>

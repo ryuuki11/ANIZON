@@ -24,13 +24,13 @@ table td{
 }
 
 .name{
-    width: 50vw;
+    width: 40vw;
 }
 .rank{
     width: 10vw;
 }
 .stock{
-    width: 10vw;
+    width: 20vw;
 }
 
 table{
