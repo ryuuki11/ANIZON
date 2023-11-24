@@ -1,6 +1,6 @@
 <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
-    const DBNAME = 'LAA1518095-anizom';
+    const DBNAME = 'LAA1518095-anizon';
     const USER = 'LAA1518095';
     const PASS = 'Pass0809';
 
@@ -20,7 +20,7 @@ $login=$password=$m_name=$post=$address=$city=$apart=$mail=$number='';
 if(isset($_SESSION['Member'])){
     $login=$_SESSION['Member']['login'];
     $password=$_SESSION['Member']['password'];
-    $m_name=$_SESSION['Member']['name'];
+    $m_name=$_SESSION['Member']['m_name'];
     $post=$_SESSION['Member']['post'];
     $address=$_SESSION['Member']['address'];
     $city=$_SESSION['Member']['city'];
@@ -37,10 +37,10 @@ if(isset($_SESSION['Member'])){
  echo ' <input type="text" size="10" name="m_name" value="',$m_name,'">';
  echo ' <div class="place">ご住所</div>';
  echo ' <div>郵便番号を入力してください</div>';
- echo ' <input type="text" id="zipcode maxlength="8" name="post" value="',$post,'">';
- echo ' <div class=p><input type="button" value="自動入力"></div>';
+ echo ' <input type="text" maxlength="8" name="post" value="',$post,'">';
+ echo ' <input type="button" class="auto" value="自動入力">';
  echo ' <div>都道府県</div>';
- echo ' <input type="text" size="30" name="prefecture" value="',$address,'">';
+ echo ' <input type="text" size="30" name="address" value="',$address,'">';
  echo ' <div>市区町村、番地</div>';
  echo ' <input type="text" size="30" name="city" value="',$city,'">';
  echo ' <div>マンション名、号室等</div>';
