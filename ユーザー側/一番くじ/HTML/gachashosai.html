@@ -4,33 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>景品一覧【僕のヒーローアカデミア】</title>
+    <link rel="stylesheet" href="../CSS/reset.css">
     <link rel="stylesheet" href="../CSS/keihin.css">
 </head>
-<body>
+<body class="hiroaka">
     <div class="top">
     <img src="image/hiroaka/ヒロアカトップ.jpg" alt="【僕のヒーローアカデミア】">
     </div>
-    <a class="image">
-    <p>A賞　緑谷出久</p>
-    <img src="image/hiroaka/緑谷.jpg" alt="A賞【緑谷出久】">
-    <p>B賞　爆豪勝己</p>
-    <img src="image/hiroaka/爆豪.jpg" alt="B賞【爆豪勝己】">
-    <p>C賞　轟焦凍</p>
-    <img src="image/hiroaka/轟.jpg" alt="C賞【轟焦凍】">
-    <p>D賞　ランダムアクリルスタンド</p>
-    <img src="image/hiroaka/アクスタ.jpg" alt="D賞【ランダムアクリルスタンド】">
-    <p>E賞　ランダムビジュアルプレート</p>
-    <img src="image/hiroaka/ビジュアルプレート.jpg" alt="E賞【ランダムビジュアルプレート】">
-    </a>
-
-    <p>購入数を入力してください</p>
+    <div class="image">
+        <div class="keihin1">
+                <span class="A">A賞</span><span>midoro</span>
+            <img src="image/hiroaka/緑谷.png" alt="A賞【緑谷出久】">
+        </div>
+        <div class="bc">
+        <div class="keihin2">
+            <span class="B">B賞</span><span>爆豪勝己</span>
+            <img src="image/hiroaka/爆豪.png" alt="B賞【爆豪勝己】">
+        </div>
+        <div class="keihin3">
+            <span class="C">C賞</span><span>轟焦凍</span>
+            <img src="image/hiroaka/轟.png" alt="C賞【轟焦凍】">
+        </div>
+        </div>
+        <div class="keihin4">
+            <span class="D">D賞</span><span>ランダムアクリルスタンド</span>
+            <img src="image/hiroaka/アクスタ.png" alt="D賞【ランダムアクリルスタンド】">
+        </div>
+    </div>
     <div class="kazu">
-    <input type="number" name="kazu">
+        <p>購入数を入力してください</p>
+        <input type="number" name="kazu">
     </div>
     <div class="button">
-    <a href="buy.html" class="buy"><button>購入</button></a>
-    <a href="hirogacha.html" class="gacha"><button>ガチャへ</button></a>
-    <a href="gachaichiran.html" class="back"><button>ガチャ一覧へ</button></a>
+        <div  class="buy"><a href="buy.html"><button>購入</button></a></div>
+        <div  class="gacha"><a href="hirogacha.html"><button>ガチャへ</button></a></div>
+        <div  class="back"><a href="gachaichiran.html"><button>ガチャ一覧へ</button></a></div>
     </div>
 </body>
 </html>
