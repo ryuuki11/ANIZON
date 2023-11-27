@@ -25,7 +25,8 @@ foreach ($sql as $row) {
             'city' => $row['city'],
             'apart' => $row['apart'],
             'mail' => $row['mail'],
-            'number' => $row['number']
+            'number' => $row['number'],
+            'id' =>$row['m_id']
         ];
     }
 }
