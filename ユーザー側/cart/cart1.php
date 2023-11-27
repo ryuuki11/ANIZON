@@ -9,85 +9,82 @@
     <link rel="stylesheet" href="css/footer.css" />
     <title>anizon</title>
 </head>
-    <body>
-            <p class="name">○○さんのカート</p>
-            <hr>
-            <div class="cart-shohin">
-                <input type="checkbox" class="checkbox c1" id="c1" name="check">
-                <label for="c1" class="check">
-                <p class="date">11/24</p>
-                <img src="img/noimage.png" alt="">
-                <div class="syosai">
-                    <p class="sname">商品名</p>
-                    <p class="price">金額</p>
-                    <div class="btn">
-                        <p><button type="submit" class="delete">削除</button>
-                        <button type="submit" class="buy">購入</button></p>
-                    </div>
-                </div>
-                </label>
-            </div>
-            <hr>
+<body>
+    
 
+    <?php
+    const SERVER = 'mysql219.phy.lolipop.lan';
+    const DBNAME = 'LAA1518095-anizon';
+    const USER = 'LAA1518095';
+    const PASS = 'Pass0809';
+ 
+    $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
 
-            <div class="cart-shohin">
-                <input type="checkbox" class="checkbox 1" id="c2" name="check">
-                <label for="c2" class="check">
-                <p class="date">11/30</p>
-                <img src="img/noimage.png" alt="">
-                <div class="syosai">
-                    <p class="sname">商品名</p>
-                    <p class="price">金額</p>
-                    <div class="btn">
-                        <p><button type="submit" class="delete">削除</button>
-                        <button type="submit" class="buy">購入</button></p>
-                    </div>
-                </div>
-                </label>
-            </div>
-            <hr>
-            <div class="cart-shohin">
-                <input type="checkbox" class="checkbox 1" id="c3" name="check">
-                <label for="c3" class="check">
-                <p class="date">11/30</p>
-                <img src="img/noimage.png" alt="">
-                <div class="syosai">
-                    <p class="sname">商品名</p>
-                    <p class="price">金額</p>
-                    <div class="btn">
-                        <p><button type="submit" class="delete">削除</button>
-                        <button type="submit" class="buy">購入</button></p>
-                    </div>
-                </div>
-                </label>
-            </div>
-            <hr>
-            <div class="select">
-                <button  onClick="checkAll()" >
-                    全選択
-                </button> 
-                <button onClick="uncheckAll()">
-                    選択解除
-                </button>
-            </div>
-            <button class="all">
-                まとめて購入
-            </button>
+    echo '<div class="name">津隈さんのカート</div>';
+    echo '<hr>';
+    // 接続確認
+   
 
+    // カートテーブルから商品情報を取得
+    $pdo=new PDO($connect,USER,PASS);
+    $result = $pdo->prepare('select * from (select *from Cart inner join Shohin on Cart.s_id=Shohin.s_id)where m_id=?');
 
-            <script>
-            const checkbox1 = document.getElementsByName("check")
+    if (!empty($result)) {
+        // 取得した商品情報を表示
+        foreach($result as $row) {
+            echo '<div class="cart-shohin">';
+            echo '<input type="checkbox" class="checkbox 1" id="c1" name="check">';
+            echo '<label for="c1" class="check">';
+            echo '<p class="date">' . $row["date"] . '</p>';
+            echo '<img src="' . $row["image"] . '" alt="">';
+            echo '<div class="syosai">';
+            echo '<p class="sname" id="s_name">' . $row["s_name"] . '</p>';
+            echo '<p class="sname" id="name"></p>';
+            echo '<p class="price">' . $row["price"] . '</p>';
+            echo '<div class="btn">';
+            echo '<p><button type="submit" class="delete">削除</button>';
+            echo '<button type="submit" class="buy">購入</button></p>';
+            echo '</div>';
+            echo '</div>';
+            echo '</label>';
+            echo '</div>';
+            echo '<hr>';
+        }
+    } else {
+        echo "カートに商品がありません。";
+    }
 
-function checkAll() {
-  for(i = 0; i < checkbox1.length; i++) {
-    checkbox1[i].checked = true
-  }
-}
-function uncheckAll(){
-    for(i = 0; i < checkbox1.length; i++) {
-    checkbox1[i].checked = false;
-  }
-}
-            </script>
-    </body>
+    // データベース接続を閉じる
+   
+    ?>
+
+    <div class="select">
+        <button onClick="checkAll()">全選択</button>
+        <button onClick="uncheckAll()">選択解除</button>
+    </div>
+    <form action="cart2.php">
+    <button class="all">まとめて購入</button></form>
+
+    <script>
+        const a =document.getElementById('s_name');
+        const b =document.getElementById('name');
+        const c =a.textContent;
+        const d =c.split(' ');
+        a.textContent=d[0];
+        b.textContent=d[1];
+        const checkbox1 = document.getElementsByName("check");
+
+        function checkAll() {
+            for (i = 0; i < checkbox1.length; i++) {
+                checkbox1[i].checked = true;
+            }
+        }
+
+        function uncheckAll() {
+            for (i = 0; i < checkbox1.length; i++) {
+                checkbox1[i].checked = false;
+            }
+        }
+    </script>
+</body>
 </html>
