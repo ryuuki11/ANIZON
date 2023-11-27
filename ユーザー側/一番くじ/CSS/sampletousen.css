@@ -1,14 +1,19 @@
+body{
+    font-size:clamp(15px, 3vw, 20px);
+  }
 h1 {
     text-align: center;
+    font-size:clamp(15px, 5vw, 30px);
+    font-weight: bold;
 }
 div.box{
     display: flex;
-    margin-top: 100px;
+    margin-top: 30px;
 }
 div.img{
     width:80vw;
     height:30vw;
-    background-color: rgb(211, 213, 214);
+    background-color: rgb(243, 229, 205);
     margin: 10vw auto 0 auto;
     overflow: hidden;
     
@@ -25,40 +30,28 @@ img.d {
     width: 50vw;
 }
 
-.next,.fin {
-    padding:16px 24px;
-    display: block;
-    margin:auto;
-    margin-top:50px;
-    text-decoration: none;
+button{
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
+    text-align:center;
+    width:10vw;
+    min-width:90px;
+    height:5vw;
+    max-height:40px;
+    min-height: 20px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+  }
+    
+  .next button{
+    font-size:clamp(10px, 4vw, 25px);
+    width:15vw;
+    color:blue;
+  }
+  .nextb{
     text-align: center;
-    border: 2px;
-    border-radius: 20px;
-    border-color: black;
-    background-color: white;
-    color: red;
-    box-shadow:0px 2px 4px rgb(177, 177, 177);
-    width:100px;
-    height:20px;
-    font-size: large;
-}
-
-.change {
-    padding-top: 10px;
-    display: inline-block;
-    margin-left: 65%;
-    text-align: center;
-    text-decoration: none;
-    border: 2px;
-    border-radius:20px;
-    border-color: black;
-    background-color: white;
-    color: rgb(93, 214, 95);
-    box-shadow:0px 2px 4px rgb(177, 177, 177);
-    width: 90px;
-    height: 30px;
-    font-size: medium;
-}
+    margin-top:15vw;
+  }
 
 p {
     display:block;

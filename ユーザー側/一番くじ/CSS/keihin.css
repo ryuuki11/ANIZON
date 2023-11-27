@@ -1,60 +1,191 @@
-.button {
+body{
+    font-size:clamp(15px, 3vw, 20px);
     text-align: center;
 }
-.buy,.gacha,.back {
-    padding:16px 24px;
-    display: block;
-    margin:auto;
-    text-decoration: none;
-    border: 2px;
-    border-radius: 20px;
+
+/*背景デザイン*/
+.hiroaka{
+    background-image: url(../HTML/image/hiroaka/back.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode:lighten;  
+}
+.jojo{
+    background-image: url(../HTML/image/jojo/jojoback.jpg);
+    background-attachment: fixed;
+    background-size: contain;
+}
+.jojo p,.juju p{
     color: white;
-    box-shadow:0px 2px 4px rgb(177, 177, 177);
-    width:100px;
-    height:20px;
 }
+.hiroaka p,.doragon p,.one p{
+    color:black;
+}
+.else p{
+    color: black;
+}
+.juju{
+    background-image: url(../HTML/image/juju/back.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.1);
+    background-blend-mode:lighten;  
+}
+.doragon{
+    background-image: url(../HTML/image/doragon/back.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode:lighten;  
+}
+.one{
+    background-image: url(../HTML/image/one/back.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.2);
+    background-blend-mode:lighten;  
+}
+.else{
+    background-color: rgb(245, 245, 206);
+}
+/* 背景終了*/
 
-.buy {
-    background-color: rgb(112, 227, 129);
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.top{
+    margin-bottom: 3vw;
 }
-.gacha {
-    background-color:rgb(255, 124, 124);
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-.back {
-    background-color:#6fa1ff;
-    margin: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
 .top img {
-    width:100%;
+    width:80%;
+    margin: auto;
 }
-
 .image img {
     display: block;
     margin: auto;
-    width: 400px;
-    height: 400px;
 }
 
-p {
-    text-align: center;
+/*景品文字*/
+span{
+    font-weight: bold;
+    text-shadow:
+            2px 2px 0px #fff, -2px -2px 0px #fff,
+           -2px 2px 0px #fff,  2px -2px 0px #fff,
+            2px 0px 0px #fff, -2px -0px 0px #fff,
+            0px 2px 0px #fff,  0px -2px 0px #fff;
+}
+span.A,span.B,span.C,span.D{
+    font-size: 3vw;
+    margin-right:1vw;
+}
+span.A{
+    color:red;
+}
+span.B{
+    color:rgb(27, 155, 27);
+}
+span.C{
+    color:rgb(69, 133, 224);
+}
+span.D{
+    color:rgb(80, 104, 43);
 }
 
-.image p::first-letter {
-    font-size: 2em;
+/*景品画像*/
+.bc{
+    display: flex;
+    margin:0 auto;
 }
-
-p {
-    text-align: center;
+.keihin1{
+    width:100vw;
 }
-.kazu {
-    text-align: center;
+.keihin1 img{
+    width:30vw;
+    min-width:200px;
+    background-image: url("../HTML/image/back1.png");
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position:center;
 }
+.keihin2{
+    width: 50vw;
+}
+.keihin2 img{
+    width:35vw;
+    min-width:200px;
+    background-image: url("../HTML/image/back1.png");
+    background-size: contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.keihin2 img,.keihin2 p{
+    padding-left: 10vw;
+}
+.keihin3{
+    width:50vw;
+    margin-top:10vw;
+}
+.keihin3 img{
+    width: 35vw;
+    min-width: 200px;
+    background-image: url("../HTML/image/back1.png");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.keihin3 img,.keihin3 p{
+    padding-right:10vw;
+}
+.keihin4{
+    width:100vw;
+    margin-top: 2vw;
+}
+.keihin4 img{
+    width: 15vw;
+    min-width: 100px;
+    background-image: url("../HTML/image/back.jpg");
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+.kazu{
+    margin-top: 7vw;
+}
+.kazu p{
+    color: black;
+    font-weight: bold;
+}
+input{
+    margin: 10px auto;
+    width:20vw;
+    min-width: 200px;
+    height:3vw;
+    min-height: 30px;
+    text-align:center;
+    border: solid 2px black;
+    font-size: clamp(15px, 3vw, 20px);
+    background-color: white;
+  }
+  .button{
+    margin-top: 5vw;
+  }
+  button{
+    font-size:clamp(10px, 2vw, 20px);
+    border:solid 1px black;
+    text-align:center;
+    width:13vw;
+    min-width:100px;
+    height:5vw;
+    max-height:40px;
+    min-height: 20px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+    margin-top:2vw;
+  }
+  .buy button{
+    color:blue
+  }
+  .gacha button{
+    color:red;
+  }
+  .back button{
+    color: rgb(75, 189, 246);
+  }
