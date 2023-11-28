@@ -1,6 +1,6 @@
 <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
-    const DBNAME = 'LAA1518095-anizon';
+    const DBNAME = 'LAA1518095-anizom';
     const USER = 'LAA1518095';
     const PASS = 'Pass0809';
 
@@ -21,7 +21,7 @@ $login=$password=$m_name=$post=$address=$city=$apart=$mail=$number='';
 if(isset($_SESSION['Member'])){
     $login=$_SESSION['Member']['login'];
     $password=$_SESSION['Member']['password'];
-    $m_name=$_SESSION['Member']['m_name'];
+    $m_name=$_SESSION['Member']['name'];
     $post=$_SESSION['Member']['post'];
     $address=$_SESSION['Member']['address'];
     $apart=$_SESSION['Member']['apart'];
@@ -34,18 +34,18 @@ if(isset($_SESSION['Member'])){
  echo '<div class="pass">パスワードを20字以内で入力してください</div>';
  echo '<input type="password" name="password" value="',$password,'">';
  echo '<div class="name">お名前</div>';
- echo ' <input type="text" size="10" name="m_name" value="',$m_name,'">';
+ echo ' <input type="text" name="m_name" value="',$m_name,'">';
  echo ' <div class="place">ご住所</div>';
  echo ' <div>郵便番号を入力してください</div>';
  echo ' <input type="text" name="post" value="',$post,'" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,\'\',\'address\',\'address\');" >';
  echo ' <div>住所</div>';
  echo ' <input type="text" name="address" size="30" value="',$address,'">';
  echo ' <div>マンション名、号室等</div>';
- echo ' <input type="text" size="30" name="apart" value="',$apart,'">';
+ echo ' <input type="text"  name="apart" value="',$apart,'">';
  echo ' <div>メールアドレスを入力してください</div>';
- echo ' <input type="text" size="30" name="mail" value="',$mail,'">';
+ echo ' <input type="text"  name="mail" value="',$mail,'">';
  echo ' <div>電話番号</div>';
- echo ' <input type="text" size="30" name="number" value="',$number,'">';
+ echo ' <input type="text" name="number" value="',$number,'">';
  echo ' <div><button class="toroku" type="submit">確認</button></div>';
  echo '</form>';
     ?>
