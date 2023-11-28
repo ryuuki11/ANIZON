@@ -9,16 +9,27 @@
     <link rel="stylesheet" href="CSS/gacha.css">
     <script src="https://code.jquery.com/jquery.min.js"></script>
 </head>
-<body>
-    <?php
-    $_SESSION['flag']=0;
-
+<?php
     const SERVER = 'mysql219.phy.lolipop.lan';
     const DBNAME = 'LAA1518095-anizon';
     const USER = 'LAA1518095';
     const PASS = 'Pass0809';
     $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
     $pdo=new PDO($connect,USER,PASS);
+    $sql=$pdo->prepare('select i_rank from image where s_id=?');
+    $sql->execute([$_SESSION['gacha']['id']]);
+    $j=0;
+    foreach($sql as $row){
+        echo '<body class="',$row['i_rank'],'">';
+        $j++;
+    }
+    if($j==0){
+        echo '<body class="else">';
+    }
+
+
+    $_SESSION['flag']=0;
+
     $sql=$pdo->prepare('select image from Shohin where s_id=?');
     $sql->execute([$_SESSION['gacha']['id']]);
     $image='';
@@ -80,6 +91,7 @@
             break;
         }
     }
+    $_SESSION['gacha']['rank']=$rank;
     echo '<div class="bottom">';
     echo '<p>あと',$num,'回</p>';
     echo '<div class="backv"></div>';
@@ -88,7 +100,6 @@
     echo '</div>';
 
     echo '<div class="button">';
-           echo '<img src="image/gacha.jpg">';
             echo '<button class="dis_none_bt">ガチャを回す</button>';
     echo '</div>';
     echo '</div>';

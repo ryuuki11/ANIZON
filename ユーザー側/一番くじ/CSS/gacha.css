@@ -1,6 +1,53 @@
 body{
     font-size:clamp(15px, 3vw, 20px);
   }
+
+  .hiroaka{
+    background-image: url(../image/hiroaka/back.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode:lighten;  
+}
+.jojo{
+    background-image: url(../image/jojo/jojoback.jpg);
+    background-attachment: fixed;
+    background-size: contain;
+}
+.hiroaka p,.doragon p{
+    color:black;
+}
+.juju p,.jojo p,.one p{
+    color: white;
+}
+.else p{
+    color: black;
+}
+.juju{
+    background-image: url(../image/juju/back.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.1);
+    background-blend-mode:lighten;  
+}
+.doragon{
+    background-image: url(../image/doragon/back.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode:lighten;  
+}
+.one{
+    background-image: url(../image/one/back.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.2);
+    background-blend-mode:lighten;  
+}
+.else{
+    background-color: white;
+}
+
   button{
     font-size:clamp(10px, 3vw, 20px);
     border:solid 1px black;
@@ -27,13 +74,9 @@ body{
     max-height:45px;
     color:red;
 }
-.button img{
-    width:7vw;
-    max-width: 60px;
-}
-
 p {
     text-align: center;
+    font-weight: bold;
 }
 div.img{
     float:right;
@@ -84,7 +127,7 @@ div.img img{
     visibility: hidden;
     margin: 3rem auto;
     padding: 4%;
-    background-color: whitesmoke;
+    
 }
 video{
     position: absolute;

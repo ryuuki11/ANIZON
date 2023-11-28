@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="CSS/keihin.css">
 </head>
 <?php
-    const SERVER = 'mysql219.phy.lolipop.lan';
+   const SERVER = 'mysql219.phy.lolipop.lan';
     const DBNAME = 'LAA1518095-anizon';
     const USER = 'LAA1518095';
     const PASS = 'Pass0809';
-    $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+    $connect = 'mys ql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
     $pdo=new PDO($connect,USER,PASS);
     $sql=$pdo->prepare('select i_rank from image where s_id=?');
     $sql->execute([$_GET['id']]);

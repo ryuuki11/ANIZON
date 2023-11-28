@@ -1,6 +1,53 @@
 body{
     font-size:clamp(15px, 3vw, 20px);
   }
+
+  .hiroaka{
+    background-image: url(../image/hiroaka/back.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode:lighten;  
+}
+.jojo{
+    background-image: url(../image/jojo/jojoback.jpg);
+    background-attachment: fixed;
+    background-size: contain;
+}
+.hiroaka p,.doragon p,.one p{
+    color:black;
+}
+.jojo .kazu p,.juju .kazu p,.one .kazu p{
+  color: white;
+}
+.else p{
+    color: black;
+}
+.juju{
+    background-image: url(../image/juju/back.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.1);
+    background-blend-mode:lighten;  
+}
+.doragon{
+    background-image: url(../image/doragon/back.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.3);
+    background-blend-mode:lighten;  
+}
+.one{
+    background-image: url(../image/one/back.webp);
+    background-attachment: fixed;
+    background-position: center;
+    background-color:rgba(255,255,255,0.2);
+    background-blend-mode:lighten;  
+}
+.else{
+    background-color: white;
+}
+
 h1 {
     text-align: center;
     font-size:clamp(15px, 5vw, 30px);
@@ -61,4 +108,28 @@ p {
 .place {
     display: block;
     text-align: center;
+}
+h1{
+  font-weight: bold;
+  text-shadow:
+          1px 1px 0px #fff, -1px -1px 0px #fff,
+         -1px 1px 0px #fff,  1px -1px 0px #fff,
+          1px 0px 0px #fff, -1px -0px 0px #fff,
+          0px 1px 0px #fff,  0px -1px 0px #fff;
+}
+.A,.B,.C,.D{
+  font-size: 3vw;
+  margin-right:1vw;
+}
+.A{
+  color:red;
+}
+.B{
+  color:rgb(27, 155, 27);
+}
+.C{
+  color:rgb(69, 133, 224);
+}
+.D{
+  color:rgb(80, 104, 43);
 }
