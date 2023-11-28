@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/header_sazae.css" />
-    <link rel="stylesheet" href="css/cart3-2.css" />
+    <link rel="stylesheet" href="css/cart3.css" />
     <link rel="stylesheet" href="css/footer.css" />
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <title>anizon</title>
