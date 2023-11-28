@@ -1,84 +1,79 @@
 body{
-    text-align: center;
-}
-input{
+    text-align:center;
+    font-size:clamp(15px, 3vw, 20px);
+  }
+  div{  
+    text-align:center;
+    font-size:clamp(15px, 3vw, 20px);
+  }
+  input{
+    margin: 10px auto;
     width:20vw;
-    min-width:150px;
+    min-width: 200px;
     height:3vw;
-    min-height:20px;
-    max-height:25px;
-}
+    min-height: 30px;
+    text-align:center;
+    border: solid 2px black;
+    font-size: clamp(15px, 3vw, 20px);
+  }
+    input.button{
+      font-size:clamp(10px, 3vw, 20px);
+      border:solid 1px black;
+      text-align:center;
+      width:10vw;
+      min-width:90px;
+      height:5vw;
+      max-height:35px;
+      border-radius: 25px;
+      background-color: rgb(240, 241, 241);
+    }
+    button{
+      font-size:clamp(10px, 3vw, 20px);
+      border:solid 1px black;
+      text-align:center;
+      width:10vw;
+      min-width:90px;
+      height:5vw;
+      max-height:40px;
+      min-height: 20px;
+      border-radius: 25px;
+      background-color: rgb(240, 241, 241);
+    }
+    div{
+      text-align: center;
+      margin-top: 20px;
   
-.list button{
-    border-radius: 20px;
-    color: #6fa1ff;
-    width:5vw;
-    min-width: 60px;
-    height:3vw;
-    min-height: 25px;
-    max-height:30px;
-    font-size:min(2vw,10px);
-    margin-left: 54%;
-}
-
-.place{
-    font-size: 20px;
-    margin-right: 150px;
-    margin-top: -20px;
-    margin-bottom: 20px;
-}
-
-
-.flex {
-    display: flex;
-    justify-content: center;
-}
-.button{
-    border-radius: 20px;
-    width:5vw;
-    min-width: 60px;
-    height:3vw;
-    min-height: 25px;
-    max-height:30px;
-    font-size:min(2vw,10px);
-    color: rgb(0, 0, 0);
-    margin-left: 10px;
-}
-.post {
-    display: block;
-    height: 20px;
-    margin-top: 3px;
-    width:14vw;
-    min-width:80px;
-}
-
-.prefecture{
-    margin-right: 150px;
-    margin-top: 10px;
-}
-  
-.town{
-    margin-right: 100px;
-    margin-top: 10px;
-}
-
-.mansion{
-    margin-right: 54px;
-    margin-top: 10px;
-}
-
-.push button{
-    margin-top:50px;
-    border-radius: 20px;
-    color: red;
-    width:5vw;
-    min-width: 70px;
-    height:3vw;
-    min-height: 25px;
-    max-height:40px;
-    font-size:min(2vw,15px);
-}
-.push{
-    display:block;
+    }
+    .place{
+        margin-top: 3vw;
+    }
+    .addres{
+    
+      text-align:center;
+      font-size:2vw;
+    }
+    div.button{
+      text-align: center;
+    }
+    input.button{
+    width:10vw;
+    min-width:30px;
+    font-size:clamp(7px, 2vw, 15px);
+    }
+    div.p{
+      width:40vw;
+    }
+   .post{
     text-align: center;
-}
+    margin-left:12.5vw;
+    margin-right:2vw;
+   }
+   .push{
+    margin-top: 50px;
+   }
+   .push button{
+    color: rgb(38, 204, 13);
+   }
+   form{
+    margin-top: 100px;
+   }
