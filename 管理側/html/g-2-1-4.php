@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php session_stat() ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -39,7 +39,7 @@
                         echo '<tr class="boder">';
                         echo '<th class="boder name">商品名</th>';
                         echo '<th class="boder rank">ランク</th>';
-                        echo '<th class="boder stock">カテゴリー</th>';
+                        echo '<th class="boder stock">在庫数</th>';
                         echo '</tr>';
                         foreach($sql as $row){
                         echo '<tr class="boder">';
@@ -51,10 +51,10 @@
                 echo '</table>';
 
                 if(isset($_POST['toroku'])){
-                    $sql=$pdo-prepare('inset into Prize value(?,?,?,?,?,?);');
+                    $sql=$pdo-prepare('inset into Shohin value(?,?,?,?,?,?);');
                     $pdo->execute($_SESSION['Shohin']['name'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['pass']);
                 }else if(isset($_POST['Ktoroku'])){
-                    $sql=$pdo-prepare('inset into Prize value(?,?,?,?,?,?);');
+                    $sql=$pdo-prepare('inset into Shohin value(?,?,?,?,?,?);');
                     $pdo->execute($_SESSION['Shohin']['name'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['pass']);
                 }
         ?>
