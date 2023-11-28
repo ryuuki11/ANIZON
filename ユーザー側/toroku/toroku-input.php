@@ -11,7 +11,8 @@
 <html lang="ja">
     <head>
     <meta charset="UTF=8">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-    <link rel="stylesheet" href="css/toroku.css">
+    <link rel="stylesheet" href="css/toroku0.css">
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
     <title>新規登録 </title>
 </head>
 <body>
@@ -23,7 +24,6 @@ if(isset($_SESSION['Member'])){
     $m_name=$_SESSION['Member']['m_name'];
     $post=$_SESSION['Member']['post'];
     $address=$_SESSION['Member']['address'];
-    $city=$_SESSION['Member']['city'];
     $apart=$_SESSION['Member']['apart'];
     $mail=$_SESSION['Member']['mail'];
     $number=$_SESSION['Member']['number'];
@@ -37,12 +37,9 @@ if(isset($_SESSION['Member'])){
  echo ' <input type="text" size="10" name="m_name" value="',$m_name,'">';
  echo ' <div class="place">ご住所</div>';
  echo ' <div>郵便番号を入力してください</div>';
- echo ' <input type="text" maxlength="8" name="post" value="',$post,'">';
- echo ' <input type="button" class="auto" value="自動入力">';
- echo ' <div>都道府県</div>';
- echo ' <input type="text" size="30" name="address" value="',$address,'">';
- echo ' <div>市区町村、番地</div>';
- echo ' <input type="text" size="30" name="city" value="',$city,'">';
+ echo ' <input type="text" name="post" value="',$post,'" size="10" maxlength="8" onKeyUp="AjaxZip3.zip2addr(this,\'\',\'address\',\'address\');" >';
+ echo ' <div>住所</div>';
+ echo ' <input type="text" name="address" size="30" value="',$address,'">';
  echo ' <div>マンション名、号室等</div>';
  echo ' <input type="text" size="30" name="apart" value="',$apart,'">';
  echo ' <div>メールアドレスを入力してください</div>';

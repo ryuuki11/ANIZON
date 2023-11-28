@@ -2,13 +2,6 @@ body{
   text-align:center;
   
 }
-p{
-  
-  text-align:center;
-  margin-bottom:30px;
-  padding:4px 0;
-
-}
 input{
   margin: 10px auto;
   width:25vw;
@@ -16,37 +9,21 @@ input{
   min-width:200px;
   min-height:20px;
 }
-a{
-    font-size: 2vw;
-    text-align:center;
-    margin-bottom:30px;
-  }
-  button{
-    font-size:1vw;
-    background-color: #ffffff;
-    border-radius:20px;
-    padding:4px 0;
-    margin: 10px auto;
-    width:15vw;
-    text-align:center;
-  }
   .toroku{
+    font-size: 13px;
+    border-radius: 20px;
+    display: block;
+    width:90px;
+    height:30px;
+    padding-top:5px;
+    box-sizing: border-box;
+    border: 1px;
+    background:#fff;
+    box-shadow:0px 2px 4px rgb(177, 177, 177);
+    text-align: center;
     color: aqua;
   }
-  div{
-text-align: center;
-
-  }
-  .th{
-    text-align: left;
-    font-size:2vw;
-  }
-  table{
-    text-align:center;
-    margin:0 auto;
-  }
   .addres{
-  
     text-align:center;
     font-size:2vw;
   }
@@ -57,12 +34,6 @@ text-align: center;
     display:flex;
     text-align: center;
     
-  }
-  .auto{
-  position:absolute;
-  right: 0;
-  margin-right:25vw;
-  width:6vw;
   }
  .post{
   text-align: center;
