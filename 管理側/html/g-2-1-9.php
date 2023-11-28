@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,25 +11,42 @@
     <h1>anizon</h1><br>
     <div class="all">
         <div class="table">
-            <table>
-                <tr>
-                    <td class="td2"><p>商品名</p></td><td class="td3"><p>入力商品名</p></td>
-                </tr>
-                <tr>
-                    <td class="td2"><p>カテゴリー</p></td><td class="td3"><p>入力商品名</p></td>
-                </tr>
-                <tr>
-                    <td class="td2"><p>商品説明</p></td><td class="td3"><p>入力商品名</p></td>
-                </tr>
-                <tr>
-                    <td class="td2"><p>値段</p></td><td class="td3"><p>入力商品名</p></td>
-                </tr>
-                <tr>
-                    <td class="td2"><p>在庫情報</p></td><td class="td3"><p>入力商品名</p></td>
-                </tr>
-                <tr>
-                    <td class="td2"><p>画像パス</p></td><td class="td3"><p>入力商品名</p></td>
-                </tr>
+            <?php
+                $name=$category=$price=$image=$explain='';
+                $_SESSION['Shohin']['name']=$_POST['name'];
+                $_SESSION['Shohin']['category']=$_POST['category'];
+                $_SESSION['Shohin']['price']=$_POST['price'];
+                $_SESSION['Shohin']['stock']=$_POST['pass'];
+                $_SESSION['Shohin']['explain']=$_POST['explain'];
+
+            $both="";
+            $both2="";
+            if(isset($_POST['Psakujo'])){
+                $both="ランク";
+                $both2="景品ID";
+            }else if(isset($_POST['sakujo'])){
+                $both="カテゴリー";
+                $both2="値段";
+            }
+            echo '<table>';
+                echo '<tr>
+                    <td class="td2"><p>商品名</p></td><td class="td3">',$_POST['p_name'],'</td>
+                </tr><br>';
+                echo '<tr>
+                    <td class="td2"><p>',$both,'</p></td><td class="td3">',$_POST['category'],'</td>
+                </tr><br>';
+                echo '<tr>
+                    <td class="td2"><p>説明</p></td><td class="td3">',$_POST['explain'],'</td>
+                </tr><br>';
+                echo '<tr>
+                    <td class="td2"><p>',$both2,'</p></td><td class="td3">',$_POST['price'],'</td>
+                </tr><br>';
+                echo '<tr>
+                    <td class="td2"><p>在庫情報</p></td><td class="td3">',$_POST['stock'],'</td>
+                </tr><br>';
+                echo '<tr>
+                    <td class="td2"><p>画像パス</p></td><td class="td3">',$_POST['pass'],'</td>
+                </tr><br>';
                 
         </table>
         </div>

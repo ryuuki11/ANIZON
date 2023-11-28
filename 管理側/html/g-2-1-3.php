@@ -26,31 +26,47 @@
         $pdo=new PDO($connect,USER,PASS);
         $sql=$pdo->prepare('select * from Shohin where s_id=?');
         $sql->execute([$_GET['id']]);
-
         foreach($sql as $row){
-    echo '<div class="shohin">';
-            echo '<div class="shosai">';
-                echo '<p><input type="text" id="name" value=',$row['s_id'],'></p>';
-                echo '<p><input type="text" id="category" value=',$row['category'],'></p>';
-                echo '<p><input type="text" id="price" value=',$row['price'],'></p>';
-                echo '<p><input type="text" id="pass" value=',$row['image'],'></p>';
-            echo '</div>';
-                echo '<textarea id="setumei" cols="50" rows="20" value=',$row['setumei'],' class="Ssetumei"></textarea>';
+            $_SESSION['Shohin2']=[
+                's_id'=>$row['s_id'],
+                'category'=>$row['category'],
+                'price' => $row['price'],
+                'image' => $row['image'],
+                'setumei' => $row['explain']
+            ];
+
+            echo '<form action="g-2-1-7.php" method="post">';
+    
+            echo '<div class="shohin">';
+                echo '<table class="left">';
+                echo '<tr>
+                    <td class="td2"><p>商品ID</p></td><td><p><input type="text" name="name" value=',$row['s_id'],' readonly></p></td>
+                </tr>';
+                echo '<tr>
+                    <td class="td2"><p>カテゴリー</p></td><td><p><input type="text" name="category" value=',$row['category'],'></p></td>
+                </tr>';
+                echo '<tr>
+                    <td class="td2"><p>値段</p></td><td><p><input type="text" name="price" value=',$row['price'],'></p></td>
+                </tr>';
+                echo '<tr>
+                    <td class="td2"><p>画像パス</p></td><td><p><input type="text" name="pass" value=',$row['image'],'></p></td>
+                </tr>';
+                echo '</table>';
+            echo '<textarea id="setumei" cols="50" rows="20" class="Ssetumei" name="explain">',$row['setumei'],'</textarea>';
         }
 
             echo '<div class="btn">';
                 echo '<p><h3>在庫管理</h3></p>';
                 echo '<p><input type="number" id="kosuu" value="1" class="textbox"></p>';
+                echo '<div class="all button">';
                 echo '<table>';
                     echo '<tr>';
-                        echo '<form action="g-2-1-9.php" method="post">';
-                            echo '<td><button type="submit" class="sakujyo">削除</button></td>';
-                        echo '</form>';
-                        echo '<form action="g-2-1-8.php" method="post">';
-                            echo '<td><button type="submit" class="kousin">更新</button></td>';
+                        echo '<td><button type="submit" class="sakujyo">削除</button></td>';
+                        echo '<td><button type="submit" class="kousin">更新</button></td>';
                         echo '</form>';                    
                     echo '</tr>';
                 echo '</table>';
+                echo '</div>';
             echo '</div>';
     echo '</div>';
     ?>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/g-2-1-7.css" />
-    <title>登録確認画面</title>
+    <title>確認画面</title>
 </head>
 <body>
     <h1>anizon</h1><br>
@@ -19,16 +19,27 @@
                     $_SESSION['Shohin']['price']=$_POST['price'];
                     $_SESSION['Shohin']['stock']=$_POST['stock'];
                     $_SESSION['Shohin']['pass']=$_POST['pass'];
-
             $both="";
             $both2="";
             if(isset($_POST['Ktoroku'])){
                 $both="ランク";
-                $both2="商品ID";  
+                $both2="景品ID";  
             }else if(isset($_POST['toroku'])){
                 $both="カテゴリー";
                 $both2="値段";
-            }  
+            }else if(isset($_POST['sakujo'])){
+                $both="カテゴリー";
+                $both2="値段";
+            }else if(isset($_POST['Psakujo'])){
+                $both="カテゴリー";
+                $both2="値段";
+            }else if(isset($_POST['kousin'])){
+                $both="カテゴリー";
+                $both2="値段";
+            }else if(isset($_POST['Pkousin'])){
+                $both="カテゴリー";
+                $both2="値段";
+            } 
             
             echo '<table>';
                 echo '<tr>
@@ -38,7 +49,7 @@
                     <td class="td2"><p>',$both,'</p></td><td class="td3">',$_POST['category'],'</td>
                 </tr><br>';
                 echo '<tr>
-                    <td class="td2"><p>商品説明</p></td><td class="td3">',$_POST['explain'],'</td>
+                    <td class="td2"><p>説明</p></td><td class="td3">',$_POST['explain'],'</td>
                 </tr><br>';
                 echo '<tr>
                     <td class="td2"><p>',$both2,'</p></td><td class="td3">',$_POST['price'],'</td>
@@ -56,6 +67,14 @@
                 $result="登録";
             }else if(isset($_POST['Ktoroku'])){
                 $result="登録";
+            }else if(isset($_POST['sakujo'])){
+                $result="削除";
+            }else if(isset($_POST['Psakujo'])){
+                $result="削除";
+            }else if(isset($_POST['kousin'])){
+                $result="更新";
+            }else if(isset($_POST['Pkousin'])){
+                $result="更新";
             }
         echo '</div>';
         echo '<div class="delete">';

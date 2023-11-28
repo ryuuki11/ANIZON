@@ -43,7 +43,7 @@
                         echo '</tr>';
                         foreach($sql as $row){
                         echo '<tr class="boder">';
-                        echo '<td class="boder name"><a href="g-2-1-3.php?id=',$row['p_id'],'">',$row['p_name'],'</a></td>';
+                        echo '<td class="boder name"><a href="g-2-1-4-1.php?id=',$row['p_id'],'">',$row['p_name'],'</a></td>';
                         echo '<td class="boder rank">',$row['rank'],'</td>';
                         echo '<td class="boder stock">',$row['category'],'</td>';
                         echo '</tr>';

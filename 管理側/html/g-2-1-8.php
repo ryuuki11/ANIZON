@@ -38,7 +38,7 @@
                         <form action="g-1-1-2.php" method="post">
                             <button type="submit"class="yes">はい</button>
                         </form>
-                        <form action="g-2-1-2.php" method="post">
+                        <form action="g-2-1-3.php" method="post">
                             <button type="submit" class="no">いいえ</button>
                         </form>
             </div>
