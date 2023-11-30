@@ -27,19 +27,21 @@
         $sql->execute([$_GET['id']]);
         foreach($sql as $row){
             $_SESSION['Shohin2']=[
+                's_name'=>$row['s_name'],
                 's_id'=>$row['s_id'],
                 'category'=>$row['category'],
                 'price' => $row['price'],
                 'image' => $row['image'],
-                'setumei' => $row['explain']
+                'setumei' => $row['setumei']
             ];
-
-            echo '<form action="g-2-1-7.php" method="post">';
-    
+            echo '<form action="g-2-1-9.php" method="post">';
             echo '<div class="shohin">';
                 echo '<table class="left">';
                 echo '<tr>
-                    <td class="td2"><p>商品ID</p></td><td><p><input type="text" name="name" value=',$row['s_id'],' readonly></p></td>
+                    <td class="td2"><p>商品名</p></td><td><p><input type="text" name="s_name" value=',$row['s_name'],'></p></td>
+                </tr>';
+                echo '<tr>
+                    <td class="td2"><p>商品ID</p></td><td><p><input type="text" name="s_id" value=',$row['s_id'],' readonly></p></td>
                 </tr>';
                 echo '<tr>
                     <td class="td2"><p>カテゴリー</p></td><td><p><input type="text" name="category" value=',$row['category'],'></p></td>

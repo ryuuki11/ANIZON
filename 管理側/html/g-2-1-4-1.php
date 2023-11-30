@@ -32,8 +32,8 @@
                 'p_name'=>$row['p_name'],
                 'rank' => $row['rank'],
                 'category' => $row['category'],
-                'image'=>$row['pass'],
-                'setumei'=>$row['explain']
+                'image'=>$row['image'],
+                'setumei'=>$row['setumei']
             ];
     echo '<div class="shohin">';
                 echo '<table class="left">';
@@ -53,7 +53,7 @@
                     <td class="td2"><p>画像パス</p></td><td><p><input type="text" name="category" value=',$row['image'],'></p></td>
                 </tr>';
                 echo '</table>';
-            echo '<textarea id="setumei" cols="50" rows="20" class="Ssetumei" name="explain">',$row['explain'],'</textarea>';
+            echo '<textarea id="setumei" cols="50" rows="20" class="Ssetumei" name="explain">',$row['setumei'],'</textarea>';
         }
 
             echo '<div class="btn">';

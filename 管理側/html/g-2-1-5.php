@@ -13,25 +13,25 @@
     <h1>anizon</h1><br>
     <h2>景品登録画面</h2>
         <?php
-            echo '<form action="g-2-1-7.php" method="post">';
+            echo '<form action="g-2-1-6.php" method="post">';
             echo '<table>';
                 echo '<tr>
-                    <td class="td2"><p>商品名</p></td><td><p><input type="text" name="name" placeholder="商品名"></p></td>
+                    <td class="td2"><p>商品名</p></td><td><p><input type="text" name="p_name" placeholder="景品名"></p></td>
                 </tr>';
                 echo '<tr>
-                    <td class="td2"><p>ランク</p></td><td><p><input type="text" name="category" placeholder="ランク"></p></td>
+                    <td class="td2"><p>ランク</p></td><td><p><input type="text" name="rank" placeholder="ランク"></p></td>
                 </tr>';
                 echo '<tr>
-                    <td class="td2"><p>商品説明</p></td><p><td><input type="text" name="explain" placeholder="商品説明"></p></td>
+                    <td class="td2"><p>商品説明</p></td><p><td><input type="text" name="setumei" placeholder="景品説明"></p></td>
                 </tr>';
                 echo '<tr>
-                    <td class="td2"><p>商品ID</p></td><td><p><input type="text" name="price" placeholder="商品ID"></p></td>
+                    <td class="td2"><p>商品ID</p></td><td><p><input type="text" name="p_id" placeholder="景品ID"></p></td>
                 </tr>';
                 echo '<tr>
-                    <td class="td2"><p>在庫情報</p></td><td><p><input type="text" name="stock" placeholder="在庫情報"></p></td>
+                    <td class="td2"><p>在庫情報</p></td><td><p><input type="text" name="category" placeholder="カテゴリー"></p></td>
                 </tr>';
                 echo '<tr>
-                    <td class="td2"><p>画像パス</p></td><td><p><input type="text" name="pass" placeholder="画像パス"></p></td>
+                    <td class="td2"><p>画像パス</p></td><td><p><input type="text" name="image" placeholder="画像パス"></p></td>
                 </tr>';
                 
         echo '</table>';

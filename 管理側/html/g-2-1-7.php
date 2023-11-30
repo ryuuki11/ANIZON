@@ -21,26 +21,17 @@
                     $_SESSION['Shohin']['pass']=$_POST['pass'];
             $both="";
             $both2="";
+    
             if(isset($_POST['Ktoroku'])){
                 $both="ランク";
-                $both2="景品ID";  
+                $both2="景品ID";
+                
             }else if(isset($_POST['toroku'])){
                 $both="カテゴリー";
                 $both2="値段";
-            }else if(isset($_POST['sakujo'])){
-                $both="カテゴリー";
-                $both2="値段";
-            }else if(isset($_POST['Psakujo'])){
-                $both="カテゴリー";
-                $both2="値段";
-            }else if(isset($_POST['kousin'])){
-                $both="カテゴリー";
-                $both2="値段";
-            }else if(isset($_POST['Pkousin'])){
-                $both="カテゴリー";
-                $both2="値段";
-            } 
-            
+                
+            }
+
             echo '<table>';
                 echo '<tr>
                     <td class="td2"><p>商品名</p></td><td class="td3">',$_POST['name'],'</td>
@@ -62,23 +53,10 @@
                 </tr><br>';
                 
         echo '</table>';
-            $result="";
-            if(isset($_POST['toroku'])){
-                $result="登録";
-            }else if(isset($_POST['Ktoroku'])){
-                $result="登録";
-            }else if(isset($_POST['sakujo'])){
-                $result="削除";
-            }else if(isset($_POST['Psakujo'])){
-                $result="削除";
-            }else if(isset($_POST['kousin'])){
-                $result="更新";
-            }else if(isset($_POST['Pkousin'])){
-                $result="更新";
-            }
+    
         echo '</div>';
         echo '<div class="delete">';
-        echo '<h2>この内容で',$result,'しますか?</h2><br>';
+        echo '<h2>この内容で登録しますか?</h2><br>';
         ?>
             <div class="brn">
                         <form action="g-1-1-2.php" method="post">
