@@ -1,5 +1,5 @@
 <?php session_start(); ?>
-<?php require '../db_connect.php'; ?>
+<?php require 'db_connect.php'; ?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -17,16 +17,8 @@ $sql->execute([$_POST['login']]);
 foreach ($sql as $row) {
     if($_POST['password']==$row['password']) {
         $_SESSION['member']=[
-            'id'=>$row['m_id'],
             'login'=>$row['login'],
-            'password'=>$row['password'],
-            'm_name' => $row['m_name'],
-            'post' => $row['post'],
-            'address' => $row['address'],
-            'apart' => $row['apart'],
-            'mail' => $row['mail'],
-            'number' => $row['number'],
-            'id' =>$row['m_id']
+            'password'=>$row['password']
         ];
     }
 }

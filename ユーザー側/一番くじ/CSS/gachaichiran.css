@@ -1,98 +1,19 @@
-body{
-    font-size:clamp(8px, 3vw, 20px);
-}
-h2{
-    text-align: left;
-    font-size:clamp(15px, 4vw, 25px);
-    font-weight: bold;
-    margin-left: 10vw;
-}
-.result{
-    display: grid;
-    width:85vw;
-    margin:0 auto;
-    grid-template-columns: auto auto ; 
-    grid-template-rows: repeat(auto,auto), 100px ;
-    
-    
-}
-.result div{
-    width:42.5vw;
+body {
     text-align: center;
 }
-.shohin img{
-    width: 35vw;
-    max-width:300px;
-    height:auto;
-    margin:50px auto 15px auto;
+
+.image{
+    display: inline-block;
 }
-.shohin p{
-    width: 35vw;
-    max-width:300px;
-    margin:2vw auto 0 auto;
-    text-align: left;
-  }
-  .botton{
-    position:relative;
-    width: 100vw;
-    height:10vw;
-    max-height: 50px;
-    background-color:#ddd;
+.image img{
+    display: block;
+}
+
+h1 {
     text-align: center;
-    margin-top: 100px;
-  }
-  .botton botton{
-    position:relative;
-    top: 40%;
-  }
+}
 
-
-@media screen and (min-width:1250px) {
-    body{
-        font-size:clamp(8px, 3vw, 20px);
-    }
-    h2{
-        text-align: left;
-        font-size:clamp(15px, 4vw, 25px);
-        font-weight: bold;
-        margin-left: 10vw;
-    }
-    .result{
-        display: grid;
-        width:90vw;
-        margin:0 auto;
-        grid-template-columns: auto auto  auto; 
-        grid-template-rows: repeat(auto,auto,auto), 100px ;
-        
-        
-    }
-    .result div{
-        width:30vw;
-        text-align: center;
-    }
-    .shohin img{
-        width: 35vw;
-        max-width:300px;
-        height:auto;
-        margin:50px auto 15px auto;
-    }
-    .shohin p{
-        width: 35vw;
-        max-width:300px;
-        margin:2vw auto 0 auto;
-        text-align: left;
-      }
-      .botton{
-        position:relative;
-        width: 100vw;
-        height:10vw;
-        max-height: 50px;
-        background-color:#ddd;
-        text-align: center;
-        margin-top: 100px;
-      }
-      .botton botton{
-        position:relative;
-        top: 40%;
-      }
+.hiro,.juju,.one,.spy {
+    display: inline-block;
+    margin: 10px;
 }

@@ -1,4 +1,3 @@
-<?php session_stat() ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>

@@ -7,8 +7,7 @@ h2{
 }
 
 .example{
-    table-layout: fixed;
-    font-size: 150%;
+    font-size: 200%;
     border: solid 2px black;
     border-collapse: collapse;
     width: 1000px;
@@ -18,29 +17,13 @@ h2{
     border: solid 2px black;
     border-collapse: collapse;
 }
-
-table td{
-    font-size: 20px;
-}
-
-.name{
-    width: 50vw;
-}
-.rank{
-    width: 10vw;
-}
-.stock{
-    width: 10vw;
-}
-
 table{
-    margin:0 auto;  
-    font-size: 5px; 
+    margin:0 auto;   
 }
 
 .button{
     position:absolute;
-    top: 1vw;
+    top: 20px;
     right: 5vw;
 }
 

@@ -1,4 +1,3 @@
-<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -60,7 +59,7 @@
         ?>
             <div class="brn">
                         <form action="g-1-1-2.php" method="post">
-                            <button type="submit" class="yes">はい</button>
+                            <button type="submit"class="yes">はい</button>
                         </form>
                         <form action="g-2-1-2.php" method="post">
                             <button type="submit" class="no">いいえ</button>

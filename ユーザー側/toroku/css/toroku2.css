@@ -1,43 +1,34 @@
 body {
-  font-size:clamp(15px, 3vw, 20px);
+    font:size 100px;
+    margin-top: 15vh;
     text-align:center;
    }
-
-   button{
-    font-size:clamp(10px, 3vw, 20px);
-    border:solid 1px black;
-    text-align:center;
-    width:10vw;
-    min-width:90px;
-    height:5vw;
-    max-height:40px;
-    min-height: 20px;
-    border-radius: 25px;
-    background-color: rgb(240, 241, 241);
-  }
-  
-  p{
-    margin-top: 20px;
-  }
-  
-  .title{
-    font-weight:bold ;
-    margin-top: 30px;
-  }
-  .top{
-    margin-top:100px;
-  }
+p{
+    text-align: center;
+    font-size: large;
+   
+}
+div{
+    text-align: center;
+}
 .toroku{
     color: rgb(62, 197, 255);
-    margin: 50px auto 0 auto;
+    border-radius:20px;
+    padding:4px 0;
+    margin: 10px auto;
+    width:150px;
   }
-  div.buttn2 button{
+  button{
+    background-color: #ffffff;
+  }
+  div.buttn2{
     position:absolute;
-    top:50px;
     right: 0;
     margin-right:20vw;
+    width:4vw;
 }
 .return{
 color: rgb(75, 189, 246);
-min-width: 70px;
+width:7vw;
+border-radius:20px;
 }

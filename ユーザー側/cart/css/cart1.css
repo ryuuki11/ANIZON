@@ -1,15 +1,8 @@
-body{
-    font-size:clamp(15px, 3vw, 20px);
-}
-hr{
-    width:90vw;
-    margin:0 auto;
-}
 div.cart-shohin{
     display: flex;
     height:21vw;
     width:90vw;
-    margin:0 auto;
+    margin-left:3vw;
 }
 
 div.cart-shohin img{
@@ -18,11 +11,11 @@ div.cart-shohin img{
     margin:auto 0 auto 10vw;
 }
 p.name{
-    font-size:clamp(15px, 4vw, 25px);
+    font-size:min(3vw,30px);
     margin:100px 0 20px 10vw;
 }
 div.cart-shohin p{
-   
+    font-size:min(3vw,30px);
 }
 .checkbox{
     width: 2vw;
@@ -43,21 +36,12 @@ div.cart-shohin p{
     margin-bottom:2vw;
 }
 button{
-    font-size:clamp(10px, 3vw, 20px);
     border:solid 1px black;
     text-align:center;
-    width:10vw;
-    min-width:90px;
-    height:5vw;
-    max-height:40px;
-    min-height: 20px;
+    width:7vw;
+    min-width:40px;
     border-radius: 25px;
     background-color: rgb(240, 241, 241);
-}
-button.delete,button.buy{
-    font-size:clamp(6px, 3vw, 20px);
-    width:8vw;
-    min-width: 20px;
 }
 button.delete{
     color:red;
@@ -69,7 +53,7 @@ button.buy{
 label.check{
     display:flex;
     width:90vw;
-    margin-left:3vw;
+    margin-left:4vw;
 }
 .checkbox:checked + label{
     box-shadow: 0 0 4px 2px rgb(139, 215, 247);
@@ -78,14 +62,17 @@ label.check{
     margin:30px 0 50px 5vw;
 }
 .select button{
-    font-size:clamp(10px, 2vw, 20px);
-    min-width: 50px;
+    width:9vw;
+    min-width: 70px;
+    height: 4vw;
+    max-height: 40px;
 }
 button.all{
     display: block;
-    font-size:clamp(10px, 3vw, 25px);
-    width:20vw;
-    max-width: 250px;
+    font-size: 3vw;
+    width: 20vw;
+    height:6vw;
+    max-height:60px;
     margin:0px auto;
     color:blue;
 }

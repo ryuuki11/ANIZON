@@ -1,51 +1,45 @@
-body{
-    font-size:clamp(15px, 3vw, 20px);
-}
 div.shohin{
     display:flex;
     width:80vw;
-    max-height: 400px;
     margin:0 auto;
-    margin-top: 50px;
 }
 .shohin img{
     width:40vw;
-    height:40vw;
-    max-width: 400px;
-    max-height: 400px;
-    margin-left: 5vw;
+}
+.shohin .shosai{
+    width:22vw;
+    font-size:min(3vw,30px);
 }
 .name{
-    margin-top: 5vw;
+    padding-top: 9vw;
 }
 p{
     margin-top: 2vw;
-    margin-left:10vw;
+    margin-left:2vw;
+}
+p.setumei{
+    font-size:min(2vw,20px);
 }
 button{
-    font-size:clamp(10px, 3vw, 20px);
+    
     border:solid 1px black;
     text-align:center;
-    width:10vw;
-    min-width:90px;
-    height:5vw;
-    max-height:40px;
-    min-height: 20px;
-    border-radius: 25px;
+    width:7vw;
+    min-width:40px;
     background-color: rgb(240, 241, 241);
 }
 button.cart{
-    font-size:clamp(7px, 2vw, 15px);
     display: block;
-    border-radius: 0px;
-    width:15vw;
-    max-width:150px ;
-    margin:7vw 0 0 15vw;
+    width:auto;
+    margin:5vw auto 0 auto;
 }
 button.backb{
     display: block;
-    width: 15vw;
-    min-width: 110px;
+    font-size: min(4vw,30px);
+    border-radius: 25px;
+    width: auto;
+    height:6vw;
+    max-height:40px;
     color:blue;
     margin:10vw auto 0 auto;
 }
