@@ -12,17 +12,16 @@
 </head>
 <body>
     <?php
-    $login=$pass=$name=$post=$address=$city=$apart=$mail=$tell='';
+    $login=$pass=$name=$post=$address=$apart=$mail=$number='';
     if(isset($_SESSION['member'])) {
         $login = $_SESSION['member']['login'];
         $pass = $_SESSION['member']['password'];
         $name = $_SESSION['member']['m_name'];
         $post = $_SESSION['member']['post'];
         $address = $_SESSION['member']['address'];
-        $city = $_SESSION['member']['city'];
         $apart = $_SESSION['member']['apart'];
         $mail = $_SESSION['member']['mail'];
-        $tell = $_SESSION['member']['number'];
+        $number = $_SESSION['member']['number'];
     }
 
     echo '<p class="name">',$name,'さんのアカウント情報</p><br>';
@@ -31,19 +30,23 @@
     echo '<p>',$login,'</p>';
 
     echo '<p class="midasi">パスワード</p>';
-    echo '<p>',$pass,'</p>';
+    echo '<p>';
+        for ($i=1;$i<strlen($pass);$i++) {
+            echo '●';
+        }
+    echo '</p>';
         
     echo '<p class="midasi">メールアドレス</p>';
     echo '<p>',$mail,'</p>';
         
     echo '<p class="midasi">住所</p>';
-    echo '<p>〒',$post,'<br>',$address,$city,'</p>';
+    echo '<p>〒',$post,'<br>',$address,'</p>';
         
     echo '<p class="midasi">マンション名・号室</p>';
     echo '<p>',$apart,'</p>';
         
     echo '<p class="midasi">電話番号</p>';
-    echo '<p>',$tell,'</p>';
+    echo '<p>',$number,'</p>';
     ?>
 
     <div><button class="toroku" onclick="location.href='account3.php'">変更する</button></div>
