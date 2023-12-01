@@ -32,32 +32,35 @@
                     <td class="td2"><p>カテゴリー</p></td><td class="td3">',$_POST['category'],'</td>
                 </tr><br>';
                 echo '<tr>
-                    <td class="td2"><p>説明</p></td><td class="td3">',$_POST['price'],'</td>
+                    <td class="td2"><p>値段</p></td><td class="td3">',$_POST['price'],'</td>
                 </tr><br>';
                 echo '<tr>
-                    <td class="td2"><p>画像パス</p></td><td class="td3">',$_POST['pass'],'</td>
+                    <td class="td2"><p>在庫情報</p></td><td class="td3">',$_POST['stock'],'</td>
                 </tr><br>';
                 echo '<tr>
-                    <td class="td2"><p>在庫情報</p></td><td class="td3">',$_POST['explain'],'</td>
-                </tr><br>';
-                echo '<tr>
-                    <td class="td2"><p>画像パス</p></td><td class="td3">',$_POST['pass'],'</td>
+                    <td class="td2"><p>商品説明</p></td><td class="td3">',$_POST['explain'],'</td>
                 </tr><br>';
                 
         echo '</table>';
         echo '</div>';
-        ?>
-        <div class="delete">
-        <h2>この内容で削除しますか?</h2><br>
-            <div class="brn">
-                        <form action="g-1-1-2.php" method="post">
-                            <button type="submit"class="yes">はい</button>
-                        </form>
-                        <form action="g-2-1-2.php" method="post">
-                            <button type="submit" class="no">いいえ</button>
-                        </form>
-            </div>
-        </div>
-    </div>
+        $result='';
+        if(isset($_POST['sakujo'])){
+            $result="この内容を削除しますか?";
+        }else if(isset($_POST['kousin'])){
+            $result="この内容に更新しますか?";
+        }
+        echo '<div class="delete">';
+        echo '<h2>',$result,'</h2><br>';
+            echo '<div class="brn">';
+                        echo '<form action="g-2-1-1.php" method="post">';
+                            echo '<button type="submit"class="yes">はい</button>';
+                        echo '</form>';
+                        echo '<a href="g-2-1-3.php?id=',$_POST['s_id'],'">';
+                            echo '<button type="submit" class="no">いいえ</button>';
+                        echo '</a>';
+            echo '</div>';
+        echo '</div>';
+    echo '</div>';
+    ?>
 </body>
 </html>

@@ -11,57 +11,45 @@
     <div class="all">
         <div class="table">
             <?php
-                $name=$category=$explain=$price=$stock=$pass='';
-                    $_SESSION['Shohin']['name']=$_POST['name'];
-                    $_SESSION['Shohin']['category']=$_POST['category'];
-                    $_SESSION['Shohin']['explain']=$_POST['explain'];
-                    $_SESSION['Shohin']['price']=$_POST['price'];
-                    $_SESSION['Shohin']['stock']=$_POST['stock'];
-                    $_SESSION['Shohin']['pass']=$_POST['pass'];
-            $both="";
-            $both2="";
-    
-            if(isset($_POST['Ktoroku'])){
-                $both="ランク";
-                $both2="景品ID";
-                
-            }else if(isset($_POST['toroku'])){
-                $both="カテゴリー";
-                $both2="値段";
-                
-            }
+                    $_SESSION['Prize']['p_name']=$_POST['p_name'];
+                    $_SESSION['Prize']['category']=$_POST['p_id'];
+                    $_SESSION['Prize']['explain']=$_POST['rank'];
+                    $_SESSION['Prize']['price']=$_POST['category'];
+                    $_SESSION['Prize']['stock']=$_POST['image'];
 
             echo '<table>';
                 echo '<tr>
-                    <td class="td2"><p>商品名</p></td><td class="td3">',$_POST['name'],'</td>
+                    <td class="td2"><p>景品名</p></td><td class="td3">',$_POST['p_name'],'</td>
                 </tr><br>';
                 echo '<tr>
-                    <td class="td2"><p>',$both,'</p></td><td class="td3">',$_POST['category'],'</td>
+                    <td class="td2"><p>景品ID</p></td><td class="td3">',$_POST['p_id'],'</td>
                 </tr><br>';
                 echo '<tr>
-                    <td class="td2"><p>説明</p></td><td class="td3">',$_POST['explain'],'</td>
+                    <td class="td2"><p>ランク</p></td><td class="td3">',$_POST['rank'],'</td>
                 </tr><br>';
                 echo '<tr>
-                    <td class="td2"><p>',$both2,'</p></td><td class="td3">',$_POST['price'],'</td>
+                    <td class="td2"><p>カテゴリー</p></td><td class="td3">',$_POST['category'],'</td>
                 </tr><br>';
                 echo '<tr>
-                    <td class="td2"><p>在庫情報</p></td><td class="td3">',$_POST['stock'],'</td>
-                </tr><br>';
-                echo '<tr>
-                    <td class="td2"><p>画像パス</p></td><td class="td3">',$_POST['pass'],'</td>
+                    <td class="td2"><p>画像パス</p></td><td class="td3">',$_POST['image'],'</td>
                 </tr><br>';
                 
         echo '</table>';
-    
         echo '</div>';
+        $result='';
+        if(isset($_POST['sakujo'])){
+            $result='この内容を削除しますか?';
+        }else if(isset($_POST['kousin'])){
+            $result='この内容に更新しますか?';
+        }
         echo '<div class="delete">';
-        echo '<h2>この内容で登録しますか?</h2><br>';
+        echo '<h2>',$result,'</h2><br>';
         ?>
             <div class="brn">
-                        <form action="g-1-1-2.php" method="post">
+                        <form action="g-2-1-4.php" method="post">
                             <button type="submit"class="yes">はい</button>
                         </form>
-                        <form action="g-2-1-2.php" method="post">
+                        <form action="g-2-1-4.php" method="post">
                             <button type="submit" class="no">いいえ</button>
                         </form>
             </div>

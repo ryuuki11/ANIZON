@@ -31,6 +31,7 @@
                 's_id'=>$row['s_id'],
                 'category'=>$row['category'],
                 'price' => $row['price'],
+                'stock' => $row['stock'],
                 'image' => $row['image'],
                 'setumei' => $row['setumei']
             ];
@@ -50,6 +51,9 @@
                     <td class="td2"><p>値段</p></td><td><p><input type="text" name="price" value=',$row['price'],'></p></td>
                 </tr>';
                 echo '<tr>
+                    <td class="td2"><p>在庫</p></td><td><p><input type="text" name="stock" value=',$row['stock'],'></p></td>
+                </tr>';
+                echo '<tr>
                     <td class="td2"><p>画像パス</p></td><td><p><input type="text" name="pass" value=',$row['image'],'></p></td>
                 </tr>';
                 echo '</table>';
@@ -62,8 +66,8 @@
                 echo '<div class="all button">';
                 echo '<table>';
                     echo '<tr>';
-                        echo '<td><button type="submit" class="sakujyo">削除</button></td>';
-                        echo '<td><button type="submit" class="kousin">更新</button></td>';
+                        echo '<td><button type="submit" class="sakujyo" name="sakujo">削除</button></td>';
+                        echo '<td><button type="submit" class="kousin" name="kousin">更新</button></td>';
                         echo '</form>';                    
                     echo '</tr>';
                 echo '</table>';

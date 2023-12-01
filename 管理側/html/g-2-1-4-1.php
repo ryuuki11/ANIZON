@@ -28,20 +28,21 @@
         $sql->execute([$_GET['id']]);
         foreach($sql as $row){
             $_SESSION['Prize2']=[
-                'p_id'=>$row['p_id'],
                 'p_name'=>$row['p_name'],
+                'p_id'=>$row['p_id'],
                 'rank' => $row['rank'],
                 'category' => $row['category'],
                 'image'=>$row['image'],
                 'setumei'=>$row['setumei']
             ];
+    echo '<form action="g-2-1-7.php" method="post">';
     echo '<div class="shohin">';
                 echo '<table class="left">';
                 echo '<tr>
-                    <td class="td2"><p>景品ID</p></td><td><p><input type="text" name="price" value=',$row['p_id'],' readonly ></p></td>
+                    <td class="td2"><p>景品名</p></td><td><p><input type="text" name="p_name" value=',$row['p_name'],'></p></td>
                 </tr>';
                 echo '<tr>
-                    <td class="td2"><p>商品名</p></td><td><p><input type="text" name="name" value=',$row['p_name'],'></p></td>
+                    <td class="td2"><p>景品ID</p></td><td><p><input type="text" name="p_id" value=',$row['p_id'],' readonly ></p></td>
                 </tr>';
                 echo '<tr>
                     <td class="td2"><p>ランク</p></td><td><p><input type="text" name="rank" value=',$row['rank'],'></p></td>
@@ -50,7 +51,7 @@
                     <td class="td2"><p>カテゴリー</p></td><td><p><input type="text" name="category" value=',$row['category'],'></p></td>
                 </tr>';
                 echo '<tr>
-                    <td class="td2"><p>画像パス</p></td><td><p><input type="text" name="category" value=',$row['image'],'></p></td>
+                    <td class="td2"><p>画像パス</p></td><td><p><input type="text" name="image" value=',$row['image'],'></p></td>
                 </tr>';
                 echo '</table>';
             echo '<textarea id="setumei" cols="50" rows="20" class="Ssetumei" name="explain">',$row['setumei'],'</textarea>';
@@ -62,11 +63,8 @@
                 echo '<div class="all button">';
                 echo '<table>';
                     echo '<tr>';
-                        echo '<form action="g-2-1-7.php" method="post">';
-                            echo '<td><button type="submit" class="Psakujyo">削除</button></td>';
-                        echo '</form>';
-                        echo '<form action="g-2-1-7.php" method="post">';
-                            echo '<td><button type="submit" class="Pkousin">更新</button></td>';
+                            echo '<td><button type="submit" class="Psakujyo" name="sakujo">削除</button></td>';
+                            echo '<td><button type="submit" class="Pkousin" name="kousin">更新</button></td>';
                         echo '</form>';                    
                     echo '</tr>';
                 echo '</table>';
