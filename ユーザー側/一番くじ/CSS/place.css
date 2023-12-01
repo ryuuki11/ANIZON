@@ -1,0 +1,36 @@
+body {
+    font-size:clamp(15px, 3vw, 20px);
+      margin-top: 170px;
+      text-align:center;
+     }
+     button{
+      font-size:clamp(10px, 3vw, 20px);
+      border:solid 1px black;
+      text-align:center;
+      width:10vw;
+      min-width:90px;
+      height:5vw;
+      max-height:40px;
+      min-height: 20px;
+      border-radius: 25px;
+      background-color: rgb(240, 241, 241);
+    }
+    .address{
+        font-weight: bold;
+        margin-bottom: 3vw;
+    }
+    .change button{
+        position:absolute;
+        top:50px;
+        right: 0;
+        margin-right:20vw;
+        color: rgb(38, 204, 13);
+    }
+    .place p{ 
+        margin-top: 1vw;
+    }
+  .fin button{
+      color:blue;
+      margin: 10px auto;
+      margin-top:100px;
+    }

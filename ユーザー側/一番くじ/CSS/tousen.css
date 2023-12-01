@@ -1,3 +1,6 @@
+body{
+    font-size: min(4vw,25px);
+}
 h1 {
     text-align: center;
 }
@@ -9,39 +12,34 @@ img {
     height: 300px;
 }
 
-.next,.fin {
-    padding:16px 24px;
-    display: block;
-    margin:auto;
+.next button,.fin button{
     margin-top:50px;
-    text-decoration: none;
+    width:6vw;
+    min-width: 80px;
+    height:3vw;
+    min-height: 25px;
+    max-height:40px;
+    font-size:min(2vw,15px);
     text-align: center;
-    border: 2px;
     border-radius: 20px;
-    border-color: black;
-    background-color: white;
     color: red;
-    box-shadow:0px 2px 4px rgb(177, 177, 177);
-    width:100px;
-    height:20px;
-    font-size: large;
+}
+.next,.fin{
+    display: block;
+    text-align: center;
 }
 
-.change {
-    padding-top: 10px;
-    display: inline-block;
-    margin-left: 65%;
-    text-align: center;
-    text-decoration: none;
-    border: 2px;
+.change button{
+    margin-left: 70%;
+    margin-bottom: 3vw;
     border-radius:20px;
-    border-color: black;
-    background-color: white;
     color: rgb(93, 214, 95);
-    box-shadow:0px 2px 4px rgb(177, 177, 177);
-    width: 90px;
-    height: 30px;
-    font-size: medium;
+    width:6vw;
+    min-width: 80px;
+    height:3vw;
+    min-height: 25px;
+    max-height:40px;
+    font-size:min(2vw,15px);
 }
 
 p {
