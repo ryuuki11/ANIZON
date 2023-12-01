@@ -1,43 +1,79 @@
 @charset "UTF-8";
 
 body {
+<<<<<<< HEAD
+ font:size 40px;
+ margin-top: 25vh;
+}
+p{
+  
+  text-align:center;
+  margin-bottom:30px;
+  padding:4px 0;
+
+}
+input{
+  margin: 10px auto;
+  width:300px;
+  font-size: 30px; 
+}
+a{
+    font-size: 30px;
+    text-align:center;
+    margin-bottom:30px;
+  }
+  button{
+=======
  text-align: center;
 }
 
-input{ 
+input{
   margin: 10px auto;
   width:200px;
   font-size: 20px;
 }
-.auto {
-  font-size: 13px;
-  border-radius: 20px;
-  display: block;
-  width:90px;
-  height:30px;
-  padding-top:5px;
-  box-sizing: border-box;
-  border: 1px;
-  background:#fff;
-  color: rgb(0, 0, 0);
-  box-shadow:0px 2px 4px rgb(177, 177, 177);
-  text-decoration: none;
-  text-align: center;
-}
+  .p{
+>>>>>>> 9e311265afa1512bb36891aba138392a1fd25371
+    font-size:18px;
+    background-color: #ffffff;
+    border-radius:20px;
+    padding:4px 0;
+<<<<<<< HEAD
+    margin: 10px auto;
+    width:200px;
+    text-align:center;
+  }
   .toroku{
-    font-size: 13px;
-  border-radius: 20px;
-  display: block;
-  width:90px;
-  height:30px;
-  padding-top:5px;
-  box-sizing: border-box;
-  border: 1px;
-  background:#fff;
-  color: rgb(60, 224, 224);
-  box-shadow:0px 2px 4px rgb(177, 177, 177);
-  text-decoration: none;
-  text-align: center;
+    color: aqua;
+  }
+  div{
+text-align: center;
+
+  }
+  .th{
+    text-align: left;
+    font-size:26px;
+    font-weight:1px;
+  }
+  table{
+    text-align:center;
+    margin:0 auto;
+  }
+  .addres{
+    text-align:center;
+    font-size:30px;
+  }
+  .post{
+    text-align:center;
+  }
+=======
+    text-align: center;
+    width:200px;
+    margin-bottom: 10px;
+  }
+  .toroku{
+    color: rgb(60, 224, 224);
+    margin-top: 20px;
   }
 .place{
   font-size: 20px;
@@ -46,6 +82,7 @@ input{
 .name{
   text-align: center;
 }
+>>>>>>> 9e311265afa1512bb36891aba138392a1fd25371
  
   
   

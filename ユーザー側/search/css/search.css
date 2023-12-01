@@ -1,48 +1,50 @@
+body{
+    font-size:clamp(15px, 3vw, 20px);
+}
 h2{
-    font-size: min(5vw,35px);
     text-align: center;
+    font-size:clamp(15px, 4vw, 25px);
+    font-weight: bold;
 }
 button{
-    border:solid 1px black;
-    text-align:center;
-    width:7vw;
-    min-width:40px;
-    border-radius: 25px;
-    background-color: rgb(240, 241, 241);
+        font-size:clamp(10px, 3vw, 20px);
+        border:solid 1px black;
+        text-align:center;
+        width:10vw;
+        min-width:90px;
+        height:5vw;
+        max-height:40px;
+        min-height: 20px;
+        border-radius: 25px;
+        background-color: rgb(240, 241, 241);
 }
 button.backb{
     display: block;
-    font-size: min(4vw,30px);
-    width: 15vw;
-    max-width: 130px;
-    height:6vw;
-    max-height:40px;
     color:blue;
-    margin:50px 15vw 0 auto;
-}
-p{
-    font-size: min(4vw,30px);
+    margin:30px 15vw 0 auto;
 }
 input,select{
-    border: solid 1px black;
-    width: 30vw;
-    height:5vw;
-    max-height: 40px;
-    font-size: min(3vw,25px);
-    margin-left:5vw;
-    margin-top:2vw;
-}
+    margin: 10px auto;
+    width:20vw;
+    min-width: 200px;
+    height:3vw;
+    min-height: 30px;
+    text-align:center;
+    border: solid 2px black;
+    font-size: clamp(15px, 3vw, 20px);
+  }
 .word{
-    margin-left:20vw;
+    text-align: center;
     margin-top:4vw;
+}
+.word p{
+    width:20vw;
+    min-width: 200px;
+    margin:0 auto;
+    text-align: left;
 }
 button.search{
     display: block;
-    font-size: min(4vw,30px);
-    width: 15vw;
-    max-width: 130px;
-    height:6vw;
-    max-height:40px;
     color:black;
     margin:7vw auto 0 auto;
 }
