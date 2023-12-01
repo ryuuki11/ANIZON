@@ -32,10 +32,10 @@
    $i=0;
     $array=$_POST['check'];
     foreach($array as $row){
+        
         foreach($_SESSION['check'] as $key=>$value){
             if($key==$i){
             $judge=$row.$value='true';
-            $_SESSION['check'][$key]='true';
             echo $key;
             echo $value;
             }
@@ -51,11 +51,10 @@
     if (!empty($result)){ 
         // 取得した商品情報を表示
         $total=0;
-        $i=0;
         foreach($result as $row) {
-            if($_POST['buy'] == $row['c_id'] || $i%2==0){
+            if($_POST['buy'] == $row['c_id']){
             foreach($_SESSION['check'] as $key=>$value){
-                if($key==$i){
+                echo $value;
                 if($value=='true'){
                     echo '<div class="cart-shohin">';
                     echo '<p class="date">' . $row['date'] . '</p>';
@@ -69,8 +68,6 @@
                     echo '<hr>';
                     $total+=$row['price'];
                 }
-            }
-            $i+=2;
             }
             }
         }

@@ -26,9 +26,11 @@ echo '<hr>';
 
 $pdo = new PDO($connect, USER, PASS);
 $result = $pdo->query('select * from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
-
+$_SESSION['check']=array();
+$array=array();
 echo '<form action="cart2.php" method="post">';
 if (!empty($result)) {
+    $i=0;
     foreach ($result as $row) {
         if ($_SESSION['member']['id'] == $row['m_id']) {
             echo '<div class="cart-shohin">';
@@ -48,22 +50,24 @@ if (!empty($result)) {
             echo '</label>';
             echo '</div>';
             echo '<hr>';
+            $_SESSION['check'][]='false';
+            $_SESSION['check'][]=$row['s_id'];
         }
     }
+    
 } else {
     echo "カートに商品がありません。";
 }
-echo '</form>';
+
 
 $pdo = null;
 ?>
 
 <div class="select">
-    <button onClick="checkAll()">全選択</button>
-    <button onClick="uncheckAll()">選択解除</button>
+    <button onClick="checkAll()" href="#">全選択</button>
+    <button onClick="uncheckAll()" href="#">選択解除</button>
 </div>
 
-<form action="cart2.php">
     <button class="all">まとめて購入</button>
 </form>
 
