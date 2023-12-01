@@ -14,7 +14,7 @@
     <p class="name">変更内容</p><br>
     <div class="buttn2"><button class="return" onclick="location.href='account3.php'">戻る</button></div>
     <?php
-    if (empty($_POST['login']) or empty($_POST['password']) or empty($_POST['name']) or empty($_POST['post']) or empty($_POST['address']) or empty($_POST['mail']) or empty($_POST['number'])) {
+    if (empty($_POST['login']) or empty($_POST['password']) or empty($_POST['m_name']) or empty($_POST['post']) or empty($_POST['address']) or empty($_POST['city']) or empty($_POST['town']) or empty($_POST['dal']) or empty($_POST['mail']) or empty($_POST['number'])) {
         echo '未入力の項目があります。';
     }else{
         echo '<form action="account5.php" method="post">';
@@ -27,13 +27,16 @@
         echo '<input type="hidden" name="password" value="',$_POST['password'],'">';
 
         echo '<p class="title">名前</p>';
-        echo '<p>',$_POST['name'],'</p>';
-        echo '<input type="hidden" name="name" value="',$_POST['name'],'">';
+        echo '<p>',$_POST['m_name'],'</p>';
+        echo '<input type="hidden" name="m_name" value="',$_POST['m_name'],'">';
         
         echo '<p class="title">ご住所</p>';
         echo '<p>',$_POST['post'],'<br>',$_POST['address'],'</p>';
         echo '<input type="hidden" name="post" value="',$_POST['post'],'">';
         echo '<input type="hidden" name="address" value="',$_POST['address'],'">';
+        echo '<input type="hidden" name="city" value="',$_POST['city'],'">';
+        echo '<input type="hidden" name="town" value="',$_POST['town'],'">';
+        echo '<input type="hidden" name="dal" value="',$_POST['dal'],'">';
         
         echo '<p class="title">マンション名・号室</p>';
         echo '<p>',$_POST['apart'],'</p>';

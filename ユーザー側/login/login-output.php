@@ -23,6 +23,8 @@ foreach ($sql as $row) {
             'post' => $row['post'],
             'address' => $row['address'],
             'city' => $row['city'],
+            'town' =>$row['town'],
+            'dal'  =>$row['dal'],
             'apart' => $row['apart'],
             'mail' => $row['mail'],
             'number' => $row['number'],

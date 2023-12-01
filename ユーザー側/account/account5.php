@@ -19,9 +19,9 @@
     $sql->execute([$id,$_POST['login']]);
 
     if (empty($sql->fetchAll())) {
-        $sql=$pdo->prepare('update Member set login=?,password=?,m_name=?,post=?,address=?,apart=?,mail=?,number=?'.' where m_id=?');
+        $sql=$pdo->prepare('update Member set login=?,password=?,m_name=?,post=?,address=?,city=?,town=?,dal=?,apart=?,mail=?,number=?'.' where m_id=?');
             $sql->execute([
-                $_POST['login'],$_POST['password'],$_POST['name'],$_POST['post'],$_POST['address'],$_POST['apart'],$_POST['mail'],$_POST['number'],$_SESSION['member']['id']
+                $_POST['login'],$_POST['password'],$_POST['m_name'],$_POST['post'],$_POST['address'],$_POST['city'],$_POST['town'],$_POST['dal'],$_POST['apart'],$_POST['mail'],$_POST['number'],$_SESSION['member']['id']
             ]);
     }else{
         echo 'ログイン名がすでに使用されていますので、変更してください。';
