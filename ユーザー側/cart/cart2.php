@@ -33,13 +33,15 @@
     $array=$_POST['check'];
     foreach($array as $row){
         foreach($_SESSION['check'] as $key=>$value){
+            echo $key;
+            echo $i;
             if($key==$i){
             $judge=$row.$value='true';
             $_SESSION['check'][$key]='true';
             echo $key;
             echo $value;
             }
-            $i+=2;
+            $i++;
             
         }
         
