@@ -6,12 +6,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/header_sazae.css" />
     <link rel="stylesheet" href="css/cart1.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>anizon</title>
 </head>
 <body>
+<?php require '../home/header_sazae.php'; ?>
 
 <?php
 const SERVER = 'mysql219.phy.lolipop.lan';
@@ -66,7 +67,7 @@ $pdo = null;
 <form action="cart2.php">
     <button class="all">まとめて購入</button>
 </form>
-
+<?php require '../home/footer.php'; ?>
 <script>
     const a = document.getElementById('s_name');
     const b = document.getElementById('name');

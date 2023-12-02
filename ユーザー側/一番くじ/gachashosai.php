@@ -7,7 +7,10 @@
     <title>景品一覧【僕のヒーローアカデミア】</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/keihin.css">
+    <link rel="stylesheet" href="../home/css/header_search.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
 </head>
+<?php require '../home/header_search.php'; ?>
 <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
     const DBNAME = 'LAA1518095-anizon';
@@ -70,5 +73,6 @@
 
         <div  class="gacha"><a href="gacha.php"><button>ガチャへ</button></a></div>
         <div  class="back"><a href="gachaichiran.php"><button>ガチャ一覧へ</button></a></div>
+        <?php require '../home/footer.php'; ?>
 </body>
 </html>

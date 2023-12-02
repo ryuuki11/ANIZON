@@ -12,12 +12,15 @@
     <head>
     <meta charset="UTF=8">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
     <link rel="stylesheet" href="css/toroku0.css">
+    <link rel="stylesheet" href="../home/css/header_title.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>新規登録 </title>
 </head>
 <body>
+<?php require '../home/header_title.php'; ?>
     <?php
 $login=$password=$m_name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
 if(isset($_SESSION['Member'])){
@@ -79,5 +82,6 @@ if(isset($_SESSION['Member'])){
 
 });
             </script>
+            <?php require '../home/footer.php'; ?>
 </body>
 </html>

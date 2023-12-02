@@ -26,10 +26,10 @@
                             <h3 class="ninki">人気・おすすめ商品</h3>
                             <ul>
                                 <li>
-                                    <a href="#">おすすめ</a>
+                                    <a href="../search/result.php?sort=4">おすすめ</a>
                                 </li>
                                 <li>
-                                    <a href="#">人気ランキング</a>
+                                    <a href="../search/result.php?sort=3">人気ランキング</a>
                                 </li>
                             </ul>
                             <h3>カテゴリー</h3>
@@ -108,46 +108,28 @@
         
         <h2>人気商品</h2>
         <div class="ninki">
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
+            <?php
+            const SERVER = 'mysql219.phy.lolipop.lan';
+            const DBNAME = 'LAA1518095-anizon';
+            const USER = 'LAA1518095';
+            const PASS = 'Pass0809';
+            $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+            $pdo = new PDO($connect, USER, PASS);
+
+            $sql = $pdo->query('select * from Shohin where category!="ガチャ" order by sale desc');
+            $i=0;
+            foreach($sql as $row){
+                echo '<div class="syohin1">';
+                    echo '<img src="',$row['image'],'" alt="">';
+                    echo '<p>',$row['s_name'],'</p>';
+                    echo '<p>',$row['price'],'</p>';
+                echo '</div>';
+                $i++;
+                if($i==8){
+                    break;
+                }
+            }
+            ?>
         </div>
         <div class="lot">
             <a href="../一番くじ/gachaichiran.php"><img src="img/ガチャ.png" alt=""></a>
@@ -166,19 +148,19 @@
             </div>
             <div class="osusume3">
                 <p class="tensura"><img src="img/tensurajpg.jpg" alt=""></p>
-                <p>アニメ名前</p>
+                <p>転生したらスライムだった件</p>
             </div>
             <div class="osusume4">
                 <p class="naruto"><img src="img/naruto.jpg" alt=""></p>
-                <p>アニメ名前</p>
+                <p>ナルト</p>
             </div>
             <div class="osusume5">
                 <p class="conan"><img src="img/conan.png" alt=""></p>
-                <p>アニメ名前</p>
+                <p>名探偵コナン</p>
             </div>
             <div class="osusume6">
                 <p class="shadow"><img src="img/シャドーハウス.jpg" alt=""></p>
-                <p>アニメ名前</p>
+                <p>シャド―ハウス</p>
             </div>
         </div>
         <div class="botton">

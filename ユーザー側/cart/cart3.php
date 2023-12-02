@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/header_sazae.css" />
     <link rel="stylesheet" href="css/cart3.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <title>anizon</title>
 </head>
     <body>
+    <?php require '../home/header_sazae.php'; ?>
     <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
     const DBNAME = 'LAA1518095-anizon';
@@ -38,19 +39,29 @@
     if (!empty($result)){ 
         // 取得した商品情報を表示
         $total=0;
+        $total=0;
         foreach($result as $row) {
-            echo '<div class="cart-shohin">';
-            echo '<p class="date">' . $row['date'] . '</p>';
-            echo '<img src="' . $row['image'] . '" alt="">';
-            echo '<div class="syosai">';
-            echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
-            echo '<p class="sname" id="name"></p>';
-            echo '<p class="price">' . $row['price'] . '</p>';
-            echo '</div>';
-            echo '</div>';
-            echo '<hr>';
-            echo '<p class="allprice">合計',$total+=$row['price'],'円</p>';  
-            echo '<form action="cart4.php"><div class="buttn2"><button class="koushin" type="submit">変更する</button><form></div>';
+            foreach($_SESSION['check'] as $key=>$value){
+                if($value=='true'){
+                    $j=$key+1;
+                    if($_SESSION['check'][$j]==$row['c_id']){
+                        echo '<div class="cart-shohin">';
+                        echo '<p class="date">' . $row['date'] . '</p>';
+                        echo '<img src="' . $row['image'] . '" alt="">';
+                        echo '<div class="syosai">';
+                        echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
+                        echo '<p class="sname" id="name"></p>';
+                        echo '<p class="price"><div class="piece">'.$row['c_piece'].'</div><div>'. $row["price"]*$row['c_piece'] .'</div></p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '<hr>';
+                        $total+=$row['price']*$row['c_piece'];
+                    }
+                }
+            }
+        }
+            echo '<p class="allprice">合計',$total,'円</p>';  
+            echo '<div class="buttn2"><a href="cart4.php"><button class="koushin" type="submit">変更する</button></a></div>';
             echo '<div class="addres"><p>ご住所</p><p class="input">',$_SESSION['member']['address'],$_SESSION['member']['apart'],'</p></div>';
             echo '<p class="kin">支払い方法</p>';
             echo '<p class="select">';
@@ -99,12 +110,11 @@
             echo '<p>3桁</p>';
             echo '<input type="text" name="mansyon">';
             echo '</div>';
-            echo '<form action="cart5.php"><div class="buttn"><button class="buy" type="submit">購入</button></form></div>';
-            
-    }
+            echo '<div class="buttn"><a href="cart5.php"><button class="buy" type="submit">購入</button></a></div>';
 }
 
     ?>
+    <?php require '../home/footer.php'; ?>
            
             <script>
                 $(function() {

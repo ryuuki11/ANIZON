@@ -7,6 +7,8 @@
     <title>当選景品</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/sampletousen.css">
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
 </head>
     <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
@@ -25,7 +27,7 @@
     if($j==0){
         echo '<body class="else">';
     }
-
+    require '../home/header_sazae.php';
 
     $sql=$pdo->prepare('select image from Prize where s_id=? and rank=?');
     $sql->execute([$_SESSION['gacha']['id'],$_SESSION['gacha']['rank']]);
@@ -42,5 +44,6 @@
     echo '</div>';
     ?>
     <div class="nextb"><a href="place.php" class="next"><button>次へ</button></a></div>
+    <?php require '../home/footer.php'; ?>
 </body>
 </html>

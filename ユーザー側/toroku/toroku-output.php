@@ -1,4 +1,18 @@
 <?php session_start();?>
+
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+
+    <meta charset="UTF=8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="../home/css/header_title.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
+    <title>login</title>
+</head>
+<body>
+<?php require '../home/header_title.php'; ?>
 <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
     const DBNAME = 'LAA1518095-anizon';
@@ -35,3 +49,6 @@ if(empty($_POST['login']) || empty($_POST['password']) || empty($_POST['m_name']
     }
 }
 ?>
+<?php require '../home/footer.php'; ?>
+</body>
+</html>

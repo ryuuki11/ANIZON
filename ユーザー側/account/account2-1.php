@@ -8,9 +8,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/account2-1.css">
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>アカウント情報</title>
 </head>
 <body>
+<?php require '../home/header_sazae.php'; ?>
     <?php
     $login=$pass=$name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
     if(isset($_SESSION['member'])) {
@@ -60,5 +63,6 @@
     ?>
 
     <div><button class="toroku" onclick="location.href='account3.php'">変更する</button></div>
+    <?php require '../home/footer.php'; ?>
 </body>
 </html>

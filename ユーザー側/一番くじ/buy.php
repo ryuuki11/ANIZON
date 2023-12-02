@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/buy.css">
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>購入</title>
 </head>
 <body>
+<?php require '../home/header_sazae.php'; ?>
         <p class="shiharai">クレジットのみ</p>
         <?php
         echo '<a href="gachashosai.php?id=',$_SESSION['gacha'],'" class="back"><div class="buttn2"><button class="return">戻る</button></div></a>';
@@ -64,5 +67,6 @@
         $_SESSION['flag']=1;
         echo '<a href="buy-output.php" class="gacha"><div class="gachab"><button>購入</button></div></a>';
     ?>
+    <?php require '../home/footer.php'; ?>
 </body>
 </html>

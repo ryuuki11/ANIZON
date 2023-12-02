@@ -7,6 +7,8 @@
     <title>ガチャ【僕のヒーローアカデミア】</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/gacha.css">
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <script src="https://code.jquery.com/jquery.min.js"></script>
 </head>
 <?php
@@ -26,6 +28,7 @@
     if($j==0){
         echo '<body class="else">';
     }
+    require '../home/header_sazae.php';
 
 
     $_SESSION['flag']=0;
@@ -104,6 +107,7 @@
     echo '</div>';
     echo '</div>';
     ?>
+    <?php require '../home/footer.php'; ?>
 
     <script>
         const displayNone = document.querySelector('.display_none');

@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/header_sazae.css" />
     <link rel="stylesheet" href="css/result.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="../home/css/header_search.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>anizon</title>
 </head>
     <body>
+    <?php require '../home/header_search.php'; ?>
         <h2>検索結果</h2>
         <?php 
 
@@ -22,35 +23,35 @@
             const PASS = 'Pass0809';
             $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
             $pdo=new PDO($connect,USER,PASS);
-            $SQL='select * from Shohin';
-            $SQLo='select * from Shohin';
+            $SQL='select * from Shohin where category != "ガチャ"';
+            $SQLo='select * from Shohin where category != "ガチャ"';
             $sql=$pdo->prepare($SQL);
             $Category=['ALL','CD・DVD','漫画','グッズ'];
-            $Sort=['price desc','price asc','sale desc'];
-                if(isset($_GET['category'])){
-                    if($_GET['category']!=0){
-                        $SQL.=' where category="'.$Category[$_GET['category']].'"';
-                        $SQLo.=' where category="'.$Category[$_GET['category']].'"';
-                        if(isset($_GET['name'])){
-                            $SQL.=' and ';
-                            $SQLo.=' or ';
-                        }
-                    }else{
-                        $SQL.=' where';
-                        $SQLo.=' where';      
+            $Sort=['price desc','price asc','sale desc','sale desc','date desc'];
+                if(isset($_GET['category']) &&$_GET['category']!=0 ){
+                    
+                        $SQL.=' and category="'.$Category[$_GET['category']].'"';
+                        $SQLo.=' and (category="'.$Category[$_GET['category']].'"';
+                    if(isset($_GET['name'])){
+                        $SQLo.=' or';
                     }
                 }else if(isset($_GET['name'])){
-                    $SQL.=' where';
-                    $SQLo.=' where';                  
+                    $SQLo.=' and';
                 }
                 if(isset($_GET['name'])){
-                    $SQL.=' s_name like "%'.$_GET['name'].'%"';
+                    $SQL.=' and s_name like "%'.$_GET['name'].'%"';
                     $SQLo.=' s_name like "%'.$_GET['name'].'%"';
+                }
+                if(isset($_GET['category'])){
+                    if($_GET['category']!=0){
+                        $SQLo.=')';
+                    }
                 }
                 if(isset($_GET['sort'])){
                     $SQL.=' order by '.$Sort[$_GET['sort']];
                 }
                 $i=0;
+                
             $sql=$pdo->query($SQL);
             
             echo '<div class="result">';
@@ -87,6 +88,7 @@
             }
             echo '</div>';
         ?>
+        <?php require '../home/footer.php'; ?>
             <div class="botton">
                 <botton id="botton">RAGETOP</botton>
             </div>
@@ -101,5 +103,6 @@
                   window.scroll({top: 0, behavior: 'smooth'});
               };
               </script>
+              
     </body>
 </html>

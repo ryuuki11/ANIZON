@@ -7,9 +7,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/buy-output.css">
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>login</title>
 </head>
 <body>
+<?php require '../home/header_sazae.php'; ?>
         <p class="name">○○○○○○○○○○さん</p>
             <p class="order">購入完了です</p>
 
@@ -45,5 +48,6 @@
         ?>
 
         <div><a href="gacha.php"><button type="submit" class="top">ガチャへ</button></a></div>
+        <?php require '../home/footer.php'; ?>
 </body>
 </html>

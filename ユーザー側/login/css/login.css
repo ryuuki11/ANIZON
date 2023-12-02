@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
-
+body{
+  min-height:100%;
+}
 p{  
   text-align:center;
   font-size: min(3vw,20px);

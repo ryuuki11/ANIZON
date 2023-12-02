@@ -6,9 +6,12 @@
        <meta name="viewport" content="width=device-width,initial-scale=1">
         <link rel="stylesheet" href="css/reset.css">
        <link rel="stylesheet" href="css/cart4.css">
+       <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
        <title>login</title>
    </head>
    <body>
+   <?php require '../home/header_sazae.php'; ?>
     <p class="name">○○○○○さんの支払い情報</p>
     <div class="buttn2"><button class="return" type="submit">戻る</button></div>
       
@@ -26,6 +29,8 @@
     <input type="text" size="30" name="apart" value="',$apart,'">
        
            <div class="buttn"><button class="koushin" type="submit">変更</button></div>
+
+           <?php require '../home/footer.php'; ?>
    </body>
    </html>
    

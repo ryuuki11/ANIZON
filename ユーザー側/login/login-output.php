@@ -6,9 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <title>ログイン成功</title>
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../home/css/header_title.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
 </head>
 <body>
+<?php require '../home/header_title.php'; ?>
 <?php
 unset($_SESSION['member']);
 $pdo=new PDO($connect,USER,PASS);
@@ -24,7 +28,7 @@ foreach ($sql as $row) {
             'address' => $row['address'],
             'city' => $row['city'],
             'town' =>$row['town'],
-            'dal'  =>$row['dal'],
+            'dal' =>$row['dal'],
             'apart' => $row['apart'],
             'mail' => $row['mail'],
             'number' => $row['number'],
@@ -44,5 +48,7 @@ if (empty($_POST['login'])) {
     echo '<p>ログインに失敗しました。</p>';
 }
 ?>
+
+<?php require '../home/footer.php'; ?>
 </body>
 </html>

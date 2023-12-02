@@ -8,9 +8,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/account4.css">
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>login</title>
 </head>
 <body>
+<?php require '../home/header_sazae.php'; ?>
+
     <p class="name">変更内容</p><br>
     <div class="buttn2"><button class="return" onclick="location.href='account3.php'">戻る</button></div>
     <?php
@@ -55,6 +59,7 @@
     }
     ?>
 
+<?php require '../home/footer.php'; ?>
         
 </body>
 </html>

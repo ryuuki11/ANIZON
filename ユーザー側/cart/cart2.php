@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/header_sazae.css" />
     <link rel="stylesheet" href="css/cart2.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>anizon</title>
 </head>
 <body>
-      
+<?php require '../home/header_sazae.php'; ?>
 
     <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
@@ -28,20 +28,18 @@
         echo '</form>';
         echo '</div>';
         echo '<hr>';
+
     // 接続確認
-   $i=0;
     $array=$_POST['check'];
     foreach($array as $row){
         foreach($_SESSION['check'] as $key=>$value){
-            echo $key;
-            echo $i;
-            if($key==$i){
-            $judge=$row.$value='true';
-            $_SESSION['check'][$key]='true';
-            echo $key;
-            echo $value;
+            $j=0;
+            if($key==$row){
+                $_SESSION['check'][$row]='true';
+                $j=1;
+                break;
             }
-            $i++;
+            
             
         }
         
@@ -53,27 +51,25 @@
     if (!empty($result)){ 
         // 取得した商品情報を表示
         $total=0;
-        $i=0;
         foreach($result as $row) {
-            if($_POST['buy'] == $row['c_id'] || $i%2==0){
             foreach($_SESSION['check'] as $key=>$value){
-                if($key==$i){
                 if($value=='true'){
-                    echo '<div class="cart-shohin">';
-                    echo '<p class="date">' . $row['date'] . '</p>';
-                    echo '<img src="' . $row['image'] . '" alt="">';
-                    echo '<div class="syosai">';
-                    echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
-                    echo '<p class="sname" id="name"></p>';
-                    echo '<p class="price">' . $row['price'] . '</p>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '<hr>';
-                    $total+=$row['price'];
+                    $j=$key+1;
+                    if($_SESSION['check'][$j]==$row['c_id']){
+                        $price=$row["price"]*$row["c_piece"];
+                        echo '<div class="cart-shohin">';
+                        echo '<p class="date">' . $row['date'] . '</p>';
+                        echo '<img src="' . $row['image'] . '" alt="">';
+                        echo '<div class="syosai">';
+                        echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
+                        echo '<p class="sname" id="name"></p>';
+                        echo '<p class="price"><div class="piece">'.$row['c_piece'].'</div><div>'. $price.'</div></p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '<hr>';
+                        $total+=$price;
+                    }
                 }
-            }
-            $i+=2;
-            }
             }
         }
         echo '<p class="allprice">合計',$total,'円</p>';   
@@ -85,6 +81,8 @@
     <form action="cart3.php"><button class="buy">
         支払い情報
     </button></form>
+
+    <?php require '../home/footer.php'; ?>
     <script>
         const a =document.getElementById('s_name');
         const b =document.getElementById('name');
