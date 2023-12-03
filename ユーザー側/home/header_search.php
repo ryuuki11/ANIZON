@@ -44,9 +44,9 @@
                     <input type="checkbox" type="checkbox" id="human">
                     <div class="icon">
                         <label for="human" class="human">
-                        <img class="humanicon" src="img/humanicon.png" width="30" height="30">
+                        <img class="humanicon" src="../image/humanicon.png" width="30" height="30">
                         </label>
-                        <a href="../cart/cart1.php"><img class="cart" src="img/cart.png" width="30" height="30"></a>
+                        <a href="../cart/cart1.php"><img class="cart" src="../image/cart.png" width="30" height="30"></a>
                     </div>
                     <label class="nav-unshown" id="nav-close" for="human"></label>
                     <div class="human-menu">
@@ -73,7 +73,7 @@
                 <div class="search">
                     <form action="../search/result.php" method="get">
                         <input class="search" type="text" name="name" placeholder="検索" >
-                        <button><img class="search" src="img/search.png" width="25" height="20"><button>
+                        <button><img class="search" src="../image/search.png" width="25" height="20"><button>
                     </form>
                 </div>
             </div>

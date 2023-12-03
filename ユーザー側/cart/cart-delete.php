@@ -12,6 +12,7 @@
     <title>anizon</title>
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
 
 <?php
@@ -86,7 +87,8 @@ if (!empty($result)) {
 
 $pdo = null;
 ?>
-<?php require '../home/footer.php'; ?>
+
+
 
 <div class="select">
     <button type="button" onClick="checkAll()">全選択</button>
@@ -95,6 +97,8 @@ $pdo = null;
 
     <button class="all">まとめて購入</button>
 </form>
+<?php require '../home/footer.php'; ?>
+</div>
 
 <script>
     const a = document.getElementById('s_name');

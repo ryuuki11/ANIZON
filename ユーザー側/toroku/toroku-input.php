@@ -20,6 +20,7 @@
     <title>新規登録 </title>
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_title.php'; ?>
     <?php
 $login=$password=$m_name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
@@ -64,6 +65,7 @@ if(isset($_SESSION['Member'])){
  echo ' <div><button class="toroku" type="submit">確認</button></div>';
  echo '</form>';
     ?>
+    </div>
     <script>
             $('.ajaxzip3').on('click', function(){
     AjaxZip3.zip2addr('post','','address','city','town','dal');

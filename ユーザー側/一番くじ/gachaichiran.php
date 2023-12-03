@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../home/css/footer.css">
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_search.php'; ?>
     <h2>ガチャ一覧</h2>
     <div class="result">
@@ -41,6 +42,7 @@
     </div>
 
     <?php require '../home/footer.php'; ?>
+    </div>
     <script>
         const scroll_to_top_btn = document.querySelector('botton');
       

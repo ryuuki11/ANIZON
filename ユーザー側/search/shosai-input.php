@@ -11,6 +11,7 @@
     <title>anizon</title>
 </head>
     <body>
+    <div id="wrap">
     <?php require '../home/header_search.php'; ?>
         <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
@@ -21,7 +22,7 @@
     $pdo=new PDO($connect,USER,PASS);
 
     if(isset($_SESSION['member']['id'])){
-        $sql=$pdo->prepare('insert into Cart (m_id,s_id,date,c_piece) values(?,?,CURDATE(),?)');
+        $sql=$pdo->prepare('insert into Cart (m_id,s_id,c_date,c_piece) values(?,?,CURRENT_DATE(),?)');
         $sql->execute([$_SESSION['member']['id'],$_SESSION['shohin_shosai']['id'],$_POST['piece']]);
         echo 'カートに商品を追加しました';
         echo '<hr>';
@@ -53,5 +54,6 @@
     }
     ?>
     <?php require '../home/footer.php'; ?>
+    </div>
     </body>
 </html>

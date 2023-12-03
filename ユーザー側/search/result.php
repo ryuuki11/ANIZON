@@ -10,8 +10,9 @@
     <title>anizon</title>
 </head>
     <body>
+    <div id="wrap">
     <?php require '../home/header_search.php'; ?>
-        <h2>検索結果</h2>
+        <h2 class="title1">検索結果</h2>
         <?php 
 
             if(isset($_SESSION['shohin_shosai']['id'])){
@@ -58,9 +59,11 @@
             foreach($sql as $row){
                 echo '<div class="shohin">';
                 echo'<a href="shosai.php?id=',$row['s_id'],'">';
-                    echo '<img src="',$row['image'],'" alt="">';
-                    echo '<p>',$row['s_name'],'</p>';
-                    echo '<p>',$row['price'],'</p>';
+                echo '<div class="ci">';
+                echo '<img src="' . $row["image"] . '" alt="">';
+                echo '</div>';
+                    echo '<p class="name">',$row['s_name'],'</p>';
+                    echo '<p>',$row['price'],'  円</p>';
                     echo '</a>';
                 echo '</div>';
                 $i++;
@@ -76,9 +79,11 @@
             foreach($sql as $row){
                 echo '<div class="shohin">';
                 echo'<a href="shosai.php?id=',$row['s_id'],'">';
-                    echo '<img src="',$row['image'],'" alt="">';
-                    echo '<p>',$row['s_name'],'</p>';
-                    echo '<p>',$row['price'],'</p>';
+                echo '<div class="ci">';
+                echo '<img src="' . $row["image"] . '" alt="">';
+                echo '</div>';
+                    echo '<p class="name">',$row['s_name'],'</p>';
+                    echo '<p>',$row['price'],' 円</p>';
                     echo '</a>';
                 echo '</div>';
                 $i++;
@@ -88,12 +93,14 @@
             }
             echo '</div>';
         ?>
-        <?php require '../home/footer.php'; ?>
+        <div class="space">
             <div class="botton">
                 <botton id="botton">RAGETOP</botton>
             </div>
-    
-            
+        </div>
+
+            <?php require '../home/footer.php'; ?>
+            </div>
             <script>
                 const scroll_to_top_btn = document.querySelector('botton');
               

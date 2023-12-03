@@ -13,6 +13,7 @@
     <title>login</title>
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
 
     <p class="name">変更内容</p><br>
@@ -60,6 +61,7 @@
     ?>
 
 <?php require '../home/footer.php'; ?>
+</div>
         
 </body>
 </html>

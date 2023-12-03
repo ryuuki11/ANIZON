@@ -13,6 +13,7 @@
     <title>アカウント情報</title>
 </head>
 <body>
+    <div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
     <?php
     $login=$pass=$name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
@@ -64,5 +65,6 @@
 
     <div><button class="toroku" onclick="location.href='account3.php'">変更する</button></div>
     <?php require '../home/footer.php'; ?>
+    </div>
 </body>
 </html>

@@ -10,6 +10,7 @@
     <title>anizon</title>
 </head>
     <body>
+    <div id="wrap">
     <?php require '../home/header_search.php'; ?>
         
         <h2>条件検索</h2>
@@ -18,7 +19,7 @@
                 戻る
             </button>
         </div>
-        <form action="result.php" method="GET">
+        <form class="search" action="result.php" method="GET">
         <div class="word">
             <p>商品名</p>
             <input  name="name" type="text">
@@ -44,8 +45,9 @@
         <button type="submit" class="search">
             検索
         </button>
-        <form action=""></form>
+        </form>
         <?php require '../home/footer.php'; ?>
+        </div>
     </body>
 </html>
 

@@ -20,7 +20,7 @@ input{
   font-size: min(3vw,20px);
 }
 form{
-  margin-top: 4vw;
+  margin-top: 6vw;
 }
 
 button{
@@ -41,11 +41,22 @@ button{
 }
 .login {
   color: rgb(228, 83, 83);
+  margin:0 auto;
   margin-top:4vw;
   margin-bottom:2vw;
 }
-
-div{
+div.log{
   margin:0 auto;
   text-align: center;
+}
+
+div.button{
+  text-align: center;
+  margin-top:2vw;
+}
+p.error{
+  margin:auto 0;
+}
+p.suc{
+  margin-top:10vw;
 }

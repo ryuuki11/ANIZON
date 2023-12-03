@@ -11,6 +11,7 @@
        <title>login</title>
    </head>
    <body>
+   <div id="wrap">
    <?php require '../home/header_sazae.php'; ?>
     <p class="name">○○○○○さんの支払い情報</p>
     <div class="buttn2"><button class="return" type="submit">戻る</button></div>
@@ -31,6 +32,7 @@
            <div class="buttn"><button class="koushin" type="submit">変更</button></div>
 
            <?php require '../home/footer.php'; ?>
+           </div>
    </body>
    </html>
    

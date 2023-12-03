@@ -11,6 +11,7 @@
     <title>anizon</title>
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
 
     <?php
@@ -23,7 +24,7 @@
 
     echo '<div class="h">';
         echo '<div class="name">津隈さんのカート</div>';
-        echo '<form action="cart1.php">';
+        echo '<form class="btn2" action="cart1.php">';
         echo '<button>戻る</button>';
         echo '</form>';
         echo '</div>';
@@ -58,12 +59,14 @@
                     if($_SESSION['check'][$j]==$row['c_id']){
                         $price=$row["price"]*$row["c_piece"];
                         echo '<div class="cart-shohin">';
-                        echo '<p class="date">' . $row['date'] . '</p>';
-                        echo '<img src="' . $row['image'] . '" alt="">';
+                        echo '<p class="date">' . $row['c_date'] . '</p>';
+                        echo '<div class="ci">';
+                        echo '<img src="' . $row["image"] . '" alt="">';
+                        echo '</div>';
                         echo '<div class="syosai">';
                         echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
                         echo '<p class="sname" id="name"></p>';
-                        echo '<p class="price"><div class="piece">'.$row['c_piece'].'</div><div>'. $price.'</div></p>';
+                        echo '<p class="price"><span class="piece">数量：'.$row['c_piece'].'</span><span class=cprice>'. $row["price"]*$row['c_piece'] .'円</span></p>';
                         echo '</div>';
                         echo '</div>';
                         echo '<hr>';
@@ -78,11 +81,12 @@
     ?>
 
     
-    <form action="cart3.php"><button class="buy">
+    <form class="bottom" action="cart3.php"><button class="buy">
         支払い情報
     </button></form>
 
     <?php require '../home/footer.php'; ?>
+    </div>
     <script>
         const a =document.getElementById('s_name');
         const b =document.getElementById('name');

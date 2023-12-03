@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="../home/css/header_search.css">
     <link rel="stylesheet" href="../home/css/footer.css">
 </head>
-<?php require '../home/header_search.php'; ?>
+
 <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
     const DBNAME = 'LAA1518095-anizon';
@@ -28,6 +28,8 @@
     if($j==0){
         echo '<body class="else">';
     }
+    echo '<div id="wrap">';
+    require '../home/header_sazae.php';
     
 
     $sql=$pdo->prepare('select image from Shohin where s_id=?');
@@ -74,5 +76,6 @@
         <div  class="gacha"><a href="gacha.php"><button>ガチャへ</button></a></div>
         <div  class="back"><a href="gachaichiran.php"><button>ガチャ一覧へ</button></a></div>
         <?php require '../home/footer.php'; ?>
+        </div>
 </body>
 </html>

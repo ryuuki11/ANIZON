@@ -12,6 +12,7 @@
     <title>login</title>
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_title.php'; ?>
 <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
@@ -50,5 +51,6 @@ if(empty($_POST['login']) || empty($_POST['password']) || empty($_POST['m_name']
 }
 ?>
 <?php require '../home/footer.php'; ?>
+</div>
 </body>
 </html>

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../home/css/footer.css">
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
     <p class="address">お届け先住所</p>
     <a href="update.php" class="change"><button>変更</button></a>
@@ -45,5 +46,6 @@
     
     <a href="end.php" class="fin"><button>完了</button></a>
     <?php require '../home/footer.php'; ?>
+    </div>
 </body>
 </html>

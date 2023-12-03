@@ -10,6 +10,7 @@
     <title>購入完了</title>
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
     <p>購入完了しました</p>
     <p> 商品到着まで</p>
@@ -18,5 +19,6 @@
     <div><a href="gachaichiran.php" class="top"><button>トップへ</button></a></div>
             
     <?php require '../home/footer.php'; ?> 
+    </div>
 </body>
 </html>

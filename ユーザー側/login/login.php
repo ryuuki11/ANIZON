@@ -11,6 +11,7 @@
     <title>login</title>
 </head>
 <body>
+<div id="wrap">
     <?php require '../home/header_title.php'; ?>
 <form action="login-output.php" method="post">
         <p class="id">ログインID</p>
@@ -19,10 +20,11 @@
         <p>パスワード</p>
         <p><input type="password" name="password"></p>
 
-        <div><button type="submit" class="login">ログイン</button><br></div>
+        <div class="log"><button type="submit" class="login">ログイン</button></div>
     </form>
 
-    <div><button class="toroku" onclick="location.href='../toroku/toroku-input.php'">新規登録</button></div>
+    <div class="button"><button class="toroku" onclick="location.href='../toroku/toroku-input.php'">新規登録</button></div>
     <?php require '../home/footer.php'; ?>
+    </div>
 </body>
 </html>

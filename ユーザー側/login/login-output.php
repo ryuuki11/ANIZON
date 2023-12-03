@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../home/css/footer.css">
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_title.php'; ?>
 <?php
 unset($_SESSION['member']);
@@ -38,17 +39,18 @@ foreach ($sql as $row) {
 }
 
 if (empty($_POST['login'])) {
-    echo '<p>ログインIDを入力してください。</p>';
+    echo '<p class="error">ログインIDを入力してください。</p>';
 }else if (empty($_POST['password'])) {
-    echo '<p>パスワードを入力してください。</p>';    
+    echo '<p class="error">パスワードを入力してください。</p>';    
 }else if (isset($_SESSION['member'])) {
-    echo '<p>ログインしました。</p>';
-    echo '<div><button class="next" onclick="location.href=',"'home.php'",'">ホームへ</button></div>';
+    echo '<p class="suc">ログインしました。</p>';
+    echo '<div class="button"><button class="next" onclick="location.href=',"'../home/home.php'",'">ホームへ</button></div>';
 }else{
-    echo '<p>ログインに失敗しました。</p>';
+    echo '<p class="error">ログインに失敗しました。</p>';
 }
 ?>
 
 <?php require '../home/footer.php'; ?>
+</div>
 </body>
 </html>

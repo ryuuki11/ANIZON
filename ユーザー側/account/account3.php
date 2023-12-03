@@ -15,6 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
 
 <?php
@@ -63,6 +64,7 @@
     ?>
 
     <?php require '../home/footer.php'; ?>
+    </div>
     <script>
             $('.ajaxzip3').on('click', function(){
     AjaxZip3.zip2addr('post','','address','city','town','dal');

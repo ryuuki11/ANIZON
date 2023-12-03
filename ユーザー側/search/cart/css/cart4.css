@@ -1,0 +1,133 @@
+body{
+  text-align:center;
+  font-size:clamp(15px, 3vw, 20px);
+  
+}
+div{  
+  text-align:center;
+  font-size:clamp(15px, 3vw, 20px);
+}
+input{
+  margin: 10px auto;
+  width:20vw;
+  min-width: 200px;
+  height:3vw;
+  min-height: 30px;
+  text-align:center;
+  border: solid 2px black;
+  font-size: clamp(15px, 3vw, 20px);
+}
+  input.button{
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
+    text-align:center;
+    width:10vw;
+    min-width:90px;
+    height:5vw;
+    max-height:35px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+  }
+  button{
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
+    text-align:center;
+    width:10vw;
+    min-width:90px;
+    height:5vw;
+    max-height:40px;
+    min-height: 20px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+  }
+<<<<<<< HEAD
+  p.pos{
+      font-size: 2vw;
+      text-align:center;
+      margin-bottom:30px;
+    }
+    button{
+      font-size:1vw;
+      background-color: #ffffff;
+      border-radius:20px;
+      padding:4px 0;
+      margin: 10px auto;
+      width:15vw;
+      text-align:center;
+    }
+    .toroku{
+      color: rgb(75, 189, 246);
+    }
+    div{
+  text-align: center;
+  
+    }
+    .addres{
+       text-align: center;
+       font-size:3.5vw;
+    }
+    button.auto{
+      margin:auto 0 auto 0;
+      }
+     input.post{
+      text-align: center;
+      margin-left:17.5vw;
+      margin-right:2vw;
+     }
+    div.buttn{
+      text-align: center;
+      
+    }
+    div.buttn2{
+        position:absolute;
+        right: 0;
+        margin-right:20vw;
+        width:1vw;
+    }
+    .return{
+=======
+  div.buttn2 button{
+    position:absolute;
+    top:50px;
+    right: 0;
+    margin-right:20vw;
+    min-width: 70px;
+>>>>>>> 4cd9613aabff1a1273966b8c82da0e40e132e65c
+    color: rgb(75, 189, 246);
+}
+  .koushin{
+    margin-top: 30px;
+    color: rgb(38, 204, 13);
+  }
+  div{
+    text-align: center;
+    margin-top: 20px;
+
+  }
+  .place{
+    margin-top: 80px;
+  }
+  .addres{
+  
+    text-align:center;
+    font-size:2vw;
+  }
+  div.button{
+    text-align: center;
+  }
+  input.button{
+  width:10vw;
+  min-width:30px;
+  font-size:clamp(7px, 2vw, 15px);
+  }
+  div.p{
+    width:40vw;
+  }
+ .post{
+  text-align: center;
+  margin-left:12.5vw;
+  margin-right:2vw;
+ }
+ form{
+  margin-top: 100px;
+ }

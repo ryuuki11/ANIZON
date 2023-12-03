@@ -28,6 +28,7 @@
     if($j==0){
         echo '<body class="else">';
     }
+    echo '<div id="wrap">';
     require '../home/header_sazae.php';
 
 
@@ -103,11 +104,16 @@
     echo '</div>';
 
     echo '<div class="button">';
+    if($num==0){
+        echo '<button type="button">ガチャを回す</button>';
+    }else{
             echo '<button class="dis_none_bt">ガチャを回す</button>';
+    }
     echo '</div>';
     echo '</div>';
     ?>
     <?php require '../home/footer.php'; ?>
+    </div>
 
     <script>
         const displayNone = document.querySelector('.display_none');

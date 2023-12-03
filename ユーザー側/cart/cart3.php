@@ -12,6 +12,7 @@
     <title>anizon</title>
 </head>
     <body>
+    <div id="wrap">
     <?php require '../home/header_sazae.php'; ?>
     <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
@@ -24,7 +25,7 @@
     echo '<div class="h">';
         echo '<div class="name">津隈さんのカート</p>';
         echo '</div>';
-        echo '<form action="cart2.php">';
+        echo '<form class="btn2" action="cart2.php">';
         echo '<button>戻る</button>';
         echo '</form>';
         echo '</div>';
@@ -38,7 +39,7 @@
 
     if (!empty($result)){ 
         // 取得した商品情報を表示
-        $total=0;
+        $_SESSION['cartflag']=1;
         $total=0;
         foreach($result as $row) {
             foreach($_SESSION['check'] as $key=>$value){
@@ -46,12 +47,14 @@
                     $j=$key+1;
                     if($_SESSION['check'][$j]==$row['c_id']){
                         echo '<div class="cart-shohin">';
-                        echo '<p class="date">' . $row['date'] . '</p>';
-                        echo '<img src="' . $row['image'] . '" alt="">';
+                        echo '<p class="date">' . $row['c_date'] . '</p>';
+                        echo '<div class="ci">';
+                        echo '<img src="' . $row["image"] . '" alt="">';
+                        echo '</div>';
                         echo '<div class="syosai">';
                         echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
                         echo '<p class="sname" id="name"></p>';
-                        echo '<p class="price"><div class="piece">'.$row['c_piece'].'</div><div>'. $row["price"]*$row['c_piece'] .'</div></p>';
+                        echo '<p class="price"><span class="piece">数量：'.$row['c_piece'].'</span><span class=cprice>'. $row["price"]*$row['c_piece'] .'円</span></p>';
                         echo '</div>';
                         echo '</div>';
                         echo '<hr>';
@@ -111,11 +114,12 @@
             echo '<input type="text" name="mansyon">';
             echo '</div>';
             echo '<div class="buttn"><a href="cart5.php"><button class="buy" type="submit">購入</button></a></div>';
+            
 }
 
     ?>
     <?php require '../home/footer.php'; ?>
-           
+    </div>
             <script>
                 $(function() {
                 $('.shiharai').change(function () {

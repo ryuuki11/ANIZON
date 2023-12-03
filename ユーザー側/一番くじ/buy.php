@@ -11,6 +11,7 @@
     <title>購入</title>
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
         <p class="shiharai">クレジットのみ</p>
         <?php
@@ -68,5 +69,6 @@
         echo '<a href="buy-output.php" class="gacha"><div class="gachab"><button>購入</button></div></a>';
     ?>
     <?php require '../home/footer.php'; ?>
+    </div>
 </body>
 </html>

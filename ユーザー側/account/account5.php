@@ -15,6 +15,7 @@
     <title>変更完了</title>
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
 
     <?php
@@ -38,5 +39,6 @@
     <div><button class="login" onclick="location.href='../login/login.php'">ログインページへ</button></div>
 
     <?php require '../home/footer.php'; ?>
+    </div>
 </body>
 </html>

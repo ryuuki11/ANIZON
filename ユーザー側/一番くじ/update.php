@@ -11,6 +11,7 @@
     <title>お届け先変更</title>
 </head>
 <body>
+<div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
     <form action="place.php" method="post">
     <p>○○さんの支払い情報</p>
@@ -38,6 +39,6 @@
     <div class="push"><button>登録</button></div>
     </form>
     <?php require '../home/footer.php'; ?>
-        
+</div>
 </body>
 </html>
