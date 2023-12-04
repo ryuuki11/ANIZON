@@ -63,7 +63,7 @@
         }else{
             echo '<a href="../login/login.php"><button>ログイン画面へ</button></a>';
         }
-        echo '<br><a href="shosai.php?id=',$_GET['id'],'"><button class="close">閉じる</button></a>';
+        echo '<br><div class="button"><a href="shosai.php?id=',$_GET['id'],'"><button class="close">閉じる</button></a></div>';
         echo '</div>';
         
         ?>
