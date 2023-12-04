@@ -12,10 +12,11 @@
 </head>
 <body>
     <p class="name">変更内容</p><br>
-    <div class="buttn2"><button class="return" onclick="location.href='account3.php'">戻る</button></div>
+    
     <?php
     if (empty($_POST['login']) or empty($_POST['password']) or empty($_POST['m_name']) or empty($_POST['post']) or empty($_POST['address']) or empty($_POST['city']) or empty($_POST['town']) or empty($_POST['dal']) or empty($_POST['mail']) or empty($_POST['number'])) {
         echo '未入力の項目があります。';
+        echo '<div><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
     }else{
         echo '<form action="account5.php" method="post">';
         echo '<p class="title top">ログインID</p>';
@@ -49,7 +50,7 @@
         echo '<p class="title">電話番号</p>';
         echo '<p>',$_POST['number'],'</p>';
         echo '<input type="hidden" name="number" value="',$_POST['number'],'">';
-
+        echo '<div><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
         echo '<div><button type="submit" class="toroku">変更</button></div>';
     echo '</form>';
     }

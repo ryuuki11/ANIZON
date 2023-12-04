@@ -29,7 +29,7 @@
 
     echo '<p class="name">',$name,'さんのアカウント情報</p><br>';
     
-    echo '<p class="midasi top">ログインID</p>';
+    echo '<p class="top">ログインID</p>';
     echo '<p>',$login,'</p>';
 
     echo '<p class="midasi">パスワード</p>';

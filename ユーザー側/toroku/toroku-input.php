@@ -19,45 +19,32 @@
 </head>
 <body>
     <?php
-$login=$password=$m_name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
-if(isset($_SESSION['Member'])){
-    $login=$_SESSION['Member']['login'];
-    $password=$_SESSION['Member']['password'];
-    $m_name=$_SESSION['Member']['name'];
-    $post=$_SESSION['Member']['post'];
-    $address=$_SESSION['Member']['address'];
-    $city=$_SESSION['Member']['city'];
-    $town=$_SESSION['Member']['town'];
-    $dal=$_SESSION['Member']['dal'];
-    $apart=$_SESSION['Member']['apart'];
-    $mail=$_SESSION['Member']['mail'];
-    $number=$_SESSION['Member']['number'];
-}
- echo '<form action="toroku-output.php" method="post">';
+
+ echo '<form action="toroku.php" method="post">';
  echo '<div class="ID">ログインIDを20字以内で入力してください</div>';
- echo '<input type="text" name="login" value="',$login,'">';
+ echo '<input type="text" name="login">';
  echo '<div class="pass">パスワードを20字以内で入力してください</div>';
- echo '<input type="password" name="password" value="',$password,'">';
+ echo '<input type="password" name="password" >';
  echo '<div class="name">お名前</div>';
- echo ' <input type="text" name="m_name" value="',$m_name,'">';
+ echo ' <input type="text" name="m_name" >';
  echo ' <div class="place">ご住所</div>';
  echo ' <div>郵便番号を入力してください</div>';
- echo ' <input type="text" name="post"  value="',$post,'" placeholder="例：1234567">';
- echo ' <button type="button" class="ajaxzip3" href="#">自動入力</button>';
+ echo ' <input type="text" name="post" placeholder="例：1234567">';
+ echo ' <div><button type="button" class="ajaxzip3" href="#">自動入力</button></div>';
  echo ' <div>県名</div>';
- echo ' <input type="text" name="address" value="',$address,'">';
+ echo ' <input type="text" name="address" >';
  echo ' <div>市区町村</div>';
- echo ' <input type="text" name="city"  value="',$city,'">';
+ echo ' <input type="text" name="city"  >';
  echo ' <div>町名</div>'; 
- echo ' <input type="text" name="town" value="',$town,'">';
+ echo ' <input type="text" name="town" >';
  echo ' <div>番地</div>';
- echo ' <input type="text" name="dal"  value="',$dal,'">';
+ echo ' <input type="text" name="dal"  >';
  echo ' <div>マンション名、号室等</div>';
- echo ' <input type="text"  name="apart" value="',$apart,'">';
+ echo ' <input type="text"  name="apart" >';
  echo ' <div>メールアドレスを入力してください</div>';
- echo ' <input type="text"  name="mail" value="',$mail,'">';
+ echo ' <input type="text"  name="mail" >';
  echo ' <div>電話番号</div>';
- echo ' <input type="text" name="number" value="',$number,'">';
+ echo ' <input type="text" name="number">';
  echo ' <div><button class="toroku" type="submit">確認</button></div>';
  echo '</form>';
     ?>
