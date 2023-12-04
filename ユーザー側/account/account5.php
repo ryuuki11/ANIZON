@@ -9,9 +9,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/account5.css">
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
+
     <title>変更完了</title>
 </head>
 <body>
+<div id="wrap">
+<?php require '../home/header_sazae.php'; ?>
+
     <?php
     $pdo=new PDO($connect,USER,PASS);
     $id=$_SESSION['member']['id'];
@@ -31,5 +37,8 @@
     ?>
       
     <div><button class="login" onclick="location.href='../login/login.php'">ログインページへ</button></div>
+
+    <?php require '../home/footer.php'; ?>
+    </div>
 </body>
 </html>

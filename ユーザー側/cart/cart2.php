@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/header_sazae.css" />
     <link rel="stylesheet" href="css/cart2.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>anizon</title>
 </head>
 <body>
-      
+<div id="wrap">
+<?php require '../home/header_sazae.php'; ?>
 
     <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
@@ -20,71 +21,112 @@
     const PASS = 'Pass0809';
  
     $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+    $pdo=new PDO($connect,USER,PASS);
+    $result = $pdo->query('select *from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
 
     echo '<div class="h">';
         echo '<div class="name">津隈さんのカート</div>';
-        echo '<form action="cart1.php">';
+        echo '<form class="btn2" action="cart1.php">';
         echo '<button>戻る</button>';
         echo '</form>';
         echo '</div>';
         echo '<hr>';
+        $total=0;
+
     // 接続確認
-   $i=0;
+if(isset($_POST['check'])){
     $array=$_POST['check'];
     foreach($array as $row){
         foreach($_SESSION['check'] as $key=>$value){
-            echo $key;
-            echo $i;
-            if($key==$i){
-            $judge=$row.$value='true';
-            $_SESSION['check'][$key]='true';
-            echo $key;
-            echo $value;
+            $j=0;
+            if($key==$row){
+                $_SESSION['check'][$row]='true';
+                $j=1;
+                break;
             }
-            $i++;
+            
             
         }
         
     }
     // カートテーブルから商品情報を取得
-    $pdo=new PDO($connect,USER,PASS);
-    $result = $pdo->query('select *from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
-
     if (!empty($result)){ 
         // 取得した商品情報を表示
         $total=0;
-        $i=0;
         foreach($result as $row) {
-            if($_POST['buy'] == $row['c_id'] || $i%2==0){
             foreach($_SESSION['check'] as $key=>$value){
-                if($key==$i){
                 if($value=='true'){
-                    echo '<div class="cart-shohin">';
-                    echo '<p class="date">' . $row['date'] . '</p>';
-                    echo '<img src="' . $row['image'] . '" alt="">';
-                    echo '<div class="syosai">';
-                    echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
-                    echo '<p class="sname" id="name"></p>';
-                    echo '<p class="price">' . $row['price'] . '</p>';
-                    echo '</div>';
-                    echo '</div>';
-                    echo '<hr>';
-                    $total+=$row['price'];
+                    $j=$key+1;
+                    if($_SESSION['check'][$j]==$row['c_id']){
+                        $price=$row["price"]*$row["c_piece"];
+                        echo '<div class="cart-shohin">';
+                        echo '<p class="date">' . $row['c_date'] . '</p>';
+                        echo '<div class="ci">';
+                        echo '<img src="' . $row["image"] . '" alt="">';
+                        echo '</div>';
+                        echo '<div class="syosai">';
+                        echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
+                        echo '<p class="sname" id="name"></p>';
+                        echo '<p class="price"><span class="piece">数量：'.$row['c_piece'].'</span><span class=cprice>'. $row["price"]*$row['c_piece'] .'円</span></p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '<hr>';
+                        $total+=$price;
+                    }
                 }
             }
-            $i+=2;
-            }
-            }
         }
-        echo '<p class="allprice">合計',$total,'円</p>';   
+           
     }
+}else if(isset($_POST['buy'])){
+                foreach($result as $row) {
+                    if($row['c_id']==$_POST['buy']){
+                        $price=$row["price"]*$row["c_piece"];
+                        echo '<div class="cart-shohin">';
+                        echo '<p class="date">' . $row['c_date'] . '</p>';
+                        echo '<div class="ci">';
+                        echo '<img src="' . $row["image"] . '" alt="">';
+                        echo '</div>';
+                        echo '<div class="syosai">';
+                        echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
+                        echo '<p class="sname" id="name"></p>';
+                        echo '<p class="price"><span class="piece">数量：'.$row['c_piece'].'</span><span class=cprice>'. $row["price"]*$row['c_piece'] .'円</span></p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '<hr>';
+                        $total+=$price;
+                }
+                }
+}else if(isset($_POST['all'])){
+    foreach($result as $row) {
+        $price=$row["price"]*$row["c_piece"];
+        echo '<div class="cart-shohin">';
+        echo '<p class="date">' . $row['c_date'] . '</p>';
+        echo '<div class="ci">';
+        echo '<img src="' . $row["image"] . '" alt="">';
+        echo '</div>';
+        echo '<div class="syosai">';
+        echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
+        echo '<p class="sname" id="name"></p>';
+        echo '<p class="price"><span class="piece">数量：'.$row['c_piece'].'</span><span class=cprice>'. $row["price"]*$row['c_piece'] .'円</span></p>';
+        echo '</div>';
+        echo '</div>';
+        echo '<hr>';
+        $total+=$price;
+    }
+
+}
+echo '<p class="allprice">合計',$total,'円</p>';
 
     ?>
 
     
-    <form action="cart3.php"><button class="buy">
+    <form class="bottom" action="cart3.php"><button class="buy">
         支払い情報
     </button></form>
+
+    <?php require '../home/footer.php'; ?>
+    </div>
     <script>
         const a =document.getElementById('s_name');
         const b =document.getElementById('name');

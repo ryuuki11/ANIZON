@@ -8,9 +8,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/account2-1.css">
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>アカウント情報</title>
 </head>
 <body>
+    <div id="wrap">
+<?php require '../home/header_sazae.php'; ?>
     <?php
     $login=$pass=$name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
     if(isset($_SESSION['member'])) {
@@ -26,6 +30,7 @@
         $mail = $_SESSION['member']['mail'];
         $number = $_SESSION['member']['number'];
     }
+    if(isset($_SESSION['member']['m_name'])){
 
     echo '<p class="name">',$name,'さんのアカウント情報</p><br>';
     
@@ -57,8 +62,16 @@
         
     echo '<p class="midasi">電話番号</p>';
     echo '<p>',$number,'</p>';
-    ?>
+    
 
-    <div><button class="toroku" onclick="location.href='account3.php'">変更する</button></div>
+    echo '<div><button class="toroku" onclick="location.href=\''.'account3.php.'.'\'">変更する</button></div>';
+
+}else{
+        echo '<p class="home">ログインしてください</p>';
+        echo '<a href="../login/login.php" ><button class="home">ログイン画面へ</button></a>';
+    }
+    ?>
+    <?php require '../home/footer.php'; ?>
+    </div>
 </body>
 </html>

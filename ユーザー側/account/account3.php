@@ -8,11 +8,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/account3.css">
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>login</title>
     <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 </head>
 <body>
+<div id="wrap">
+<?php require '../home/header_sazae.php'; ?>
+
 <?php
     $login=$password=$m_name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
     if(isset($_SESSION['member'])) {
@@ -57,6 +62,9 @@
     echo ' <div><button class="toroku" type="submit">確認</button></div>';
     echo '</form>';
     ?>
+
+    <?php require '../home/footer.php'; ?>
+    </div>
     <script>
             $('.ajaxzip3').on('click', function(){
     AjaxZip3.zip2addr('post','','address','city','town','dal');
