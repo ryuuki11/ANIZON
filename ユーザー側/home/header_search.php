@@ -40,7 +40,7 @@
                             </ul>
                         </div>
                     </div>
-                    <span class="title">ANIZON</span>
+                    <a href="../home/home.php"></a><span class="title">ANIZON</span></a>
                     <input type="checkbox" type="checkbox" id="human">
                     <div class="icon">
                         <label for="human" class="human">
@@ -58,8 +58,19 @@
                             <h3>アカウント情報</h3>
                             <ul>
                             <li>
-                                    <a href="../account/account2-1.php">アカウント情報</a>
-                                </li>
+                                <a href="../account/account2-1.php">アカウント情報</a>
+                            </li>
+                            <?php
+                            if(isset($_SESSION['member']['m_name'])){
+                                echo '<li>';
+                                echo '<a href="../home/logout.php">ログアウト</a>';
+                            echo '</li>';
+                            }else{
+                                echo '<li>';
+                                echo '<a href="../login/login.php">ログイン/新規登録</a>';
+                                 echo '</li>';
+                            }
+                            ?>
                             </ul>
                             <h3>注文履歴</h3>
                             <ul>

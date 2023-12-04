@@ -24,33 +24,37 @@
     if(isset($_SESSION['member']['id'])){
         $sql=$pdo->prepare('insert into Cart (m_id,s_id,c_date,c_piece) values(?,?,CURRENT_DATE(),?)');
         $sql->execute([$_SESSION['member']['id'],$_SESSION['shohin_shosai']['id'],$_POST['piece']]);
-        echo 'カートに商品を追加しました';
+        echo '<p class="mess">カートに商品を追加しました</p>';
         echo '<hr>';
 
 
-    $sql=$pdo->prepare('select * from Shohin where s_id=?');
-    $sql->execute([$_SESSION['shohin_shosai']['id']]);
-   
-        foreach($sql as $row){
-            $_SESSION['shohin_shosai']['id']=$row['s_id'];
-            echo '<div class="shohin">';
-                echo '<img src="',$row['image'],'" alt="">';
-                echo '<div class="shosai">';
-                    echo '<p class="name">',$row['s_name'],'</p>';
-                    echo '<p class="setumei">',$row['setumei'],'</p>';
-                    echo '<p class="price">',$row['price'],'</p>';
-                    echo'<a href="shosai.php?id=',$row['s_id'],'"><button class="cart">カートに入れる</button></a>';
+        $sql=$pdo->prepare('select * from Shohin where s_id=?');
+        $sql->execute([$_SESSION['shohin_shosai']['id']]);
+            foreach($sql as $row){
+                $_SESSION['shohin_shosai']['id']=$row['s_id'];
+                echo '<div class="shohin">';
+                echo '<div class="ci">';
+                echo '<img src="' . $row["image"] . '" alt="">';
                 echo '</div>';
-            echo '</div>';
-        }
-        
-        echo '<a href="result.php">';
-        echo '<button class="backb">検索画面へ</button>';
-        echo '</a>';
+                    echo '<form action="shosai-input" method="post">';
+                    echo '<div class="shosai">';
+                        echo '<p class="name">',$row['s_name'],'</p>';
+                        echo '<p class="setumei">',$row['setumei'],'</p>';
+                        echo '<p class="price">金額：',$row['price'],'円</p>';
+                        echo '<p>数量：<input type="text" class="piece" name="piece" value="1"><p>';
+                        echo'<div><button class="cart">カートに入れる</button></div>';
+                    echo '</div>';
+                    echo '</form>';
+                echo '</div>';
+            }
+            
+            echo '<a href="result.php">';
+            echo '<button class="backb">検索画面へ</button>';
+            echo '</a>';
         echo '<div>';
     }else{
-        header('Location:https://aso2201370.icurus.jp/ユーザー側/search/shosai.php');
-        exit();
+        echo '<p class="home">ログインしてください</p>';
+        echo '<a href="../login/login.php" ><button class="home">ログイン画面へ</button></a>';
     }
     ?>
     <?php require '../home/footer.php'; ?>

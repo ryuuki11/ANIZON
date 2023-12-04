@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -37,8 +38,10 @@
     ?>
     </div>
 
-    <div class="botton">
-        <botton id="botton">RAGETOP</botton>
+    <div class="space">
+            <div class="botton">
+                <botton id="botton">RAGETOP</botton>
+            </div>
     </div>
 
     <?php require '../home/footer.php'; ?>

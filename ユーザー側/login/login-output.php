@@ -40,13 +40,16 @@ foreach ($sql as $row) {
 
 if (empty($_POST['login'])) {
     echo '<p class="error">ログインIDを入力してください。</p>';
+    echo '<div class="backb"><a href="login.php"><button class="back">ログイン画面へ</button></a></div>';
 }else if (empty($_POST['password'])) {
-    echo '<p class="error">パスワードを入力してください。</p>';    
+    echo '<p class="error">パスワードを入力してください。</p>';  
+    echo '<div class="backb"><a href="login.php"><button class="back">ログイン画面へ</button></a></div>';
 }else if (isset($_SESSION['member'])) {
     echo '<p class="suc">ログインしました。</p>';
-    echo '<div class="button"><button class="next" onclick="location.href=',"'../home/home.php'",'">ホームへ</button></div>';
+    echo '<div class="buttonsuc"><button class="next" onclick="location.href=',"'../home/home.php'",'">ホームへ</button></div>';
 }else{
     echo '<p class="error">ログインに失敗しました。</p>';
+    echo '<div class="backb"><a href="login.php"><button class="back">ログイン画面へ</button></a></div>';
 }
 ?>
 

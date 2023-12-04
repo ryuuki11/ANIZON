@@ -23,7 +23,8 @@
         <div class="log"><button type="submit" class="login">ログイン</button></div>
     </form>
 
-    <div class="button"><button class="toroku" onclick="location.href='../toroku/toroku-input.php'">新規登録</button></div>
+    <div class="button b1"><button class="toroku" onclick="location.href='../toroku/toroku-input.php'">新規登録</button></div>
+    <div class="button b2"><button class="home" onclick="location.href='../home/home.php'">ホームへ</button></div>
     <?php require '../home/footer.php'; ?>
     </div>
 </body>

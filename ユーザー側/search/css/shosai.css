@@ -6,7 +6,7 @@ div.shohin{
     width:80vw;
     max-height: 400px;
     margin:0 auto;
-    margin-top: 120px;
+    margin-top: 140px;
 }
 input{
     margin: 10px auto;
@@ -27,6 +27,7 @@ input{
     text-align: center;
     margin:0 auto;
     margin-bottom: 15px;
+    border: solid 2px black;
   }
   div.shohin img{
     width:100%;
@@ -37,11 +38,19 @@ input{
     margin-top: 5vw;
 }
 p{
+    font-size:clamp(10px, 3vw, 20px);
     margin-top: 2vw;
     margin-left:10vw;
 }
+p.mess{
+    margin-top: 10vw;
+}
+.shosai{
+    width: 50vw;
+}
 input.piece{
     width:5vw;
+    min-width: 50px;
 }
 button{
     font-size:clamp(10px, 3vw, 20px);
@@ -61,7 +70,7 @@ button.cart{
     border-radius: 0px;
     width:15vw;
     max-width:150px ;
-    margin:7vw 0 0 15vw;
+    margin:2vw 0 0 15vw;
 }
 button.backb{
     display: block;
@@ -69,4 +78,42 @@ button.backb{
     min-width: 110px;
     color:blue;
     margin:10vw auto 0 auto;
+}
+a button{
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
+    text-align:center;
+    width:10vw;
+    min-width:90px;
+    height:5vw;
+    max-height:40px;
+    min-height: 20px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+}
+.display_none {
+    visibility: hidden;
+    margin: 3rem auto;
+    padding: 4%;
+    position: absolute;
+    width: 70vw;
+    top:100px;
+    left:15vw;
+    z-index: 80;
+    background-color: white;
+    text-align: center;
+}
+.backv{
+    visibility: hidden;
+    position: fixed;
+    z-index: 70;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.3;
+}
+.display_none button{
+    margin-top:3vw;
 }

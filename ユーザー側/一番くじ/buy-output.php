@@ -14,17 +14,22 @@
 <body>
 <div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
-        <p class="name">○○○○○○○○○○さん</p>
-            <p class="order">購入完了です</p>
-
-        <?php
+<?php
+const SERVER = 'mysql219.phy.lolipop.lan';
+const DBNAME = 'LAA1518095-anizon';
+const USER = 'LAA1518095';
+const PASS = 'Pass0809';
+$connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+$pdo=new PDO($connect,USER,PASS);
+if((!isset($_POST['name1']) || $_POST['name1']==="")||(!isset($_POST['sec']) || $_POST['sec']==="")||(!isset($_POST['num']) || $_POST['num']==="")){
+    echo '<p class="error">すべての項目に入力してください</p>';
+    echo '<div><a href="buy.php"><button type="submit" class="top">入力画面へ</button></a></div>';
+}else{
+        echo '<p class="name">',$_SESSION['member']['m_name'],'さん</p>';
+            echo '<p class="order">購入完了です</p>';
+            unset($_SESSION['gacha']['num']);
     
-            const SERVER = 'mysql219.phy.lolipop.lan';
-            const DBNAME = 'LAA1518095-anizon';
-            const USER = 'LAA1518095';
-            const PASS = 'Pass0809';
-            $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
-            $pdo=new PDO($connect,USER,PASS);
+            
             if($_SESSION['flag']==1){
                 $sql=$pdo->prepare('insert into Buy (m_id,date) values (?,CURRENT_DATE())');
                 $sql->execute([$_SESSION['member']['id']]);
@@ -52,10 +57,12 @@
             }
             
       
-        ?>
+        
 
-        <div><a href="gacha.php"><button type="submit" class="top">ガチャへ</button></a></div>
-        <?php require '../home/footer.php'; ?>
+        echo '<div><a href="gacha.php"><button type="submit" class="top">ガチャへ</button></a></div>';
+}
+        require "../home/footer.php";
+        ?>
         </div>
 </body>
 </html>

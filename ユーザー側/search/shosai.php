@@ -14,11 +14,26 @@
     <div id="wrap">
     <?php require '../home/header_search.php'; ?>
         <?php
-    const SERVER = 'mysql219.phy.lolipop.lan';
-    const DBNAME = 'LAA1518095-anizon';
-    const USER = 'LAA1518095';
-    const PASS = 'Pass0809';
-    $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+            const SERVER = 'mysql219.phy.lolipop.lan';
+            const DBNAME = 'LAA1518095-anizon';
+            const USER = 'LAA1518095';
+            const PASS = 'Pass0809';
+            $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+           $count=0;
+                    $mess='';
+            if(isset($_POST['piece'])){
+                $num=1;
+                    if(isset($_SESSION['member']['id'])&& $count==0){
+                        $mess='カートに追加しました';
+                        $count=1;
+                    }else{
+                        $mess='ログインしてください';
+                    }
+        }else{
+            $num=0;
+        }
+
+    
     $pdo=new PDO($connect,USER,PASS);
     $sql=$pdo->prepare('select * from Shohin where s_id=?');
     $sql->execute([$_GET['id']]);
@@ -28,17 +43,29 @@
             echo '<div class="ci">';
             echo '<img src="' . $row["image"] . '" alt="">';
             echo '</div>';
-                echo '<form action="shosai-input" method="post">';
+                echo '<form method="post">';
                 echo '<div class="shosai">';
                     echo '<p class="name">',$row['s_name'],'</p>';
                     echo '<p class="setumei">',$row['setumei'],'</p>';
                     echo '<p class="price">金額：',$row['price'],'円</p>';
                     echo '<p>数量：<input type="text" class="piece" name="piece" value="1"><p>';
-                    echo'<div><button class="cart">カートに入れる</button></div>';
+                    echo'<div><button class="cartb" value="1">カートに入れる</button></div>';
                 echo '</div>';
                 echo '</form>';
             echo '</div>';
         }
+
+        echo '<div class="backv"></div>';
+        echo '<div class="display_none">';
+        echo '<p>',$mess,'</p>';
+        if(isset($_SESSION['member']['id'])){
+            echo '<a href="../cart/cart1.php"><button>カートへ</button></a>';
+        }else{
+            echo '<a href="../login/login.php"><button>ログイン画面へ</button></a>';
+        }
+        echo '<br><a href="shosai.php?id=',$_GET['id'],'"><button class="close">閉じる</button></a>';
+        echo '</div>';
+        
         ?>
         <a href="result.php">
         <button class="backb">
@@ -47,5 +74,19 @@
         </a>
         <?php require '../home/footer.php'; ?>
         </div>
+
+        <script>
+            const displayNone = document.querySelector('.display_none');
+            const cartb = document.querySelector('.cartb');
+            const closeb = document.querySelector('.close');
+            const back = document.querySelector('.backv');
+            let num = <?php echo $num; ?>;
+            console.log(num);
+            if(num==1){
+                    displayNone.style.visibility = 'visible';
+                    back.style.visibility = 'visible';
+                
+            };      
+        </script>
     </body>
 </html>

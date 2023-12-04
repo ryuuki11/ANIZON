@@ -19,6 +19,7 @@
     const PASS = 'Pass0809';
  
     $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+    if(isset($_SESSION['member']['m_name'])){
     
             echo '<div class="name">○○さんの注文履歴</div>';
                 echo '<hr>';
@@ -44,11 +45,15 @@
             }
                 echo '<hr>';
     
-    ?>
+   
                 
-                <button class="back">
-                    戻る
-                </button>
+                echo '<button class="back">戻る</button>';
+
+        }else{
+        echo '<p class="home">ログインしてください</p>';
+        echo '<a href="../login/login.php" ><button class="home">ログイン画面へ</button></a>';
+    }
+    ?>
                 <?php require '../home/footer.php'; ?>
                 </div>
     </body>

@@ -7,6 +7,7 @@
     <meta charset="UTF=8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/toroku0.css">
     <link rel="stylesheet" href="../home/css/header_title.css">
     <link rel="stylesheet" href="../home/css/footer.css">
     <title>login</title>

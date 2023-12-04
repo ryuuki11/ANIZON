@@ -1,7 +1,7 @@
 
         <div class="header">
             <div class="img">
-                <span class="title">ANIZON</span>
+                <a href="../home/home.php"><span class="title">ANIZON</span></a>
             </div>
         </div>
     

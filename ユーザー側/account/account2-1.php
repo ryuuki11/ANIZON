@@ -30,6 +30,7 @@
         $mail = $_SESSION['member']['mail'];
         $number = $_SESSION['member']['number'];
     }
+    if(isset($_SESSION['member']['m_name'])){
 
     echo '<p class="name">',$name,'さんのアカウント情報</p><br>';
     
@@ -61,9 +62,15 @@
         
     echo '<p class="midasi">電話番号</p>';
     echo '<p>',$number,'</p>';
-    ?>
+    
 
-    <div><button class="toroku" onclick="location.href='account3.php'">変更する</button></div>
+    echo '<div><button class="toroku" onclick="location.href=\''.'account3.php.'.'\'">変更する</button></div>';
+
+}else{
+        echo '<p class="home">ログインしてください</p>';
+        echo '<a href="../login/login.php" ><button class="home">ログイン画面へ</button></a>';
+    }
+    ?>
     <?php require '../home/footer.php'; ?>
     </div>
 </body>

@@ -23,6 +23,10 @@
     const PASS = 'Pass0809';
     $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
     $pdo=new PDO($connect,USER,PASS);
+    if((!isset($_POST['name1']) || $_POST['name1']==="")||(!isset($_POST['sec']) || $_POST['sec']==="")||(!isset($_POST['num']) || $_POST['num']==="")){
+        echo '<p class="error">すべての項目に入力してください</p>';
+        echo '<div class="button"><a href="cart3.php"><button type="submit" class="top">入力画面へ</button></a></div>';
+    }else{
     $result = $pdo->query('select * from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
     $s_id=array();
     $s_name=array();
@@ -79,15 +83,17 @@
             }
         }
     }
-    ?>
+   
 
-        <p class="name">○○○○○○○○○○さん</p>
-            <p class="order">注文完了です</p>
+        echo '<p class="name">',$_SESSION['member']['m_name'],'さん</p>';
+            echo '<p class="order">注文完了です</p>';
             
       
             
 
-        <div><button type="submit" class="top">トップページへ</button></div>
+        echo '<div><button type="submit" class="top">トップページへ</button></div>';
+}
+?>
 
         <?php require '../home/footer.php'; ?>
         </div>

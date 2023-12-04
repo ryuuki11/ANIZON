@@ -14,8 +14,6 @@
 <body>
 <div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
-
-
 <?php
 const SERVER = 'mysql219.phy.lolipop.lan';
 const DBNAME = 'LAA1518095-anizon';
@@ -23,61 +21,72 @@ const USER = 'LAA1518095';
 const PASS = 'Pass0809';
 
 $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+if(isset($_SESSION['member']['m_name'])){
 
-echo '<div class="name">津隈さんのカート</div>';
-echo '<hr>';
+        
 
-$pdo = new PDO($connect, USER, PASS);
-$result = $pdo->query('select * from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
-$_SESSION['check']=array();
-$array=array();
-echo '<form action="cart2.php" method="post">';
-if (!empty($result)) {
-    $i=1;
-    foreach ($result as $row) {
-        if ($_SESSION['member']['id'] == $row['m_id']) {
-            echo '<div class="cart-shohin">';
-            echo '<input type="checkbox" class="checkbox 1" id="c1" name="check[]" value="' . $i. '">';
-            echo '<label for="c1" class="check">';
-            echo '<p class="date">' . $row["c_date"] . '</p>';
-            echo '<div class="ci">';
-            echo '<img src="' . $row["image"] . '" alt="">';
-            echo '</div>';
-            echo '<div class="syosai">';
-            echo '<p class="sname" id="s_name">' . $row["s_name"] . '</p>';
-            echo '<p class="sname" id="name"></p>';
-            echo '<p class="price"><span class="piece">数量：'.$row['c_piece'].'</span><span class=cprice>'. $row["price"]*$row['c_piece'] .'円</span></p>';
-            echo '<div class="btn">';
-            echo '<p><button type="submit" class="delete" name="delete"  formaction="cart-delete.php" value="' , $row['c_id'] . '">削除</button>';
-            echo '<button type="submit" class="buy" name="buy">購入</button></p>';
-            echo '</div>';
-            echo '</div>';
-            echo '</label>';
-            echo '</div>';
-            echo '<hr>';
+
+
+
+        echo '<div class="name">さんのカート</div>';
+        echo '<hr>';
+
+        $pdo = new PDO($connect, USER, PASS);
+        $result = $pdo->query('select * from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
+        $_SESSION['check']=array();
+        $array=array();
+        echo '<form action="cart2.php" method="post">';
+        if (!empty($result)) {
+            $i=1;
+            foreach ($result as $row) {
+                if ($_SESSION['member']['id'] == $row['m_id']) {
+                    echo '<div class="cart-shohin">';
+                    echo '<input type="checkbox" class="checkbox 1" id="c1" name="check[]" value="' . $i. '">';
+                    echo '<label for="c1" class="check">';
+                    echo '<p class="date">' . $row["c_date"] . '</p>';
+                    echo '<div class="ci">';
+                    echo '<img src="' . $row["image"] . '" alt="">';
+                    echo '</div>';
+                    echo '<div class="syosai">';
+                    echo '<p class="sname" id="s_name">' . $row["s_name"] . '</p>';
+                    echo '<p class="sname" id="name"></p>';
+                    echo '<p class="price"><span class="piece">数量：'.$row['c_piece'].'</span><span class=cprice>'. $row["price"]*$row['c_piece'] .'円</span></p>';
+                    echo '<div class="btn">';
+                    echo '<p><button type="submit" class="delete" name="delete"  formaction="cart-delete.php" value="' , $row['c_id'] . '">削除</button>';
+                    echo '<button type="submit" class="buy" name="buy" value="',$row['c_id'],'">購入</button></p>';
+                    echo '</div>';
+                    echo '</div>';
+                    echo '</label>';
+                    echo '</div>';
+                    echo '<hr>';
+                    
+                    $_SESSION['check'][]=$row['s_id'];
+                    $_SESSION['check'][]='false';
+                    $_SESSION['check'][]=$row['c_id'];
+                    $i+=3;
+                }
+            }
             
-            $_SESSION['check'][]=$row['s_id'];
-            $_SESSION['check'][]='false';
-            $_SESSION['check'][]=$row['c_id'];
-            $i+=3;
+        } else {
+            echo "カートに商品がありません。";
         }
-    }
     
-} else {
-    echo "カートに商品がありません。";
-}
 
+        $pdo = null;
+        
 
-$pdo = null;
-?>
+        echo '<div class="select">';
+            echo '<button type="button" onClick="checkAll()">全選択</button>';
+            echo '<button type="button" onClick="uncheckAll()">選択解除</button>';
+        echo '</div>';
 
-<div class="select">
-    <button type="button" onClick="checkAll()">全選択</button>
-    <button type="button" onClick="uncheckAll()">選択解除</button>
-</div>
-
-    <button class="all">まとめて購入</button>
-</form>
+            echo'<button class="all" name="all" value="2">まとめて購入</button>';
+        echo '</form>';
+    }else{
+        echo '<p class="home">ログインしてください</p>';
+        echo '<a href="../login/login.php" ><button class="home">ログイン画面へ</button></a>';
+    }
+    ?>
 
 <?php require '../home/footer.php'; ?>
 </div>

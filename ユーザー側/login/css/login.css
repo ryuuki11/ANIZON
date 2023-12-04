@@ -5,7 +5,7 @@ body{
 }
 p{  
   text-align:center;
-  font-size: min(3vw,20px);
+  font-size:clamp(15px, 3vw, 20px);
   margin-bottom: 2vw;
 }
 
@@ -17,7 +17,7 @@ input{
   min-height: 30px;
   text-align:center;
   border: solid 2px black;
-  font-size: min(3vw,20px);
+  font-size:clamp(15px, 3vw, 20px);
 }
 form{
   margin-top: 6vw;
@@ -52,10 +52,29 @@ div.log{
 
 div.button{
   text-align: center;
+}
+.b2{
   margin-top:2vw;
 }
+div.buttonsuc{
+  text-align: center;
+  margin-top: 10vw;
+}
 p.error{
-  margin:auto 0;
+  margin-top: 10vw;
+}
+div.backb{
+  text-align: center;
+  margin-top: 10vw;
+}
+div.backb button{
+  font-size:clamp(10px, 2vw, 20px);
+  width:20vw;
+  min-width:130px;
+  max-width:200px;
+}
+button.back{
+  margin-top: 10vw;
 }
 p.suc{
   margin-top:10vw;

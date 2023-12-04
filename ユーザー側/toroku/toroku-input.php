@@ -11,7 +11,8 @@
 <html lang="ja">
     <head>
     <meta charset="UTF=8">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-    <link rel="stylesheet" href="css/toroku0.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/toroku.css">
     <link rel="stylesheet" href="../home/css/header_title.css">
     <link rel="stylesheet" href="../home/css/footer.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,8 +47,10 @@ if(isset($_SESSION['Member'])){
  echo ' <input type="text" name="m_name" value="',$m_name,'">';
  echo ' <div class="place">ご住所</div>';
  echo ' <div>郵便番号を入力してください</div>';
- echo ' <input type="text" name="post"  value="',$post,'" placeholder="例：1234567">';
- echo ' <button type="button" class="ajaxzip3" href="#">自動入力</button>';
+ echo '<div class="button">';
+ echo ' <input type="text" class="post" name="post"  value="',$post,'" placeholder="例：1234567">';
+ echo ' <input type="button" class="ajaxzip3" href="#" value="自動入力">';
+ echo '</div>';
  echo ' <div>県名</div>';
  echo ' <input type="text" name="address" value="',$address,'">';
  echo ' <div>市区町村</div>';
