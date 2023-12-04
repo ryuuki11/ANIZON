@@ -32,7 +32,7 @@
         echo '</div>';
         echo '<hr>';
         $total=0;
-
+        unset($_SESSION['cart']);
     // 接続確認
 if(isset($_POST['check'])){
     $array=$_POST['check'];
@@ -72,6 +72,7 @@ if(isset($_POST['check'])){
                         echo '</div>';
                         echo '<hr>';
                         $total+=$price;
+                        $_SESSION['cart'][]=$row['c_id'];
                     }
                 }
             }
@@ -96,6 +97,7 @@ if(isset($_POST['check'])){
                         echo '</div>';
                         echo '<hr>';
                         $total+=$price;
+                        $_SESSION['cart'][]=$row['c_id'];
                 }
             }
                 }
@@ -116,6 +118,7 @@ if(isset($_POST['check'])){
         echo '</div>';
         echo '<hr>';
         $total+=$price;
+        $_SESSION['cart'][]=$row['c_id'];
         }
     }
 

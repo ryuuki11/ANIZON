@@ -83,6 +83,7 @@
             }
         }
     }
+    unset($_SESSION['cart']);
    
 
         echo '<p class="name">',$_SESSION['member']['m_name'],'さん</p>';
