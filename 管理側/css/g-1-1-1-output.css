@@ -1,0 +1,12 @@
+p{
+    text-align: center;
+    font-size: 50px;
+}
+ 
+button{
+    background-color: rgb(243, 156, 156);
+    font-size: 30px;
+    border-radius: 20px;
+    text-align: center;
+    top: 5vw;
+}
