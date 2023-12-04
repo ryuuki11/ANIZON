@@ -4,23 +4,24 @@ body {
  text-align: center;
 }
 
-input{
-  margin: 10px auto;
-  width:200px;
-  font-size: 20px;
+p{  
+  text-align:center;
+  font-size:clamp(15px, 3vw, 20px);
+  margin-top:10vw;
 }
-  button{
-    font-size:18px;
-    background-color: #ffffff;
-    border-radius:20px;
-    padding:4px 0;
-    text-align: center;
-    width:200px;
-    margin-bottom: 10px;
-  }
-  .toroku{
-    color: rgb(60, 224, 224);
-    text-align: center;
-  }
- 
+button{
+  font-size:clamp(10px, 3vw, 20px);
+  border:solid 1px black;
+  text-align:center;
+  width:10vw;
+  min-width:90px;
+  height:5vw;
+  max-height:40px;
+  min-height: 20px;
+  border-radius: 25px;
+  background-color: rgb(240, 241, 241);
+}
+button{
+  margin-top: 10vw;
+}
   

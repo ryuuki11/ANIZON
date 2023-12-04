@@ -1,0 +1,148 @@
+body{
+  font-size:clamp(15px, 3vw, 20px);
+}
+hr{
+  width:90vw;
+  margin:0 auto;
+}
+div.cart-shohin{
+  display: flex;
+  height:21vw;
+  width:90vw;
+  margin-left:3vw;
+}
+div.h{
+  display:flex;
+  margin-top: 6vw;
+}
+button{
+  font-size:clamp(10px, 3vw, 20px);
+  border:solid 1px black;
+  text-align:center;
+  width:10vw;
+  min-width:90px;
+  height:5vw;
+  max-height:40px;
+  min-height: 20px;
+  border-radius: 25px;
+  background-color: rgb(240, 241, 241);
+}
+div.h button{
+  margin-left:20vw;
+  min-width: 70px;
+  color: rgb(75, 189, 246);
+}
+div.ci{
+  width:20vw;
+  height:auto;
+  text-align: center;
+  margin:5px 0 5px 3vw;
+}
+div.cart-shohin p{
+  font-size: min(2vw, 20px);
+}
+div.cart-shohin img{
+  width:100%;
+  height:100%;
+  object-fit: contain;
+}
+div.name{
+  font-size:clamp(15px, 4vw, 25px);
+  margin:0 0 0 10vw;
+  width:50vw;
+  height:4vw;
+  max-height: 25px;
+  margin-bottom:20px ;
+}
+form.btn2{
+  height:4vw;
+  max-height: 25px;
+}
+.date{
+  margin:auto 0 auto 5vw;
+  
+}
+.syosai{
+  margin:auto 0 auto 5vw;
+}
+.sname{
+  margin-bottom:2vw;
+}
+.price{
+  margin-bottom:2vw;
+}
+.allprice{
+  font-size:clamp(15px, 4vw, 25px);
+  width: auto;
+  float: right;
+  margin-top: 50px;
+  margin-right: 10vw;
+ 
+}
+div.buttn2{
+  text-align: right;
+  margin-top: 130px;
+  margin-right:15vw;
+}
+button.koushin{
+  color: rgb(38, 204, 13);
+}
+p.kin,select.shiharai{
+  text-align: center;
+}
+select.shiharai{
+  margin:0 auto;
+}
+input,select{
+  margin: 10px auto;
+  width:20vw;
+  min-width: 200px;
+  height:3vw;
+  min-height: 30px;
+  text-align:center;
+  border: solid 2px black;
+  font-size: clamp(15px, 3vw, 20px);
+}
+div.addres{
+  text-align: center;
+  margin-top:20px;
+}
+div.addres p.input{
+  margin-top: 20px;
+}
+p.select{
+  text-align: center;
+}
+div.card{
+  text-align: center;
+  margin-top: 50px;
+}
+p.kin{
+  margin-top: 50px;
+}
+table{
+  margin:0 auto;
+}
+select.month,select.year{
+  width:6vw;
+  min-width: 60px;
+}
+select.year{
+  margin-left:2vw;
+}
+button.buy{
+  display: block;
+  font-size:clamp(10px, 3vw, 25px);
+  width:20vw;
+  max-width: 250px;
+  margin:0px auto;
+  color:blue;
+  margin-top:70px;
+}
+span.cprice{
+  margin-left: 5vw;
+}
+div.buttn{
+    padding-bottom:calc(5vw + 90px);
+
+}

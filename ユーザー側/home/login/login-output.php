@@ -37,7 +37,7 @@ if (empty($_POST['login'])) {
     echo '<p>パスワードを入力してください。</p>';    
 }else if (isset($_SESSION['member'])) {
     echo '<p>ログインしました。</p>';
-    echo '<div><button class="next" onclick="location.href=',"'home.php'",'">ホームへ</button></div>';
+    echo '<div><button class="next" onclick="location.href=',"'../home/home.php'",'">ホームへ</button></div>';
 }else{
     echo '<p>ログインに失敗しました。</p>';
 }

@@ -1,6 +1,6 @@
 <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
-    const DBNAME = 'LAA1518095-anizom';
+    const DBNAME = 'LAA1518095-anizon';
     const USER = 'LAA1518095';
     const PASS = 'Pass0809';
 
@@ -10,14 +10,21 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-    <meta charset="UTF=8">        
-    <meta name="viewport" content="width=device-width,initial-scale=1">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+    <meta charset="UTF=8">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/toroku.css">
+    <link rel="stylesheet" href="../home/css/header_title.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>新規登録 </title>
 </head>
 <body>
+<div id="wrap">
+<?php require '../home/header_title.php'; ?>
     <?php
-$login=$password=$m_name=$post=$address=$city=$apart=$mail=$number='';
+$login=$password=$m_name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
 if(isset($_SESSION['Member'])){
     $login=$_SESSION['Member']['login'];
     $password=$_SESSION['Member']['password'];
@@ -25,6 +32,8 @@ if(isset($_SESSION['Member'])){
     $post=$_SESSION['Member']['post'];
     $address=$_SESSION['Member']['address'];
     $city=$_SESSION['Member']['city'];
+    $town=$_SESSION['Member']['town'];
+    $dal=$_SESSION['Member']['dal'];
     $apart=$_SESSION['Member']['apart'];
     $mail=$_SESSION['Member']['mail'];
     $number=$_SESSION['Member']['number'];
@@ -38,12 +47,18 @@ if(isset($_SESSION['Member'])){
  echo ' <input type="text" name="m_name" value="',$m_name,'">';
  echo ' <div class="place">ご住所</div>';
  echo ' <div>郵便番号を入力してください</div>';
- echo ' <div class="button"><input class="post" type="text" id="zipcode maxlength="8" name="post" value="',$post,'">';
- echo ' <input type="button" value="自動入力"></div>';
- echo ' <div>都道府県</div>';
- echo ' <input type="text"  name="prefecture" value="',$address,'">';
- echo ' <div>市区町村、番地</div>';
- echo ' <input type="text" name="city" value="',$city,'">';
+ echo '<div class="button">';
+ echo ' <input type="text" class="post" name="post"  value="',$post,'" placeholder="例：1234567">';
+ echo ' <input type="button" class="ajaxzip3" href="#" value="自動入力">';
+ echo '</div>';
+ echo ' <div>県名</div>';
+ echo ' <input type="text" name="address" value="',$address,'">';
+ echo ' <div>市区町村</div>';
+ echo ' <input type="text" name="city"  value="',$city,'">';
+ echo ' <div>町名</div>'; 
+ echo ' <input type="text" name="town" value="',$town,'">';
+ echo ' <div>番地</div>';
+ echo ' <input type="text" name="dal"  value="',$dal,'">';
  echo ' <div>マンション名、号室等</div>';
  echo ' <input type="text"  name="apart" value="',$apart,'">';
  echo ' <div>メールアドレスを入力してください</div>';
@@ -53,5 +68,25 @@ if(isset($_SESSION['Member'])){
  echo ' <div><button class="toroku" type="submit">確認</button></div>';
  echo '</form>';
     ?>
+    </div>
+    <script>
+            $('.ajaxzip3').on('click', function(){
+    AjaxZip3.zip2addr('post','','address','city','town','dal');
+
+    //成功時に実行する処理
+    AjaxZip3.onSuccess = function() {
+        $('.dal').focus();
+    };
+    
+    //失敗時に実行する処理
+    AjaxZip3.onFailure = function() {
+        alert('郵便番号に該当する住所が見つかりません');
+    };
+    
+    return false;
+
+});
+            </script>
+            <?php require '../home/footer.php'; ?>
 </body>
 </html>

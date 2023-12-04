@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,86 +12,7 @@
     <title>anizon</title>
 </head>
     <body>
-        <div class="header">
-            <div class="h">
-                <div class="img">
-                    <div class="hamburger-menu">
-                        <input class="checkbox" type="checkbox" id="menu-btn-check">
-                        <label for="menu-btn-check" class="menu-btn">
-                            <span class="bar bar-top"></span>
-                            <span class="bar bar-middle"></span>
-                            <span class="bar bar-bottom"></span>
-                        </label>
-                        <label class="nav-unshown" id="nav-close" for="menu-btn-check"></label>
-                        <div class="menu-content">
-                            <h3 class="ninki">人気・おすすめ商品</h3>
-                            <ul>
-                                <li>
-                                    <a href="#">おすすめ</a>
-                                </li>
-                                <li>
-                                    <a href="#">人気ランキング</a>
-                                </li>
-                            </ul>
-                            <h3>カテゴリー</h3>
-                            <ul>
-                                
-                                <li>
-                                    <a href="../search/result.php?category=1">CD・DVD</a>
-                                </li>
-                                <li>
-                                    <a href="../search/result.php?category=2">漫画</a>
-                                </li>
-                                <li>
-                                    <a href="../search/result.php?category=3">グッズ</a>
-                                </li>
-                            </ul>
-                            <h3>条件検索</h3>
-                            <ul>
-                                <li>
-                                    <a href="../search/search.php">条件検索</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <span class="title">ANIZON</span>
-                    <input type="checkbox" type="checkbox" id="human">
-                    <div class="icon">
-                        <label for="human" class="human">
-                        <img class="humanicon" src="img/humanicon.png" width="30" height="30">
-                        </label>
-                        <a href=""><img class="cart" src="img/cart.png" width="30" height="30"></a>
-                    </div>
-                    <label class="nav-unshown" id="nav-close" for="human"></label>
-                    <div class="human-menu">
-                        <label class="bor"  for="human">
-                        <span class="border border-top"></span>
-                        <span class="border border-bottom"></span>
-                        </label>
-                        <div class="font">
-                            <h3>アカウント情報</h3>
-                            <ul>
-                                <li>
-                                    <a href="../account/account2-1.php">アカウント情報</a>
-                                </li>
-                            </ul>
-                            <h3>注文履歴</h3>
-                            <ul>
-                                <li>
-                                    <a href="../account/order.php">注文履歴</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="search">
-                    <form action="../search/result.php" method="get">
-                        <input class="search" type="text" name="name" placeholder="検索" >
-                        <img class="search" src="img/search.png" width="25" height="20">
-                    </form>
-                </div>
-            </div>
-        </div>
+        <?php require 'header_search.php';?>
 
         
         <img class="stopper" src="img/back.png" alt="">
@@ -108,46 +30,28 @@
         
         <h2>人気商品</h2>
         <div class="ninki">
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
-            <div class="syohin1">
-                <img src="img/noimage.png" alt="">
-                <p>商品名</p>
-                <p>価格</p>
-            </div>
+            <?php
+            const SERVER = 'mysql219.phy.lolipop.lan';
+            const DBNAME = 'LAA1518095-anizon';
+            const USER = 'LAA1518095';
+            const PASS = 'Pass0809';
+            $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+            $pdo = new PDO($connect, USER, PASS);
+
+            $sql = $pdo->query('select * from Shohin where category!="ガチャ" order by sale desc');
+            $i=0;
+            foreach($sql as $row){
+                echo '<div class="syohin1">';
+                    echo '<img src="',$row['image'],'" alt="">';
+                    echo '<p>',$row['s_name'],'</p>';
+                    echo '<p>',$row['price'],'</p>';
+                echo '</div>';
+                $i++;
+                if($i==8){
+                    break;
+                }
+            }
+            ?>
         </div>
         <div class="lot">
             <a href="../一番くじ/gachaichiran.php"><img src="img/ガチャ.png" alt=""></a>
@@ -166,19 +70,19 @@
             </div>
             <div class="osusume3">
                 <p class="tensura"><img src="img/tensurajpg.jpg" alt=""></p>
-                <p>アニメ名前</p>
+                <p>転生したらスライムだった件</p>
             </div>
             <div class="osusume4">
                 <p class="naruto"><img src="img/naruto.jpg" alt=""></p>
-                <p>アニメ名前</p>
+                <p>ナルト</p>
             </div>
             <div class="osusume5">
                 <p class="conan"><img src="img/conan.png" alt=""></p>
-                <p>アニメ名前</p>
+                <p>名探偵コナン</p>
             </div>
             <div class="osusume6">
                 <p class="shadow"><img src="img/シャドーハウス.jpg" alt=""></p>
-                <p>アニメ名前</p>
+                <p>シャド―ハウス</p>
             </div>
         </div>
         <div class="botton">

@@ -19,7 +19,7 @@ body{
   }
   div.buttn2 button{
     position:absolute;
-    top:5vw;
+    top:120px;
     right: 0;
     margin-right:20vw;
     min-width: 70px;
@@ -27,9 +27,10 @@ body{
 }
 p.shiharai{
     font-weight: bold;
+    width: 100vw;
     font-size:clamp(15px, 4vw, 25px);
-    width:80vw;
-    margin:5vw 0 0 auto;
+    margin:70px 0 0 0;
+    text-align: center;
 }
   .allprice{
     font-size:clamp(15px, 4vw, 25px);
@@ -79,6 +80,7 @@ p.shiharai{
   .gachab{
     text-align: center;
     margin-top: 13vw;
+    padding-bottom: 130px;
   }
   .gachab button{
     display: block;
