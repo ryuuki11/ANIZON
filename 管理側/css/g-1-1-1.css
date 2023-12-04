@@ -8,12 +8,13 @@
 button{
     position: relative;
     margin-top: 10vw;
-    background-color: #8dd7e8;
+    background-color: #aae9f7;
     width: 10vw;
     height: 3vw;
     font-size: 20px;
     min-width: 100px;
     min-height: 35px;
+    border-radius: 20px;
 }
 
 input{
