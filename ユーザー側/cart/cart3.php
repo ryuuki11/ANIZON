@@ -66,7 +66,7 @@
         }}
 }else if(isset($_POST['buy'])){
                 foreach($result as $row) {
-                    if($_SESSION['member']['id']){
+                    if($_SESSION['member']['id']==$row['m_id']){
                     if($row['c_id']==$_POST['buy']){
                         $price=$row["price"]*$row["c_piece"];
                         echo '<div class="cart-shohin">';
@@ -87,7 +87,7 @@
                 }
 }else if(isset($_POST['all'])){
     foreach($result as $row) {
-        if($_SESSION['member']['id']){
+        if($_SESSION['member']['id']==$row['m_id']){
         $price=$row["price"]*$row["c_piece"];
         echo '<div class="cart-shohin">';
         echo '<p class="date">' . $row['c_date'] . '</p>';
