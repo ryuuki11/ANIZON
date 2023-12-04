@@ -36,7 +36,7 @@
     // カートテーブルから商品情報を取得
     $pdo=new PDO($connect,USER,PASS);
     $result = $pdo->query('select *from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
-
+    if(isset($_POST['check'])){
     if (!empty($result)){ 
         // 取得した商品情報を表示
         $_SESSION['cartflag']=1;
@@ -46,6 +46,7 @@
                 if($value=='true'){
                     $j=$key+1;
                     if($_SESSION['check'][$j]==$row['c_id']){
+                        $price=$row["price"]*$row["c_piece"];
                         echo '<div class="cart-shohin">';
                         echo '<p class="date">' . $row['c_date'] . '</p>';
                         echo '<div class="ci">';
@@ -58,11 +59,53 @@
                         echo '</div>';
                         echo '</div>';
                         echo '<hr>';
-                        $total+=$row['price']*$row['c_piece'];
+                        $total+=$price;
                     }
                 }
             }
+        }}
+}else if(isset($_POST['buy'])){
+                foreach($result as $row) {
+                    if($_SESSION['member']['id']){
+                    if($row['c_id']==$_POST['buy']){
+                        $price=$row["price"]*$row["c_piece"];
+                        echo '<div class="cart-shohin">';
+                        echo '<p class="date">' . $row['c_date'] . '</p>';
+                        echo '<div class="ci">';
+                        echo '<img src="' . $row["image"] . '" alt="">';
+                        echo '</div>';
+                        echo '<div class="syosai">';
+                        echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
+                        echo '<p class="sname" id="name"></p>';
+                        echo '<p class="price"><span class="piece">数量：'.$row['c_piece'].'</span><span class=cprice>'. $row["price"]*$row['c_piece'] .'円</span></p>';
+                        echo '</div>';
+                        echo '</div>';
+                        echo '<hr>';
+                        $total+=$price;
+                }
+            }
+                }
+}else if(isset($_POST['all'])){
+    foreach($result as $row) {
+        if($_SESSION['member']['id']){
+        $price=$row["price"]*$row["c_piece"];
+        echo '<div class="cart-shohin">';
+        echo '<p class="date">' . $row['c_date'] . '</p>';
+        echo '<div class="ci">';
+        echo '<img src="' . $row["image"] . '" alt="">';
+        echo '</div>';
+        echo '<div class="syosai">';
+        echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
+        echo '<p class="sname" id="name"></p>';
+        echo '<p class="price"><span class="piece">数量：'.$row['c_piece'].'</span><span class=cprice>'. $row["price"]*$row['c_piece'] .'円</span></p>';
+        echo '</div>';
+        echo '</div>';
+        echo '<hr>';
+        $total+=$price;
         }
+    }
+
+}
             echo '<p class="allprice">合計',$total,'円</p>';  
             echo '<div class="buttn2"><a href="cart4.php"><button class="koushin" type="submit">変更する</button></a></div>';
 
@@ -144,7 +187,6 @@
             echo '<div class="buttn"><button class="buy" type="submit">購入</button></div>';
             echo '</form>';
             
-}
 
     ?>
     <?php require '../home/footer.php'; ?>

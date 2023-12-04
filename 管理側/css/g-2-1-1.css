@@ -7,18 +7,30 @@ h2{
 }
 
 .example{
-    font-size: 200%;
+    table-layout: fixed;
+    font-size: 150%;
     border: solid 2px black;
     border-collapse: collapse;
     width: 1000px;
 }
 table{
     margin:0 auto;
+    font-size:5px;
+}
+
+table td{
+    font-size: 20px;
 }
 
 .boder{
     border: solid 2px black;
     border-collapse: collapse;
+}
+
+.left{
+    position: absolute;
+    top: 1vw;
+    left: 5vw;
 }
 
 .button{
@@ -33,11 +45,17 @@ button{
     margin-right: 5vw;
 }
 
+.back{
+    border-radius: 20px;
+    background-color: rgb(176, 239, 172);
+    width: 10vw;
+    height: 3vw;
+    min-height: 35px;
+    min-width: 20px;
+    font-size: 20px;
+}
+
 .keihin{
-    position:absolute;
-    top: 1vw;
-    left: 5vw;
-    margin-left: 20vw;
     border-radius: 20px;
     background-color: rgb(160, 197, 241);
     width: 10vw;
@@ -65,4 +83,19 @@ button{
     min-width: 20px;
     font-size: 20px;
     border-radius: 20px;
+}
+
+.name{
+    width: 40vw;
+    text-align: center;
+}
+
+.price{
+    width: 10vw;
+    text-align: center;
+}
+
+.category{
+    width: 20vw;
+    text-align: center;
 }

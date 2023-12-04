@@ -23,7 +23,7 @@
     const PASS = 'Pass0809';
     $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
     $pdo=new PDO($connect,USER,PASS);
-    if((!isset($_POST['name1']) || $_POST['name1']==="")||(!isset($_POST['sec']) || $_POST['sec']==="")||(!isset($_POST['num']) || $_POST['num']==="")){
+    if(((!isset($_POST['name1']) || $_POST['name1']==="")||(!isset($_POST['sec']) || $_POST['sec']==="")||(!isset($_POST['num']) || $_POST['num']===""))&& $_POST['shiharai']==2){
         echo '<p class="error">すべての項目に入力してください</p>';
         echo '<div class="button"><a href="cart3.php"><button type="submit" class="top">入力画面へ</button></a></div>';
     }else{

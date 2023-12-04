@@ -64,7 +64,7 @@ button{
     border-radius: 25px;
     background-color: rgb(240, 241, 241);
 }
-button.cart{
+button.cartb{
     font-size:clamp(7px, 2vw, 15px);
     display: block;
     border-radius: 0px;
@@ -102,6 +102,9 @@ a button{
     z-index: 80;
     background-color: white;
     text-align: center;
+}
+.display_none p{
+    margin-left: 0px;
 }
 .backv{
     visibility: hidden;
