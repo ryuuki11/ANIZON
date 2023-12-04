@@ -19,7 +19,7 @@
     const PASS = 'Pass0809';
  
     $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
-    if(isset($_SESSION['member']['m_name'])){
+    if(isset($_SESSION['member']['id'])){
     
             echo '<div class="name">○○さんの注文履歴</div>';
                 echo '<hr>';
