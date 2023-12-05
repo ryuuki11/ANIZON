@@ -19,9 +19,7 @@ input{
   border: solid 2px black;
   font-size:clamp(15px, 3vw, 20px);
 }
-form{
-  margin-top: 6vw;
-}
+
 
 button{
   font-size:clamp(10px, 3vw, 20px);
@@ -34,6 +32,9 @@ button{
   min-height: 20px;
   border-radius: 25px;
   background-color: rgb(240, 241, 241);
+}
+p.id{
+  margin-top: 130px;
 }
 
 .toroku,.next{
