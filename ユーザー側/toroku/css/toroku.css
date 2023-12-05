@@ -1,6 +1,6 @@
-body{
-  text-align:center;
+body {
   font-size:clamp(15px, 3vw, 20px);
+<<<<<<< HEAD
 }
 div{  
   text-align:center;
@@ -42,19 +42,44 @@ input{
   div{
     text-align: center;
     margin-top: 20px;
+=======
+    text-align:center;
+   }
+>>>>>>> 975a4c075ea4384c1b6ecac738cfe809703e728a
 
+   button{
+    font-size:18px;
+    background-color: #ffffff;
+    border-radius:20px;
+    padding:4px 0;
+    text-align: center;
+    width:200px;
+    margin-bottom: 10px;
   }
+<<<<<<< HEAD
   .place{
       margin-top: 3vw;
   }
   .addres{
+=======
+>>>>>>> 975a4c075ea4384c1b6ecac738cfe809703e728a
   
-    text-align:center;
-    font-size:2vw;
+  p{
+    margin-top: 20px;
   }
-  div.button{
+  
+  .midasi{
+    font-weight:bold ;
+    margin-top: 30px;
+  }
+  .top{
+    margin-top:-10px;
+  }
+  .toroku{
+    color: rgb(60, 224, 224);
     text-align: center;
   }
+<<<<<<< HEAD
   input.ajaxzip3{
   width:10vw;
   min-width:30px;
@@ -77,3 +102,10 @@ input{
  form{
   margin-top: 100px;
  }
+=======
+
+ 
+  
+  
+  
+>>>>>>> 975a4c075ea4384c1b6ecac738cfe809703e728a
