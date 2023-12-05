@@ -19,6 +19,7 @@
             const USER = 'LAA1518095';
             const PASS = 'Pass0809';
             $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+            $pdo=new PDO($connect,USER,PASS);
            $count=0;
                     $mess='';
             if(isset($_POST['piece'])){
@@ -37,7 +38,7 @@
         }
 
     
-    $pdo=new PDO($connect,USER,PASS);
+    
     $sql=$pdo->prepare('select * from Shohin where s_id=?');
     $sql->execute([$_GET['id']]);
         foreach($sql as $row){

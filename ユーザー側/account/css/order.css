@@ -23,10 +23,16 @@ button{
     border-radius: 25px;
     background-color: rgb(240, 241, 241);
 }
-div.order-shohin img{
+div.ci{
     width:20vw;
-    height:18vw;
-    margin:auto 0 auto 10vw;
+    height:auto;
+    text-align: center;
+    margin:5px 0 5px 3vw;
+}
+div.order-shohin img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
 }
 div.name{
     margin:100px 0 20px 10vw;

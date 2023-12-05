@@ -22,7 +22,7 @@
  
     $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
 
-    echo '<div class="h">';
+    echo '<div class="t">';
         echo '<div class="name">津隈さんのカート</p>';
         echo '</div>';
         echo '<form class="btn2" action="cart2.php">';
@@ -40,7 +40,7 @@
     $total=0;
 
         // 取得した商品情報を表示
-       
+       if(isset($_SESSION['cart'])){
         foreach($result as $row) {
             foreach($_SESSION['cart'] as $key=>$value){
                 if($value==$row['c_id']){
@@ -61,9 +61,10 @@
                     }
                 }
             }
+        }
             echo '<p class="allprice">合計',$total,'円</p>';  
             echo '<div class="buttn2"><a href="cart4.php"><button class="koushin" type="submit">変更する</button></a></div>';
-
+            if(isset($_POST['post'])){
             if(empty($_POST['member']['login']) || empty($_POST['member']['password']) || empty($_POST['member']['m_name']) || empty($_POST['member']['post']) || empty($_POST['member']['address']) || empty($_POST['member']['city']) || empty($_POST['member']['town']) || empty($_POST['member']['dal']) || empty($_POST['member']['mail']) || empty($_POST['member']['number'])){
 
                 $_SESSION['member']['post'] = $_POST['post'];
@@ -75,18 +76,12 @@
                 $_SESSION['member']['mail'] = $_POST['mail'];
                 
         }
+    }
         echo '<div class="addres"><p>ご住所</p></div>';
-        echo '<p>〒',$_SESSION['member']['post'],'</p>';
-        echo '<p class="midasi">都道府県</p>';
-        echo '<p>',$_SESSION['member']['address'],'<p>';
-        echo '<p class="midasi">市区町村</p>';
-        echo '<p>',$_SESSION['member']['city'],'</p>';
-        echo '<p class="midasi">町名</p>';
-        echo '<p>',$_SESSION['member']['town'],'</p>';
-        echo '<p class="midasi>番地<p>';
-        echo '<p>',$_SESSION['member']['dal'],'</p>';
-        echo '<p class="midasi">マンション名・号室</p>';
-        echo '<p>',$_SESSION['member']['apart'],'</p>';
+        echo '<p class="post">〒',$_SESSION['member']['post'],'</p>';
+        echo '<p class="add">',$_SESSION['member']['address'],' ',$_SESSION['member']['city'],'</p>';
+        echo '<p class="add">',$_SESSION['member']['town'],' ',$_SESSION['member']['dal'],'</p>';
+        echo '<p class="add">',$_SESSION['member']['apart'],'</p>';
             
         echo '<p class="mali">メールアドレス</p>';
         echo '<p>',$_SESSION['member']['mail'],'</p>';

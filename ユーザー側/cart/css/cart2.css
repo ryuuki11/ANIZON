@@ -11,9 +11,9 @@ div.cart-shohin{
     width:90vw;
     margin-left:3vw;
 }
-div.h{
+div.t{
     display:flex;
-    margin-top: 6vw;
+    margin-top:30px;
 }
 button{
     font-size:clamp(10px, 3vw, 20px);
@@ -27,7 +27,7 @@ button{
     border-radius: 25px;
     background-color: rgb(240, 241, 241);
 }
-div.h button{
+div.t button{
     margin-left:20vw;
     min-width: 70px;
     color: rgb(75, 189, 246);
