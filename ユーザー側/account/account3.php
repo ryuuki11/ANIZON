@@ -35,31 +35,33 @@
     }
 
     echo '<form action="account4.php" method="post">';
-    echo '<div class="ID">ログインIDを20字以内で入力してください</div>';
+    echo '<div class="ID a">ログインIDを20字以内で入力してください</div>';
     echo '<input type="text" name="login" value="',$login,'">';
-    echo '<div class="pass">パスワードを20字以内で入力してください</div>';
+    echo '<div class="pass" a>パスワードを20字以内で入力してください</div>';
     echo '<input type="password" name="password" value="',$password,'">';
-    echo '<div class="name">お名前</div>';
+    echo '<div class="name" a>お名前</div>';
     echo ' <input type="text" name="m_name" value="',$m_name,'">';
-    echo ' <div class="place">ご住所</div>';
-    echo ' <div>郵便番号を入力してください</div>';
+    echo ' <div class="place" a>ご住所</div>';
+    echo ' <div a>郵便番号を入力してください</div>';
+    echo  '<div class="button">';
     echo ' <input type="text" name="post"  value="',$post,'" >';
-    echo ' <div><button type="button" class="ajaxzip3" href="#">自動入力</button></div>';
-    echo ' <div>県名</div>';
+    echo ' <button type="button" class="ajaxzip3" href="#">自動入力</button>';
+    echo '</div>';
+    echo ' <div a>県名</div>';
     echo ' <input type="text" name="address" value="',$address,'">';
-    echo ' <div>市区町村</div>';
+    echo ' <div a>市区町村</div>';
     echo ' <input type="text" name="city"  value="',$city,'">';
-    echo ' <div>町名</div>'; 
+    echo ' <div a>町名</div>'; 
     echo ' <input type="text" name="town" value="',$town,'">';
-    echo ' <div>番地</div>';
+    echo ' <div a>番地</div>';
     echo ' <input type="text" name="dal"  value="',$dal,'">';
-    echo ' <div>マンション名、号室等</div>';
+    echo ' <div a>マンション名、号室等</div>';
     echo ' <input type="text"  name="apart" value="',$apart,'">';
-    echo ' <div>メールアドレスを入力してください</div>';
+    echo ' <div a>メールアドレスを入力してください</div>';
     echo ' <input type="text"  name="mail" value="',$mail,'">';
-    echo ' <div>電話番号</div>';
+    echo ' <div a>電話番号</div>';
     echo ' <input type="text" name="number" value="',$number,'">';
-    echo ' <div><button class="toroku" type="submit">確認</button></div>';
+    echo ' <div a><button class="toroku" type="submit">確認</button></div>';
     echo '</form>';
     ?>
 

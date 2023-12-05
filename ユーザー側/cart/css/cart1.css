@@ -5,6 +5,9 @@ hr{
     width:90vw;
     margin:0 auto;
 }
+p.cart{
+    margin-top:140px;
+}
 div.cart-shohin{
     display: flex;
     height:21vw;
@@ -30,6 +33,7 @@ div.cart-shohin img{
 div.name{
     font-size:clamp(15px, 4vw, 25px);
     margin:6vw 0 20px 10vw;
+    margin-top:140px;
 }
 .checkbox{
     width: 2vw;

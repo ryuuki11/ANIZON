@@ -31,6 +31,10 @@ div.order-shohin img{
 div.name{
     margin:100px 0 20px 10vw;
     width:50vw;
+    margin-top:140px;
+}
+div.home{
+    text-align: center;
 }
 .date{
     margin:auto 0 auto 5vw;
@@ -38,6 +42,9 @@ div.name{
 }
 .syosai{
     margin:auto 0 auto 5vw;
+}
+p.home{
+    margin-top:140px;
 }
 .sname{
     margin-bottom:2vw;

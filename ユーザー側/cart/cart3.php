@@ -64,7 +64,7 @@
             echo '<p class="allprice">合計',$total,'円</p>';  
             echo '<div class="buttn2"><a href="cart4.php"><button class="koushin" type="submit">変更する</button></a></div>';
 
-            if(isset($_POST['post'])){
+            if(empty($_POST['member']['login']) || empty($_POST['member']['password']) || empty($_POST['member']['m_name']) || empty($_POST['member']['post']) || empty($_POST['member']['address']) || empty($_POST['member']['city']) || empty($_POST['member']['town']) || empty($_POST['member']['dal']) || empty($_POST['member']['mail']) || empty($_POST['member']['number'])){
 
                 $_SESSION['member']['post'] = $_POST['post'];
                 $_SESSION['member']['address'] = $_POST['address'];

@@ -51,8 +51,10 @@
                 echo '<button class="back">戻る</button>';
 
         }else{
+        echo '<div class="home">';
         echo '<p class="home">ログインしてください</p>';
         echo '<a href="../login/login.php" ><button class="home">ログイン画面へ</button></a>';
+        echo '</div>';
     }
     ?>
                 <?php require '../home/footer.php'; ?>

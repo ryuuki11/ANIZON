@@ -29,8 +29,6 @@
             $sql->execute([
                 $_POST['login'],$_POST['password'],$_POST['m_name'],$_POST['post'],$_POST['address'],$_POST['city'],$_POST['town'],$_POST['dal'],$_POST['apart'],$_POST['mail'],$_POST['number'],$_SESSION['member']['id']
             ]);
-    }else{
-        echo 'ログイン名がすでに使用されていますので、変更してください。';
     }
 
         echo 'お客様情報を更新しました。';
