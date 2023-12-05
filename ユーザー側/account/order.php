@@ -1,3 +1,4 @@
+<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -19,7 +20,7 @@
     const PASS = 'Pass0809';
  
     $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
-    if(isset($_SESSION['member']['id'])){
+    if(isset($_SESSION['member'])){
     
             echo '<div class="name">○○さんの注文履歴</div>';
                 echo '<hr>';

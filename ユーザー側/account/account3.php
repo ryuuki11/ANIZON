@@ -44,7 +44,7 @@
     echo ' <div class="place">ご住所</div>';
     echo ' <div>郵便番号を入力してください</div>';
     echo ' <input type="text" name="post"  value="',$post,'" >';
-    echo ' <button type="button" class="ajaxzip3" href="#">自動入力</button>';
+    echo ' <div><button type="button" class="ajaxzip3" href="#">自動入力</button></div>';
     echo ' <div>県名</div>';
     echo ' <input type="text" name="address" value="',$address,'">';
     echo ' <div>市区町村</div>';
