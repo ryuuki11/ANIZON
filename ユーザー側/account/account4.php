@@ -19,11 +19,28 @@
     <p class="name">変更内容</p><br>
     
     <?php
+    
+    const SERVER = 'mysql219.phy.lolipop.lan';
+    const DBNAME = 'LAA1518095-anizon';
+    const USER = 'LAA1518095';
+    const PASS = 'Pass0809';
+    
+    $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
+    
+    
+    $pdo=new PDO($connect,USER,PASS);
+    $id=$_SESSION['member']['id'];
+    $sql=$pdo->prepare('select * from Member where m_id!=? and login=?');
+    $sql->execute([$id,$_POST['login']]);
+
     if (empty($_POST['login']) or empty($_POST['password']) or empty($_POST['m_name']) or empty($_POST['post']) or empty($_POST['address']) or empty($_POST['city']) or empty($_POST['town']) or empty($_POST['dal']) or empty($_POST['mail']) or empty($_POST['number'])) {
-        echo '未入力の項目があります。';
-        echo '<div><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
+        echo '<p class="no">未入力の項目があります。</p>';
+        echo '<div class="no"><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
+    }else if (!empty($sql->fetchAll())){
+        echo 'ログイン名がすでに使用されていますので、変更してください。';
     }else{
         echo '<form action="account5.php" method="post">';
+        echo 'お客様情報を更新しました。';
         echo '<p class="title top">ログインID</p>';
         echo '<p>',$_POST['login'],'</p>';
         echo '<input type="hidden" name="login" value="',$_POST['login'],'">';
@@ -60,6 +77,7 @@
     echo '</form>';
     }
     ?>
+
 
 <?php require '../home/footer.php'; ?>
 </div>

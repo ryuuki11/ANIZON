@@ -34,7 +34,7 @@ button{
   background-color: rgb(240, 241, 241);
 }
 p.id{
-  margin-top: 130px;
+  margin-top: 140px;
 }
 
 .toroku,.next{
@@ -62,7 +62,7 @@ div.buttonsuc{
   margin-top: 10vw;
 }
 p.error{
-  margin-top: 10vw;
+  margin-top: 140px;
 }
 div.backb{
   text-align: center;
@@ -78,5 +78,5 @@ button.back{
   margin-top: 10vw;
 }
 p.suc{
-  margin-top:10vw;
+  margin-top:140px;
 }

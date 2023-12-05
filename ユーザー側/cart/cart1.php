@@ -23,11 +23,6 @@ const PASS = 'Pass0809';
 $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
 if(isset($_SESSION['member']['m_name'])){
 
-        
-
-
-
-
         echo '<div class="name">さんのカート</div>';
         echo '<hr>';
 
@@ -68,7 +63,7 @@ if(isset($_SESSION['member']['m_name'])){
             }
             
         } else {
-            echo "カートに商品がありません。";
+            echo '<p class="cart">カートに商品がありません。</p>';
         }
     
 

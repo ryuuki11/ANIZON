@@ -53,10 +53,12 @@ div.name{
     height:4vw;
     max-height: 25px;
     margin-bottom:20px ;
+    margin-top:140px;
 }
 form.btn2{
     height:4vw;
     max-height: 25px;
+    margin-top:140px;
 }
 .date{
     margin:auto 0 auto 5vw;
