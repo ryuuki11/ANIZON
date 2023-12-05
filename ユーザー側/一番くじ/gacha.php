@@ -20,6 +20,7 @@
     $pdo=new PDO($connect,USER,PASS);
     $sql=$pdo->prepare('select i_rank from image where s_id=?');
     $sql->execute([$_SESSION['gacha']['id']]);
+    unset($_SESSION['gacha']['num']);
     $j=0;
     foreach($sql as $row){
         echo '<body class="',$row['i_rank'],'">';
