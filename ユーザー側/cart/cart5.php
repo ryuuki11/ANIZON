@@ -92,7 +92,7 @@
       
             
 
-        echo '<div><button type="submit" class="top">トップページへ</button></div>';
+        echo '<div><button type="submit" class="top" onclick="location.href=',"'../home/home.php'",'">トップページへ</button></div>';
 }
 ?>
 
