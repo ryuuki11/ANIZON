@@ -26,6 +26,9 @@
                     if(isset($_SESSION['member']['id'])&& $count==0){
                         $mess='カートに追加しました';
                         $count=1;
+                        $sql=$pdo->prepare('insert into Cart (m_id,s_id,c_date,c_piece) values(?,?,CURRENT_DATE(),?)');
+                        $sql->execute([$_SESSION['member']['id'],$_SESSION['shohin_shosai']['id'],$_POST['piece']]);
+
                     }else{
                         $mess='ログインしてください';
                     }

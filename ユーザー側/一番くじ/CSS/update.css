@@ -2,9 +2,10 @@ body{
     text-align:center;
     font-size:clamp(15px, 3vw, 20px);
   }
-  div{  
+  div.a{  
     text-align:center;
     font-size:clamp(15px, 3vw, 20px);
+      margin-top: 20px;
   }
   input{
     margin: 10px auto;
@@ -39,11 +40,7 @@ body{
       border-radius: 25px;
       background-color: rgb(240, 241, 241);
     }
-    div{
-      text-align: center;
-      margin-top: 20px;
-  
-    }
+    
     .place{
         margin-top: 3vw;
     }
@@ -75,5 +72,6 @@ body{
     color: rgb(38, 204, 13);
    }
    form{
-    margin-top: 100px;
+    margin-top: 140px;
+    padding-bottom: 140px;
    }

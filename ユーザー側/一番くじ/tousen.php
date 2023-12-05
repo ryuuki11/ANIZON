@@ -63,13 +63,14 @@
     }
     echo '<h1 class="',$_SESSION['gacha']['rank'],'">',$_SESSION['gacha']['rank'],'賞</h1>';
     echo '<div class="box">';
-        echo '<div class="img">';
+        echo '<div class="img1">';
             echo '<img  class="c" src="',$image,'" alt="noimage">';
         echo '</div>';
         echo '<img class="d" src="',$image,'" alt="noimage">';
     echo '</div>';
     ?>
     <div class="nextb"><a href="place.php" class="next"><button>次へ</button></a></div>
+    <div class="ba"></div>
     <?php require '../home/footer.php'; ?>
 </div>
 </body>
