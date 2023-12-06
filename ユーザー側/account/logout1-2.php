@@ -10,17 +10,15 @@
     <link rel="stylesheet" href="../home/css/footer.css" />
     <title>anizon</title>
 </head>
-
-    <body>
-    <?php require '../home/header_sazae.php'; ?>
-        <?php
-        $_SESSION=array();
-        ?>
-        
-        <p class="logout">ログアウトしました</p>
-        <button class="logoutb1" onclick="location.href='../login/login.php'">
-        ログイン画面へ
-        </button>
-        <?php require '../home/footer.php'; ?>
-    </body>
+<body>
+    <div id="wrap">
+        <?php require '../home/header_sazae.php'; ?>
+            <?php $_SESSION=array(); ?>
+            <p class="logout">ログアウトしました</p>
+            <button class="logoutb1" onclick="location.href='../login/login.php'">
+            ログイン画面へ
+            </button>
+            <?php require '../home/footer.php'; ?>
+    </div>
+</body>
 </html>

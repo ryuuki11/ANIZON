@@ -10,16 +10,17 @@
 
     <title>anizon</title>
 </head>
-    <body>
-    <?php require '../home/header_sazae.php'; ?>
-        <p class="logout">ログアウトしますか</p>
+<body>
+    <div id="wrap">
+        <?php require '../home/header_sazae.php'; ?>
+            <p class="logout">ログアウトしますか</p>
             <button class="logoutb1" onclick="location.href='../account/logout1-2.php'">
                 はい
             </button>
             <button class="logoutb2" onclick="location.href='../home/home.php'">
                 戻る
             </button>
-
-            <?php require '../home/footer.php'; ?>
-    </body>
+        <?php require '../home/footer.php'; ?>
+    </div>
+</body>
 </html>
