@@ -63,7 +63,7 @@
                             <?php
                             if(isset($_SESSION['member']['m_name'])){
                                 echo '<li>';
-                                echo '<a href="../account/logout.php">ログアウト</a>';
+                                echo '<a href="../account/logout1.php">ログアウト</a>';
                             echo '</li>';
                             }else{
                                 echo '<li>';
