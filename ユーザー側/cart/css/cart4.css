@@ -40,19 +40,21 @@ input{
     border-radius: 25px;
     background-color: rgb(240, 241, 241);
   }
-<<<<<<< HEAD
+  p.name{
+    margin-top:140px;
+  }
   p.pos{
       font-size: 2vw;
       text-align:center;
       margin-bottom:30px;
     }
     button{
-      font-size:1vw;
+      font-size:1.5vw;
       background-color: #ffffff;
       border-radius:20px;
       padding:4px 0;
       margin: 10px auto;
-      width:15vw;
+      width:10vw;
       text-align:center;
     }
     .toroku{
@@ -71,7 +73,6 @@ input{
       }
      input.post{
       text-align: center;
-      margin-left:17.5vw;
       margin-right:2vw;
      }
     div.buttn{
@@ -84,15 +85,12 @@ input{
         margin-right:20vw;
         width:1vw;
     }
-    .return{
-=======
+
   div.buttn2 button{
-    position:absolute;
     top:50px;
     right: 0;
     margin-right:20vw;
-    min-width: 70px;
->>>>>>> 4cd9613aabff1a1273966b8c82da0e40e132e65c
+    min-width: 8px;
     color: rgb(75, 189, 246);
 }
   .koushin{
@@ -130,4 +128,10 @@ input{
  }
  form{
   margin-top: 100px;
+ }
+ div.push{
+  padding-bottom:140px;
+ }
+ div.header,div.h{
+  margin-top:0;
  }

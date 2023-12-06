@@ -12,9 +12,9 @@
 <body>
 <div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
-    <p>購入完了しました</p>
-    <p> 商品到着まで</p>
-    <p>しばらくお待ちください</p>
+    <p class="top">購入完了しました</p>
+    <p class="a"> 商品到着まで</p>
+    <p class="a">しばらくお待ちください</p>
     <div><a href="gacha.php" class="more"><button>もう一度引く</button></a></div>
     <div><a href="gachaichiran.php" class="top"><button>トップへ</button></a></div>
             

@@ -14,29 +14,27 @@
 <div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
     <form action="place.php" method="post">
-    <p>○○さんの支払い情報</p>
-    <div class="place">ご住所</div>
+    <p class="name">○○さんの支払い情報</p>
+    <div class="place a">ご住所</div>
     <?php
-        echo '<div>郵便番号を入力してください</div>';
-        echo '<div class="button">';
+        echo '<div class="a">郵便番号を入力してください</div>';
+        echo '<div class="button a">';
             echo '<input class="post" type="text" id="zipcode" maxlength="8" name="post" value="',$_SESSION['member']['post'],'">';
             echo '<input class="button" type="button" value="自動入力">';
         echo '</div>';
-        echo '<div>都道府県</div>';
+        echo '<div class="a">都道府県</div>';
         echo ' <input type="text" name="address" value="',$_SESSION['member']['address'],'">';
-        echo ' <div>市区町村</div>';
+        echo ' <div class="a">市区町村</div>';
         echo ' <input type="text" name="city"  value="',$_SESSION['member']['city'],'">';
-        echo ' <div>町名</div>'; 
+        echo ' <div class="a">町名</div>'; 
         echo ' <input type="text" name="town" value="',$_SESSION['member']['town'],'">';
-        echo ' <div>番地</div>';
+        echo ' <div class="a">番地</div>';
         echo ' <input type="text" name="dal"  value="',$_SESSION['member']['dal'],'">';
-        echo ' <div>マンション名、号室等</div>';
+        echo ' <div class="a">マンション名、号室等</div>';
         echo ' <input type="text"  name="apart" value="',$_SESSION['member']['apart'],'">';
-        echo ' <div>メールアドレスを入力してください</div>';
-        echo ' <input type="text"  name="mail" value="',$_SESSION['member']['mail'],'">';
     ?>
 
-    <div class="push"><button>登録</button></div>
+    <div class="push a"><button>登録</button></div>
     </form>
     <?php require '../home/footer.php'; ?>
 </div>

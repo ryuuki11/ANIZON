@@ -47,6 +47,9 @@ body{
 .else{
     background-color: white;
 }
+div.imagebox{
+    margin-top:140px;
+}
 
   button{
     font-size:clamp(10px, 3vw, 20px);
@@ -61,13 +64,13 @@ body{
     background-color: rgb(240, 241, 241);
   }
 .button {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     margin-top: 30px;
+    height:calc(6vw + 50px);
+    max-height:95px ;
 }
 
 .button button{
-    margin-top: 1.5vw;
     width:20vw;
     max-width: 200px;
     height:6vw;
@@ -78,13 +81,13 @@ p {
     text-align: center;
     font-weight: bold;
 }
-div.img{
+div.img1{
     float:right;
     width:50vw;
     text-align: center;
     margin-right:10vw;
 }
-div.img img{
+div.img1 img{
     width:50vw;
     height:auto;
 }
@@ -124,9 +127,11 @@ div.img img{
     margin-top: 8vw;
 }
 .display_none {
-    visibility: hidden;
+    display: none;
+    position:absolute;
     margin: 3rem auto;
     padding: 4%;
+    top: -100px;
     
 }
 video{
@@ -137,7 +142,7 @@ video{
     z-index: 80;
 }
 .backv{
-    visibility: hidden;
+    display:none;
     position: fixed;
     z-index: 70;
     top: 0;
@@ -147,4 +152,11 @@ video{
     background: black;
     opacity: 0.3;
 }
+div.ba{
+    position: absolute;
+    bottom: 0;
+    width:100vw;
+    height:90px;
+    background-color: white;
+  }
 

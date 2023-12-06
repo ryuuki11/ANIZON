@@ -1,6 +1,5 @@
 body {
     font-size:clamp(15px, 3vw, 20px);
-      margin-top: 170px;
       text-align:center;
      }
      button{
@@ -18,12 +17,21 @@ body {
     .address{
         font-weight: bold;
         margin-bottom: 3vw;
+        margin-top: 140px;
+    }
+    .post{
+      margin-top: 50px;
+      margin-bottom: 30px;
+    }
+    .add{
+      margin-top: 1em;
     }
     .change button{
         position:absolute;
-        top:50px;
+        top:30px;
         right: 0;
         margin-right:20vw;
+        min-width: 60px;
         color: rgb(38, 204, 13);
     }
     .place p{ 
@@ -32,5 +40,5 @@ body {
   .fin button{
       color:blue;
       margin: 10px auto;
-      margin-top:100px;
+      margin-top:10vw;
     }

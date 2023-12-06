@@ -11,10 +11,9 @@
 
     <title>anizon</title>
 </head>
-    <body>
+<body>
+       <div id="wrap"> 
         <?php require 'header_search.php';?>
-
-        
         <img class="stopper" src="img/back.png" alt="">
         <div class="pic-ctn">
             <img src="img/anime1.jpg" alt="" class="pic">
@@ -89,17 +88,15 @@
             <botton id="botton">RAGETOP</botton>
         </div>
 
-        <div class="footer">
-        </div>
+        <?php require 'footer.php'; ?>
+    </div>
 
-        <script>
-            const scroll_to_top_btn = document.querySelector('botton');
-          
-          scroll_to_top_btn.addEventListener( 'click' , scroll_to_top );
-          
-          function scroll_to_top(){
-              window.scroll({top: 0, behavior: 'smooth'});
-          };
-          </script>
-    </body>
+    <script>
+        const scroll_to_top_btn = document.querySelector('botton');  
+        scroll_to_top_btn.addEventListener( 'click' , scroll_to_top );
+        function scroll_to_top(){
+            window.scroll({top: 0, behavior: 'smooth'});
+        };
+    </script>
+</body>
 </html>

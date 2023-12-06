@@ -2,7 +2,7 @@
 
 #wrap{
     position: relative;
-    min-height: 100vh;
+    min-height:calc(100vh - 140px);
 }
 div.footer{
     background: linear-gradient(to bottom right,rgb(174,251,138,0.25),rgb(0,204,249,0.25));

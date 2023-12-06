@@ -1,8 +1,12 @@
-@charset "UTF-8";
-
-body {
- text-align: center;
+body{
+  text-align:center;
+  
 }
+div{  
+  text-align:center;
+  font-size:clamp(15px, 3vw, 20px);
+}
+<<<<<<< HEAD
 
 p{  
   text-align:center;
@@ -24,4 +28,64 @@ button{
 button{
   margin-top: 10vw;
 }
+=======
+input{
+  margin: 10px auto;
+  width:20vw;
+  min-width: 200px;
+  height:3vw;
+  min-height: 30px;
+  text-align:center;
+  border: solid 2px black;
+  font-size: clamp(15px, 3vw, 20px);
+}
+  input.button{
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
+    text-align:center;
+    width:10vw;
+    min-width:90px;
+    height:5vw;
+    max-height:35px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+  }
+    button{
+      font-size:18px;
+      background-color: #ffffff;
+      border-radius:20px;
+      padding:4px 0;
+      text-align: center;
+      width:200px;
+      margin-bottom: 10px;
+    }
+  
+  .toroku{
+    color: rgb(60, 224, 224);
+    text-align: center;
+  }
+  div{
+    text-align: center;
+    margin-top: 20px;
+
+  }
+  .addres{
+    text-align:center;
+    font-size:2vw;
+  }
+  
+  .p{
+    width:40vw;
+  }
+ .post{
+  text-align: center;
+  margin-left:12.5vw;
+  margin-right:2vw;
+ }
+ form{
+  margin-top: 100px;
+ }
+  
+ 
+>>>>>>> 975a4c075ea4384c1b6ecac738cfe809703e728a
   

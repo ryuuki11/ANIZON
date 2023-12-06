@@ -25,23 +25,13 @@
             $_SESSION['member']['town'] = $_POST['town'];
             $_SESSION['member']['dal'] = $_POST['dal'];
             $_SESSION['member']['apart'] = $_POST['apart'];
-            $_SESSION['member']['mail'] = $_POST['mail'];
             
     }
-    echo '<p>〒',$_SESSION['member']['post'],'</p>';
-    echo '<p class="midasi">都道府県</p>';
-    echo '<p>',$_SESSION['member']['address'],'<p>';
-    echo '<p class="midasi">市区町村</p>';
-    echo '<p>',$_SESSION['member']['city'],'</p>';
-    echo '<p class="midasi">町名</p>';
-    echo '<p>',$_SESSION['member']['town'],'</p>';
-    echo '<p class="midasi>番地<p>';
-    echo '<p>',$_SESSION['member']['dal'],'</p>';
-    echo '<p class="midasi">マンション名・号室</p>';
-    echo '<p>',$_SESSION['member']['apart'],'</p>';
+    echo '<p class="post">〒',$_SESSION['member']['post'],'</p>';
+    echo '<p class="add">',$_SESSION['member']['address'],' ',$_SESSION['member']['city'],'</p>';
+    echo '<p class="add">',$_SESSION['member']['town'],' ',$_SESSION['member']['dal'],'</p>';
+    echo '<p class="add">',$_SESSION['member']['apart'],'</p>';
         
-    echo '<p class="mali">メールアドレス</p>';
-    echo '<p>',$_SESSION['member']['mail'],'</p>';
 ?>
     
     <a href="end.php" class="fin"><button>完了</button></a>

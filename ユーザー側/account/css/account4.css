@@ -19,13 +19,18 @@ body {
   p{
     margin-top: 20px;
   }
-  
+  p.no{
+    margin-top:10px;
+  }
+  p.name{
+    margin-top:140px;;
+  }
   .title{
     font-weight:bold ;
     margin-top: 30px;
   }
   .top{
-    margin-top:100px;
+    margin-top:10px;
   }
 .toroku{
     color: rgb(62, 197, 255);
@@ -37,7 +42,13 @@ body {
     right: 0;
     margin-right:20vw;
 }
+div.no{
+  margin-top:100px;
+}
 .return{
 color: rgb(75, 189, 246);
 min-width: 70px;
+}
+form{
+  padding-bottom:140px;
 }

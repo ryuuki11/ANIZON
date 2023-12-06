@@ -20,6 +20,7 @@
     $pdo=new PDO($connect,USER,PASS);
     $sql=$pdo->prepare('select i_rank from image where s_id=?');
     $sql->execute([$_SESSION['gacha']['id']]);
+    unset($_SESSION['gacha']['num']);
     $j=0;
     foreach($sql as $row){
         echo '<body class="',$row['i_rank'],'">';
@@ -42,8 +43,8 @@
     }
     $sql=$pdo->prepare('select * from Prize where s_id=? order by rank asc');
     $sql->execute([$_SESSION['gacha']['id']]);
-    echo '<div>';
-    echo '<div class="img">';
+    echo '<div class="imagebox">';
+    echo '<div class="img1">';
     echo '<img src="',$image,'" alt="noimage">';
     echo '</div>';
     echo '<div class="slide">';
@@ -110,8 +111,10 @@
             echo '<button class="dis_none_bt">ガチャを回す</button>';
     }
     echo '</div>';
+    echo '<div class="ba"></div>';
     echo '</div>';
     ?>
+    
     <?php require '../home/footer.php'; ?>
     </div>
 
@@ -122,13 +125,13 @@
         var v = document.getElementById('video');
         dis_none_bt.addEventListener('click' ,  () => {
             if(displayNone.classList.contains('active')){
-                displayNone.style.visibility = 'hidden';
-                back.style.visibility = 'hidden';
+                displayNone.style.display = 'none';
+                back.style.display = 'none';
                 displayNone.classList.remove('active');
             }
             else {
-                displayNone.style.visibility = 'visible';
-                back.style.visibility = 'visible';
+                displayNone.style.display = 'block';
+                back.style.display = 'block';
                 displayNone.classList.add('active');
                     //再生
                 v.play();
