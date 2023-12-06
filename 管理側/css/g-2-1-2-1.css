@@ -31,34 +31,24 @@ td p{
 .brn{
     display: flex;
 }
-.all .enter{
+.enter{
     width: fit-content;
     margin: 0 auto;
 }
 
-.all{
-    display: flex;
-    margin-left: 10vw;
-}
-
-.enter{
-    /* text-align: center; */
-}
-
 .back{
     background-color: rgb(176, 213, 246);
-    margin-right: 20vw;
-    margin-top: 5vw;
+    text-align: center;
 }
 
 .allbutton{
     text-align: center;
 }
 
-.delete{
-    margin-top: 12vw;
-    margin-left: 3vw;
+.all{
+    text-align: center;
 }
+
 button{
     width: 8vw;
     min-width: 70px;
@@ -75,12 +65,18 @@ button{
     margin-left: 6vw;
 }
 
+.null{
+    text-align: center;
+    top: 10vw;
+}
+
 .back1{
     text-align: center;
     top: 13vw;
 }
 
-.null{
-    text-align: center;
-    top: 10vw;
+.delete{
+    position: absolute;
+    margin-left: 50vw;
+    top: 25vw;
 }

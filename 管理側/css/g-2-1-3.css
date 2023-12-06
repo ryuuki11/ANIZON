@@ -2,12 +2,31 @@ body{
     position:relative;
 
 }
+.back{
+    border-radius: 20px;
+    background-color: rgb(176, 239, 172);
+    width: 7vw;
+    height: 2vw;
+    min-height: 35px;
+    min-width: 20px;
+    font-size: 15px;
+    margin-right: 1vw;
+}
+
 .rogout{
-    position: absolute;
-    top: 15px;
-    right:100px;
     background-color: #f190a0;
     border-radius: 20px;
+    width: 7vw;
+    height: 2vw;
+    min-height: 35px;
+    min-width: 20px;
+    font-size: 15px;
+}
+
+.right{
+    position: absolute;
+    top: 2vw;
+    right: 7vw;
 }
 
 h1{
@@ -80,6 +99,7 @@ table{
     border-radius: 20px;
     min-height: 35px;
     min-width: 40px;
+    margin-right: 2vw;
 }
 
 .kousin{
@@ -90,6 +110,7 @@ table{
     border-radius: 20px;
     min-height: 35px;
     min-width: 40px;
+    margin-right: 2vw;
 }
 
 .textbox{
@@ -107,6 +128,7 @@ table{
     border-radius: 20px;
     min-height: 35px;
     min-width: 40px;
+    margin-right: 2vw;
 }
 
 .Psakujyo{
@@ -117,4 +139,22 @@ table{
     border-radius: 20px;
     min-height: 35px;
     min-width: 40px;
+    margin-right: 2vw;
 }
+
+.zaiko{
+    width: 10vw;
+    height:3vw;
+    font-size: 18px;
+    margin-left: 2vw;
+}
+
+.zaikosuu{
+    text-align: center;
+}
+
+.all button{
+    text-align: center;
+}
+
+

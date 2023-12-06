@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ログイン</title>
-    <link rel="stylesheet">
+    <link rel="stylesheet" href="../css/g-1-1-1-output.css" />
 </head>
 <body>
 <?php
@@ -31,11 +31,13 @@ foreach ($sql as $row) {
 }
  
 if (empty($_POST['id'])) {
-    echo '<p>ログインIDを入力してください。</p>';
+    echo '<p class="A">ログインIDを入力してください。</p>';
+    echo '<div><button class="modoru" onclick="location.href=',"'g-1-1-1.php'",'">戻る</button></div>';
 }else if (empty($_POST['password'])) {
-    echo '<p>パスワードを入力してください。</p>';    
+    echo '<p class="B">パスワードを入力してください。</p>';
+    echo '<div><button class="modoru" onclick="location.href=',"'g-1-1-1.php'",'">戻る</button></div>';  
 }else if (isset($_SESSION['admin'])) {
-    echo '<p>ログインしました。</p>';
+    echo '<p class="c">ログインしました。</p>';
     echo '<div><button class="next" onclick="location.href=',"'g-1-1-2.php'",'">次のページへ</button></div>';
 }else{
     echo '<p>ログインに失敗しました。</p>';
