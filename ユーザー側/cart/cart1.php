@@ -21,12 +21,38 @@ const USER = 'LAA1518095';
 const PASS = 'Pass0809';
 
 $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
-if(isset($_SESSION['member']['m_name'])){
+$pdo = new PDO($connect, USER, PASS);
 
-        echo '<div class="name">さんのカート</div>';
+
+
+
+
+if(isset($_SESSION['member']['m_name'])){
+    $mess='';
+    if(isset($_POST['delete'])){
+    $result = explode(" ", $_POST['delete']);
+    if (!empty($result[1])&&(isset($_SESSION["chkno"])) && ($result[1] == $_SESSION["chkno"])){
+        $num=1;
+                $sql = $pdo->prepare('SELECT * FROM Cart WHERE c_id = ?');
+                $sql ->execute([$result[0]]);
+                foreach($sql as $row) {
+                    $m_id = $row['m_id'];
+                    $s_id = $row['s_id'];
+                }
+                $sql_delete = $pdo->prepare('DELETE FROM Cart WHERE c_id = ? AND m_id = ? AND s_id = ?');
+                $sql_delete->execute([$result[0], $m_id, $s_id]);
+                $mess='カートから削除しました';
+    }else{
+        $num=0;
+    }
+}
+    $_SESSION["chkno"] = $chkno = mt_rand();
+
+
+        echo '<div class="name">',$_SESSION['member']['m_name'],'さんのカート</div>';
         echo '<hr>';
 
-        $pdo = new PDO($connect, USER, PASS);
+        
         $result = $pdo->query('select * from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
         $_SESSION['check']=array();
         $array=array();
@@ -47,13 +73,14 @@ if(isset($_SESSION['member']['m_name'])){
                     echo '<p class="sname" id="name"></p>';
                     echo '<p class="price"><span class="piece">数量：'.$row['c_piece'].'</span><span class=cprice>'. $row["price"]*$row['c_piece'] .'円</span></p>';
                     echo '<div class="btn">';
-                    echo '<p><button type="submit" class="delete" name="delete"  formaction="cart-delete.php" value="' , $row['c_id'] . '">削除</button>';
+                    echo '<p><button type="submit" class="delete" name="delete"  formaction="cart1.php" value="' , $row['c_id'].' ',$_SESSION['chkno'] . '">削除</button>';
                     echo '<button type="submit" class="buy" name="buy" value="',$row['c_id'],'">購入</button></p>';
                     echo '</div>';
                     echo '</div>';
                     echo '</label>';
                     echo '</div>';
                     echo '<hr>';
+                    $_SESSION['chkno2']=$_SESSION['chkno'];
                     
                     $_SESSION['check'][]=$row['s_id'];
                     $_SESSION['check'][]='false';
@@ -77,6 +104,13 @@ if(isset($_SESSION['member']['m_name'])){
 
             echo'<button class="all" name="all" value="2">まとめて購入</button>';
         echo '</form>';
+
+        echo '<div class="backv"></div>';
+        echo '<div class="display_none">';
+        echo '<p>',$mess,'</p>';
+        echo '<div class="button"><a href="cart1.php"><button class="close">閉じる</button></a></div>';
+        echo '</div>';
+
     }else{
         echo '<p class="home">ログインしてください</p>';
         echo '<a href="../login/login.php" ><button class="home">ログイン画面へ</button></a>';
@@ -107,6 +141,19 @@ if(isset($_SESSION['member']['m_name'])){
         }
     }
 </script>
+<script>
+            const displayNone = document.querySelector('.display_none');
+            const cartb = document.querySelector('.cartb');
+            const closeb = document.querySelector('.close');
+            const back = document.querySelector('.backv');
+            let num = <?php echo $num; ?>;
+            console.log(num);
+            if(num==1){
+                    displayNone.style.visibility = 'visible';
+                    back.style.visibility = 'visible';
+                
+            };      
+        </script>
 
 </body>
 </html>

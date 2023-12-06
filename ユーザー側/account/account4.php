@@ -40,7 +40,6 @@
         echo 'ログイン名がすでに使用されていますので、変更してください。';
     }else{
         echo '<form action="account5.php" method="post">';
-        echo 'お客様情報を更新しました。';
         echo '<p class="title top">ログインID</p>';
         echo '<p>',$_POST['login'],'</p>';
         echo '<input type="hidden" name="login" value="',$_POST['login'],'">';

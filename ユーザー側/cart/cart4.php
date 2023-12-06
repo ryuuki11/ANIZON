@@ -15,12 +15,13 @@
    <body>
    <div id="wrap">
    <?php require '../home/header_sazae.php'; ?>
-   <form action="cart3.php" method="post"></form>
-    <p class="name">○○○○○さんの支払い情報</p>
-    <div class="buttn2"><button class="return" type="submit" onclick="location.href='../cart/cart3.php'">戻る</button></div>
+   <?php
+   echo '<form action="cart3.php" method="post"></form>';
+   echo '<div class="name">',$_SESSION['member']['m_name'],'さんのカート</div>';
+    echo '<div class="buttn2"><button class="return" type="submit" onclick="location.href=\'../cart/cart3.php\'">戻る</button></div>';
       
-    <div class="place">ご住所</div>
-    <?php
+    echo '<div class="place">ご住所</div>';
+    
         echo '<div>郵便番号を入力してください</div>';
         echo '<div class="button">';
         echo '<input class="post" type="text" id="zipcode" maxlength="8" name="post" value="',$_SESSION['member']['post'],'">';

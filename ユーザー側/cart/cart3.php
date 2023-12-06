@@ -23,7 +23,7 @@
     $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
 
     echo '<div class="t">';
-        echo '<div class="name">津隈さんのカート</p>';
+    echo '<div class="name">',$_SESSION['member']['m_name'],'さんのカート</div>';
         echo '</div>';
         echo '<form class="btn2" action="cart2.php">';
         echo '<button>戻る</button>';

@@ -25,7 +25,7 @@
     $result = $pdo->query('select *from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
 
     echo '<div class="t">';
-        echo '<div class="name">津隈さんのカート</div>';
+    echo '<div class="name">',$_SESSION['member']['m_name'],'さんのカート</div>';
         echo '<form class="btn2" action="cart1.php">';
         echo '<button>戻る</button>';
         echo '</form>';

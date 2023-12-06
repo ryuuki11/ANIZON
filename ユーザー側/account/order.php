@@ -22,7 +22,7 @@
     $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
     if(isset($_SESSION['member'])){
     
-            echo '<div class="name">○○さんの注文履歴</div>';
+            echo '<div class="name">',$_SESSION['member']['m_name'],'さんの注文履歴</div>';
                 echo '<hr>';
 
             $pdo=new PDO($connect,USER,PASS);    

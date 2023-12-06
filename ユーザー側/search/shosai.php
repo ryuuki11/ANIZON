@@ -20,22 +20,20 @@
             const PASS = 'Pass0809';
             $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
             $pdo=new PDO($connect,USER,PASS);
-           $count=0;
-                    $mess='';
-            if(isset($_POST['piece'])){
+            $mess='';
+            if ((isset($_POST["cartb"])) && (isset($_SESSION["chkno"])) && ($_POST["cartb"] == $_SESSION["chkno"])){
                 $num=1;
-                    if(isset($_SESSION['member']['id'])&& $count==0){
+                    if(isset($_SESSION['member']['id'])){
                         $mess='カートに追加しました';
-                        $count=1;
                         $sql=$pdo->prepare('insert into Cart (m_id,s_id,c_date,c_piece) values(?,?,CURRENT_DATE(),?)');
                         $sql->execute([$_SESSION['member']['id'],$_SESSION['shohin_shosai']['id'],$_POST['piece']]);
-
                     }else{
                         $mess='ログインしてください';
                     }
-        }else{
-            $num=0;
-        }
+            }else{
+                $num=0;
+            }
+            $_SESSION["chkno"] = $chkno = mt_rand();
 
     
     
@@ -53,7 +51,7 @@
                     echo '<p class="setumei">',$row['setumei'],'</p>';
                     echo '<p class="price">金額：',$row['price'],'円</p>';
                     echo '<p>数量：<input type="text" class="piece" name="piece" value="1"><p>';
-                    echo'<div><button class="cartb" value="1">カートに入れる</button></div>';
+                    echo'<div><button class="cartb" name="cartb" value="',$_SESSION['chkno'],'">カートに入れる</button></div>';
                 echo '</div>';
                 echo '</form>';
             echo '</div>';

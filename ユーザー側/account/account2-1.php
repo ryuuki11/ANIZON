@@ -64,7 +64,7 @@
     echo '<p>',$number,'</p>';
     
 
-    echo '<div><button class="toroku" onclick="location.href=\''.'account3.php.'.'\'">変更する</button></div>';
+    echo '<div class="toroku"><button class="toroku" onclick="location.href=\''.'account3.php'.'\'">変更する</button></div>';
 
 }else{
         echo '<p class="home">ログインしてください</p>';
