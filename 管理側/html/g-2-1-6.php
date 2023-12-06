@@ -1,4 +1,4 @@
-<?php session_start() ?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,29 +9,35 @@
 </head>
 <body>
     <h1>anizon</h1><br>
-    <div class="all">
-        <div class="table">
             <?php
-                $p_name=$_rank=$setumei=$p_id=$category=$image='';
-                    $_SESSION['Prieze']['p_name']=$_POST['p_name'];
-                    $_SESSION['Prieze']['rank']=$_POST['rank'];
-                    $_SESSION['Prieze']['setumei']=$_POST['setumei'];
-                    $_SESSION['Prieze']['p_id']=$_POST['p_id'];
-                    $_SESSION['Prieze']['category']=$_POST['category'];
-                    $_SESSION['Prieze']['image']=$_POST['image'];
+            if (empty($_POST['p_name']) or empty($_POST['p_id']) or empty($_POST['rank']) or empty($_POST['setumei']) or empty($_POST['category']) or empty($_POST['image'])) {
+                echo '<p class="null">未入力の項目があります。</p>';
+                echo '<form action="g-2-1-5.php" class="back1">';
+                        echo '<button type="submit">戻る</button>';
+                echo '</form>';
+            }else{
+                $p_name=$rank=$setumei=$p_id=$category=$image='';
+                    $_SESSION['Prize']['p_name']=$_POST['p_name'];
+                    $_SESSION['Prize']['p_id']=$_POST['p_id'];
+                    $_SESSION['Prize']['rank']=$_POST['rank'];
+                    $_SESSION['Prize']['setumei']=$_POST['setumei'];
+                    $_SESSION['Prize']['category']=$_POST['category'];
+                    $_SESSION['Prize']['image']=$_POST['image'];
 
+            echo '<div class="all">';
+            echo '<div class="table">';
             echo '<table>';
                 echo '<tr>
                     <td class="td2"><p>景品名</p></td><td class="td3">',$_POST['p_name'],'</td>
+                </tr><br>';
+                echo '<tr>
+                    <td class="td2"><p>景品ID</p></td><td class="td3">',$_POST['p_id'],'</td>
                 </tr><br>';
                 echo '<tr>
                     <td class="td2"><p>ランク</p></td><td class="td3">',$_POST['rank'],'</td>
                 </tr><br>';
                 echo '<tr>
                     <td class="td2"><p>景品説明</p></td><td class="td3">',$_POST['setumei'],'</td>
-                </tr><br>';
-                echo '<tr>
-                    <td class="td2"><p>景品ID</p></td><td class="td3">',$_POST['p_id'],'</td>
                 </tr><br>';
                 echo '<tr>
                     <td class="td2"><p>カテゴリー</p></td><td class="td3">',$_POST['category'],'</td>
@@ -45,16 +51,19 @@
         echo '</div>';
         echo '<div class="delete">';
         echo '<h2>この内容で登録しますか?</h2><br>';
-        ?>
-            <div class="brn">
-                        <form action="g-1-1-2.php" method="post">
-                            <button type="submit" class="yes">はい</button>
-                        </form>
-                        <form action="g-2-1-2.php" method="post">
-                            <button type="submit" class="no">いいえ</button>
-                        </form>
-            </div>
-        </div>
-    </div>
+            
+
+            echo '<div class="brn">';
+                        echo '<form action="g-2-1-6-1.php" method="post">';
+                            echo '<button type="submit" class="yes">はい</button>';
+                        echo '</form>';
+                        echo '<form action="g-2-1-5.php" method="post">';
+                            echo '<button type="submit" class="no">いいえ</button>';
+                        echo '</form>';
+            echo '</div>';
+        echo '</div>';
+            }
+    echo '</div>';
+    ?>
 </body>
 </html>

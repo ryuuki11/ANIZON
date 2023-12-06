@@ -1,12 +1,49 @@
-p{
+.all {
+    height: 60px;
+    padding: 200px ;
     text-align: center;
-    font-size: 50px;
+    font-size: 40px;
 }
  
-button{
-    background-color: rgb(243, 156, 156);
+.modoru{
+    position: fixed;
+    background-color: rgb(156, 215, 243);
+    width: 15vw;
     font-size: 30px;
     border-radius: 20px;
+    position:absolute;
+    top: 400px;
+    right: 500px;
+}
+.A{
     text-align: center;
-    top: 5vw;
+    position: relative;
+    margin-top: 20vw;
+    height: 50vw;
+    font-size: 40px;
+}
+ 
+.B{
+    text-align: center;
+    position: relative;
+    margin-top: 20vw;
+    height: 50vw;
+    font-size: 40px;
+}
+.c{
+    text-align: center;
+    position: relative;
+    margin-top: 20vw;
+    height: 50vw;
+    font-size: 40px;
+}
+.next{
+    position: fixed;
+    background-color: rgb(156, 215, 243);
+    width: 15vw;
+    font-size: 28px;
+    border-radius: 20px;
+    position:absolute;
+    top: 400px;
+    right: 500px;
 }

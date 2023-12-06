@@ -8,9 +8,16 @@
     <title>商品登録画面</title>
 </head>
 <body>
-    <form action="g-1-1-1.php" method="post">
-        <button type="submit" class="logout">ログアウト</button>
-    </form>
+    <table class="right">
+        <tr>
+            <form action="g-2-1-1.php" method="post">
+                <td><button type="submit" class="back">戻る</button></td>
+            </form>
+            <form action="g-1-1-1.php" method="post">
+                <td><button type="submit" class="logout">ログアウト</button></td>
+            </form>
+        </tr>
+    </table>
     <h1>anizon</h1><br>
     <h2>商品登録画面</h2>
         <?php
@@ -18,9 +25,6 @@
             echo '<table>';
                 echo '<tr>
                     <td class="td2"><p>商品名</p></td><td><p><input type="text" name="name" placeholder="商品名"></p></td>
-                </tr>';
-                echo '<tr>
-                    <td class="td2"><p>商品ID</p></td><td><p><input type="text" name="id" placeholder="商品id"></p></td>
                 </tr>';
                 echo'<tr>
                     <td class="td2"><p>カテゴリー</p></td><td><p><input type="text" name="category" placeholder="カテゴリー"></p></td>

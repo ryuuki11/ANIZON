@@ -9,9 +9,27 @@
 <body>
         <h1>anizon</h1><br>
         <h2>景品一覧</h2><br>
-                <form action="g-2-1-1.php" method="post">
-                    <button type="submit" class="syohin">商品</button>
-                </form>
+        <?php
+        if (isset($_GET['flag'])) {
+            echo '<div class="message">景品を登録しました。</div>';
+        }
+        if (isset($_GET['deleteflag'])) {
+            echo '<div class="message">景品を削除しました。</div>';
+        }
+        if (isset($_GET['updateflag'])) {
+            echo '<div class="message">景品情報を更新しました。</div>';
+        }
+        ?>
+                <table class="left">
+                    <tr>
+                        <form action="g-1-1-2.php" method="post">
+                            <td><button type="submit" class="back">戻る</button></td>
+                        </form>
+                        <form action="g-2-1-1.php" method="post">
+                            <td><button type="submit" class="syohin">商品</button></td>
+                        </form>
+                    </tr>
+                </table>
             <div class="button">
                 <table class="top">
                     <tr>
@@ -49,13 +67,13 @@
                         }
                 echo '</table>';
 
-                if(isset($_POST['toroku'])){
-                    $sql=$pdo-prepare('inset into Shohin value(?,?,?,?,?,?);');
-                    $pdo->execute($_SESSION['Shohin']['name'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['pass']);
-                }else if(isset($_POST['Ktoroku'])){
-                    $sql=$pdo-prepare('inset into Shohin value(?,?,?,?,?,?);');
-                    $pdo->execute($_SESSION['Shohin']['name'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['pass']);
-                }
+                // if(isset($_POST['toroku'])){
+                //     $sql=$pdo-prepare('inset into Shohin value(?,?,?,?,?,?);');
+                //     $pdo->execute($_SESSION['Shohin']['name'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['pass']);
+                // }else if(isset($_POST['Ktoroku'])){
+                //     $sql=$pdo-prepare('inset into Shohin value(?,?,?,?,?,?);');
+                //     $pdo->execute($_SESSION['Shohin']['name'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['pass']);
+                // }
         ?>
 </body>
 </html>

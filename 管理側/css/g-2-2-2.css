@@ -11,25 +11,30 @@ h1{
  
 p{
     text-align: center;
-    font-size: 200%;
+    font-size: 150%;
     padding-top: 5%;
 }
  
 ::placeholder{
     text-align: center;
 }
- 
+
 table,th,td{
     margin:0 auto;  
     margin-top: 10vw;
     border: 3px solid black;
     border-collapse: collapse;
 }
- 
-td{
-    width: calc(20%);
+
+.boder{
+    width: 10vw;
+    height: 6vw;
 }
- 
+
+.boder2{
+    width: 30vw;
+    height: 6vw;
+} 
  
 .sakujyo{
     background-color: #aca5f7;
@@ -45,6 +50,17 @@ td{
     border-radius: 20px;
 }
  
+.back{
+    right: 18vw;
+    border-radius: 20px;
+    background-color: rgb(176, 239, 172);
+    width: 9vw;
+    height: 2vw;
+    min-height: 35px;
+    min-width: 20px;
+    font-size: 15px;
+}
+
 .rogout{
     background-color: #f7a6b2;
     top: 1vw;
@@ -59,17 +75,7 @@ td{
 }
  
 .font{
-    font-size: 50px;
+    font-size: 20px;
     font-weight: bold;
 }
  
-.A{
-    text-align: center;
-    font-weight: bold;
-}
- 
-.B{
-    position: absolute;
-    margin-left: 48vw;
-    top: 10vw;
-}
