@@ -48,6 +48,7 @@
  echo ' <div><button class="toroku" type="submit">確認</button></div>';
  echo '</form>';
     ?>
+    
     <script>
             $('.ajaxzip3').on('click', function(){
     AjaxZip3.zip2addr('post','','address','city','town','dal');
