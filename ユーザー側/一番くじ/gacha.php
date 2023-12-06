@@ -55,31 +55,36 @@
         echo '</div>';
     echo '</div>';
     echo '</div>';
-    $sql=$pdo->prepare('select b_id from Buy where m_id=?');
-    $sql->execute([$_SESSION['member']['id']]);
-    $data=array();
-    $i=0;
-    foreach($sql as $row){
-        $data[$i]=$row['b_id'];
-        $i++;
-    }
-    $i=0;
-    $sql=$pdo->prepare('select * from Orderhistory where s_id=?');
-    $sql->execute([$_SESSION['gacha']['id']]);
-    $num=0;
-    foreach($sql as $row){
-        for($j=0;$j<count($data);$j++){
-            if($data[$j]==$row['b_id']){
-                $num+=$row['o_piece'];
-        $num-=$row['count'];
-            }
+
+    if(isset($_SESSION['member']['id'])){
+        $sql=$pdo->prepare('select b_id from Buy where m_id=?');
+        $sql->execute([$_SESSION['member']['id']]);
+        $data=array();
+        $i=0;
+        foreach($sql as $row){
+            $data[$i]=$row['b_id'];
+            $i++;
         }
-        
-    }
-    if($num<0){
+        $i=0;
+        $sql=$pdo->prepare('select * from Orderhistory where s_id=?');
+        $sql->execute([$_SESSION['gacha']['id']]);
+        $num=0;
+        foreach($sql as $row){
+            for($j=0;$j<count($data);$j++){
+                if($data[$j]==$row['b_id']){
+                    $num+=$row['o_piece'];
+            $num-=$row['count'];
+                }
+            }
+            
+        }
+        if($num<0){
+            $num=0;
+        }
+    }else{
         $num=0;
     }
-
+    
     $Rate=array(
         'D'=>array('rate'=>70),
         'C'=>array('rate'=>15),
