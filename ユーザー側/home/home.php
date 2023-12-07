@@ -41,7 +41,9 @@
             $i=0;
             foreach($sql as $row){
                 echo '<div class="syohin1">';
-                    echo '<img src="',$row['image'],'" alt="">';
+                echo '<div class="ci">';
+                echo '<img src="' . $row["image"] . '" alt="">';
+                echo '</div>';
                     echo '<p>',$row['s_name'],'</p>';
                     echo '<p>',$row['price'],'</p>';
                 echo '</div>';
@@ -84,8 +86,10 @@
                 <p>シャド―ハウス</p>
             </div>
         </div>
-        <div class="botton">
-            <botton id="botton">RAGETOP</botton>
+        <div class="space">
+            <div class="botton">
+                <botton id="botton">RAGETOP</botton>
+            </div>
         </div>
 
         <?php require 'footer.php'; ?>

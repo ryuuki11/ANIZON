@@ -27,7 +27,7 @@ if((!isset($_POST['name1']) || $_POST['name1']==="")||(!isset($_POST['sec']) || 
 }else{
         echo '<p class="name">',$_SESSION['member']['m_name'],'さん</p>';
             echo '<p class="order">購入完了です</p>';
-            
+            unset($_SESSION['gacha']['num']);
     
             
             if($_SESSION['flag']==1){
