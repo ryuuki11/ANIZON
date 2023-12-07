@@ -51,7 +51,7 @@
                 echo '<p>',$city,'</p>';
                 echo '<p class="midasi">町名</p>';
                 echo '<p>',$town,'</p>';
-                echo '<p class="midasi>番地<p>';
+                echo '<p class="midasi">番地<p>';
                 echo '<p>',$dal,'</p>';
                 echo '<p class="midasi">マンション名・号室</p>';
                 echo '<p>',$apart,'</p>';
