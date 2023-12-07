@@ -37,8 +37,10 @@ foreach ($sql as $row) {
         ];
     }
 }
-
-if (empty($_POST['login'])) {
+if (empty($_POST['login']) and empty($_POST['password'])) {
+    echo '<p class="error">ログインIDとパスワードを入力してください。</p>';
+    echo '<div class="backb"><a href="login.php"><button class="back">ログイン画面へ</button></a></div>';
+}else if (empty($_POST['login'])) {
     echo '<p class="error">ログインIDを入力してください。</p>';
     echo '<div class="backb"><a href="login.php"><button class="back">ログイン画面へ</button></a></div>';
 }else if (empty($_POST['password'])) {
