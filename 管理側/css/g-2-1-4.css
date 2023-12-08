@@ -43,13 +43,13 @@ table{
 
 .left{
     position: absolute;
-    top: 1vw;
+    top: 4vw;
     left: 5vw;
 }
 
 .button{
     position:absolute;
-    top: 1vw;
+    top: 4vw;
     right: 5vw;
 }
 

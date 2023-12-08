@@ -8,9 +8,9 @@
         $deleteflag=1;
         header('Location: g-2-1-1.php?deleteflag='.$deleteflag);
     }else{
-        $sql=$pdo->prepare('update Shohin set s_name=?,image=?,price=?,category=?,stock=?,setumei=? where s_id=?');
+        $sql=$pdo->prepare('update Shohin set s_name=?,category=?,price=?,stock=?,setumei=?,image=? where s_id=?');
         $sql->execute([
-            $_SESSION['Shohin']['s_name'],$_SESSION['Shohin']['pass'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['s_id']
+            $_SESSION['Shohin']['s_name'],$_SESSION['Shohin']['category'],$_SESSION['Shohin']['price'],$_SESSION['Shohin']['stock'],$_SESSION['Shohin']['explain'],$_SESSION['Shohin']['pass'],$_SESSION['Shohin']['s_id']
         ]);
         $updateflag=1;
         header('Location: g-2-1-1.php?updateflag='.$updateflag);
