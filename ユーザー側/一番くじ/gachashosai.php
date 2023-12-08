@@ -68,7 +68,7 @@ echo '<div class="gacha">';
  <form action="buy.php" method="post">
     <div class="kazu">
         <p>購入数を入力してください</p>
-        <input type="number" class="num"  name="kazu">
+        <input type="number" class="num"  name="kazu" min="1" value="1">
     </div>
         <div  class="buy"><button type="submit">購入</button></div>
 </form>

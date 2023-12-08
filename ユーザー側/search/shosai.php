@@ -50,7 +50,7 @@
                     echo '<p class="name">',$row['s_name'],'</p>';
                     echo '<p class="setumei">',$row['setumei'],'</p>';
                     echo '<p class="price">金額：',$row['price'],'円</p>';
-                    echo '<p>数量：<input type="text" class="piece" name="piece" value="1"><p>';
+                    echo '<p>数量：<input type="number" min="1" class="piece" name="piece" value="1"><p>';
                     echo'<div><button class="cartb" name="cartb" value="',$_SESSION['chkno'],'">カートに入れる</button></div>';
                 echo '</div>';
                 echo '</form>';

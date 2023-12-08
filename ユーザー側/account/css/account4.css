@@ -3,7 +3,7 @@ body {
     text-align:center;
    }
 
-   button{
+   button {
     font-size:clamp(10px, 3vw, 20px);
     border:solid 1px black;
     text-align:center;
@@ -14,6 +14,10 @@ body {
     min-height: 20px;
     border-radius: 25px;
     background-color: rgb(240, 241, 241);
+  }
+
+  div.no {
+    margin-top:30px;
   }
   
   p{
@@ -34,7 +38,8 @@ body {
   }
 .toroku{
     color: rgb(62, 197, 255);
-    margin: 50px auto 0 auto;
+    margin-top: 20px;
+    margin-bottom: 15px;
   }
   div.buttn2 button{
     position:absolute;
@@ -42,13 +47,11 @@ body {
     right: 0;
     margin-right:20vw;
 }
-div.no{
-  margin-top:100px;
-}
 .return{
 color: rgb(75, 189, 246);
 min-width: 70px;
 }
+
 form{
-  padding-bottom:140px;
+  padding-bottom:100px;
 }

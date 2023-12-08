@@ -34,6 +34,7 @@
                 echo '<div class="no"><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
             }else if (!empty($sql->fetchAll())){
                 echo 'ログイン名がすでに使用されていますので、変更してください。';
+                echo '<div class="no"><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
             }else{
                 echo '<form action="account5.php" method="post">';
                     echo '<p class="title top">ログインID</p>';
@@ -49,7 +50,7 @@
                     echo '<input type="hidden" name="m_name" value="',$_POST['m_name'],'">';
                     
                     echo '<p class="title">ご住所</p>';
-                    echo '<p>',$_POST['post'],'<br>',$_POST['address'],'</p>';
+                    echo '<p>〒',$_POST['post'],'<br>',$_POST['address'],'<br>',$_POST['city'],$_POST['town'],$_POST['dal'],'</p>';
                     echo '<input type="hidden" name="post" value="',$_POST['post'],'">';
                     echo '<input type="hidden" name="address" value="',$_POST['address'],'">';
                     echo '<input type="hidden" name="city" value="',$_POST['city'],'">';
@@ -67,16 +68,13 @@
                     echo '<p class="title">電話番号</p>';
                     echo '<p>',$_POST['number'],'</p>';
                     echo '<input type="hidden" name="number" value="',$_POST['number'],'">';
-                    echo '<div><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
+                    echo '<div class="no"><button formaction="account3.php">戻る</button></div>';
                     echo '<div><button type="submit" class="toroku">変更</button></div>';
-
                 echo '</form>';
             }
         ?>
 
-
-        <?php require '../home/footer.php'; ?>
+<?php require '../home/footer.php'; ?>
     </div>
-        
 </body>
 </html>

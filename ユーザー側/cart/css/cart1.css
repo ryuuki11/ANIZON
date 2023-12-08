@@ -136,3 +136,10 @@ form{
 .display_none button{
     margin-top:3vw;
 }
+div.mess{
+    margin-top: 140px;
+    text-align: center;
+}
+button.home{
+    margin-top: 50px;
+}

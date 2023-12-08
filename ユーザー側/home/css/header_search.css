@@ -241,6 +241,9 @@ label.bor{
     background-color: rgba(0～255,0～255,0～255,0～1);
     transition: all 0.3s;
 }
+div.title{
+    margin-top: 20px;
+}
 span.title{
     margin:20px auto 0 18vw;
     font-size: 20px;

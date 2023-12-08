@@ -21,7 +21,6 @@
             const PASS = 'Pass0809';
             $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
             $pdo = new PDO($connect, USER, PASS);
-
             if(isset($_SESSION['member']['m_name'])){
                 $mess='';
                 if(isset($_POST['delete'])){
@@ -49,8 +48,8 @@
                 $_SESSION['check']=array();
                 $array=array();
                 echo '<form action="cart2.php" method="post">';
-                if (!empty($result)) {
-                    $i=1;
+                $i=1;
+                $j=0;
                     foreach ($result as $row) {
                         if ($_SESSION['member']['id'] == $row['m_id']) {
                             echo '<div class="cart-shohin">';
@@ -77,28 +76,36 @@
                             $_SESSION['check'][]='false';
                             $_SESSION['check'][]=$row['c_id'];
                             $i+=3;
+                            $j++;
                         }
-                    }   
+                    } 
+                    if ($j!=0) { 
+                    echo '<div class="select">';
+                    echo '<button type="button" onClick="checkAll()">全選択</button>';
+                    echo '<button type="button" onClick="uncheckAll()">選択解除</button>';
+                    echo '</div>';
+                    echo'<button class="all" name="all" value="2">まとめて購入</button>';
+                    echo '</form>';
+                    echo '<div class="backv"></div>';
+                    echo '<div class="display_none">';
+                    echo '<p>',$mess,'</p>';
+                    echo '<div class="button"><a href="cart1.php"><button class="close">閉じる</button></a></div>';
+                    echo '</div>'; 
                 } else {
+                    echo '<div class="mess">';
                     echo '<p class="cart">カートに商品がありません。</p>';
+                    echo '<a href="../home/home.php" ><button class="home">ホームへ</button></a>';
+                    echo '</div>';
                 }
 
                 $pdo = null;
-                echo '<div class="select">';
-                echo '<button type="button" onClick="checkAll()">全選択</button>';
-                echo '<button type="button" onClick="uncheckAll()">選択解除</button>';
-                echo '</div>';
-                echo'<button class="all" name="all" value="2">まとめて購入</button>';
-                echo '</form>';
-                echo '<div class="backv"></div>';
-                echo '<div class="display_none">';
-                echo '<p>',$mess,'</p>';
-                echo '<div class="button"><a href="cart1.php"><button class="close">閉じる</button></a></div>';
-                echo '</div>';
+                
 
             }else{
+                echo '<div class="mess">';
                 echo '<p class="home">ログインしてください</p>';
                 echo '<a href="../login/login.php" ><button class="home">ログイン画面へ</button></a>';
+                echo '</div>';
             }
         ?>
         <?php require '../home/footer.php'; ?>
@@ -113,12 +120,7 @@
         b.textContent = d[1];
         const checkbox1 = document.getElementsByName("check[]");
 
-        //メッセージの表示切り替え
-        const displayNone = document.querySelector('.display_none');
-        const cartb = document.querySelector('.cartb');
-        const closeb = document.querySelector('.close');
-        const back = document.querySelector('.backv');
-        let num = <?php echo $num; ?>;
+        
         
         //全て選択・解除
         function checkAll() {
@@ -132,12 +134,23 @@
             }
         }
 
+        
+       
+    </script>
+    <script>
+        //メッセージの表示切り替え
+        const displayNone = document.querySelector('.display_none');
+        const cartb = document.querySelector('.cartb');
+        const closeb = document.querySelector('.close');
+        const back = document.querySelector('.backv');
+        let num = <?php echo $num; ?>;
+
         //メッセージの表示切り替え
         if(num==1){
             displayNone.style.visibility = 'visible';
             back.style.visibility = 'visible';
-                    
         }; 
+                    
     </script>
 </body>
 </html>

@@ -28,7 +28,7 @@
         echo '<a href="gachashosai.php?id=',$row['s_id'],'" class="image">';
         echo '<img src="',$row['image'],'" alt="noimage">';
         echo '<p class="sname">',$row['s_name'],'</p>';
-        echo '<p class="price">',$row['price'],'円</p>';
+        echo '<p class="price">＄',$row['price'],'円</p>';
         echo '</a>';
         echo '</div>';
     }

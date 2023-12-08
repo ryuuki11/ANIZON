@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/cart4.css">
     <link rel="stylesheet" href="../home/css/header_sazae.css">
     <link rel="stylesheet" href="../home/css/footer.css">
+    <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>login</title>
 </head>
 <body>
@@ -21,7 +23,7 @@
             echo '<div>郵便番号を入力してください</div>';
             echo '<div class="button">';
             echo '<input class="post" type="text" id="zipcode" maxlength="8" name="post" value="',$_SESSION['member']['post'],'">';
-            echo '<input class="button" type="button" value="自動入力">';
+            echo '<button type="button" class="ajaxzip3" href="#">自動入力</button>';
             echo '</div>';
             echo '<div>都道府県</div>';
             echo ' <input type="text" name="address" value="',$_SESSION['member']['address'],'">';
@@ -41,7 +43,21 @@
         </form>
             <?php require '../home/footer.php'; ?>
     </div>
+    <script>
+        $('.ajaxzip3').on('click', function(){
+            AjaxZip3.zip2addr('post','','address','city','town','dal');
+            //成功時に実行する処理
+            AjaxZip3.onSuccess = function() {
+                $('.dal').focus();
+            };
+            //失敗時に実行する処理
+            AjaxZip3.onFailure = function() {
+                alert('郵便番号に該当する住所が見つかりません');
+            };
+            return false;
+        });
+    </script>
 </body>
 </html>
-   
+
     
