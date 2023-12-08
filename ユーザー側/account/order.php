@@ -22,6 +22,7 @@
             $pdo=new PDO($connect,USER,PASS);
 
             if(isset($_SESSION['member'])){
+                echo '<div class="button"><a href="../home/home.php"><button>戻る</button></a></div>';
                 echo '<div class="name">',$_SESSION['member']['m_name'],'さんの注文履歴</div>';
                 echo '<hr>';
                 $sql = $pdo->query('select * from Buy inner join Orderhistory on Buy.b_id=Orderhistory.b_id');
@@ -41,7 +42,7 @@
                             echo '</div>';
                             echo '<div class="syosai">';
                             echo '<p class="sname">',$row['s_name'],'</p>';
-                            echo '<p class="price"><span class="piece">数量：'.$row['o_piece'].'</span><span class=cprice>'. $row["o_price"].'円</span></p>';
+                            echo '<p class="price"><span class="piece">数量：'.$row['o_piece'].'</span><span class=cprice>　　'. $row["o_price"].'円</span></p>';
                             echo '</div>';
                             echo '</div>';
                             $i++;

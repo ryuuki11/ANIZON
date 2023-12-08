@@ -67,6 +67,7 @@
                         $sql=$pdo->prepare('insert into Orderhistory (b_id,s_id,s_name,s_image,o_piece,o_price,count) values(?,?,?,?,?,?,0)');
                         $sql->execute([$b_id,$s_id[$i],$s_name[$i],$s_image[$i],$o_piece[$i],$o_price[$i]]);
                     }
+                    
                     $_SESSION['cartflag']=0;
                 }$result = $pdo->query('select * from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
                 if (!empty($result)){ 

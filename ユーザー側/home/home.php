@@ -41,11 +41,13 @@
             $i=0;
             foreach($sql as $row){
                 echo '<div class="syohin1">';
+                echo'<a href="../search/shosai.php?id=',$row['s_id'],'">';
                 echo '<div class="ci">';
                 echo '<img src="' . $row["image"] . '" alt="">';
                 echo '</div>';
                     echo '<p>',$row['s_name'],'</p>';
-                    echo '<p>',$row['price'],'</p>';
+                    echo '<p>＄',$row['price'],'円</p>';
+                    echo '</a>';
                 echo '</div>';
                 $i++;
                 if($i==8){
@@ -88,7 +90,7 @@
         </div>
         <div class="space">
             <div class="botton">
-                <botton id="botton">RAGETOP</botton>
+                <botton id="botton">PAGETOP</botton>
             </div>
         </div>
 
