@@ -35,7 +35,7 @@
  echo ' <div class="place">ご住所</div>';
  echo ' <div>郵便番号を入力してください</div>';
  echo '<div class="button">';
- echo ' <input type="text" class="post" name="post"  value="',$post,'" placeholder="例：1234567">';
+ echo ' <input type="text" class="post" name="post" placeholder="例：1234567">';
  echo ' <input type="button" class="ajaxzip3" href="#" value="自動入力">';
  echo '</div>';
  echo ' <div>県名</div>';
@@ -74,6 +74,8 @@
 
 });
             </script>
-            <?php require '../home/footer.php'; ?>
+            
 </body>
+
+<?php require '../home/footer.php'; ?>
 </html>
