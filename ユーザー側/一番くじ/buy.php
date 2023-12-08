@@ -22,7 +22,7 @@ if(isset($_SESSION['member']['m_name'])){
         $_SESSION['gacha']['num']=0;
     }
         echo '<p class="shiharai">クレジットのみ</p>';
-        echo '<a href="gachashosai.php?id=',$_SESSION['gacha'],'" class="back"><div class="buttn2"><button class="return">戻る</button></div></a>';
+        echo '<a href="gachashosai.php?id=',$_SESSION['gacha']['id'],'" class="back"><div class="buttn2"><button class="return">戻る</button></div></a>';
         echo '<form action="buy-output.php" method="post">';
     echo '<div class="card">';
         echo '<p>カード名義</p>';
