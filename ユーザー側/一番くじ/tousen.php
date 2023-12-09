@@ -71,7 +71,7 @@
             echo '<img class="d" src="',$image,'" alt="noimage">';
         echo '</div>';
         ?>
-        <div class="nextb"><a href="place.php" class="next"><button>次へ</button></a></div>
+        <div class="nextb"><a href="place.php" class="next"><button>住所確認へ</button></a></div>
         <div class="ba"></div>
         <?php require '../home/footer.php'; ?>
     </div>

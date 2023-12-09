@@ -9,7 +9,7 @@
 <body>
     <table class="right">
         <tr>
-            <form action="g-2-1-4.php" method="post">
+            <form action="g-2-1-1.php" method="post">
                 <td><button type="submit" class="back">戻る</button></td>
             </form>
             <form action="g-1-1-1.php" method="post">
@@ -31,7 +31,7 @@
         $sql=$pdo->prepare('select * from Shohin where s_id=?');
         $sql->execute([$_GET['id']]);
         foreach($sql as $row){
-            $_SESSION['Shohin2']=[
+            $_SESSION['Shohin']=[
                 's_name'=>$row['s_name'],
                 's_id'=>$row['s_id'],
                 'category'=>$row['category'],

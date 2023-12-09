@@ -91,7 +91,7 @@ button{
   }
     
   .next button{
-    font-size:clamp(10px, 4vw, 25px);
+    font-size:clamp(10px, 2vw, 15px);
     width:15vw;
     color:blue;
   }

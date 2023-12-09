@@ -21,10 +21,8 @@
     <?php
         echo '<div class="a">郵便番号を入力してください</div>';
         echo '<div class="button a">';
-        echo  '<div class="button">';
         echo ' <input type="text" class="post" name="post"  value="',$_SESSION['member']['post'],'" >';
         echo ' <button type="button" class="ajaxzip3" href="#">自動入力</button>';
-        echo '</div>';
         echo '</div>';
         echo '<div class="a">都道府県</div>';
         echo ' <input type="text" name="address" value="',$_SESSION['member']['address'],'">';

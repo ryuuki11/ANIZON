@@ -19,9 +19,9 @@ body{
   }
   div.buttn2 button{
     position:absolute;
-    top:120px;
+    top:130px;
     right: 0;
-    margin-right:20vw;
+    margin-right:15vw;
     min-width: 70px;
     color: rgb(75, 189, 246);
 }
@@ -31,6 +31,7 @@ p.shiharai{
     font-size:clamp(15px, 4vw, 25px);
     margin:70px 0 0 0;
     text-align: center;
+    padding-top:80px;
 }
   .allprice{
     font-size:clamp(15px, 4vw, 25px);
