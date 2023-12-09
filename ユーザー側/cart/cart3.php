@@ -24,7 +24,6 @@
 
             echo '<div class="t">';
             echo '<div class="name">',$_SESSION['member']['m_name'],'さんのカート</div>';
-            echo '</div>';
             echo '<form class="btn2" action="cart2.php">';
             echo '<button>戻る</button>';
             echo '</form>';
@@ -79,7 +78,7 @@
             echo '<p>',$_SESSION['member']['mail'],'</p>';
 
             echo '<form action="cart5.php" method="post">';
-            echo '<p class="kin">支払い方法</p>';
+            echo '<p class="kin">支払い方法選択</p>';
             echo '<p class="select">';
             echo '<select class="shiharai" name="shiharai" data-switchvalue="2" data-target=".card">';
             echo '<option value="1">代金引換</option>';

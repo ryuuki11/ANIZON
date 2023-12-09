@@ -33,12 +33,10 @@
                 $s_image=array();
                 $o_piece=array();
                 $o_price=array();
-                if (!empty($result)){ 
+                if (isset($_SESSION['cart'])){ 
                     foreach($result as $row) {
-                        foreach($_SESSION['check'] as $key=>$value){
-                            if($value=='true'){
-                                $j=$key+1;
-                                if($_SESSION['check'][$j]==$row['c_id']){
+                        foreach($_SESSION['cart'] as $key=>$value){
+                            if($value==$row['c_id']){
                                 $s_id[]=$row['s_id'];
                                 $s_name[]=$row['s_name'];
                                 $s_image[]=$row['image'];
@@ -48,10 +46,12 @@
                                 }
                             }
                         }
-                    }
                 }
+                
 
+                 
                 if($_SESSION['cartflag']==1){
+                    echo 'a';
                     $sql=$pdo->prepare('insert into Buy (m_id,date) values (?,CURRENT_DATE())');
                     $sql->execute([$_SESSION['member']['id']]);
                     $sql=$pdo->query('select * from Buy order by b_id desc');
@@ -67,22 +67,20 @@
                         $sql=$pdo->prepare('insert into Orderhistory (b_id,s_id,s_name,s_image,o_piece,o_price,count) values(?,?,?,?,?,?,0)');
                         $sql->execute([$b_id,$s_id[$i],$s_name[$i],$s_image[$i],$o_piece[$i],$o_price[$i]]);
                     }
-                    
-                    $_SESSION['cartflag']=0;
-                }$result = $pdo->query('select * from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
-                if (!empty($result)){ 
+
+                }
+                $result = $pdo->query('select * from Cart inner join Shohin on Cart.s_id=Shohin.s_id');
+                if (isset($_SESSION['cart'])){ 
                     foreach($result as $row) {
-                        foreach($_SESSION['check'] as $key=>$value){
-                            if($value=='true'){
-                                $j=$key+1;
-                                if($_SESSION['check'][$j]==$row['c_id']){
+                        foreach($_SESSION['cart'] as $key=>$value){
+                            if($value==$row['c_id']){
                                     $sql_delete = $pdo->prepare('DELETE FROM Cart WHERE c_id = ?');
                                     $sql_delete->execute([$row['c_id']]);
-                                }
                             }
                         }
                     }
                 }
+                $_SESSION['cartflag']=0;
                 unset($_SESSION['cart']);
                 echo '<p class="name">',$_SESSION['member']['m_name'],'さん</p>';
                 echo '<p class="order">注文完了です</p>';
