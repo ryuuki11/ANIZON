@@ -31,7 +31,6 @@
             echo '</div>';
             echo '<hr>';
             $total=0;
-            unset($_SESSION['cart']);
             // 接続確認
             if(isset($_POST['check'])){
                 $array=$_POST['check'];
@@ -118,6 +117,27 @@
                     }
                 }
 
+            }else if(isset($_SESSION['cart'])){
+                foreach($result as $row) {
+                    foreach($_SESSION['cart'] as $key=>$value){
+                        if($value==$row['c_id']){
+                            $price=$row["price"]*$row["c_piece"];
+                            echo '<div class="cart-shohin">';
+                            echo '<p class="date">' . $row['c_date'] . '</p>';
+                            echo '<div class="ci">';
+                            echo '<img src="' . $row["image"] . '" alt="">';
+                            echo '</div>';
+                            echo '<div class="syosai">';
+                            echo '<p class="sname" id="s_name">' . $row['s_name'] . '</p>';
+                            echo '<p class="sname" id="name"></p>';
+                            echo '<p class="price"><span class="piece">数量：'.$row['c_piece'].'</span><span class=cprice>'. $row["price"]*$row['c_piece'] .'円</span></p>';
+                            echo '</div>';
+                            echo '</div>';
+                            echo '<hr>';
+                            $total+=$price;
+                        }
+                    }
+                }
             }
 
             echo '<p class="allprice">合計',$total,'円</p>';

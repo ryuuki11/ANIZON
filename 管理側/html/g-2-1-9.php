@@ -12,11 +12,12 @@
     <div class="all">
         <div class="table">
             <?php
-                $s_name=$s_id=$category=$price=$pass=$explain='';
+                $s_name=$s_id=$category=$price=$stock=$pass=$explain='';
                 $_SESSION['Shohin']['s_name']=$_POST['s_name'];
                 $_SESSION['Shohin']['s_id']=$_POST['s_id'];
                 $_SESSION['Shohin']['category']=$_POST['category'];
                 $_SESSION['Shohin']['price']=$_POST['price'];
+                $_SESSION['Shohin']['stock']=$_POST['stock'];
                 $_SESSION['Shohin']['pass']=$_POST['pass'];
                 $_SESSION['Shohin']['explain']=$_POST['explain'];
 

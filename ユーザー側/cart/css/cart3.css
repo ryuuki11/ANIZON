@@ -14,7 +14,7 @@ div.cart-shohin{
 }
 div.t{
   display:flex;
-  margin-top: 140px;
+  margin-top:30px;
 }
 button{
   font-size:clamp(10px, 3vw, 20px);
@@ -54,10 +54,13 @@ div.name{
   height:4vw;
   max-height: 25px;
   margin-bottom:20px ;
+  margin-top:140px;
+  text-align: left;
 }
 form.btn2{
   height:4vw;
   max-height: 25px;
+  margin-top:140px;
 }
 .date{
   margin:auto 0 auto 5vw;
@@ -81,9 +84,10 @@ form.btn2{
  
 }
 div.buttn2{
-  text-align: right;
-  margin-top: 130px;
-  margin-right:15vw;
+  position: absolute;
+  margin-top:160px;
+  left:60vw;
+  
 }
 button.koushin{
   color: rgb(38, 204, 13);
@@ -106,7 +110,7 @@ input,select{
 }
 div.addres{
   text-align: center;
-  margin-top:20px;
+  margin-top:170px;
 }
 div.addres p.input{
   margin-top: 20px;

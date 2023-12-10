@@ -67,3 +67,7 @@ button.back{
     color:blue;
     margin-top:100px;
 }
+div.button{
+    float: right;
+    margin-right: 10vw;
+}

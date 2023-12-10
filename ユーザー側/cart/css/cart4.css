@@ -17,17 +17,6 @@ input{
   border: solid 2px black;
   font-size: clamp(15px, 3vw, 20px);
 }
-  input.button{
-    font-size:clamp(10px, 3vw, 20px);
-    border:solid 1px black;
-    text-align:center;
-    width:10vw;
-    min-width:90px;
-    height:5vw;
-    max-height:35px;
-    border-radius: 25px;
-    background-color: rgb(240, 241, 241);
-  }
   button{
     font-size:clamp(10px, 3vw, 20px);
     border:solid 1px black;
@@ -37,6 +26,17 @@ input{
     height:5vw;
     max-height:40px;
     min-height: 20px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+  }
+  button.ajaxzip3{
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
+    text-align:center;
+    width:10vw;
+    min-width:90px;
+    height:5vw;
+    max-height:35px;
     border-radius: 25px;
     background-color: rgb(240, 241, 241);
   }

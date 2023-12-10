@@ -3,10 +3,10 @@ body{
     text-align: center;
 }
 button{
-    font-size:clamp(10px, 3vw, 20px);
+    font-size:clamp(10px, 2vw, 15px);
     border:solid 1px black;
     text-align:center;
-    width:10vw;
+    width:15vw;
     min-width:90px;
     height:5vw;
     max-height:40px;

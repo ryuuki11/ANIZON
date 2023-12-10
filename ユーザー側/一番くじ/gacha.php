@@ -32,7 +32,7 @@
     echo '<div id="wrap">';
     require '../home/header_sazae.php';
 
-
+echo '<div class="gacha">';
     $_SESSION['flag']=0;
 
     $sql=$pdo->prepare('select image from Shohin where s_id=?');
@@ -106,7 +106,7 @@
     echo '<p>あと',$num,'回</p>';
     echo '<div class="backv"></div>';
     echo '<div class="display_none">';
-    echo '<video id="video" src="video/sazae',$rank,'.mp4"></video>';
+    echo '<video id="video" src="video/sazae',$rank,'.mp4" disablepicturepicture></video>';
     echo '</div>';
 
     echo '<div class="button">';
@@ -118,6 +118,7 @@
     echo '</div>';
     echo '<div class="ba"></div>';
     echo '</div>';
+    echo '<div>';
     ?>
     
     <?php require '../home/footer.php'; ?>

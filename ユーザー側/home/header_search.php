@@ -14,10 +14,10 @@
                             <h3 class="ninki">人気・おすすめ商品</h3>
                             <ul>
                                 <li>
-                                    <a href="#">おすすめ</a>
+                                    <a href="../search/result.php?sort=4">おすすめ</a>
                                 </li>
                                 <li>
-                                    <a href="#">人気ランキング</a>
+                                    <a href="../search/result.php?sort=3">人気ランキング</a>
                                 </li>
                             </ul>
                             <h3>カテゴリー</h3>
@@ -40,7 +40,7 @@
                             </ul>
                         </div>
                     </div>
-                    <a href="../home/home.php"></a><span class="title">ANIZON</span></a>
+                    <div class="title"><a class="a" href="../home/home.php"><span class="title">ANIZON</span></a></div>
                     <input type="checkbox" type="checkbox" id="human">
                     <div class="icon">
                         <label for="human" class="human">

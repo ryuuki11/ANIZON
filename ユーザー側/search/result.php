@@ -84,7 +84,7 @@
                 echo '<img src="' . $row["image"] . '" alt="">';
                 echo '</div>';
                     echo '<p class="name">',$row['s_name'],'</p>';
-                    echo '<p>',$row['price'],' 円</p>';
+                    echo '<p>＄',$row['price'],' 円</p>';
                     echo '</a>';
                 echo '</div>';
                 $i++;
@@ -96,7 +96,7 @@
         ?>
         <div class="space">
             <div class="botton">
-                <botton id="botton">RAGETOP</botton>
+                <botton id="botton">PAGETOP</botton>
             </div>
         </div>
 

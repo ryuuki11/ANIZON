@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -11,6 +12,7 @@
     <div class="all">
         <div class="table">
             <?php
+                    $p_name=$s_id=$rank=$catgory=$image=$setumei='';
                     $_SESSION['Prize']['p_name']=$_POST['p_name'];
                     $_SESSION['Prize']['s_id']=$_POST['s_id'];
                     $_SESSION['Prize']['rank']=$_POST['rank'];
