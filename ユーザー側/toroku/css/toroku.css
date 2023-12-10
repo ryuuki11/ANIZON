@@ -4,13 +4,16 @@ body {
    }
 
    button{
-    font-size:18px;
-    background-color: #ffffff;
-    border-radius:20px;
-    padding:4px 0;
-    text-align: center;
-    width:200px;
-    margin-bottom: 10px;
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
+    text-align:center;
+    width:10vw;
+    min-width:90px;
+    height:5vw;
+    max-height:40px;
+    min-height: 20px;
+    border-radius: 25px;
+    margin-top:10px;
   }
   
   p{
@@ -21,9 +24,9 @@ body {
     font-weight:bold ;
     margin-top: 30px;
   }
-  .top{
-    margin-top:-10px;
-  }
+ h2{
+  margin-top: 20px;
+ }
   .toroku{
     color: rgb(60, 224, 224);
     text-align: center;

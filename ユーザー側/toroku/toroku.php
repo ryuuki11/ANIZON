@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php require '../db_connect.php'; ?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -12,8 +13,7 @@
 </head>
 <body>
     <?php
-    $login=$pass=$name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
-    if(isset($_SESSION['member'])) {
+    $login=$password=$m_name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
         $_SESSION['member']['login']=$_POST['login'];
         $_SESSION['member']['password']=$_POST['password'];
         $_SESSION['member']['m_name']=$_POST['m_name'];
@@ -25,35 +25,33 @@
         $_SESSION['member']['apart']=$_POST['apart'];
         $_SESSION['member']['mail']=$_POST['mail'];
         $_SESSION['member']['number']=$_POST['number'];
-    }
-
     echo '<h2>登録内容確認</h2>';
     echo '<p class="midasi">お名前</p>';
-    echo '<p>',$_SESSION['member']['m_name'],'</p>';
+    echo '<p>',$_POST['m_name'],'</p>';
     echo '<p class="midasi">ログインID</p>';
-    echo '<p>',$_SESSION['member']['login'],'</p>';
+    echo '<p>',$_POST['login'],'</p>';
     echo '<p class="midasi">パスワード</p>';
     echo '<p>';
-        for ($i=1;$i<strlen($_SESSION['member']['password']);$i++) {
+        for ($i=1;$i<strlen($_POST['password']);$i++) {
             echo '●';
         }
     echo '</p>';
     echo '<p class="midasi">住所</p>';
-    echo '<p>〒',$_SESSION['member']['post'],'</p>';
+    echo '<p>〒',$_POST['post'],'</p>';
     echo '<p class="midasi">都道府県</p>';
-    echo '<p>',$_SESSION['member']['address'],'<p>';
+    echo '<p>',$_POST['address'],'<p>';
     echo '<p class="midasi">市区町村</p>';
-    echo '<p>',$_SESSION['member']['city'],'</p>';
+    echo '<p>',$_POST['city'],'</p>';
     echo '<p class="midasi">町名</p>';
-    echo '<p>',$_SESSION['member']['town'],'</p>';
-    echo '<p class="midasi>番地<p>';
-    echo '<p>',$_SESSION['member']['dal'],'</p>';
+    echo '<p>',$_POST['town'],'</p>';
+    echo '<p class="midasi">番地<p>';
+    echo '<p>',$_POST['dal'],'</p>';
     echo '<p class="midasi">マンション名・号室</p>';
-    echo '<p>',$_SESSION['member']['apart'],'</p>';
+    echo '<p>',$_POST['apart'],'</p>';
     echo '<p class="midasi">メールアドレス</p>';
-    echo '<p>',$_SESSION['member']['mail'],'</p>';
+    echo '<p>',$_POST['mail'],'</p>';
     echo '<p class="midasi">電話番号</p>';
-    echo '<p>',$_SESSION['member']['number'],'</p>';
+    echo '<p>',$_POST['number'],'</p>';
     ?>
 
     <div><button  onclick="location.href='toroku-input.php'">戻る</button></div>
