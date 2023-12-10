@@ -28,12 +28,19 @@
             $id=$_SESSION['member']['id'];
             $sql=$pdo->prepare('select * from Member where m_id!=? and login=?');
             $sql->execute([$id,$_POST['login']]);
+            // $pattern = "/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)*$/";
 
             if (empty($_POST['login']) or empty($_POST['password']) or empty($_POST['m_name']) or empty($_POST['post']) or empty($_POST['address']) or empty($_POST['city']) or empty($_POST['town']) or empty($_POST['dal']) or empty($_POST['mail']) or empty($_POST['number'])) {
                 echo '<p class="no">未入力の項目があります。</p>';
                 echo '<div class="no"><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
             }else if (!empty($sql->fetchAll())){
                 echo 'ログイン名がすでに使用されていますので、変更してください。';
+                echo '<div class="no"><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
+            }else if (!preg_match('/^[a-z0-9._+^~-]+@[a-z0-9-]+.+[a-z0-9-]+$/i',$_POST['mail'])) {
+                echo 'メールアドレスが正しくありません。';
+                echo '<div class="no"><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
+            }else if (!preg_match( '/^0[0-9]{9,10}\z/', $_POST['number'] )) {
+                echo '電話番号が正しくありません。';
                 echo '<div class="no"><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
             }else{
                 echo '<form action="account5.php" method="post">';

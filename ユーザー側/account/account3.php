@@ -59,7 +59,7 @@
             echo ' <div a>メールアドレスを入力してください</div>';
             echo ' <input type="text"  name="mail" value="',$mail,'">';
             echo ' <div a>電話番号</div>';
-            echo ' <input type="text" name="number" value="',$number,'">';
+            echo ' <input type="text" name="number" value="',$number,'" placeholder="ハイフンを含まない">';
             echo ' <div a><button class="toroku" type="submit">確認</button></div>';
             echo '</form>';
             ?>

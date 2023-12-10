@@ -41,8 +41,6 @@
                     echo '●';
                 }
                 echo '</p>';  
-                echo '<p class="midasi">メールアドレス</p>';
-                echo '<p>',$mail,'</p>'; 
                 echo '<p class="midasi">住所</p>';
                 echo '<p>〒',$post,'</p>';
                 echo '<p class="midasi">都道府県</p>';
@@ -55,6 +53,8 @@
                 echo '<p>',$dal,'</p>';
                 echo '<p class="midasi">マンション名・号室</p>';
                 echo '<p>',$apart,'</p>';
+                echo '<p class="midasi">メールアドレス</p>';
+                echo '<p>',$mail,'</p>'; 
                 echo '<p class="midasi">電話番号</p>';
                 echo '<p>',$number,'</p>';
 
