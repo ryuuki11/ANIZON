@@ -23,18 +23,13 @@ body {
   p{
     margin-top: 20px;
   }
-  p.no{
-    margin-top:10px;
-  }
-  p.name{
-    margin-top:140px;;
-  }
+  
   .title{
     font-weight:bold ;
     margin-top: 30px;
   }
   .top{
-    margin-top:10px;
+    margin-top:100px;
   }
 .toroku{
     color: rgb(62, 197, 255);

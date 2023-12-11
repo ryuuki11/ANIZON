@@ -11,18 +11,13 @@
 <html lang="ja">
     <head>
     <meta charset="UTF=8">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/toroku.css">
-    <link rel="stylesheet" href="../home/css/header_title.css">
-    <link rel="stylesheet" href="../home/css/footer.css">
+    <link rel="stylesheet" href="css/toroku0.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <title>新規登録 </title>
 </head>
 <body>
-<div id="wrap">
-<?php require '../home/header_title.php'; ?>
     <?php
 
  echo '<form action="toroku.php" method="post">';
@@ -55,7 +50,7 @@
  echo ' <div><button class="toroku" type="submit">確認</button></div>';
  echo '</form>';
     ?>
-    </div>
+    
     <script>
             $('.ajaxzip3').on('click', function(){
     AjaxZip3.zip2addr('post','','address','city','town','dal');
@@ -74,7 +69,10 @@
 
 });
             </script>
+<<<<<<< HEAD
             
+=======
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 </body>
 
 <?php require '../home/footer.php'; ?>

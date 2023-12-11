@@ -1,3 +1,4 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/update.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="../home/css/header_sazae.css">
     <link rel="stylesheet" href="../home/css/footer.css">
     <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
@@ -21,8 +21,10 @@
     <?php
         echo '<div class="a">郵便番号を入力してください</div>';
         echo '<div class="button a">';
+        echo  '<div class="button">';
         echo ' <input type="text" class="post" name="post"  value="',$_SESSION['member']['post'],'" >';
         echo ' <button type="button" class="ajaxzip3" href="#">自動入力</button>';
+        echo '</div>';
         echo '</div>';
         echo '<div class="a">都道府県</div>';
         echo ' <input type="text" name="address" value="',$_SESSION['member']['address'],'">';
@@ -54,31 +56,5 @@
             return false;
         });
     </script>
-=======
-    <title>お届け先変更</title>
-</head>
-<body>
-    <p>○○さんの支払い情報</p>
-    <div class="place">ご住所</div>
-        <div>郵便番号を入力してください</div>
-        <div class="button">
-            <input class="post" type="text" id="zipcode" maxlength="8" name="post" value="',$post,'">
-            <input class="button" type="button" value="自動入力">
-        </div>
-        <div>都道府県</div>
-        <input type="text" name="prefecture" value="',$address,'">
-        <div>市区町村、番地</div>
-        <input type="text" name="city" value="',$city,'">
-        <div>マンション名、号室等</div>
-        <input type="text" name="apart" value="',$apart,'">
-        <div>メールアドレスを入力してください</div>
-        <input type="text" name="mail" value="',$mail,'">
-        <div>電話番号</div>
-        <input type="text" name="number" value="',$number,'">
-
-    <div class="push"><button>登録</button></div>
-            
-        
->>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 </body>
 </html>

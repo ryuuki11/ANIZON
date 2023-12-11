@@ -1,4 +1,13 @@
-
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header_search.css" />
+    <title>anizon</title>
+</head>
+    <body>
         <div class="header">
             <div class="h">
                 <div class="img">
@@ -22,20 +31,20 @@
                             </ul>
                             <h3>カテゴリー</h3>
                             <ul>
-                            <li>
-                                    <a href="../search/result.php?category=1">CD・DVD</a>
+                                <li>
+                                    <a href="#">CD・DVD</a>
                                 </li>
                                 <li>
-                                    <a href="../search/result.php?category=2">漫画</a>
+                                    <a href="#">漫画</a>
                                 </li>
                                 <li>
-                                    <a href="../search/result.php?category=3">グッズ</a>
+                                    <a href="#">グッズ</a>
                                 </li>
                             </ul>
                             <h3>条件検索</h3>
                             <ul>
                                 <li>
-                                    <a href="../search/search.php">条件検索</a>
+                                    <a href="#">条件検索</a>
                                 </li>
                             </ul>
                         </div>
@@ -44,9 +53,9 @@
                     <input type="checkbox" type="checkbox" id="human">
                     <div class="icon">
                         <label for="human" class="human">
-                        <img class="humanicon" src="../image/humanicon.png" width="30" height="30">
+                        <img class="humanicon" src="img/humanicon.png" width="30" height="30">
                         </label>
-                        <a href="../cart/cart1.php"><img class="cart" src="../image/cart.png" width="30" height="30"></a>
+                        <a href=""><img class="cart" src="img/cart.png" width="30" height="30"></a>
                     </div>
                     <label class="nav-unshown" id="nav-close" for="human"></label>
                     <div class="human-menu">
@@ -57,25 +66,14 @@
                         <div class="font">
                             <h3>アカウント情報</h3>
                             <ul>
-                            <li>
-                                <a href="../account/account2-1.php">アカウント情報</a>
-                            </li>
-                            <?php
-                            if(isset($_SESSION['member']['m_name'])){
-                                echo '<li>';
-                                echo '<a href="../account/logout1.php">ログアウト</a>';
-                            echo '</li>';
-                            }else{
-                                echo '<li>';
-                                echo '<a href="../login/login.php">ログイン/新規登録</a>';
-                                 echo '</li>';
-                            }
-                            ?>
+                                <li>
+                                    <a href="">アカウント情報</a>
+                                </li>
                             </ul>
                             <h3>注文履歴</h3>
                             <ul>
                                 <li>
-                                    <a href="../account/order.php">注文履歴</a>
+                                    <a href="">注文履歴</a>
                                 </li>
                             </ul>
                         </div>
@@ -89,4 +87,6 @@
                 </div>
             </div>
         </div>
+    </body>
+</html>
     

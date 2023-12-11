@@ -47,9 +47,6 @@ body{
 .else{
     background-color: white;
 }
-div.imagebox{
-    margin-top:140px;
-}
 
   button{
     font-size:clamp(10px, 3vw, 20px);
@@ -64,11 +61,13 @@ div.imagebox{
     background-color: rgb(240, 241, 241);
   }
 .button {
-    text-align: center;
+    display: flex;
+    justify-content: center;
     margin-top: 30px;
 }
 
 .button button{
+    margin-top: 1.5vw;
     width:20vw;
     max-width: 200px;
     height:6vw;
@@ -79,13 +78,13 @@ p {
     text-align: center;
     font-weight: bold;
 }
-div.img1{
+div.img{
     float:right;
     width:50vw;
     text-align: center;
     margin-right:10vw;
 }
-div.img1 img{
+div.img img{
     width:50vw;
     height:auto;
 }
@@ -125,12 +124,18 @@ div.img1 img{
     margin-top: 8vw;
 }
 .display_none {
+<<<<<<< HEAD
     display: none;
     position:fixed;
     margin: 3rem auto;
     padding: 4%;
     top: -100px;
     z-index: 80;
+=======
+    visibility: hidden;
+    margin: 3rem auto;
+    padding: 4%;
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
     
 }
 .gacha{
@@ -144,7 +149,7 @@ video{
     z-index: 80;
 }
 .backv{
-    display:none;
+    visibility: hidden;
     position: fixed;
     z-index: 70;
     top: 0;
@@ -154,6 +159,7 @@ video{
     background: black;
     opacity: 0.3;
 }
+<<<<<<< HEAD
 div.ba{
     position: absolute;
     bottom: 0;
@@ -162,4 +168,6 @@ div.ba{
     background-color: white;
 
   }
+=======
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 

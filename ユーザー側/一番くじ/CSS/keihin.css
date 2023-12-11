@@ -4,14 +4,14 @@ body{
 }
 
 /*背景デザイン*/
-.hiroaka div.gacha{
+.hiroaka{
     background-image: url(../image/hiroaka/back.png);
     background-attachment: fixed;
     background-position: center;
     background-color:rgba(255,255,255,0.3);
     background-blend-mode:lighten;  
 }
-.jojo div.gacha{
+.jojo{
     background-image: url(../image/jojo/jojoback.jpg);
     background-attachment: fixed;
     background-size: contain;
@@ -22,32 +22,29 @@ body{
 .else p{
     color: black;
 }
-.juju div.gacha{
+.juju{
     background-image: url(../image/juju/back.webp);
     background-attachment: fixed;
     background-position: center;
     background-color:rgba(255,255,255,0.1);
     background-blend-mode:lighten;  
 }
-.doragon div.gacha{
+.doragon{
     background-image: url(../image/doragon/back.jpg);
     background-attachment: fixed;
     background-position: center;
     background-color:rgba(255,255,255,0.3);
     background-blend-mode:lighten;  
 }
-.one div.gacha{
+.one{
     background-image: url(../image/one/back.webp);
     background-attachment: fixed;
     background-position: center;
     background-color:rgba(255,255,255,0.2);
     background-blend-mode:lighten;  
 }
-.else div.gacha{
+.else{
     background-color: rgb(245, 245, 206);
-}
-div.gacha{
-    padding-bottom: 90px;
 }
 /* 背景終了*/
 
@@ -65,7 +62,7 @@ div.gacha{
 }
 
 /*景品文字*/
-span.A,span.B,span.C,span.D,span.name{
+span{
     font-weight: bold;
     text-shadow:
             1px 1px 0px #fff, -1px -1px 0px #fff,
@@ -189,7 +186,4 @@ input{
   }
   .back button{
     color: rgb(75, 189, 246);
-  }
-  div.ba{
-    height:90px;
   }

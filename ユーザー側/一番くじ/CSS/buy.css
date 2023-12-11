@@ -19,7 +19,11 @@ body{
   }
   div.buttn2 button{
     position:absolute;
+<<<<<<< HEAD
     top:130px;
+=======
+    top:5vw;
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
     right: 0;
     margin-right:15vw;
     min-width: 70px;
@@ -27,11 +31,15 @@ body{
 }
 p.shiharai{
     font-weight: bold;
-    width: 100vw;
     font-size:clamp(15px, 4vw, 25px);
+<<<<<<< HEAD
     margin:70px 0 0 0;
     text-align: center;
     padding-top:80px;
+=======
+    width:80vw;
+    margin:5vw 0 0 auto;
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 }
   .allprice{
     font-size:clamp(15px, 4vw, 25px);
@@ -81,7 +89,6 @@ p.shiharai{
   .gachab{
     text-align: center;
     margin-top: 13vw;
-    padding-bottom: 130px;
   }
   .gachab button{
     display: block;

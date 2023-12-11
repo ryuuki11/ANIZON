@@ -1,19 +1,21 @@
-<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="ja">
     <head>
+
     <meta charset="UTF=8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/cart5.css">
-    <link rel="stylesheet" href="../home/css/header_sazae.css">
-    <link rel="stylesheet" href="../home/css/footer.css">
     <title>login</title>
 </head>
 <body>
-    <div id="wrap">
-        <?php require '../home/header_sazae.php'; ?>
+        <p class="name">○○○○○○○○○○さん</p>
+            <p class="order">注文完了です</p>
+            
+      
+            
 
+<<<<<<< HEAD
         <?php
             const SERVER = 'mysql219.phy.lolipop.lan';
             const DBNAME = 'LAA1518095-anizon';
@@ -89,5 +91,8 @@
         ?>
         <?php require '../home/footer.php'; ?>
     </div>
+=======
+        <div><button type="submit" class="top">トップページへ</button></div>
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 </body>
 </html>
