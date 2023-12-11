@@ -106,7 +106,7 @@ echo '<div class="gacha">';
     echo '<p>あと',$num,'回</p>';
     echo '<div class="backv"></div>';
     echo '<div class="display_none">';
-    echo '<video id="video" src="video/sazae',$rank,'.mp4" disablepicturepicture></video>';
+    echo '<video id="video" src="video/sazae',$rank,'.mp4" playsinline></video>';
     echo '</div>';
 
     echo '<div class="button">';

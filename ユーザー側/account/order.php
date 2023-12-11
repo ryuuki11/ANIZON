@@ -28,10 +28,11 @@
                 $sql = $pdo->query('select * from Buy inner join Orderhistory on Buy.b_id=Orderhistory.b_id');
                 $i=0;
                 $id=0;
+                $j=0;
                 $rows=$sql->fetchAll(PDO::FETCH_ASSOC);
                 if (!empty($rows)){
                     foreach($rows as $row){
-                        if($i!=0 && $row['b_id']!=$id){
+                        if($i!=0 && $row['b_id']!=$id && $j==1){
                             echo '<hr>';
                         }
                         if($row['m_id']==$_SESSION['member']['id']){
@@ -45,8 +46,11 @@
                             echo '<p class="price"><span class="piece">数量：'.$row['o_piece'].'</span><span class=cprice>　　'. $row["o_price"].'円</span></p>';
                             echo '</div>';
                             echo '</div>';
+                            $j=1;
                             $i++;
                             $id=$row['b_id'];
+                        }else{
+                            $j=0;
                         }
                     }
                     echo '<hr>';
@@ -56,7 +60,7 @@
                     echo '<p>注文履歴がありません</P>';
                 }
             
-                echo '<button class="back">戻る</button>';
+                echo '<div class="button2"><button class="back">戻る</button></div>';
 
             }else{
                 echo '<div class="home">';

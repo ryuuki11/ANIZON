@@ -10,6 +10,7 @@ div.order-shohin{
     height:21vw;
     width:90vw;
     margin-left:3vw;
+    font-size:clamp(10px, 3vw, 20px);
 }
 button{
     font-size:clamp(10px, 3vw, 20px);
@@ -65,9 +66,12 @@ button.back{
     max-width: 250px;
     margin:0px auto;
     color:blue;
-    margin-top:100px;
+    margin-top:50px;
 }
 div.button{
     float: right;
     margin-right: 10vw;
+}
+div.button2{
+    padding-bottom: 140px;
 }

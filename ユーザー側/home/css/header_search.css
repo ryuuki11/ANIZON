@@ -1,3 +1,17 @@
+div.search form button{
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  border-radius: 0;
+  text-align: inherit;
+}
+
 /*ヘッダー全体*/
 div.header{
     position: fixed;
@@ -265,6 +279,12 @@ div.search{
     text-align: center;
     margin-top: 10px;
 }
+div.search button{
+    width: 0;
+    height:0;
+    min-width:0;
+    min-height: 0;
+}
 input.search{
     position: absolute;
     background:#CCCCCC;
@@ -272,13 +292,16 @@ input.search{
     border-radius: 45px;
     width:60vw;
     height:20px;
+    min-height: 20px;
     right:20vw;
     z-index: 1;
     text-align: left;
     padding-left: 10px;
+    margin:0 auto;
 }
 img.search{
     position: absolute;
     right:22vw;
     z-index: 2;
+    top:50px;
 }

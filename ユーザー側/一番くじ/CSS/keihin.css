@@ -52,7 +52,7 @@ div.gacha{
 /* 背景終了*/
 
 .top{
-    padding-top: 5vw;
+    padding-top: 100px;
     margin-bottom: 3vw;
 }
 .top img {
@@ -184,7 +184,7 @@ input{
     margin-top: 5vw;
     color:blue
   }
-  .gacha button{
+  .gachab button{
     color:red;
   }
   .back button{

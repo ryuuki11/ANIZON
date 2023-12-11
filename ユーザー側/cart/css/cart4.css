@@ -39,6 +39,8 @@ input{
     max-height:35px;
     border-radius: 25px;
     background-color: rgb(240, 241, 241);
+    min-width:30px;
+    font-size:clamp(7px, 2vw, 15px);
   }
   p.name{
     margin-top:140px;
