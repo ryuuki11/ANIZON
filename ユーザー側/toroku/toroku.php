@@ -21,24 +21,24 @@
 $pdo=new PDO ($connect,USER,PASS);
 
     $login=$password=$m_name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
-        $_SESSION['member']['login']=$_POST['login'];
-        $_SESSION['member']['password']=$_POST['password'];
-        $_SESSION['member']['m_name']=$_POST['m_name'];
-        $_SESSION['member']['post']=$_POST['post'];
-        $_SESSION['member']['address']=$_POST['address'];
-        $_SESSION['member']['city']=$_POST['city'];
-        $_SESSION['member']['town']=$_POST['town'];
-        $_SESSION['member']['dal']=$_POST['dal'];
-        $_SESSION['member']['apart']=$_POST['apart'];
-        $_SESSION['member']['mail']=$_POST['mail'];
-        $_SESSION['member']['number']=$_POST['number'];
+        $_SESSION['member2']['login']=$_POST['login'];
+        $_SESSION['member2']['password']=$_POST['password'];
+        $_SESSION['member2']['m_name']=$_POST['m_name'];
+        $_SESSION['member2']['post']=$_POST['post'];
+        $_SESSION['member2']['address']=$_POST['address'];
+        $_SESSION['member2']['city']=$_POST['city'];
+        $_SESSION['member2']['town']=$_POST['town'];
+        $_SESSION['member2']['dal']=$_POST['dal'];
+        $_SESSION['member2']['apart']=$_POST['apart'];
+        $_SESSION['member2']['mail']=$_POST['mail'];
+        $_SESSION['member2']['number']=$_POST['number'];
 
-        if(empty($_SESSION['member']['login']) or empty($_SESSION['member']['password']) or empty($_SESSION['member']['m_name']) or empty($_SESSION['member']['post']) or empty($_SESSION['member']['address']) or empty($_SESSION['member']['city']) or empty($_SESSION['member']['town']) or empty($_SESSION['member']['dal']) or empty($_SESSION['member']['mail']) or empty($_SESSION['member']['number'])){
+        if(empty($_SESSION['member2']['login']) or empty($_SESSION['member2']['password']) or empty($_SESSION['member2']['m_name']) or empty($_SESSION['member2']['post']) or empty($_SESSION['member2']['address']) or empty($_SESSION['member2']['city']) or empty($_SESSION['member2']['town']) or empty($_SESSION['member2']['dal']) or empty($_SESSION['member2']['mail']) or empty($_SESSION['member2']['number'])){
             echo '<p class="top">未入力の項目があります</p>';
             echo '<button onclick="location.href=',"'toroku-input.php'",'">戻る</button>';
         }else{
             $sql=$pdo->prepare('select * from Member where login=?');
-            $sql->execute([$_SESSION['member']['login']]);
+            $sql->execute([$_SESSION['member2']['login']]);
             if(empty($sql->fetchAll())){
                 echo '<h2>登録内容確認</h2>';
                 echo '<p class="midasi">お名前</p>';

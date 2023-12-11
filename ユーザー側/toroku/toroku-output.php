@@ -19,10 +19,10 @@
 <?php
 $pdo=new PDO ($connect,USER,PASS);
 
-     if(isset($_SESSION['member'])){
+     if(isset($_SESSION['member2'])){
         $sql=$pdo->prepare('insert into Member values(null,?,?,?,?,?,?,?,?,?,?,?,0)');
         $sql->execute([
-                $_SESSION['member']['login'],$_SESSION['member']['password'],$_SESSION['member']['m_name'],$_SESSION['member']['post'],$_SESSION['member']['address'],$_SESSION['member']['city'],$_SESSION['member']['town'],$_SESSION['member']['dal'],$_SESSION['member']['apart'],$_SESSION['member']['mail'],$_SESSION['member']['number']]);
+                $_SESSION['member2']['login'],$_SESSION['member2']['password'],$_SESSION['member2']['m_name'],$_SESSION['member2']['post'],$_SESSION['member2']['address'],$_SESSION['member2']['city'],$_SESSION['member2']['town'],$_SESSION['member2']['dal'],$_SESSION['member2']['apart'],$_SESSION['member2']['mail'],$_SESSION['member2']['number']]);
             echo '<p class="top">お客様情報を登録しました。</p>';
             echo '<button onclick="location.href=',"'../home/home.php'",'">ホーム</button>';
     }

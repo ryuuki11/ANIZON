@@ -13,7 +13,7 @@
     <body>
     <div id="wrap">
     <?php require '../home/header_search.php'; ?>
-        <h2 class="title1">検索結果</h2>
+        
         <?php 
 
             if(isset($_SESSION['shohin_shosai']['id'])){
@@ -30,8 +30,12 @@
             $sql=$pdo->prepare($SQL);
             $Category=['ALL','CD・DVD','漫画','グッズ'];
             $Sort=['price desc','price asc','sale desc','sale desc','date desc'];
+            $Sortname=['高い順','安い順','人気順','人気順','おすすめ順'];
+            $name="";
+            $category="";
+            $sort="";
                 if(isset($_GET['category']) &&$_GET['category']!=0 ){
-                    
+                    $category="カテゴリー：".$Category[$_GET['category']];
                         $SQL.=' and category="'.$Category[$_GET['category']].'"';
                         $SQLo.=' and (category="'.$Category[$_GET['category']].'"';
                     if(isset($_GET['name'])){
@@ -43,18 +47,28 @@
                 if(isset($_GET['name'])){
                     $SQL.=' and s_name like "%'.$_GET['name'].'%"';
                     $SQLo.=' s_name like "%'.$_GET['name'].'%"';
+                    if(!empty($_GET['name'])){
+                        $name="商品名：".$_GET['name'];
+                    }
                 }
                 if(isset($_GET['category'])){
                     if($_GET['category']!=0){
                         $SQLo.=')';
+                        
+                    }else{
+                        $category="カテゴリー：全て";
                     }
+                    
                 }
                 if(isset($_GET['sort'])){
                     $SQL.=' order by '.$Sort[$_GET['sort']];
+                    $sort='並び順：'.$Sortname[$_GET['sort']];
                 }
                 $i=0;
                 
             $sql=$pdo->query($SQL);
+
+            echo '<div class="ht"><h2 class="title1">検索結果</h2><span class="first">',$name,'</span><span>',$category,'</span><span>',$sort,'</span></div>';
             
             echo '<div class="result">';
             foreach($sql as $row){
@@ -70,7 +84,7 @@
                 $i++;
             }
             if($i==0){
-                echo '<p>一致する商品がありません</p>';
+                echo '<p class="mess">一致する商品がありません</p>';
             }
             echo '</div>';
             $sql=$pdo->query($SQLo);

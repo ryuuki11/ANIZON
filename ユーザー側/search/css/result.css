@@ -1,6 +1,17 @@
 body{
     font-size:clamp(8px, 3vw, 20px);
 }
+div.ht{
+  margin-top:140px;
+}
+div.ht span{
+  margin-left: 2vw;
+  margin-top: 1px;
+  font-size:clamp(4px, 3vw, 15px);
+}
+div.ht span.first{
+  margin-left: 10vw;
+}
 h2{
     text-align: left;
     font-size:clamp(15px, 4vw, 25px);
@@ -9,11 +20,13 @@ h2{
    
 }
 h2.title1{
-  margin-top:140px;
-  margin-bottom: 3vw;
+  margin-bottom: 3px;
 }
 h2.title{
     margin-top:20vw;
+}
+p.mess{
+  margin-top: 50px;
 }
 .result{
     display: grid;
@@ -95,9 +108,20 @@ div.shohin img{
         font-weight: bold;
         margin-left: 10vw;
     }
+    div.ht{
+      margin-top:140px;
+    }
+    div.ht span{
+      margin-left: 2vw;
+      margin-top: 1px;
+      font-size:clamp(4px, 3vw, 15px);
+    }
+    div.ht span.first{
+      margin-left: 10vw;
+    }
     h2.title1{
-      margin-top:120px;
-      margin-bottom: 3vw;
+     
+      margin-bottom: 3px;
     }
     h2.title{
       margin-top:20vw;
