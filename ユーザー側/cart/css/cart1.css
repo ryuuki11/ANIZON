@@ -138,7 +138,7 @@ form{
     margin-top:3vw;
 }
 div.mess{
-    margin-top: 140px;
+    margin-top: -140px;
     text-align: center;
 }
 button.home{

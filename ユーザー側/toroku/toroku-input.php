@@ -22,7 +22,7 @@
 </head>
 <body>
 <div id="wrap">
-<?php require '../home/header_title.php'; ?>
+        <?php require '../home/header_title.php'; ?>
     <?php
 
  echo '<form action="toroku.php" method="post">';
@@ -34,10 +34,8 @@
  echo ' <input type="text" name="m_name" >';
  echo ' <div class="place">ご住所</div>';
  echo ' <div>郵便番号を入力してください</div>';
- echo '<div class="button">';
- echo ' <input type="text" class="post" name="post" placeholder="例：1234567">';
- echo ' <input type="button" class="ajaxzip3" href="#" value="自動入力">';
- echo '</div>';
+ echo ' <input type="text" name="post" placeholder="例：1234567">';
+ echo ' <div><button type="button" class="ajaxzip3" href="#">自動入力</button></div>';
  echo ' <div>県名</div>';
  echo ' <input type="text" name="address" >';
  echo ' <div>市区町村</div>';
@@ -57,6 +55,7 @@
     ?>
     <?php require '../home/footer.php'; ?>
     </div>
+    
     <script>
             $('.ajaxzip3').on('click', function(){
     AjaxZip3.zip2addr('post','','address','city','town','dal');
@@ -75,8 +74,5 @@
 
 });
             </script>
-            
 </body>
-
-
 </html>

@@ -46,8 +46,8 @@
                 echo '<img src="' . $row["image"] . '" alt="">';
                 echo '</div>';
                     echo '<p>',$row['s_name'],'</p>';
-                    echo '<p>＄',$row['price'],'円</p>';
-                    echo '</a>';
+                    echo '<p>￥',$row['price'],'</p>';
+                   echo '</a>';
                 echo '</div>';
                 $i++;
                 if($i==8){

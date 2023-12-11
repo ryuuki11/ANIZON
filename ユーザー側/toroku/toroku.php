@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+<?php require '../db_connect.php'; ?>
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -7,13 +8,19 @@
     <meta charset="UTF=8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/toroku.css">
+    <link rel="stylesheet" href="css/toroku0.css">
+    <link rel="stylesheet" href="../home/css/header_title.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>アカウント情報</title>
 </head>
 <body>
+<div id="wrap">
+
+        <?php require '../home/header_title.php'; ?>
     <?php
-    $login=$pass=$name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
-    if(isset($_SESSION['member'])) {
+$pdo=new PDO ($connect,USER,PASS);
+
+    $login=$password=$m_name=$post=$address=$city=$town=$dal=$apart=$mail=$number='';
         $_SESSION['member']['login']=$_POST['login'];
         $_SESSION['member']['password']=$_POST['password'];
         $_SESSION['member']['m_name']=$_POST['m_name'];
@@ -25,38 +32,54 @@
         $_SESSION['member']['apart']=$_POST['apart'];
         $_SESSION['member']['mail']=$_POST['mail'];
         $_SESSION['member']['number']=$_POST['number'];
+
+        if(empty($_SESSION['member']['login']) or empty($_SESSION['member']['password']) or empty($_SESSION['member']['m_name']) or empty($_SESSION['member']['post']) or empty($_SESSION['member']['address']) or empty($_SESSION['member']['city']) or empty($_SESSION['member']['town']) or empty($_SESSION['member']['dal']) or empty($_SESSION['member']['mail']) or empty($_SESSION['member']['number'])){
+            echo '<p class="top">未入力の項目があります</p>';
+            echo '<button onclick="location.href=',"'toroku-input.php'",'">戻る</button>';
+        }else{
+            $sql=$pdo->prepare('select * from Member where login=?');
+            $sql->execute([$_SESSION['member']['login']]);
+            if(empty($sql->fetchAll())){
+                echo '<h2>登録内容確認</h2>';
+                echo '<p class="midasi">お名前</p>';
+                echo '<p>',$_POST['m_name'],'</p>';
+                echo '<p class="midasi">ログインID</p>';
+                echo '<p>',$_POST['login'],'</p>';
+                echo '<p class="midasi">パスワード</p>';
+                echo '<p>';
+                for ($i=1;$i<strlen($_POST['password']);$i++) {
+                    echo '●';
+                }
+                echo '</p>';
+                echo '<p class="midasi">住所</p>';
+                echo '<p>〒',$_POST['post'],'</p>';
+                echo '<p class="midasi">都道府県</p>';
+                echo '<p>',$_POST['address'],'<p>';
+                echo '<p class="midasi">市区町村</p>';
+                echo '<p>',$_POST['city'],'</p>';
+                echo '<p class="midasi">町名</p>';
+                echo '<p>',$_POST['town'],'</p>';
+                echo '<p class="midasi">番地<p>';
+                echo '<p>',$_POST['dal'],'</p>';
+                echo '<p class="midasi">マンション名・号室</p>';
+                echo '<p>',$_POST['apart'],'</p>';
+                echo '<p class="midasi">メールアドレス</p>';
+                echo '<p>',$_POST['mail'],'</p>';
+                echo '<p class="midasi">電話番号</p>';
+                echo '<p>',$_POST['number'],'</p>';
+                echo '<div><button  onclick="location.href=\'toroku-input.php\'">戻る</button></div>';
+                echo '<div class="bottom"><button class="toroku" onclick="location.href=\'toroku-output.php\'">登録</button></div>';
+            }else{
+                echo '<p class="top">ログインIDが既に使用されています。変更してください。</p>';
+                echo '<button onclick="location.href=',"'toroku-input.php'",'">戻る</button>';
+            }
+
     }
-
-    echo '<h2>登録内容確認</h2>';
-    echo '<p class="midasi">お名前</p>';
-    echo '<p>',$_SESSION['member']['m_name'],'</p>';
-    echo '<p class="midasi">ログインID</p>';
-    echo '<p>',$_SESSION['member']['login'],'</p>';
-    echo '<p class="midasi">パスワード</p>';
-    echo '<p>';
-        for ($i=1;$i<strlen($_SESSION['member']['password']);$i++) {
-            echo '●';
-        }
-    echo '</p>';
-    echo '<p class="midasi">住所</p>';
-    echo '<p>〒',$_SESSION['member']['post'],'</p>';
-    echo '<p class="midasi">都道府県</p>';
-    echo '<p>',$_SESSION['member']['address'],'<p>';
-    echo '<p class="midasi">市区町村</p>';
-    echo '<p>',$_SESSION['member']['city'],'</p>';
-    echo '<p class="midasi">町名</p>';
-    echo '<p>',$_SESSION['member']['town'],'</p>';
-    echo '<p class="midasi>番地<p>';
-    echo '<p>',$_SESSION['member']['dal'],'</p>';
-    echo '<p class="midasi">マンション名・号室</p>';
-    echo '<p>',$_SESSION['member']['apart'],'</p>';
-    echo '<p class="midasi">メールアドレス</p>';
-    echo '<p>',$_SESSION['member']['mail'],'</p>';
-    echo '<p class="midasi">電話番号</p>';
-    echo '<p>',$_SESSION['member']['number'],'</p>';
     ?>
+    
 
-    <div><button  onclick="location.href='toroku-input.php'">戻る</button></div>
-    <div><button class="toroku" onclick="location.href='toroku-output.php'">登録</button></div>
+    
+    <?php require '../home/footer.php'; ?>
+    </div>
 </body>
 </html>

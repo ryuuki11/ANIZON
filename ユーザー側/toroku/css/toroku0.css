@@ -13,7 +13,7 @@ p.top{
 p{  
   text-align:center;
   font-size:clamp(15px, 3vw, 20px);
-  margin-top:10vw;
+  margin-top:2vw;
 }
 button{
   font-size:clamp(10px, 3vw, 20px);
@@ -29,5 +29,8 @@ button{
 }
 button{
   margin-top: 10vw;
+}
+div.bottom{
+  padding-bottom: 140px;
 }
   
