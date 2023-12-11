@@ -1,5 +1,6 @@
 body {
   font-size:clamp(15px, 3vw, 20px);
+<<<<<<< HEAD
 }
 form div{  
   text-align:center;
@@ -19,6 +20,8 @@ input{
   input.ajaxzip3{
     font-size:clamp(10px, 3vw, 20px);
     border:solid 1px black;
+=======
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
     text-align:center;
    }
 
@@ -50,6 +53,7 @@ input{
     color: rgb(60, 224, 224);
     text-align: center;
   }
+<<<<<<< HEAD
   input.ajaxzip3{
   width:10vw;
   min-width:30px;
@@ -74,3 +78,10 @@ input{
   text-align: center;
   padding-bottom: 140px;
  }
+=======
+
+ 
+  
+  
+  
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995

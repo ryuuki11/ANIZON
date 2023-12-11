@@ -8,16 +8,11 @@
     <link rel="stylesheet" href="../css/g-2-1-3.css" />
 </head>
 <body>
-    <table class="right">
-        <tr>
-            <form action="g-2-1-4.php" method="post">
-                <td><button type="submit" class="back">戻る</button></td>
-            </form>
-            <form action="g-1-1-1.php" method="post">
-                <td><button type="submit" class="rogout">ログアウト</button></td>
-            </form>
-        </tr>
-    </table>
+    <div class="right-top">
+        <form action="g-1-1-1.php" method="post">
+            <button type="submit" class="rogout">ログアウト</button>
+        </form>
+    </div>
     <h1>anizon</h1>
     <h2>景品詳細</h2><br>
     <?php
@@ -32,13 +27,11 @@
         $sql=$pdo->prepare('select * from Prize where p_id=?');
         $sql->execute([$_GET['id']]);
         foreach($sql as $row){
-            $_SESSION['Prize']=[
+            $_SESSION['Prize2']=[
                 'p_name'=>$row['p_name'],
-                's_id'=>$row['s_id'],
                 'p_id'=>$row['p_id'],
                 'rank' => $row['rank'],
                 'category' => $row['category'],
-                'stock' => $row['stock'],
                 'image'=>$row['image'],
                 'setumei'=>$row['setumei']
             ];
@@ -49,7 +42,7 @@
                     <td class="td2"><p>景品名</p></td><td><p><input type="text" name="p_name" value=',$row['p_name'],'></p></td>
                 </tr>';
                 echo '<tr>
-                    <td class="td2"><p>商品ID</p></td><td><p><input type="text" name="s_id" value=',$row['s_id'],' readonly ></p></td>
+                    <td class="td2"><p>景品ID</p></td><td><p><input type="text" name="p_id" value=',$row['p_id'],' readonly ></p></td>
                 </tr>';
                 echo '<tr>
                     <td class="td2"><p>ランク</p></td><td><p><input type="text" name="rank" value=',$row['rank'],'></p></td>
@@ -61,12 +54,12 @@
                     <td class="td2"><p>画像パス</p></td><td><p><input type="text" name="image" value=',$row['image'],'></p></td>
                 </tr>';
                 echo '</table>';
-            echo '<textarea id="setumei" cols="50" rows="20" class="Ssetumei" name="setumei">',$row['setumei'],'</textarea>';
+            echo '<textarea id="setumei" cols="50" rows="20" class="Ssetumei" name="explain">',$row['setumei'],'</textarea>';
         }
 
             echo '<div class="btn">';
                 echo '<p><h3>在庫管理</h3></p>';
-                    echo '<p class="zaikosuu"><input type="text" name="stock" value=',$row['stock'],'  class="zaiko"></p>';
+                echo '<p><input type="number" id="kosuu" value="1" class="textbox"></p>';
                 echo '<div class="all button">';
                 echo '<table>';
                     echo '<tr>';

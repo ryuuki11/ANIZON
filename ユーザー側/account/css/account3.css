@@ -2,11 +2,9 @@ body{
   text-align:center;
   
 }
-div.a{  
+div{  
   text-align:center;
   font-size:clamp(15px, 3vw, 20px);
-  text-align: center;
-  margin-top: 20px;
 }
 input{
   margin: 10px auto;
@@ -18,7 +16,7 @@ input{
   border: solid 2px black;
   font-size: clamp(15px, 3vw, 20px);
 }
-  button.ajaxzip3{
+  input.button{
     font-size:clamp(10px, 3vw, 20px);
     border:solid 1px black;
     text-align:center;
@@ -28,9 +26,6 @@ input{
     max-height:35px;
     border-radius: 25px;
     background-color: rgb(240, 241, 241);
-    width:10vw;
-    min-width:30px;
-    font-size:clamp(7px, 2vw, 15px);
   }
   button{
     font-size:clamp(10px, 3vw, 20px);
@@ -47,8 +42,10 @@ input{
   .toroku{
     color: aqua;
   }
-  div.ID{
-    margin-top:140px;
+  div{
+    text-align: center;
+    margin-top: 20px;
+
   }
   .addres{
   
@@ -58,6 +55,14 @@ input{
   div.button{
     text-align: center;
   }
+  input.button{
+  width:10vw;
+  min-width:30px;
+  font-size:clamp(7px, 2vw, 15px);
+  }
+  div.p{
+    width:40vw;
+  }
  .post{
   text-align: center;
   margin-left:12.5vw;
@@ -65,10 +70,4 @@ input{
  }
  form{
   margin-top: 100px;
-  padding-bottom:140px;
- }
- div.button{
-  text-align: center;
-    margin-left:12.5vw;
-    margin-right:2vw;
  }

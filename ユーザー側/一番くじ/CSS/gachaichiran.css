@@ -6,7 +6,6 @@ h2{
     font-size:clamp(15px, 4vw, 25px);
     font-weight: bold;
     margin-left: 10vw;
-    margin-top: 130px;
 }
 .result{
     display: grid;
@@ -33,22 +32,18 @@ h2{
     margin:2vw auto 0 auto;
     text-align: left;
   }
-  div.space{
-    height:130px;
-    margin-top: 10vw;
-  }
-  div.botton{
+  .botton{
     position:relative;
     width: 100vw;
-    height:40px;
+    height:10vw;
+    max-height: 50px;
     background-color:#ddd;
     text-align: center;
-    margin-bottom: 90px;
+    margin-top: 100px;
   }
-  div.botton botton{
+  .botton botton{
     position:relative;
     top: 40%;
-    
   }
 
 
@@ -61,7 +56,6 @@ h2{
         font-size:clamp(15px, 4vw, 25px);
         font-weight: bold;
         margin-left: 10vw;
-        margin-top: 130px;
     }
     .result{
         display: grid;
@@ -88,21 +82,17 @@ h2{
         margin:2vw auto 0 auto;
         text-align: left;
       }
-      div.space{
-        height:130px;
-        margin-top: 10vw;
-      }
-      div.botton{
+      .botton{
         position:relative;
         width: 100vw;
-        height:40px;
+        height:10vw;
+        max-height: 50px;
         background-color:#ddd;
         text-align: center;
-        margin-bottom: 90px;
+        margin-top: 100px;
       }
-      div.botton botton{
+      .botton botton{
         position:relative;
         top: 40%;
-        
       }
 }

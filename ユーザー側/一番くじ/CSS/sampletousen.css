@@ -57,7 +57,7 @@ div.box{
     display: flex;
     margin-top: 30px;
 }
-div.img1{
+div.img{
     width:80vw;
     height:30vw;
     background-color: rgb(243, 229, 205);
@@ -98,7 +98,6 @@ button{
   .nextb{
     text-align: center;
     margin-top:15vw;
-    padding-bottom: 150px;
   }
 
 p {
@@ -111,7 +110,6 @@ p {
     text-align: center;
 }
 h1{
-  margin-top: 140px;
   font-weight: bold;
   text-shadow:
           1px 1px 0px #fff, -1px -1px 0px #fff,
@@ -134,11 +132,4 @@ h1{
 }
 .D{
   color:rgb(80, 104, 43);
-}
-div.ba{
-  position: absolute;
-  bottom: 0;
-  width:100vw;
-  height:90px;
-  background-color: white;
 }

@@ -49,6 +49,7 @@ button.backb{
     color:blue;
     margin:10vw auto 0 auto;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 a button{
     font-size:clamp(10px, 3vw, 20px);
@@ -90,6 +91,9 @@ a button{
 .display_none button{
     margin-top:3vw;
 }
+=======
+}
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 =======
 }
 >>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995

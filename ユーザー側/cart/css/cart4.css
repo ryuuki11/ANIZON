@@ -30,6 +30,7 @@ input{
     background-color: rgb(240, 241, 241);
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
   button.ajaxzip3{
     font-size:clamp(10px, 3vw, 20px);
     border:solid 1px black;
@@ -89,6 +90,8 @@ input{
         width:1vw;
     }
 
+=======
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 =======
 >>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
   div.buttn2 button{

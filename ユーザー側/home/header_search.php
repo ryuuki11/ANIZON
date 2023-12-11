@@ -49,7 +49,11 @@
                             </ul>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div class="title"><a class="a" href="../home/home.php"><span class="title">ANIZON</span></a></div>
+=======
+                    <span class="title">ANIZON</span>
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
                     <input type="checkbox" type="checkbox" id="human">
                     <div class="icon">
                         <label for="human" class="human">
@@ -82,7 +86,11 @@
                 <div class="search">
                     <form action="../search/result.php" method="get">
                         <input class="search" type="text" name="name" placeholder="検索" >
+<<<<<<< HEAD
                         <button><img class="search" src="../image/search.png" width="25" height="20"></button>
+=======
+                        <button><img class="search" src="img/search.png" width="25" height="20"><button>
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
                     </form>
                 </div>
             </div>

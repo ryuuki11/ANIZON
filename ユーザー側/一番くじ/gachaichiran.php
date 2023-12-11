@@ -1,4 +1,3 @@
-<?php session_start()?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -7,12 +6,8 @@
     <title>ガチャ一覧</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/gachaichiran.css">
-    <link rel="stylesheet" href="../home/css/header_search.css">
-    <link rel="stylesheet" href="../home/css/footer.css">
 </head>
 <body>
-<div id="wrap">
-<?php require '../home/header_search.php'; ?>
     <h2>ガチャ一覧</h2>
     <div class="result">
     <?php
@@ -38,14 +33,11 @@
     ?>
     </div>
 
-    <div class="space">
-            <div class="botton">
-                <botton id="botton">RAGETOP</botton>
-            </div>
+    <div class="botton">
+        <botton id="botton">RAGETOP</botton>
     </div>
 
-    <?php require '../home/footer.php'; ?>
-    </div>
+    
     <script>
         const scroll_to_top_btn = document.querySelector('botton');
       

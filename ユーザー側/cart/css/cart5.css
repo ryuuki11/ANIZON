@@ -1,5 +1,6 @@
 body {
   font-size:clamp(15px, 3vw, 20px);
+    margin-top: 25vh;
     text-align:center;
    }
    button{
@@ -14,24 +15,14 @@ body {
     border-radius: 25px;
     background-color: rgb(240, 241, 241);
   }
-  p.name{
-    margin-top: 5vw;
-  }
-  p.order{
-    margin-top: 5vw;
-  }
 .top{
     color: rgb(62, 197, 255);
     margin: 10px auto;
-    margin-top:10vw;
+    margin-top:100px;
     width:30vw;
     max-width: 200px;
   }
   .order{
-    margin-top: 10vw;
+    margin-top: 50px;
     font-size:clamp(10px, 4vw, 25px);
   }
-  p.error{
-    margin-top: 10vw;
-  }
-  

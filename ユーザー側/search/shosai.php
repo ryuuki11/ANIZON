@@ -38,9 +38,14 @@
                     echo '<p class="name">',$row['s_name'],'</p>';
                     echo '<p class="setumei">',$row['setumei'],'</p>';
 <<<<<<< HEAD
+<<<<<<< HEAD
                     echo '<p class="price">金額：',$row['price'],'円</p>';
                     echo '<p>数量：<input type="number" min="1" class="piece" name="piece" value="1"><p>';
                     echo'<div><button class="cartb" name="cartb" value="',$_SESSION['chkno'],'">カートに入れる</button></div>';
+=======
+                    echo '<p class="price">',$row['price'],'</p>';
+                    echo'<a href="shosai.php?id=',$row['s_id'],'"><button class="cart">カートに入れる</button></a>';
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 =======
                     echo '<p class="price">',$row['price'],'</p>';
                     echo'<a href="shosai.php?id=',$row['s_id'],'"><button class="cart">カートに入れる</button></a>';

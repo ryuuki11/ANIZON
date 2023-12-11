@@ -76,11 +76,17 @@
                 echo '<div class="shohin">';
                 echo'<a href="shosai.php?id=',$row['s_id'],'">';
 <<<<<<< HEAD
+<<<<<<< HEAD
                 echo '<div class="ci">';
                 echo '<img src="' . $row["image"] . '" alt="">';
                 echo '</div>';
                     echo '<p class="name">',$row['s_name'],'</p>';
                     echo '<p>＄',$row['price'],' 円</p>';
+=======
+                    echo '<img src="',$row['image'],'" alt="">';
+                    echo '<p>',$row['s_name'],'</p>';
+                    echo '<p>',$row['price'],'</p>';
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 =======
                     echo '<img src="',$row['image'],'" alt="">';
                     echo '<p>',$row['s_name'],'</p>';
@@ -96,7 +102,11 @@
             echo '</div>';
         ?>
             <div class="botton">
+<<<<<<< HEAD
                 <botton id="botton">PAGETOP</botton>
+=======
+                <botton id="botton">RAGETOP</botton>
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
             </div>
     
             

@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/g-2-1-3.css" />
 </head>
 <body>
+<<<<<<< HEAD
     <table class="right">
         <tr>
             <form action="g-2-1-1.php" method="post">
@@ -17,6 +18,13 @@
             </form>
         </tr>
     </table>
+=======
+    <div class="right-top">
+        <form action="g-1-1-1.php" method="post">
+            <button type="submit" class="rogout">ログアウト</button>
+        </form>
+    </div>
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
     <h1>anizon</h1>
     <h2>商品詳細</h2><br>
     <?php
@@ -56,6 +64,9 @@
                     <td class="td2"><p>値段</p></td><td><p><input type="text" name="price" value=',$row['price'],'></p></td>
                 </tr>';
                 echo '<tr>
+                    <td class="td2"><p>在庫</p></td><td><p><input type="text" name="stock" value=',$row['stock'],'></p></td>
+                </tr>';
+                echo '<tr>
                     <td class="td2"><p>画像パス</p></td><td><p><input type="text" name="pass" value=',$row['image'],'></p></td>
                 </tr>';
                 echo '</table>';
@@ -64,7 +75,7 @@
 
             echo '<div class="btn">';
                 echo '<p><h3>在庫管理</h3></p>';
-                    echo '<p class="zaikosuu"><input type="text" name="stock" value=',$row['stock'],'  class="zaiko"></p>';
+                echo '<p><input type="number" id="kosuu" value="1" class="textbox"></p>';
                 echo '<div class="all button">';
                 echo '<table>';
                     echo '<tr>';

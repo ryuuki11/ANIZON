@@ -108,6 +108,9 @@
     echo '</div>';
     ?>
     <div class="nextb"><a href="place.php" class="next"><button>次へ</button></a></div>
+<<<<<<< HEAD
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
+=======
 >>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 </body>
 </html>

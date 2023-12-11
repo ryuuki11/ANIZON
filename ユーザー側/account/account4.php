@@ -43,6 +43,7 @@
         echo '<p>',$_POST['apart'],'</p>';
         echo '<input type="hidden" name="apart" value="',$_POST['apart'],'">';
 
+<<<<<<< HEAD
             if (empty($_POST['login']) or empty($_POST['password']) or empty($_POST['m_name']) or empty($_POST['post']) or empty($_POST['address']) or empty($_POST['city']) or empty($_POST['town']) or empty($_POST['dal']) or empty($_POST['mail']) or empty($_POST['number'])) {
                 echo '<p class="no">未入力の項目があります。</p>';
                 echo '<div class="no"><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
@@ -90,5 +91,21 @@
 
 <?php require '../home/footer.php'; ?>
     </div>
+=======
+        echo '<p class="title">メールアドレス</p>';
+        echo '<p>',$_POST['mail'],'</p>';
+        echo '<input type="hidden" name="mail" value="',$_POST['mail'],'">';
+        
+        echo '<p class="title">電話番号</p>';
+        echo '<p>',$_POST['number'],'</p>';
+        echo '<input type="hidden" name="number" value="',$_POST['number'],'">';
+        echo '<div><button onclick="location.href=',"'account3.php'",'">戻る</button></div>';
+        echo '<div><button type="submit" class="toroku">変更</button></div>';
+    echo '</form>';
+    }
+    ?>
+
+        
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 </body>
 </html>

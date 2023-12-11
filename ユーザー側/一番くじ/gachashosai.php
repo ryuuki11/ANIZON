@@ -7,10 +7,7 @@
     <title>景品一覧【僕のヒーローアカデミア】</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/keihin.css">
-    <link rel="stylesheet" href="../home/css/header_sazae.css">
-    <link rel="stylesheet" href="../home/css/footer.css">
 </head>
-
 <?php
     const SERVER = 'mysql219.phy.lolipop.lan';
     const DBNAME = 'LAA1518095-anizon';
@@ -28,10 +25,8 @@
     if($j==0){
         echo '<body class="else">';
     }
-    echo '<div id="wrap">';
-    require '../home/header_sazae.php';
     
-echo '<div class="gacha">';
+
     $sql=$pdo->prepare('select image from Shohin where s_id=?');
     $sql->execute([$_GET['id']]);
     echo '<div class="top">';
@@ -48,7 +43,7 @@ echo '<div class="gacha">';
             echo '<div class="bc">';
         }
         echo '<div class="keihin',$i,'">';
-        echo '<span class="',$row['rank'],'">',$row['rank'],'賞</span><span class="name">',$row['p_name'],'</span>';
+        echo '<span class="',$row['rank'],'">',$row['rank'],'賞</span><span>',$row['p_name'],'</span>';
         echo '<img src="',$row['image'],'" alt="noimage">';
         echo '</div>';
         if($row['rank']=='C'){
@@ -75,9 +70,5 @@ echo '<div class="gacha">';
 
         <div  class="gachab"><a href="gacha.php"><button>ガチャへ</button></a></div>
         <div  class="back"><a href="gachaichiran.php"><button>ガチャ一覧へ</button></a></div>
-</div>
-<div class="ba"></div>
-        <?php require '../home/footer.php'; ?>
-        </div>
 </body>
 </html>

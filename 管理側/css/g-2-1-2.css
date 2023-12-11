@@ -19,11 +19,6 @@ td p{
     font-size:max(1.5vw,5px);
 }
 
-.right{
-    position: absolute;
-    top: 1vw;
-    right: 5vw;
-}
 
 button{
     width: 8vw;
@@ -33,12 +28,6 @@ button{
     border-radius: 20px;
 }
 
-.back{
-    position: fixed;
-    right: 18vw;
-    top: 3vw;
-    background-color: rgb(176, 239, 172);
-}
 .logout{
     position: fixed;
     right: 7vw;

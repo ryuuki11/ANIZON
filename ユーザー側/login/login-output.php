@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
+<<<<<<< HEAD
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
+=======
 >>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 <?php
 unset($_SESSION['member']);
@@ -36,6 +39,7 @@ foreach ($sql as $row) {
     }
 }
 
+<<<<<<< HEAD
 
 if (empty($_POST['login']) and empty($_POST['password'])) {
     echo '<p class="error">ログインIDとパスワードを入力してください。</p>';
@@ -47,7 +51,21 @@ if (empty($_POST['login']) and empty($_POST['password'])) {
     echo '<p>パスワードを入力してください。</p>';    
 }else if (isset($_SESSION['member'])) {
     header('Location: ../home/home.php');
+=======
+if (empty($_POST['login'])) {
+    echo '<p>ログインIDを入力してください。</p>';
+}else if (empty($_POST['password'])) {
+    echo '<p>パスワードを入力してください。</p>';    
+}else if (isset($_SESSION['member'])) {
+    echo '<p>ログインしました。</p>';
+    echo '<div><button class="next" onclick="location.href=',"'home.php'",'">ホームへ</button></div>';
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 }else{
     echo '<p>ログインに失敗しました。</p>';
 }
 ?>
+<<<<<<< HEAD
+=======
+</body>
+</html>
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995

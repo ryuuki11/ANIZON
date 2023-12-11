@@ -23,18 +23,6 @@ button{
     right: 5vw;
 }
 
-
-.back{
-    right: 18vw;
-    border-radius: 20px;
-    background-color: rgb(176, 239, 172);
-    width: 9vw;
-    height: 2vw;
-    min-height: 35px;
-    min-width: 20px;
-    font-size: 15px;
-}
-
 .rogout{
     background-color: #f1b4bf;
     width: 9vw;
@@ -46,6 +34,3 @@ button{
 }
 
 
-.message {
-    text-align: center;
-}

@@ -125,12 +125,18 @@ div.img img{
 }
 .display_none {
 <<<<<<< HEAD
+<<<<<<< HEAD
     display: none;
     position:fixed;
     margin: 3rem auto;
     padding: 4%;
     top: -100px;
     z-index: 80;
+=======
+    visibility: hidden;
+    margin: 3rem auto;
+    padding: 4%;
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 =======
     visibility: hidden;
     margin: 3rem auto;
@@ -160,6 +166,7 @@ video{
     opacity: 0.3;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 div.ba{
     position: absolute;
     bottom: 0;
@@ -168,6 +175,8 @@ div.ba{
     background-color: white;
 
   }
+=======
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 =======
 >>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 

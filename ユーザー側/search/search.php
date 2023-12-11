@@ -1,18 +1,15 @@
-<?php session_start()?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/header_sazae.css" />
     <link rel="stylesheet" href="css/search.css" />
-    <link rel="stylesheet" href="../home/css/header_search.css">
-    <link rel="stylesheet" href="../home/css/footer.css">
+    <link rel="stylesheet" href="css/footer.css" />
     <title>anizon</title>
 </head>
     <body>
-    <div id="wrap">
-    <?php require '../home/header_search.php'; ?>
         
         <h2>条件検索</h2>
         <div class="btn">
@@ -20,7 +17,7 @@
                 戻る
             </button>
         </div>
-        <form class="search" action="result.php" method="GET">
+        <form action="result.php" method="GET">
         <div class="word">
             <p>商品名</p>
             <input  name="name" type="text">
@@ -46,9 +43,7 @@
         <button type="submit" class="search">
             検索
         </button>
-        </form>
-        <?php require '../home/footer.php'; ?>
-        </div>
+        <form action=""></form>
     </body>
 </html>
 

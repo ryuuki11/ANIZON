@@ -1,13 +1,5 @@
-
-
-#wrap{
-    position: relative;
-    min-height:calc(100vh - 140px);
-}
 div.footer{
-    background: linear-gradient(to bottom right,rgb(174,251,138,0.25),rgb(0,204,249,0.25));
-    position: absolute;
-    bottom: 0;
     width:100vw;
     height:90px;
+    background: linear-gradient(to bottom right,rgb(174,251,138,0.25),rgb(0,204,249,0.25));
 }

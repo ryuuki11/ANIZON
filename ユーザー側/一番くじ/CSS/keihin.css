@@ -49,7 +49,10 @@ body{
 /* 背景終了*/
 
 .top{
+<<<<<<< HEAD
     padding-top: 100px;
+=======
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
     margin-bottom: 3vw;
 }
 .top img {

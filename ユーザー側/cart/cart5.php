@@ -16,6 +16,7 @@
             
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <?php
             const SERVER = 'mysql219.phy.lolipop.lan';
             const DBNAME = 'LAA1518095-anizon';
@@ -91,6 +92,9 @@
         ?>
         <?php require '../home/footer.php'; ?>
     </div>
+=======
+        <div><button type="submit" class="top">トップページへ</button></div>
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 =======
         <div><button type="submit" class="top">トップページへ</button></div>
 >>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995

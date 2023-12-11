@@ -29,6 +29,7 @@
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
             echo '<div class="t">';
             echo '<div class="name">',$_SESSION['member']['m_name'],'さんのカート</div>';
             echo '<form class="btn2" action="cart1.php">';
@@ -151,6 +152,8 @@
  
         <form class="bottom" action="cart3.php">
 =======
+=======
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
             <div class="cart-shohin">
                 <p class="date">11/30</p>
                 <img src="img/noimage.png" alt="">
@@ -170,6 +173,9 @@
             </div>
             <hr>
             <p class="allprice">合計 1000円</p>
+<<<<<<< HEAD
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
+=======
 >>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
             <button class="buy">
                 支払い情報

@@ -31,30 +31,10 @@ td p{
 .brn{
     display: flex;
 }
-.all .enter{
-    width: fit-content;
-    margin: 0 auto;
-}
-
 .all{
     display: flex;
     margin-left: 10vw;
 }
-
-.enter{
-    /* text-align: center; */
-}
-
-.back{
-    background-color: rgb(176, 213, 246);
-    margin-right: 20vw;
-    margin-top: 5vw;
-}
-
-.allbutton{
-    text-align: center;
-}
-
 .delete{
     margin-top: 12vw;
     margin-left: 3vw;
@@ -73,14 +53,4 @@ button{
 .no{
     background-color:rgb(235, 200, 128);
     margin-left: 6vw;
-}
-
-.back1{
-    text-align: center;
-    top: 13vw;
-}
-
-.null{
-    text-align: center;
-    top: 10vw;
 }

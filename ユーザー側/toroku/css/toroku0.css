@@ -6,6 +6,7 @@ div{
   text-align:center;
   font-size:clamp(15px, 3vw, 20px);
   margin-top: 20px;
+<<<<<<< HEAD
 }
 p.top{
   margin-top: 140px;
@@ -32,3 +33,91 @@ button{
   margin-top: 10vw;
 }
   
+=======
+}
+input{
+  margin: 10px auto;
+  width:20vw;
+  min-width: 200px;
+  height:3vw;
+  min-height: 30px;
+  text-align:center;
+  border: solid 2px black;
+  font-size: clamp(15px, 3vw, 20px);
+}
+  input.ajaxzip3{
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
+    text-align:center;
+    width:10vw;
+    min-width:90px;
+    height:5vw;
+    max-height:35px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+  }
+  button{
+    font-size:clamp(10px, 3vw, 20px);
+    border:solid 1px black;
+    text-align:center;
+    width:10vw;
+    min-width:90px;
+    height:5vw;
+    max-height:40px;
+    min-height: 20px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+  }
+    
+
+   button{
+    font-size:18px;
+    background-color: #ffffff;
+    border-radius:20px;
+    padding:4px 0;
+    text-align: center;
+    width:200px;
+    margin-bottom: 10px;
+  }
+  .place{
+      margin-top: 3vw;
+  }
+  
+  p{
+    margin-top: 20px;
+  }
+  
+  .midasi{
+    font-weight:bold ;
+    margin-top: 30px;
+  }
+  .top{
+    margin-top:-10px;
+  }
+  .toroku{
+    color: rgb(60, 224, 224);
+    text-align: center;
+  }
+  input.ajaxzip3{
+  width:10vw;
+  min-width:30px;
+  font-size:clamp(7px, 2vw, 15px);
+  }
+  div.p{
+    width:40vw;
+  }
+ .post{
+  text-align: center;
+  margin-left:12.5vw;
+  margin-right:2vw;
+ }
+ .push{
+  margin-top: 50px;
+ }
+ .push button{
+  color: rgb(38, 204, 13);
+ }
+ form{
+  margin-top: 100px;
+ }
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995

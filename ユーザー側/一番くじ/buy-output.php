@@ -43,11 +43,14 @@
             
       
 <<<<<<< HEAD
+<<<<<<< HEAD
         
             unset($_SESSION['gacha']['num']);
         echo '<div><a href="gacha.php"><button type="submit" class="top">ガチャへ</button></a></div>';
 }
         require "../home/footer.php";
+=======
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 =======
 >>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
         ?>

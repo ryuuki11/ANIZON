@@ -108,6 +108,7 @@
         
         <h2>人気商品</h2>
         <div class="ninki">
+<<<<<<< HEAD
             <?php
             const SERVER = 'mysql219.phy.lolipop.lan';
             const DBNAME = 'LAA1518095-anizon';
@@ -134,6 +135,48 @@
                 }
             }
             ?>
+=======
+            <div class="syohin1">
+                <img src="img/noimage.png" alt="">
+                <p>商品名</p>
+                <p>価格</p>
+            </div>
+            <div class="syohin1">
+                <img src="img/noimage.png" alt="">
+                <p>商品名</p>
+                <p>価格</p>
+            </div>
+            <div class="syohin1">
+                <img src="img/noimage.png" alt="">
+                <p>商品名</p>
+                <p>価格</p>
+            </div>
+            <div class="syohin1">
+                <img src="img/noimage.png" alt="">
+                <p>商品名</p>
+                <p>価格</p>
+            </div>
+            <div class="syohin1">
+                <img src="img/noimage.png" alt="">
+                <p>商品名</p>
+                <p>価格</p>
+            </div>
+            <div class="syohin1">
+                <img src="img/noimage.png" alt="">
+                <p>商品名</p>
+                <p>価格</p>
+            </div>
+            <div class="syohin1">
+                <img src="img/noimage.png" alt="">
+                <p>商品名</p>
+                <p>価格</p>
+            </div>
+            <div class="syohin1">
+                <img src="img/noimage.png" alt="">
+                <p>商品名</p>
+                <p>価格</p>
+            </div>
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
         </div>
         <div class="lot">
             <a href="../一番くじ/gachaichiran.php"><img src="img/ガチャ.png" alt=""></a>

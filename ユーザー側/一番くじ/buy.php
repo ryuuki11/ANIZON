@@ -9,6 +9,7 @@
     <title>購入</title>
 </head>
 <body>
+<<<<<<< HEAD
 <div id="wrap">
 <?php require '../home/header_sazae.php'; ?>
 
@@ -31,6 +32,21 @@ if(isset($_SESSION['member']['m_name'])){
         echo'<tr>';
         echo'<td class="tp">有効期限</td><td class="tt">月</td><td class="tt">年</td>';
         echo'<tr><td></td><td><div class="month"><select class="month" name="month" >';
+=======
+        <p class="shiharai">クレジットのみ</p>
+        <?php
+        echo '<a href="gachashosai.php?id=',$_SESSION['gacha'],'" class="back"><div class="buttn2"><button class="return">戻る</button></div></a>';
+        ?>
+    <div class="card">
+        <p>カード名義</p>
+        <input type="text" name="name1">
+        <p>番号入力</p>
+        <input type="text" name="kusityou">
+        <table>
+            <tr>
+            <td class="tp">有効期限</td><td class="tt">月</td><td class="tt">年</td>
+            <tr><td></td><td><div class="month"><select class="month" name="month" >
+>>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
         
         <option value="1">1</option>
         <option value="2">2</option>
