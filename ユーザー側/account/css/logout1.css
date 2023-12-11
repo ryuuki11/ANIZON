@@ -1,0 +1,27 @@
+body{
+    font-size:clamp(15px, 3vw, 20px);
+    text-align: center;
+}
+button{
+    font-size:clamp(10px, 2vw, 15px);
+    border:solid 1px black;
+    text-align:center;
+    width:15vw;
+    min-width:90px;
+    height:5vw;
+    max-height:40px;
+    min-height: 20px;
+    border-radius: 25px;
+    background-color: rgb(240, 241, 241);
+}
+p.logout{
+    margin-top:140px;
+}
+button.logoutb1{
+    margin-top:50px;
+    color:red;
+}
+button.logoutb2{
+margin-top:50px;
+color:blue;
+}

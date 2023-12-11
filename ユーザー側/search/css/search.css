@@ -5,6 +5,7 @@ h2{
     text-align: center;
     font-size:clamp(15px, 4vw, 25px);
     font-weight: bold;
+    margin-top:140px;
 }
 button{
         font-size:clamp(10px, 3vw, 20px);
@@ -47,5 +48,8 @@ button.search{
     display: block;
     color:black;
     margin:7vw auto 0 auto;
+}
+form.search{
+    padding-bottom:calc(90px);
 }
 

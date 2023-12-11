@@ -1,6 +1,5 @@
 body {
   font-size:clamp(15px, 3vw, 20px);
-    margin-top: 25vh;
     text-align:center;
    }
    button{
@@ -15,13 +14,16 @@ body {
     border-radius: 25px;
     background-color: rgb(240, 241, 241);
   }
-  p{
+  p.top{
+    margin-top: 140px;
+  }
+  p.a{
     margin-top: 1vw;
   }
 .top button{
     color:blue;
     margin: 10px auto;
-    margin-top:20px;
+    
     width:30vw;
     max-width: 150px;
   }

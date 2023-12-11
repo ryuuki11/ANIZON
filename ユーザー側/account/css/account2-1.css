@@ -19,6 +19,12 @@ body {
   p{
     margin-top: 20px;
   }
+  p.name{
+    margin-top:140px;
+  }
+  p.home{
+    margin-top:140px;
+  }
   
   .midasi{
     font-weight:bold ;
@@ -27,7 +33,14 @@ body {
   .top{
     margin-top:-10px;
   }
-.toroku{
+  button.toroku{
     color: rgb(62, 197, 255);
     margin: 50px auto 0 auto;
+  }
+div.toroku{
+  text-align: center;
+    padding-bottom: 140px;
+  }
+  button.home{
+    margin-top:50px;
   }

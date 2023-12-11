@@ -7,6 +7,8 @@
     <title>ガチャ【僕のヒーローアカデミア】</title>
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/gacha.css">
+    <link rel="stylesheet" href="../home/css/header_sazae.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <script src="https://code.jquery.com/jquery.min.js"></script>
 </head>
 <?php
@@ -18,6 +20,7 @@
     $pdo=new PDO($connect,USER,PASS);
     $sql=$pdo->prepare('select i_rank from image where s_id=?');
     $sql->execute([$_SESSION['gacha']['id']]);
+    unset($_SESSION['gacha']['num']);
     $j=0;
     foreach($sql as $row){
         echo '<body class="',$row['i_rank'],'">';
@@ -26,6 +29,8 @@
     if($j==0){
         echo '<body class="else">';
     }
+    echo '<div id="wrap">';
+    require '../home/header_sazae.php';
 
 echo '<div class="gacha">';
     $_SESSION['flag']=0;
@@ -38,8 +43,8 @@ echo '<div class="gacha">';
     }
     $sql=$pdo->prepare('select * from Prize where s_id=? order by rank asc');
     $sql->execute([$_SESSION['gacha']['id']]);
-    echo '<div>';
-    echo '<div class="img">';
+    echo '<div class="imagebox">';
+    echo '<div class="img1">';
     echo '<img src="',$image,'" alt="noimage">';
     echo '</div>';
     echo '<div class="slide">';
@@ -105,11 +110,19 @@ echo '<div class="gacha">';
     echo '</div>';
 
     echo '<div class="button">';
+    if($num==0){
+        echo '<button type="button">ガチャを回す</button>';
+    }else{
             echo '<button class="dis_none_bt">ガチャを回す</button>';
+    }
     echo '</div>';
+    echo '<div class="ba"></div>';
     echo '</div>';
     echo '<div>';
     ?>
+    
+    <?php require '../home/footer.php'; ?>
+    </div>
 
     <script>
         const displayNone = document.querySelector('.display_none');
@@ -118,13 +131,13 @@ echo '<div class="gacha">';
         var v = document.getElementById('video');
         dis_none_bt.addEventListener('click' ,  () => {
             if(displayNone.classList.contains('active')){
-                displayNone.style.visibility = 'hidden';
-                back.style.visibility = 'hidden';
+                displayNone.style.display = 'none';
+                back.style.display = 'none';
                 displayNone.classList.remove('active');
             }
             else {
-                displayNone.style.visibility = 'visible';
-                back.style.visibility = 'visible';
+                displayNone.style.display = 'block';
+                back.style.display = 'block';
                 displayNone.classList.add('active');
                     //再生
                 v.play();

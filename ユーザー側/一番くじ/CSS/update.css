@@ -2,9 +2,10 @@ body{
     text-align:center;
     font-size:clamp(15px, 3vw, 20px);
   }
-  div{  
+  div.a{  
     text-align:center;
     font-size:clamp(15px, 3vw, 20px);
+      margin-top: 20px;
   }
   input{
     margin: 10px auto;
@@ -29,8 +30,6 @@ body{
       border-radius: 25px;
       background-color: rgb(240, 241, 241);
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
     button.ajaxzip3{
       font-size:clamp(10px, 3vw, 20px);
       border:solid 1px black;
@@ -45,18 +44,6 @@ body{
     font-size:clamp(7px, 2vw, 15px);
     }
     
-=======
-=======
->>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
-    div{
-      text-align: center;
-      margin-top: 20px;
-  
-    }
-<<<<<<< HEAD
->>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
-=======
->>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
     .place{
         margin-top: 3vw;
     }
@@ -88,5 +75,6 @@ body{
     color: rgb(38, 204, 13);
    }
    form{
-    margin-top: 100px;
+    margin-top: 140px;
+    padding-bottom: 140px;
    }

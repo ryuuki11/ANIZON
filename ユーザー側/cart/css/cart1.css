@@ -5,6 +5,9 @@ hr{
     width:90vw;
     margin:0 auto;
 }
+p.cart{
+    margin-top:140px;
+}
 div.cart-shohin{
     display: flex;
     height:21vw;
@@ -12,17 +15,25 @@ div.cart-shohin{
     margin:0 auto;
 }
 
-div.cart-shohin img{
-    width:20vw;
-    height:18vw;
-    margin:auto 0 auto 10vw;
-}
-p.name{
-    font-size:clamp(15px, 4vw, 25px);
-    margin:100px 0 20px 10vw;
-}
 div.cart-shohin p{
-   
+    font-size: min(2vw, 20px);
+}
+div.ci{
+    width:20vw;
+    height:auto;
+    text-align: center;
+    margin:5px 0 5px 3vw;
+}
+div.cart-shohin img{
+    width:100%;
+    height:100%;
+    object-fit: contain;
+}
+
+div.name{
+    font-size:clamp(15px, 4vw, 25px);
+    margin:6vw 0 20px 10vw;
+    margin-top:140px;
 }
 .checkbox{
     width: 2vw;
@@ -88,8 +99,6 @@ button.all{
     max-width: 250px;
     margin:0px auto;
     color:blue;
-<<<<<<< HEAD
-<<<<<<< HEAD
    
 }
 span.cprice{
@@ -134,8 +143,4 @@ div.mess{
 }
 button.home{
     margin-top: 50px;
-=======
->>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
-=======
->>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
 }

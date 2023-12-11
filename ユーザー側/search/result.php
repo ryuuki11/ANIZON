@@ -1,16 +1,19 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/header_sazae.css" />
     <link rel="stylesheet" href="css/result.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="../home/css/header_search.css">
+    <link rel="stylesheet" href="../home/css/footer.css">
     <title>anizon</title>
 </head>
     <body>
-        <h2>検索結果</h2>
+    <div id="wrap">
+    <?php require '../home/header_search.php'; ?>
+        <h2 class="title1">検索結果</h2>
         <?php 
 
             if(isset($_SESSION['shohin_shosai']['id'])){
@@ -22,44 +25,46 @@
             const PASS = 'Pass0809';
             $connect = 'mysql:host='.SERVER.';dbname='.DBNAME.';charset=utf8';
             $pdo=new PDO($connect,USER,PASS);
-            $SQL='select * from Shohin';
-            $SQLo='select * from Shohin';
+            $SQL='select * from Shohin where category != "ガチャ"';
+            $SQLo='select * from Shohin where category != "ガチャ"';
             $sql=$pdo->prepare($SQL);
             $Category=['ALL','CD・DVD','漫画','グッズ'];
-            $Sort=['price desc','price asc','sale desc'];
-                if(isset($_GET['category'])){
-                    if($_GET['category']!=0){
-                        $SQL.=' where category="'.$Category[$_GET['category']].'"';
-                        $SQLo.=' where category="'.$Category[$_GET['category']].'"';
-                        if(isset($_GET['name'])){
-                            $SQL.=' and ';
-                            $SQLo.=' or ';
-                        }
-                    }else{
-                        $SQL.=' where';
-                        $SQLo.=' where';      
+            $Sort=['price desc','price asc','sale desc','sale desc','date desc'];
+                if(isset($_GET['category']) &&$_GET['category']!=0 ){
+                    
+                        $SQL.=' and category="'.$Category[$_GET['category']].'"';
+                        $SQLo.=' and (category="'.$Category[$_GET['category']].'"';
+                    if(isset($_GET['name'])){
+                        $SQLo.=' or';
                     }
                 }else if(isset($_GET['name'])){
-                    $SQL.=' where';
-                    $SQLo.=' where';                  
+                    $SQLo.=' and';
                 }
                 if(isset($_GET['name'])){
-                    $SQL.=' s_name like "%'.$_GET['name'].'%"';
+                    $SQL.=' and s_name like "%'.$_GET['name'].'%"';
                     $SQLo.=' s_name like "%'.$_GET['name'].'%"';
+                }
+                if(isset($_GET['category'])){
+                    if($_GET['category']!=0){
+                        $SQLo.=')';
+                    }
                 }
                 if(isset($_GET['sort'])){
                     $SQL.=' order by '.$Sort[$_GET['sort']];
                 }
                 $i=0;
+                
             $sql=$pdo->query($SQL);
             
             echo '<div class="result">';
             foreach($sql as $row){
                 echo '<div class="shohin">';
                 echo'<a href="shosai.php?id=',$row['s_id'],'">';
-                    echo '<img src="',$row['image'],'" alt="">';
-                    echo '<p>',$row['s_name'],'</p>';
-                    echo '<p>',$row['price'],'</p>';
+                echo '<div class="ci">';
+                echo '<img src="' . $row["image"] . '" alt="">';
+                echo '</div>';
+                    echo '<p class="name">',$row['s_name'],'</p>';
+                    echo '<p>',$row['price'],'  円</p>';
                     echo '</a>';
                 echo '</div>';
                 $i++;
@@ -75,23 +80,11 @@
             foreach($sql as $row){
                 echo '<div class="shohin">';
                 echo'<a href="shosai.php?id=',$row['s_id'],'">';
-<<<<<<< HEAD
-<<<<<<< HEAD
                 echo '<div class="ci">';
                 echo '<img src="' . $row["image"] . '" alt="">';
                 echo '</div>';
                     echo '<p class="name">',$row['s_name'],'</p>';
                     echo '<p>＄',$row['price'],' 円</p>';
-=======
-                    echo '<img src="',$row['image'],'" alt="">';
-                    echo '<p>',$row['s_name'],'</p>';
-                    echo '<p>',$row['price'],'</p>';
->>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
-=======
-                    echo '<img src="',$row['image'],'" alt="">';
-                    echo '<p>',$row['s_name'],'</p>';
-                    echo '<p>',$row['price'],'</p>';
->>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
                     echo '</a>';
                 echo '</div>';
                 $i++;
@@ -101,15 +94,14 @@
             }
             echo '</div>';
         ?>
+        <div class="space">
             <div class="botton">
-<<<<<<< HEAD
                 <botton id="botton">PAGETOP</botton>
-=======
-                <botton id="botton">RAGETOP</botton>
->>>>>>> ac4b04c3ad5a9b650f4f2c33cf27f2b82effe995
             </div>
-    
-            
+        </div>
+
+            <?php require '../home/footer.php'; ?>
+            </div>
             <script>
                 const scroll_to_top_btn = document.querySelector('botton');
               
@@ -119,5 +111,6 @@
                   window.scroll({top: 0, behavior: 'smooth'});
               };
               </script>
+              
     </body>
 </html>
