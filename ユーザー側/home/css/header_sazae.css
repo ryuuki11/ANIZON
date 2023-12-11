@@ -23,17 +23,17 @@ div.img{
     display:flex;
     width:100vw;
     margin-top:-10px;
+    text-align: center;
 }
 span.title{
-    position:absolute;
     margin:35px auto 0 auto;
-    margin-left:45vw;
     font-size: 20px;
     font-family:cursive;
     font-weight: bold;
 }
 div.icon{
-    margin:20px 0 0 70px;
+    position: absolute;
+    margin:20px 0 0 5vw;
 }
 a img.home{
     position:absolute;

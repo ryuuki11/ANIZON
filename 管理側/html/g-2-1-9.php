@@ -47,17 +47,14 @@
         $result='';
         if(isset($_POST['sakujo'])){
             $result="この内容を削除しますか?";
-            $num = 1;
         }else if(isset($_POST['kousin'])){
             $result="この内容に更新しますか?";
-            $num = 2;
         }
         echo '<div class="delete">';
         echo '<h2>',$result,'</h2><br>';
             echo '<div class="brn">';
-                        echo '<form action="g-2-1-9-1.php" method="post">';
+                        echo '<form action="g-2-1-1.php" method="post">';
                             echo '<button type="submit"class="yes">はい</button>';
-                            echo '<input type="hidden" name="num" value="',$num,'">';
                         echo '</form>';
                         echo '<a href="g-2-1-3.php?id=',$_POST['s_id'],'">';
                             echo '<button type="submit" class="no">いいえ</button>';

@@ -126,17 +126,18 @@ div.img1 img{
 }
 .display_none {
     display: none;
-    position:absolute;
+    position:fixed;
     margin: 3rem auto;
     padding: 4%;
     top: -100px;
+    z-index: 80;
     
 }
 .gacha{
     height:60vw;
 }
 video{
-    position: absolute;
+    position: fixed;
     width: 70vw;
     top:100px;
     left:15vw;

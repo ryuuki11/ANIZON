@@ -55,6 +55,7 @@
  echo ' <div><button class="toroku" type="submit">確認</button></div>';
  echo '</form>';
     ?>
+    <?php require '../home/footer.php'; ?>
     </div>
     <script>
             $('.ajaxzip3').on('click', function(){
@@ -77,5 +78,5 @@
             
 </body>
 
-<?php require '../home/footer.php'; ?>
+
 </html>

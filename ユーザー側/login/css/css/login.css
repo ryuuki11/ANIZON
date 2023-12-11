@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+body{
+  min-height:100%;
+}
+p{  
+  text-align:center;
+  font-size:clamp(15px, 3vw, 20px);
+  margin-bottom: 2vw;
+}
+
+input{
+  margin: 10px auto;
+  width:20vw;
+  min-width: 200px;
+  height:3vw;
+  min-height: 30px;
+  text-align:center;
+  border: solid 2px black;
+  font-size:clamp(15px, 3vw, 20px);
+}
+
+
+button{
+  font-size:clamp(10px, 3vw, 20px);
+  border:solid 1px black;
+  text-align:center;
+  width:10vw;
+  min-width:90px;
+  height:5vw;
+  max-height:40px;
+  min-height: 20px;
+  border-radius: 25px;
+  background-color: rgb(240, 241, 241);
+}
+p.id{
+  margin-top: 130px;
+}
+
+.toroku,.next{
+  color: #6fa1ff;
+}
+.login {
+  color: rgb(228, 83, 83);
+  margin:0 auto;
+  margin-top:4vw;
+  margin-bottom:2vw;
+}
+div.log{
+  margin:0 auto;
+  text-align: center;
+}
+
+div.button{
+  text-align: center;
+}
+.b2{
+  margin-top:2vw;
+}
+div.buttonsuc{
+  text-align: center;
+  margin-top: 10vw;
+}
+p.error{
+  margin-top: 10vw;
+}
+div.backb{
+  text-align: center;
+  margin-top: 10vw;
+}
+div.backb button{
+  font-size:clamp(10px, 2vw, 20px);
+  width:20vw;
+  min-width:130px;
+  max-width:200px;
+}
+button.back{
+  margin-top: 10vw;
+}
+p.suc{
+  margin-top:10vw;
+}

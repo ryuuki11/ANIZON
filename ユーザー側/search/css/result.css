@@ -25,7 +25,6 @@ h2.title{
     
 }
 .result div{
-  width:42.5vw;
   text-align: center;
 }
 div.ci{
@@ -66,7 +65,7 @@ div.shohin img{
     margin-top: 50px;
   }
   .osusume div{
-    margin:0 auto;
+    text-align: center;
   }
   div.space{
     height:130px;
@@ -113,7 +112,6 @@ div.shohin img{
         
     }
     .result div{
-        width:30vw;
         text-align: center;
     }
     div.ci{
@@ -149,7 +147,6 @@ div.shohin img{
         margin-top: 50px;
       }
       .osusume div{
-        width:30vw;
         text-align: center;
       }
       div.space{

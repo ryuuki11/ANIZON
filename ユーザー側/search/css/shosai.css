@@ -93,11 +93,10 @@ a button{
 }
 .display_none {
     visibility: hidden;
-    margin: 3rem auto;
+    margin: -30vw auto 0 auto;
     padding: 4%;
-    position: absolute;
+    position: fixed;
     width: 70vw;
-    top:100px;
     left:15vw;
     z-index: 80;
     background-color: white;

@@ -73,7 +73,7 @@ echo '<div class="gacha">';
         <div  class="buy"><button type="submit">購入</button></div>
 </form>
 
-        <div  class="gacha"><a href="gacha.php"><button>ガチャへ</button></a></div>
+        <div  class="gachab"><a href="gacha.php"><button>ガチャへ</button></a></div>
         <div  class="back"><a href="gachaichiran.php"><button>ガチャ一覧へ</button></a></div>
 </div>
 <div class="ba"></div>

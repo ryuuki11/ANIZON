@@ -11,20 +11,20 @@ div.header{
 div.h{
     top:0;
     width:100vw;
-    height:100px;
+    height:90px;
     z-index: 90;
     background: linear-gradient(to bottom right,rgb(0,204,249,0.25),rgb(174,251,138,0.25));
 }
 
 /*タイトルとアイコン*/
 div.img{
-    display:flex;
+    top:0;
     width:100vw;
-    margin-top:-10px;
+    height:90px;
+    text-align: center;
 }
 span.title{    
-    margin:auto;
-    margin-top:35px;
+    line-height: 90px;
     font-size: 20px;
     font-family:cursive;
     font-weight: bold;

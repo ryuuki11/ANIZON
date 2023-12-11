@@ -84,7 +84,7 @@
                 <div class="search">
                     <form action="../search/result.php" method="get">
                         <input class="search" type="text" name="name" placeholder="検索" >
-                        <button><img class="search" src="../image/search.png" width="25" height="20"><button>
+                        <button><img class="search" src="../image/search.png" width="25" height="20"></button>
                     </form>
                 </div>
             </div>

@@ -107,6 +107,7 @@
                 echo '<a href="../login/login.php" ><button class="home">ログイン画面へ</button></a>';
                 echo '</div>';
             }
+            unset($_SESSION['cart']);
         ?>
         <?php require '../home/footer.php'; ?>
     </div>

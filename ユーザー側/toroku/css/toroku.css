@@ -1,7 +1,7 @@
 body {
   font-size:clamp(15px, 3vw, 20px);
 }
-div{  
+form div{  
   text-align:center;
   font-size:clamp(15px, 3vw, 20px);
   margin-top: 20px;
@@ -89,5 +89,7 @@ input{
   color: rgb(38, 204, 13);
  }
  form{
-  margin-top: 100px;
+  margin-top: 140px;
+  text-align: center;
+  padding-bottom: 140px;
  }

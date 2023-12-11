@@ -19,18 +19,6 @@ td p{
     font-size:max(1.5vw,5px);
 }
 
-.right{
-    position: absolute;
-    top: 1vw;
-    right: 5vw;
-}
-
-.back{
-    position: fixed;
-    right: 18vw;
-    top: 3vw;
-    background-color: rgb(176, 239, 172);
-}
 
 button{
     width: 8vw;
