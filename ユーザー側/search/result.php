@@ -98,7 +98,7 @@
                 echo '<img src="' . $row["image"] . '" alt="">';
                 echo '</div>';
                     echo '<p class="name">',$row['s_name'],'</p>';
-                    echo '<p>￥￥',$row['price'],'</p>';
+                    echo '<p>￥',$row['price'],'</p>';
                     echo '</a>';
                 echo '</div>';
                 $i++;
